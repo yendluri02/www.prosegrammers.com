@@ -9,6 +9,26 @@ working on this Quarto-based website project.
 - Maintain the existing style and structure of the website.
 - Ensure that all new content is appropriately linked from existing pages if necessary.
 
+## Course Theme
+
+- This is a course about Document Engineering. These are the course's goals:
+    - Teach students how to program in the Python programming language.
+    - Teach students how to use Python to create, manipulate, and analyze
+    documents.
+    - Teach students how to document their work in a way that is clear, concise,
+    and professional. This includes documenting a project's source code itself
+    and then also writing documentation for their software projects.
+    - Teach students how to use tools like Jupyter Notebooks and Quarto to
+    create and share documents that include code, text, and visualizations.
+    - Teach students how to use generative AI techniques as provided by tools
+    like GitHub Copilot, Google Gemini CLI, and OpenCode to generate, revise,
+    and review both code and documentation. The focus is on ensuring that
+    students can use these tools effectively and responsibly.
+    - Teach students how to use version control systems like Git and GitHub to
+    manage their project's source code and its documentation.
+    - The course is designed to be accessible to students with varying levels of
+    Python programming experience and knowledge of document engineering.
+
 ## Editing and Creating Content
 
 ### Editing Existing Content
@@ -34,19 +54,39 @@ working on this Quarto-based website project.
 
 Slides for this project are created using Quarto and reveal.js.
 
-1.  Create a new `.qmd` file for the slide deck (e.g., in the `slides/` directory).
-2.  Add the following YAML header to the top of the file to specify the `revealjs` format:
-    ```yaml
-    ---
-    title: "Your Slide Title"
-    format: revealjs
-    ---
-    ```
+1.  Create a new `index.qmd` file for the slide deck (e.g., in the `slides/`
+    directory). When you add a new slide deck, always make sure that it is in
+    its own sub-directory inside of the `slides/` directory.
+2.  Add the following YAML header to the top of the file to specify the
+    `revealjs` format:
+
+```yaml
+---
+title: "Introduction to Document Engineering"
+description: "Exploring tools for document engineering with Python"
+date: "2025-08-18"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+```
+
 3.  Use Markdown headings to create slides. A level 2 heading (`##`) creates a new slide.
 4.  Add content (text, images, code blocks) to each slide.
-5.  Preview the site to see the rendered slides.
+5.  Use `quarto preview` on the specific `.qmd` file to see the rendered slides.
 
-## Verification
+## Content Verification
 
 Before committing any changes, it is crucial to verify that the site builds
 correctly and that there are no issues with the content.
@@ -72,12 +112,33 @@ quarto preview
 This will start a local web server and open the site in a browser. The site will
 automatically reload when you make changes to the source files.
 
-## Deployment
+## High-Level Rules
 
-The site is automatically deployed to Netlify when changes are pushed to the `main` branch, as configured in the `.github/workflows/publish.yml` file.
+These are the high-level rules about modifying the files in this repository:
 
-To manually deploy the site, you can run the following command. Note that this requires having the `NETLIFY_AUTH_TOKEN` environment variable configured correctly.
+- **Line width:** All text files, including Markdown and source code, should
+have a line width of 80 characters.
+- **Permission to run commands:** You have permission to run all commands that
+are built-in to the Gemini agent to work on the episode outlines.
+- **Incremental changes:** Make small, incremental changes. This makes it easier
+to review your work and catch errors early.
+- **Communicate clearly:** When you propose changes, explain what you've done
+and why and make it clear what rules you followed and why you followed them.
+- **Use examples:** This repository often contains examples of existing content
+that Gregory M. Kapfhammer already wrote about the topic of document
+engineering. Make sure that you review this content  so as to make sure that you
+write with the correct tone.
+- **Support your work:** Once you are finished writing the content, you need to
+make sure that you provide evidence to support the sentences and/or bullet
+points that you wrote. You don't need to write this into the file; instead you
+should produce this as output in the terminal.
 
-```bash
-quarto publish netlify
-```
+As a Gemini agent, you must also follow these behavior guidelines, especially
+when it comes to notifying the podcast host about your work and status:
+
+- The user has given permission to use the `notify-send` command to signal task
+completion. Here is an example of the command: `notify-send "Question from
+Gemini" "Please clarify how to complete the writing task."`.
+- The user wants a `notify-send` notification whenever I ask a question.
+- Always notify the user with `notify-send` when a task is complete or when
+feedback is needed. I have standing permission to use the notification tool.
