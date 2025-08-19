@@ -18,6 +18,9 @@ working on this Quarto-based website project.
     - Teach students how to document their work in a way that is clear, concise,
     and professional. This includes documenting a project's source code itself
     and then also writing documentation for their software projects.
+    - Teach students how to read and critique the documentation for popular
+    open-source projects like Quarto or Ruff or Uv or other open-source tools
+    that are primarily in the Python ecosystem.
     - Teach students how to use tools like Jupyter Notebooks and Quarto to
     create and share documents that include code, text, and visualizations.
     - Teach students how to use generative artificial intelligence (AI)
@@ -31,6 +34,22 @@ working on this Quarto-based website project.
     able to use GitHub is both an individual and team-based fashion.
     - The course is designed to be accessible to students with varying levels of
     Python programming experience and knowledge of document engineering.
+
+- The official title of this course is "Document Engineering". The official
+title of this course's website is "Prosegrammers". The term "Prosegrammers" is a
+"play on words" that combines the word "prose" with the word "programmers":
+    - *Prose*: This is the written word, like an article or a blog post.
+    - *Programmers*: This is a term that refers to people who write software.
+    - *Prosegrammers*: This is a term that refers to people who write software
+    and documentation and use software to create, manipulate, and analyze
+    documents.
+    - The domain name for the website is
+    [www.prosegrammers.com](https://www.prosegrammers.com/).
+    - The domain name for the course is intentionally plural to indicate that
+    it is a hub for multiple learners coming together to work in a team, in
+    a collaborative fashion, to explore the field of document engineering.
+    - A prosegrammer should be adept at attaining all the course objectives that
+    are listed above in the prior list of bullet points.
 
 ## Editing and Creating Content
 
