@@ -9,7 +9,7 @@ working on this Quarto-based website project.
 - Maintain the existing style and structure of the website.
 - Ensure that all new content is appropriately linked from existing pages if necessary.
 
-## Course Theme
+## Course Objectives
 
 - This is a course about Document Engineering. These are the course's goals:
     - Teach students how to program in the Python programming language.
@@ -20,12 +20,15 @@ working on this Quarto-based website project.
     and then also writing documentation for their software projects.
     - Teach students how to use tools like Jupyter Notebooks and Quarto to
     create and share documents that include code, text, and visualizations.
-    - Teach students how to use generative AI techniques as provided by tools
-    like GitHub Copilot, Google Gemini CLI, and OpenCode to generate, revise,
-    and review both code and documentation. The focus is on ensuring that
-    students can use these tools effectively and responsibly.
+    - Teach students how to use generative artificial intelligence (AI)
+    techniques as provided by tools like that use large language models, such as
+    GitHub Copilot, Google Gemini CLI, and OpenCode. They will learn how to use
+    these tools to generate, revise, and review both source code and
+    documentation. The focus of this objective is on ensuring that students can
+    use these tools effectively and responsibly.
     - Teach students how to use version control systems like Git and GitHub to
-    manage their project's source code and its documentation.
+    manage their project's source code and its documentation. Students should be
+    able to use GitHub is both an individual and team-based fashion.
     - The course is designed to be accessible to students with varying levels of
     Python programming experience and knowledge of document engineering.
 
@@ -110,7 +113,13 @@ quarto preview
 ```
 
 This will start a local web server and open the site in a browser. The site will
-automatically reload when you make changes to the source files.
+automatically reload when you make changes to the source files. You need to be
+careful about running the `quarto preview` command because it is possible that
+the person who creates this site may have already run this command. If you then
+also try to run this command, you will get an error message that says that, for
+instance, the specified port is already in use. If you encounter this error,
+then you should consider manually specifying a different port or using the
+`quarto render` command for a specific Quarto-based Markdown file.
 
 ## High-Level Rules
 
@@ -126,7 +135,7 @@ to review your work and catch errors early.
 and why and make it clear what rules you followed and why you followed them.
 - **Use examples:** This repository often contains examples of existing content
 that Gregory M. Kapfhammer already wrote about the topic of document
-engineering. Make sure that you review this content  so as to make sure that you
+engineering. Make sure that you review this content so as to make sure that you
 write with the correct tone.
 - **Support your work:** Once you are finished writing the content, you need to
 make sure that you provide evidence to support the sentences and/or bullet
