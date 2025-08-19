@@ -117,13 +117,6 @@ of various algorithm engineering projects.
 learning objectives and explains how on-campus learners will be assessed by the
 course instructor.
 
-- The [algorithm all-hands reports](./allhands/index.qmd) includes articles
-written by learners as they explore the engineering and scientific knowledge and
-skills in the field of algorithmology. While some of these articles report on
-the results from running experiments, others explain how to implement and use
-the Python programs that support performance evaluation. Read these reports to
-learn more about the algorithmology!
-
 ::: {.callout-note appearance="minimal" title="Algorithmology Community Resources"}
 
 Interested in connecting with other like-minded algorithm engineers? Please join
