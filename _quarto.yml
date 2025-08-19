@@ -27,14 +27,14 @@ website:
       - allhands/index.qmd
 
   page-footer:
-    left: '<a href="https://github.com//www.algorithmology.org/graphs/contributors" aria-label="Algorithmology Maintainers">{{< iconify fa copyright >}} Algorithmology</a>'
+    left: '<a href="https://github.com/prosegrammers/prosegrammers/graphs/contributors" aria-label="Prosegrammers Maintainers">{{< iconify fa copyright >}} Prosegrammers</a>'
     right:
       - text: "{{< iconify fa github size=18px >}}"
-        href: https://github.com/Algorithmology/
+        href: https://github.com/prosegrammers/
       - text: "{{< iconify fa github-square size=18px >}}"
-        href: https://github.com/Algorithmology/www.algorithmology.org/
+        href: https://github.com/prosegrammers/prosegrammers/
       - text: "{{< iconify bi discord size=19px >}}"
-        href: https://discord.gg/phSQfB8bZx
+        href: https://discord.gg/5HdxuqjUvK
       - text: "{{< iconify bi rss-fill size=18px >}}"
         href: "blog/index.xml"
 
