@@ -13,10 +13,10 @@ website:
   reader-mode: false
   back-to-top-navigation: true
   page-navigation: true
-  favicon: "icons/algorithmology.png"
+  favicon: "icons/prosegrammers.png"
   open-graph: true
-  site-url: https://www.algorithmology.org/
-  repo-url: https://github.com/Algorithmology/www.algorithmology.org
+  site-url: https://www.prosegrammers.com/
+  repo-url: https://github.com/prosegrammers/prosegrammers
   navbar:
     left:
       - href: index.qmd
@@ -27,7 +27,7 @@ website:
       - allhands/index.qmd
 
   page-footer:
-    left: '<a href="https://github.com/Algorithmology/www.algorithmology.org/graphs/contributors" aria-label="Algorithmology Maintainers">{{< iconify fa copyright >}} Algorithmology</a>'
+    left: '<a href="https://github.com//www.algorithmology.org/graphs/contributors" aria-label="Algorithmology Maintainers">{{< iconify fa copyright >}} Algorithmology</a>'
     right:
       - text: "{{< iconify fa github size=18px >}}"
         href: https://github.com/Algorithmology/
