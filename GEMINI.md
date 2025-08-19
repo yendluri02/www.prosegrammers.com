@@ -133,14 +133,23 @@ are built-in to the Gemini agent to work on the episode outlines.
 to review your work and catch errors early.
 - **Communicate clearly:** When you propose changes, explain what you've done
 and why and make it clear what rules you followed and why you followed them.
-- **Use examples:** This repository often contains examples of existing content
+- **Correct tone:** This repository often contains examples of existing content
 that Gregory M. Kapfhammer already wrote about the topic of document
 engineering. Make sure that you review this content so as to make sure that you
-write with the correct tone.
+write with the correct tone. Ultimately, you need to make sure that the content
+is funny and engaging while also being informative and accurate. It also needs
+to come across as being written by a human and not an AI. It is also important
+that all the content is professional in nature and not overly casual.
 - **Support your work:** Once you are finished writing the content, you need to
 make sure that you provide evidence to support the sentences and/or bullet
-points that you wrote. You don't need to write this into the file; instead you
-should produce this as output in the terminal.
+points that you wrote. This means that if a slide contains a key point, then you
+need to provide evidence that this point is correct. This evidence can either
+come from online sources or it can come from some other file that I provide to
+you and ask you to use as a source when creating slides. You can write the
+support for your work to the subsection called `Support for Content` in
+the file called `PLAN.md` that is in the root of this repository. If you are 
+creating new content for `slides/weekone/index.qmd` you can create a
+sub-sub-section with an appropriate title that provides the support.
 
 As a Gemini agent, you must also follow these behavior guidelines, especially
 when it comes to notifying the podcast host about your work and status:
