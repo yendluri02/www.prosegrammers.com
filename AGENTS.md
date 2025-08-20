@@ -1,7 +1,8 @@
 # Claude Sonnet 4 Agent Instructions
 
-This document provides instructions for Claude Sonnet 4 when working on the
-Quarto-based website project for www.prosegrammers.com.
+This document provides instructions for GPT 4.1, Claude Sonnet 4, or another
+large language model (LLM) when working on the Quarto-based website project for
+www.prosegrammers.com through agent platforms like OpenCode (https://opencode.ai/).
 
 ## General Principles
 
@@ -10,6 +11,7 @@ Quarto-based website project for www.prosegrammers.com.
 - Ensure that all new content is appropriately linked from existing pages if necessary.
 - Use the `TodoWrite` tool to plan and track complex tasks throughout the conversation.
 - Follow the concise communication style: be direct and minimize unnecessary explanations.
+- Work efficiently within the OpenCode environment, leveraging its integrated tools and capabilities.
 
 ## Course Objectives
 
@@ -169,10 +171,13 @@ the file called `PLAN.md` that is in the root of this repository. If you are
 creating new content for `slides/weekone/index.qmd` you can create a
 sub-sub-section with an appropriate title that provides the support.
 
-## Claude-Specific Guidelines
+## Claude-Specific Guidelines for OpenCode
 
-As Claude Sonnet 4, you must also follow these behavior guidelines:
+As Claude Sonnet 4 (or another large language model like GPT4.1) working through
+OpenCode, you must also follow these behavior guidelines:
 
+- **OpenCode Integration:** Leverage OpenCode's capabilities for seamless file editing, 
+command execution, and project management within the web-based environment.
 - **Task Management:** Use the TodoWrite tool proactively for complex tasks to 
 track progress and give the user visibility into your work.
 - **Code References:** When referencing specific functions or pieces of code, 
@@ -181,14 +186,17 @@ include the pattern `file_path:line_number` to allow easy navigation.
 your tool calls together for optimal performance.
 - **File Exploration:** Use Read, Glob, and Grep tools effectively. Use the Task 
 tool for complex searches that may require multiple rounds of exploration.
-- **Version Control:** Be prepared to use Git commands when explicitly requested, 
-but never commit changes unless specifically asked to do so.
+- **Version Control:** OpenCode provides integrated Git functionality. Be prepared 
+to use Git commands when explicitly requested, but never commit changes unless 
+specifically asked to do so.
 - **Content Verification:** Always run `quarto check` and preview commands before 
-completing content-related tasks.
+completing content-related tasks, utilizing OpenCode's terminal capabilities.
 - **No Assumptions:** Never assume libraries or frameworks are available. Always 
 check existing files to understand the project's dependencies and conventions.
 - **Security:** Follow security best practices. Never introduce code that exposes 
 or logs secrets and keys.
+- **OpenCode Workflow:** Take advantage of OpenCode's real-time collaboration and 
+editing features when working with multiple files simultaneously.
 
 ## Command Reference
 
@@ -199,7 +207,8 @@ Key commands for working with this Quarto project:
 - `quarto render` - Render specific files
 - `quarto preview <file.qmd>` - Preview specific slide deck
 
-Always use the `Bash` tool to execute these commands and verify successful completion.
+Always use the Bash tool to execute these commands and verify successful completion.
+OpenCode provides an integrated terminal environment for seamless command execution.
 
 ## Agent Rules
 
@@ -207,8 +216,8 @@ These are the high-level rules about modifying the files in this repository:
 
 - **Line width:** All text files, including Markdown and source code, should
 have a line width of 80 characters.
-- **Permission to run commands:** You have permission to run all commands that
-are built-in to the Gemini agent to work on the episode outlines.
+- **Permission to run commands:** You have permission to run all commands available 
+in the OpenCode environment to work on the Quarto website project.
 - **Incremental changes:** Make small, incremental changes. This makes it easier
 to review your work and catch errors early.
 - **Communicate clearly:** When you propose changes, explain what you've done
@@ -231,12 +240,14 @@ the file called `PLAN.md` that is in the root of this repository. If you are
 creating new content for `slides/weekone/index.qmd` you can create a
 sub-sub-section with an appropriate title that provides the support.
 
-As an agent, you must also follow these behavior guidelines, especially
-when it comes to notifying the podcast host about your work and status:
+As an agent working through `OpenCode`, you must also follow these behavior
+guidelines, especially when it comes to notifying the user about your work and
+status:
 
 - The user has given permission to use the `notify-send` command to signal task
 completion. Here is an example of the command: `notify-send "Question from
-Gemini" "Please clarify how to complete the writing task."`.
+OpenCode" "Please clarify how to complete the writing task."`.
 - The user wants a `notify-send` notification whenever I ask a question.
 - Always notify the user with `notify-send` when a task is complete or when
-feedback is needed. I have standing permission to use the notification tool.
+feedback is needed. You have standing permission to use the notification tool.
+- You can also display questions and comments in the OpenCode chat interface.
