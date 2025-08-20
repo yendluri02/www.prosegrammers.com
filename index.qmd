@@ -9,46 +9,46 @@ toc: false
 ## Becoming a Prosegrammer
 
 Welcome to the world of **Prosegrammers** --- where prose meets programming!
-The term "Prosegrammer" is a delightful combination of "prose" (the written
-word) and "programmer" (people who write software). As a prosegrammer, you'll
-master the art of using Python to create, manipulate, and analyze documents
-while also learning to craft clear, compelling documentation for your software
-projects. This course focuses on document engineering, a field that bridges the
-gap between technical writing and software development. Whether you're
-generating reports from data, building interactive documentation systems, or
-creating tools that transform text, prosegrammers use code to make written
-communication more powerful and accessible. Join us as we explore how to be
-both eloquent writers and skilled programmers in the fascinating world of
+The term "Prosegrammer" is a delightful combination of "prose" (i.e., the
+written word) and "programmer" (i.e., the people who write software). As a
+prosegrammer, you'll master the art of using Python to create, manipulate, and
+analyze documents while also learning to craft clear, compelling documentation
+for your software projects. This course focuses on document engineering, a
+field that bridges the gap between technical writing and software development.
+Whether you're generating reports from data, building interactive documentation
+systems, or creating tools that transform text, prosegrammers use code to make
+written communication more powerful and accessible. Join us as we explore how
+to be both eloquent writers and skilled programmers in the fascinating world of
 document engineering!
 
 ## Course Overview
 
 With the goal of cultivating skilled prosegrammers, this web site features a
-[sixteen-week schedule](schedule/index.qmd) filled with activities that support
-the development of your professional and technical capacities in the field of
-document engineering. Although this site is best used by an on-campus learner
-in the [Department of Computer and Information
-Science](https://www.cs.allegheny.edu/) at [Allegheny
+[sixteen-week schedule](schedule/index.qmd) filled with activities that
+support the development of your professional and technical capacities in the
+field of document engineering. Although this site is best used by an on-campus
+learner in the [Department of Computer and Information
+Science](https://www.cis.allegheny.edu/) at [Allegheny
 College](https://www.allegheny.edu/), the resources and projects are all
 publicly available. This course teaches you to harness Python's power for
 creating and manipulating documents, from simple text processing to building
 sophisticated documentation systems. You'll learn to use tools like Jupyter
 Notebooks and Quarto to create interactive documents that blend code, text, and
 visualizations. Throughout the course, you'll also develop skills in reading
-and critiquing documentation for popular open-source projects, ensuring you
-can both create and consume high-quality technical writing. Check out the
+and critiquing documentation for popular open-source projects, ensuring you can
+both create and consume high-quality technical writing. Check out the
 [schedule](schedule/index.qmd) and [slides](slides/index.qmd) to begin your
 journey as a prosegrammer!
 
 ## Wow, Python for Document Engineering ... and its Output!
 
 As you explore the technical resources on this site, you'll discover how Python
-can transform the way we work with documents. For instance, here's a simple
-example of a `word_frequency` function that analyzes text to count how often
-each word appears --- a fundamental task in document engineering! This function
-takes a string of text, converts it to lowercase, removes punctuation, and
-creates a dictionary showing word frequencies. Pretty neat how Python makes
-document analysis so accessible!
+can transform the way that prosegrammers work with documents. For instance,
+here's a simple example of a `word_frequency` function that analyzes text to
+count how often each word appears --- a fundamental task in document
+engineering! This function takes a string of text, converts it to lowercase,
+removes punctuation, and creates a dictionary showing word frequencies. Pretty
+neat how Python makes document analysis so accessible!
 
 ```{python}
 from typing import Dict
