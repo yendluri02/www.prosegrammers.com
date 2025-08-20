@@ -56,21 +56,17 @@ import string
 
 def word_frequency(text: str) -> Dict[str, int]:
     """Analyze text and return a dictionary of word frequencies."""
-    # Convert to lowercase and remove punctuation
     cleaned_text = text.lower().translate(str.maketrans('', '', string.punctuation))
     words = cleaned_text.split()
-    
-    # Count word frequencies
     frequency_dict = {}
     for word in words:
         frequency_dict[word] = frequency_dict.get(word, 0) + 1
-    
     return frequency_dict
 
-# Example text about document engineering
+# example text about document engineering
 sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill. Programming helps automate document creation."
 
-# Analyze the text and display results
+# analyze the text and display results
 word_counts = word_frequency(sample_text)
 print("Word Frequencies:")
 for word, count in sorted(word_counts.items()):
