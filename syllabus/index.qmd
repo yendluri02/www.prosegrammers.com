@@ -303,7 +303,7 @@ examination.
   - **Weeks**: Twelve through sixteen
   - **Topics**: 
     - **Documentation**: Literate programming, Localization
-    - **Engineering**: Advanced Python programming, AI coding agents, Quarto
+    - **Engineering**: Advanced Python programming, Context engineering, Quarto
 
 ### Schedule Details
 
