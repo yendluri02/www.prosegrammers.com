@@ -45,7 +45,7 @@ CLI](https://github.com/google-gemini/gemini-cli), and
 documentation and source code. Check out the [schedule](schedule/index.qmd)
 and [slides](slides/index.qmd) to begin your journey as a prosegrammer!
 
-## Wow, Python for Document Engineering ... and its Output!
+## Python for Document Engineering
 
 As you explore the technical resources on this site, you'll discover how Python
 can transform the way that prosegrammers work with documents. For instance,
@@ -53,7 +53,8 @@ here's a simple example of a `word_frequency` function that analyzes text to
 count how often each word appears --- a fundamental task in document
 engineering! This function takes a string of text, converts it to lowercase,
 removes punctuation, and creates a dictionary showing word frequencies. Pretty
-neat how Python makes document analysis so accessible!
+neat how Python makes document analysis so accessible! And, notice that the
+website itself includes the output from running this function with an input!
 
 ```{python}
 from typing import Dict
