@@ -8,121 +8,149 @@ toc: false
 
 ## Becoming a Prosegrammer
 
-In addition to ensuring that the programs they implement are correct and
-maintainable, document engineers must confirm that their code is efficient.
-The focus of this course --- called "algorithmology" for fun! --- is the study
-of algorithms, with a concentration on both their correctness and efficiency.
-The process of algorithmology requires the completion of tasks that leverage
-knowledge and skills in both engineering and science. For instance, an
-algorithm engineer needs to design, implement, and test data structures and
-algorithms and then correctly integrate them into a working software system.
-However, an algorithm engineer must also employ the scientific method to
-analyze the efficiency of both a software system's components and the system as
-a whole. This course introduces learners to both empirical and analytical
-approaches to studying the efficiency of algorithms, data structures, and the
-software systems that contain them.
+Welcome to the world of **Prosegrammers** --- where prose meets programming!
+The term "Prosegrammer" is a delightful combination of "prose" (the written
+word) and "programmer" (people who write software). As a prosegrammer, you'll
+master the art of using Python to create, manipulate, and analyze documents
+while also learning to craft clear, compelling documentation for your software
+projects. This course focuses on document engineering, a field that bridges the
+gap between technical writing and software development. Whether you're
+generating reports from data, building interactive documentation systems, or
+creating tools that transform text, prosegrammers use code to make written
+communication more powerful and accessible. Join us as we explore how to be
+both eloquent writers and skilled programmers in the fascinating world of
+document engineering!
 
 ## Course Overview
 
-With the goal of enabling the growth of algorithm engineers, this web site
-features a [sixteen-week schedule](schedule/index.qmd) filled with activities
-that support the development of your professional and technical capacities in
-the field of algorithm analysis. Although this site is best used by an on-campus
-learner in the [Department of Computer and information
+With the goal of cultivating skilled prosegrammers, this web site features a
+[sixteen-week schedule](schedule/index.qmd) filled with activities that support
+the development of your professional and technical capacities in the field of
+document engineering. Although this site is best used by an on-campus learner
+in the [Department of Computer and Information
 Science](https://www.cs.allegheny.edu/) at [Allegheny
 College](https://www.allegheny.edu/), the resources and projects are all
-publicly available. For instance, this course leverages and extends the
-open-access course textbook called [A First Course on Data Structures in
-Python](https://github.com/donsheehy/datastructures). You can access all of the
-source code and technical content for this book by checking out its GitHub
-repositories and following along with the [schedule](schedule/index.qmd) and the
-[slides](slides/index.qmd) for this course, as found on this site.
+publicly available. This course teaches you to harness Python's power for
+creating and manipulating documents, from simple text processing to building
+sophisticated documentation systems. You'll learn to use tools like Jupyter
+Notebooks and Quarto to create interactive documents that blend code, text, and
+visualizations. Throughout the course, you'll also develop skills in reading
+and critiquing documentation for popular open-source projects, ensuring you
+can both create and consume high-quality technical writing. Check out the
+[schedule](schedule/index.qmd) and [slides](slides/index.qmd) to begin your
+journey as a prosegrammer!
 
-## Wow, Python Source Code ... and its Output!
+## Wow, Python for Document Engineering ... and its Output!
 
-As you browse the technical resources on this site you will notice that they
-often contain both Python source code and the output from running code. For
-instance, here is the source code for a `duplicates` function that uses a
-double-nested `for` loop to determine whether or not the `input_list` contains
-a duplicate `int` value. This source code segments shows that both
-`print(duplicates([1,2,6,3,4,5,6,7,8]))` and `print(not duplicates([1,2,3,4]))`
-yield `True` as their output! Pretty cool, huh?
-
-```{python}
-from typing import List
-def duplicates(input_list: List[int]) -> bool:
-    """Determine whether or not the input list contains a duplicate value."""
-    n = len(input_list)
-    for i in range(n):
-        for j in range(n):
-            if i != j and input_list[i] == input_list[j]:
-                return True
-    return False
-
-# use assertions to confirm that duplicates
-# works as expected; note that assert only
-# produces output if the condition is False
-assert(duplicates([1,2,6,3,4,5,6,7,8]))
-assert(not duplicates([1,2,3,4]))
-# display the output of the functions calls
-# to show that the output appears inline
-print(duplicates([1,2,6,3,4,5,6,7,8]))
-print(not duplicates([1,2,3,4]))
-```
-
-Throughout this site, the source code that appears in the top-most region of a
-page is available for use in later sections of the same page. For instance, the
-following code defines a new `timetrials` function that can be used to time the
-`duplicates` function in a doubling experiment. Wow, check it out! The output
-from running the following function will produce a data table that reveals that
-the likely worst-case time complexity of `duplicates` is $O(n^2)$. Are you
-wondering how the data shows that `duplicate` is $O(n^2)$? Well, you can use
-the data in the table to compute `0.23 / 0.05 = 4.6`, which suggests that as
-the input size doubles, the time more than quadruples. To learn more about this
-topic, you can use the technical content in the course to learn how to analyze
-the time complexity of algorithms --- so check out the
-[schedule](schedule/index.qmd) and the [slides](slides/index.qmd) for more
-details!
+As you explore the technical resources on this site, you'll discover how Python
+can transform the way we work with documents. For instance, here's a simple
+example of a `word_frequency` function that analyzes text to count how often
+each word appears --- a fundamental task in document engineering! This function
+takes a string of text, converts it to lowercase, removes punctuation, and
+creates a dictionary showing word frequencies. Pretty neat how Python makes
+document analysis so accessible!
 
 ```{python}
-from typing import Callable, List
-import time
+from typing import Dict
+import string
 
-def timetrials(function: Callable, n: int, trials: int = 10) -> float:
-    """Time a function with an input of size n for trials number of times."""
-    totaltime = 0
-    for _ in range(trials):
-        start = time.time()
-        function(list(range(n)))
-        totaltime += time.time() - start
-    print("Average time =%10.7f (s) for n = %d" % (totaltime/trials, n))
-    return totaltime/trials
+def word_frequency(text: str) -> Dict[str, int]:
+    """Analyze text and return a dictionary of word frequencies."""
+    # Convert to lowercase and remove punctuation
+    cleaned_text = text.lower().translate(str.maketrans('', '', string.punctuation))
+    words = cleaned_text.split()
+    
+    # Count word frequencies
+    frequency_dict = {}
+    for word in words:
+        frequency_dict[word] = frequency_dict.get(word, 0) + 1
+    
+    return frequency_dict
 
-# conduct a doubling experiment for a provided function
-timings = []
-for n in [50, 100, 200, 400, 800, 1600, 3200]:
-    timings.append(timetrials(duplicates, n))
+# Example text about document engineering
+sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill. Programming helps automate document creation."
+
+# Analyze the text and display results
+word_counts = word_frequency(sample_text)
+print("Word Frequencies:")
+for word, count in sorted(word_counts.items()):
+    print(f"'{word}': {count}")
 ```
 
-## Resources for an Adventure in Algorithmology
+Building on the previous example, let's explore how prosegrammers can create more
+sophisticated document analysis tools! The following code demonstrates a
+`document_summary` function that provides key insights about any text document.
+This function calculates statistics like word count, sentence count, and
+average words per sentence --- essential metrics for document engineers who
+need to analyze and improve written content. Watch how Python makes complex
+document analysis tasks straightforward and accessible!
 
-Interested in getting started on a developer development adventure? Begin here:
+```{python}
+import re
+from typing import Dict, Any
 
-- The [sixteen-week course schedule](./schedule/index.qmd) offers detailed
-insights into each step that learners should take to help them to emerge as
-algorithm engineers, including a list of reading assignments and descriptions
-of various algorithm engineering projects.
+def document_summary(text: str) -> Dict[str, Any]:
+    """Generate a comprehensive summary of document statistics."""
+    # Count words (excluding punctuation-only tokens)
+    words = [word for word in text.split() if any(char.isalnum() for char in word)]
+    word_count = len(words)
+    
+    # Count sentences (simple approach using sentence-ending punctuation)
+    sentences = re.split(r'[.!?]+', text)
+    sentence_count = len([s for s in sentences if s.strip()])
+    
+    # Count paragraphs (assuming double newlines separate paragraphs)
+    paragraphs = [p for p in text.split('\n\n') if p.strip()]
+    paragraph_count = len(paragraphs)
+    
+    # Calculate averages
+    avg_words_per_sentence = word_count / sentence_count if sentence_count > 0 else 0
+    avg_sentences_per_paragraph = sentence_count / paragraph_count if paragraph_count > 0 else 0
+    
+    return {
+        'word_count': word_count,
+        'sentence_count': sentence_count,
+        'paragraph_count': paragraph_count,
+        'avg_words_per_sentence': round(avg_words_per_sentence, 1),
+        'avg_sentences_per_paragraph': round(avg_sentences_per_paragraph, 1)
+    }
+
+# Example document about prosegrammers
+sample_document = """
+Prosegrammers are skilled professionals who combine programming expertise with writing abilities. They create tools that help generate, analyze, and improve documents.
+
+Document engineering is an exciting field that leverages technology to enhance written communication. Python provides excellent libraries for text processing, making it an ideal language for prosegrammers.
+
+By mastering both code and prose, prosegrammers can automate repetitive writing tasks, analyze large collections of documents, and create dynamic content that adapts to different audiences.
+"""
+
+# Analyze the document
+summary = document_summary(sample_document.strip())
+print("Document Analysis Summary:")
+for metric, value in summary.items():
+    print(f"{metric.replace('_', ' ').title()}: {value}")
+```
+
+## Resources for Your Document Engineering Adventure
+
+Ready to embark on your journey as a prosegrammer? Start exploring here:
+
+- The [sixteen-week course schedule](./schedule/index.qmd) provides detailed
+insights into each step that learners should take to emerge as skilled
+prosegrammers, including reading assignments focused on document engineering
+tools and projects that combine programming with technical writing.
 
 - The [course syllabus](./syllabus/index.qmd) introduces the course and its
-learning objectives and explains how on-campus learners will be assessed by the
-course instructor.
+learning objectives, explaining how on-campus learners will develop both their
+programming skills and their ability to create exceptional documentation.
 
-::: {.callout-note appearance="minimal" title="Algorithmology Community Resources"}
+::: {.callout-note appearance="minimal" title="Prosegrammers Community Resources"}
 
-Interested in connecting with other like-minded algorithm engineers? Please join
-the [Algorithmology Discord Server](https://discord.gg/phSQfB8bZx) and join
-the conversation! If you are an on-campus learner at Allegheny College, you may
-also join the [Allegheny College Computer Science Discord
+Interested in connecting with other aspiring prosegrammers? Please join the
+[Prosegrammers Discord Server](https://discord.gg/5HdxuqjUvK) and join the
+conversation about document engineering, Python programming, and technical
+writing! If you are an on-campus learner at Allegheny College, you may also
+join the [Allegheny College Computer Science Discord
 Server](https://discord.gg/CS2h9kXzX6). Finally, if you are an on-campus
 learner, you can schedule a meeting with the instructor during office hours by
 visiting the [Course Instructor's Appointment
