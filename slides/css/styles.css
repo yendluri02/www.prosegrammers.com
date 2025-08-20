@@ -6,7 +6,8 @@
 }
 
 .reveal a {
-  color: #5D3A74;
+  /* color: #5D3A74; */
+  color: #7a4e99;
   text-decoration: none;
 }
 
@@ -52,7 +53,7 @@ p.tightspacer {
 }
 
 .boxed-content {
-  border: 3px solid #5D3A74;
+  border: 3px solid #333333;
   padding: 10px;
   border-radius: 5px;
 }
