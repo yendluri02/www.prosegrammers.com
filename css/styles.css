@@ -195,6 +195,7 @@ pre.sourceCode {
   overflow: visible !important;
   background-color: #f9f7fb !important;
   border: 0.5px solid #dee2e6 !important;
+  border-radius: 0rem !important;
 }
 
 .slide-deck {
