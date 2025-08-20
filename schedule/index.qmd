@@ -52,8 +52,10 @@ listing:
 
 - **Basics**:
   - **Start Semester**: Week One
-  - **Spring Break**: Week Eight
-  - **Refresh Break**: Week Thirteen
+  - **Fall Break**: Week Seven 
+  - **Mid-Term Grades Submission**: Week Nine
+  - **All-College Programming**: Week Eleven 
+  - **Thanksgiving Break**: Week Fourteen
   - **End Semester**: Week Sixteen
 - **Examinations**:
   - **Midterm Exam One**: Week Seven
