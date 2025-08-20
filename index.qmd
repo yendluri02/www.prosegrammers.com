@@ -49,12 +49,13 @@ and [slides](slides/index.qmd) to begin your journey as a prosegrammer!
 
 As you explore the technical resources on this site, you'll discover how Python
 can transform the way that prosegrammers work with documents. For instance,
-here's a simple example of a `word_frequency` function that analyzes text to
-count how often each word appears --- a fundamental task in document
-engineering! This function takes a string of text, converts it to lowercase,
-removes punctuation, and creates a dictionary showing word frequencies. Pretty
-neat how Python makes document analysis so accessible! And, notice that the
-website itself includes the output from running this function with an input!
+here's a simple example of a Python implementation of a `word_frequency`
+function that analyzes text to count how often each word appears --- a
+fundamental task in document engineering! This function takes a string of text,
+converts it to lowercase, removes punctuation, and creates a dictionary showing
+word frequencies. Pretty neat how Python makes document analysis so accessible!
+And, notice that the website itself includes the output from running this
+function with an input!
 
 ```{python}
 from typing import Dict
@@ -79,13 +80,14 @@ for word, count in sorted(word_counts.items()):
     print(f"'{word}': {count}")
 ```
 
-Building on the previous example, let's explore how prosegrammers can create more
-sophisticated document analysis tools! The following code demonstrates a
+Building on the previous example, let's explore how prosegrammers can create
+more sophisticated document analysis tools! The following code demonstrates a
 `document_summary` function that provides key insights about any text document.
-This function calculates statistics like word count, sentence count, and
-average words per sentence --- essential metrics for document engineers who
-need to analyze and improve written content. Watch how Python makes complex
-document analysis tasks straightforward and accessible!
+This function calculates statistics like word count, sentence count, and average
+words per sentence, all of which are essential metrics for document engineers
+who need to analyze and improve written content. Watch how Python makes complex
+document analysis tasks straightforward and accessible. And, notice how the
+website displays the output from running this function with an input!
 
 ```{python}
 import re
@@ -93,22 +95,18 @@ from typing import Dict, Any
 
 def document_summary(text: str) -> Dict[str, Any]:
     """Generate a comprehensive summary of document statistics."""
-    # Count words (excluding punctuation-only tokens)
+    # count words (excluding punctuation-only tokens)
     words = [word for word in text.split() if any(char.isalnum() for char in word)]
     word_count = len(words)
-    
-    # Count sentences (simple approach using sentence-ending punctuation)
+    # count sentences (simple approach using sentence-ending punctuation)
     sentences = re.split(r'[.!?]+', text)
     sentence_count = len([s for s in sentences if s.strip()])
-    
-    # Count paragraphs (assuming double newlines separate paragraphs)
+    # count paragraphs (assuming double newlines separate paragraphs)
     paragraphs = [p for p in text.split('\n\n') if p.strip()]
     paragraph_count = len(paragraphs)
-    
-    # Calculate averages
+    # calculate averages for words and paragraphs
     avg_words_per_sentence = word_count / sentence_count if sentence_count > 0 else 0
     avg_sentences_per_paragraph = sentence_count / paragraph_count if paragraph_count > 0 else 0
-    
     return {
         'word_count': word_count,
         'sentence_count': sentence_count,
@@ -117,7 +115,7 @@ def document_summary(text: str) -> Dict[str, Any]:
         'avg_sentences_per_paragraph': round(avg_sentences_per_paragraph, 1)
     }
 
-# Example document about prosegrammers
+# define an example document about prosegrammers
 sample_document = """
 Prosegrammers are skilled professionals who combine programming expertise with writing abilities. They create tools that help generate, analyze, and improve documents.
 
@@ -126,9 +124,10 @@ Document engineering is an exciting field that leverages technology to enhance w
 By mastering both code and prose, prosegrammers can automate repetitive writing tasks, analyze large collections of documents, and create dynamic content that adapts to different audiences.
 """
 
-# Analyze the document
+# analyze the document using the defined summary function
 summary = document_summary(sample_document.strip())
 print("Document Analysis Summary:")
+# display the results in a user-friendly format
 for metric, value in summary.items():
     print(f"{metric.replace('_', ' ').title()}: {value}")
 ```
