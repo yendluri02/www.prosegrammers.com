@@ -7,13 +7,13 @@
 /* Styled Components {{{ */
 
 body {
-  background-color: #F9F7FB;
+  background-color: #f9f7fb;
   color: #333333;
 }
 
 a {
   text-decoration: none;
-  color: #5D3A74;
+  color: #5d3a74;
 }
 
 pre,
@@ -25,12 +25,12 @@ samp {
 }
 
 body a:hover {
-  color: #7A4E99 !important;
+  color: #7a4e99 !important;
   transition:
     text-decoration-color 300ms,
     text-underline-offset 300ms;
   text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #7A4E99;
+  text-decoration-color: #7a4e99;
   text-underline-offset: 0.3em;
 }
 
@@ -78,8 +78,15 @@ body a:hover {
   border-radius: 10px;
 }
 
-.page-footer {
-  background-color: #F9F7FB !important;
+.page-footer, footer {
+  background-color: #f9f7fb !important;
+  color: #333333 !important;
+}
+
+.nav-footer {
+  min-height: 1em;
+  background-color: #f9f7fb !important;
+  color: #333333 !important;
 }
 
 .toc-actions {
@@ -98,12 +105,12 @@ body a:hover {
 }
 
 .toc-actions a:hover {
-  color: #7A4E99 !important;
+  color: #7a4e99 !important;
   transition:
     text-decoration-color 300ms,
     text-underline-offset 300ms;
   text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #7A4E99;
+  text-decoration-color: #7a4e99;
   text-underline-offset: 0.3em;
 }
 
@@ -116,7 +123,7 @@ body a:hover {
 }
 
 .callout {
-  border-left-color: #5D3A74 !important;
+  border-left-color: #5d3a74 !important;
 }
 
 .callout.callout-style-simple>div.callout-header {
@@ -124,7 +131,7 @@ body a:hover {
   font-size: 0.9rem;
   font-weight: 600;
   opacity: 100%;
-  color: #5D3A74 !important;
+  color: #5d3a74 !important;
 }
 
 .callout .callout-title-container {
@@ -155,15 +162,16 @@ h4>a {
 }
 
 div.sourceCode {
-  border-left: .25rem solid #5D3A74;
-  padding-left: 1rem;
-  margin-left: 0.25em;
+  background-color: #f9f7fb !important;
+  border-left: 0.25rem solid #5d3a74;
+  padding-left: 0rem;
+  margin-left: 0.05em;
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
 code {
-  background-color: #F9F7FB !important;
+  background-color: #f9f7fb !important;
   border: none;
   padding: 0;
 }
@@ -185,6 +193,8 @@ pre.sourceCode {
   padding: 0.5em;
   font-size: 0.875em;
   overflow: visible !important;
+  background-color: #f9f7fb !important;
+  border: 0.5px solid #dee2e6 !important;
 }
 
 .slide-deck {
@@ -258,7 +268,7 @@ caption,
 }
 
 .quarto-title .quarto-categories .quarto-category:hover {
-  color: #7A4E99 !important;
+  color: #7a4e99 !important;
 }
 
 /* }}} */
