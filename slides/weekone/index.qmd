@@ -15,7 +15,7 @@ format:
     scrollable: true
     transition: slide
     highlight-style: github
-    footer: "Algorithmology"
+    footer: "Prosegrammers"
 ---
 
 # Algorithm analysis
