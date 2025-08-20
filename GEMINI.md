@@ -156,6 +156,9 @@ successful completion.
 
 These are the high-level rules about modifying the files in this repository:
 
+- **Version Control:** OpenCode provides integrated Git functionality. Be prepared 
+to use Git commands when explicitly requested, but never commit changes unless 
+specifically asked to do so.
 - **Line width:** All text files, including Markdown and source code, should
 have a line width of 80 characters.
 - **Permission to run commands:** You have permission to run all commands that
