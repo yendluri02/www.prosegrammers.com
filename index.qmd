@@ -1,12 +1,12 @@
 ---
-title: Prosegrammers
+pagetitle: "Prosegrammers"
 layout: full
 toc: false
 ---
 
-![](images/Prosegrammers-Logo.svg){fig-align="center"}
+![](images/Prosegrammers-Logo.svg){fig-align="center" width="125%"}
 
-## Welcome to an Adventure in Algorithm Analysis!
+## Becoming a Prosegrammer
 
 In addition to ensuring that the programs they implement are correct and
 maintainable, document engineers must confirm that their code is efficient.
