@@ -13,7 +13,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #5d3a74;
+  color: #7a4e99;
 }
 
 pre,
@@ -30,7 +30,7 @@ body a:hover {
     text-decoration-color 300ms,
     text-underline-offset 300ms;
   text-decoration: underline 0.1em rgba(0, 0, 0, 1);
-  text-decoration-color: #7a4e99;
+  text-decoration-color: #7a4e99 !important;
   text-underline-offset: 0.3em;
 }
 
@@ -78,7 +78,8 @@ body a:hover {
   border-radius: 10px;
 }
 
-.page-footer, footer {
+.page-footer,
+footer {
   background-color: #f9f7fb !important;
   color: #333333 !important;
 }
@@ -112,6 +113,17 @@ body a:hover {
   text-decoration: underline 0.1em rgba(0, 0, 0, 1);
   text-decoration-color: #7a4e99;
   text-underline-offset: 0.3em;
+}
+
+.sidebar nav[role="doc-toc"] ul>li>a.active,
+.sidebar nav[role="doc-toc"] ul>li>ul>li>a.active {
+  border-left: 1px solid #7a4e99 !important;
+  color: #7a4e99 !important;
+}
+
+.sidebar nav[role="doc-toc"] ul>li>a:hover,
+.sidebar nav[role="doc-toc"] ul>li>ul>li>a:hover {
+  color: #7a4e99 !important;
 }
 
 #quarto-margin-sidebar .toc-actions .bi:before {
