@@ -1,0 +1,40 @@
+---
+title: Hierarchical Data Structures
+description: "Create and Navigate Tree-Based Data"
+date: 2025-04-07
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Exploration
+
+- {{< iconify fa6-solid book-open size=18px >}} Read chapter 16 through 18 in
+[A First Course on Data Structures in
+Python](https://donsheehy.github.io/datastructures/)
+- {{< iconify fa6-brands github size=18px >}} Explore tree implementations in
+the `ds2` package of
+[donsheehy/datastructures](https://github.com/donsheehy/datastructures/).
+- {{< iconify fa6-solid book size=18px >}} Review previous chapters to see how
+data structures like the `LinkedList` influence the design and implementation
+of this data structure.
+
+## Activities
+
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
+Hierarchical Data Structures
+  - Explore how to implement the `Tree` data structure
+  - Learn how to calculate characteristics of a tree like height and depth
+  - Learn how to traverse a tree in different ways like pre-order and
+  post-order 
+  - Examine Python source code segments to illustrate key points
+- No class on April 7, April 10, and April 11
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekthirteen/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Thirteen: Hierarchical Data Structures](../../slides/weekthirteen/)

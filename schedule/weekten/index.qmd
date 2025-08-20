@@ -1,0 +1,43 @@
+---
+title: Dynamic Programming
+description: "Explore an Innovative Algorithmic Paradigm"
+date: 2025-03-17
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Exploration
+
+- {{< iconify fa6-solid book-open size=18px >}} Read chapters 9 and 10 in [A
+First Course on Data Structures in
+Python](https://donsheehy.github.io/datastructures/)
+- {{< iconify fa6-brands github size=18px >}} Explore algorithms that use recursion and dynamic
+programming in the `ds2` package of
+[donsheehy/datastructures](https://github.com/donsheehy/datastructures/). Can
+you add debugging statements to trace how these algorithms work?
+- {{< iconify fa6-solid book size=18px >}} Read chapter 9 for a review of
+recursion and how it works in the Python language
+- {{< iconify fa6-solid robot size=18px >}} Design, implement, and test your own
+efficient implementation of the `lcs` function! How would you measure this
+function's performance?
+
+## Activities
+
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
+Dynamic Programming
+  - Explore how to implement recursive functions in Python
+  - Investigate a new algorithmic paradigm called dynamic programming
+  - Learn more about the longest common sub-sequence problem
+  - Examine Python source code segments to illustrate key points
+- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Continue
+algorithm engineering project five (see the [prior week](../weeknine/) for
+details about this project) and take algorithm engineering skill-check three
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekten/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Ten: Recursion and Dynamic Programming](../../slides/weekten/)

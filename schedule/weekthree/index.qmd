@@ -1,0 +1,40 @@
+---
+title: Object-Oriented Programming
+description: "Understand Basics of Object-Oriented Programming"
+date: 2025-01-27
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Exploration
+
+- {{< iconify fa6-solid book-open size=18px >}} Read chapter 3 of [A First
+Course on Data Structures in
+Python](https://donsheehy.github.io/datastructures/)
+- {{< iconify fa6-brands github size=18px >}} Overview objects in `ds2` package
+of [donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+
+## Activities
+
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
+Object-oriented programming
+  - Review the goals of object-oriented programming
+  - Review the principles of object-oriented programming
+    - Abstraction
+    - Inheritance
+    - Encapsulation
+    - Polymorphism
+  - Examine source code segments to illustrate trade-offs
+  - Conduct experiments to measure performance of object-orientation
+- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Continue
+algorithm engineering project two (see the [prior week](../weektwo/) for
+details about this project)
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekthree/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Three: Object-Oriented Programming in Python](../../slides/weekthree/)

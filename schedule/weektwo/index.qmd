@@ -1,0 +1,79 @@
+---
+title: Reviewing Python Programming
+description: "Understand Python Programming Basics"
+date: 2025-01-20
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Exploration
+
+- {{< iconify fa6-solid book-open size=18px >}} Read chapters 1 and 2 of [A
+First Course on Data Structures in
+Python](https://donsheehy.github.io/datastructures/)
+- {{< iconify fa6-brands github size=18px >}} Overview functions in `ds2`
+package of
+[donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+
+## Activities
+
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
+Course introduction
+  - Review the basic building blocks of a Python program:
+    - Sequence
+    - Selection
+    - Iteration
+  - Consider different ways to create collections in Python
+  - Measure the performance trade-offs of Python's collections
+- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Submit
+algorithm engineering project one, start algorithm engineering project two
+(note that the first project requires only one week of work), and take the first
+algorithm engineering skill-check in the second half of the laboratory session
+
+## Project
+
+### Goal
+
+To build and use a Python program, called `containmentchecking`, that runs
+benchmarks to measure the performance of `in` for `list`, `tuple`, and `set`,
+thereby enabling software engineers to pick the fastest collection for their
+program.
+
+### Steps
+
+- Click the link provided in Discord to get started on this project
+- Review {{< iconify fa6-brands github size=18px >}} [Containment
+Checking](https://github.com/Algorithmology/containment-checking-starter) as a
+public reference repository
+- Install the project's dependencies using `devenv` and/or `poetry`
+- Follow the instructions to complete the project:
+  - **Week 1**: Implement all of the modules in `containmentchecking`
+  - **Week 2**: Design and conduct experiments and document experimental
+  results
+- Schedule [office hours](https://www.gregorykapfhammer.com/schedule/) if you
+have questions
+
+::: {.callout-note appearance="minimal" title="Student Insights" collapse="false"}
+Students who completed this project shared these insights:
+
+- "My biggest takeaway from this entire experience is that it's important to
+know what kinds of inputs would be considered 'large', 'small', or 'standard'
+for whatever task you're performing. Having that kind of information is crucial
+in being able to come up with good values to test to make sure the experiment is
+being performed correctly." **Jacob Allebach**
+
+- "Throughout conducting my experiments, I learned that the tuple is the overall
+quickest container to use for containment checking. Especially when searching
+through super large values, I would definitely use a tuple. Lists were a close
+second to tuples, and Sets were extremely slow." **Aidan Dyga**
+
+:::
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weektwo/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Two: Exploring the Python Programming Language](../../slides/weektwo/)

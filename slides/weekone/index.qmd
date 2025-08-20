@@ -1,0 +1,429 @@
+---
+title: "Introduction to Algorithm Analysis"
+description: "How can we use Python packages to characterize the runtime environment used during experiments?"
+date: "2025-01-13"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Algorithmology"
+---
+
+# Algorithm analysis
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is algorithm analysis?**
+    - Data structures that organize data
+    - Algorithms that process data structures
+    - Experimental and theoretical analysis
+    - "Algorithmology" is both *science* and *engineering*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Why is it important?**
+    - System performance is critical
+        - Poor performance causes system failure
+        - Slow systems are not user-friendly
+        - Slow algorithms increase overall cost
+
+:::
+
+## Algorithm analysis process
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **Design, implement, and test**
+  - Data structures and algorithms
+  - Benchmark framework
+  - Data analysis tools
+- {{< iconify fa6-solid gear >}} **Create execution environments**
+  - Repeatable and reproducible
+  - Controlled and varied
+  - Local and in the cloud
+- {{< iconify fa6-solid lightbulb >}} **Use science and engineering to study system performance!**
+
+:::
+
+## How fast is this program?
+
+```{python}
+from typing import List
+def duplicates(input_list: List[int]) -> bool:
+    """Determine whether or not the input list contains a duplicate value."""
+    n = len(input_list)
+    for i in range(n):
+        for j in range(n):
+            if i != j and input_list[i] == input_list[j]:
+                return True
+    return False
+
+assert(duplicates([1,2,6,3,4,5,6,7,8]))
+assert(not duplicates([1,2,3,4]))
+print(duplicates([1,2,6,3,4,5,6,7,8]))
+print(not duplicates([1,2,3,4]))
+```
+
+::: {.fragment style="margin-top: -0.25em; font-size: 0.80em;"}
+
+- **Analytical evaluation**: prove performance characteristics
+- **Experimental evaluation**: measure performance in practice
+
+:::
+
+## Interact with `duplicates`
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 15
+from typing import List
+def duplicates(input_list: List[int]) -> bool:
+    """Determine whether or not the input list contains a duplicate value."""
+    n = len(input_list)
+    for i in range(n):
+        for j in range(n):
+            if i != j and input_list[i] == input_list[j]:
+                return True
+    return False
+
+assert(duplicates([1,2,6,3,4,5,6,7,8]))
+assert(not duplicates([1,2,3,4]))
+print(duplicates([1,2,6,3,4,5,6,7,8]))
+print(not duplicates([1,2,3,4]))
+```
+
+::: {.fragment style="margin-top: -0.25em; font-size: 0.80em;"}
+
+- **Important question**: is this function implemented correctly?
+
+:::
+
+## Create benchmark for `duplicates`
+
+```{python}
+from typing import Callable, List
+import time
+
+def timetrials(function: Callable, n: int, trials: int = 10) -> float:
+    """Time a function with an input of size n for trials number of times."""
+    totaltime = 0
+    for _ in range(trials):
+        start = time.time()
+        function(list(range(n)))
+        totaltime += time.time() - start
+    print("Average time =%10.7f (s) for n = %d" % (totaltime/trials, n))
+    return totaltime/trials
+```
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.80em;"}
+
+- `timetrial`: time a provided `function` with an input of size `n`
+- Use the `time.time` function to compute `start` for each trial
+- Compute the elapsed time using `totaltime += time.time() - start`
+- Use `print` to display the average time for `n` and return the average
+
+:::
+
+## Run benchmark for `duplicates`
+
+```{python}
+#| freeze: auto
+# conduct a doubling experiment for a provided function
+timings = []
+for n in [50, 100, 200, 400, 800, 1600, 3200]:
+    timings.append(timetrials(duplicates, n))
+```
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.85em;"}
+
+- {{< iconify game-icons team-idea >}} **Discuss in your teams:**
+    - When input size doubles, how does the execution time change?
+    - What is the likely worst-case time complexity of `duplicates`?
+    - What does this tell us about the performance of `duplicates`?
+
+:::
+
+## Examples of four programs to study through performance benchmarks
+
+- Terminal window shell like `bash` or `zsh`
+- Terminal prompt like `powerlevel10k` or `starship`
+- Web browser like `firefox` or `chrome`
+- Text editor like `vim` or `emacs`
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid microscope >}} How do we *characterize* the program and
+its execution environment? *...* How do we *compare* their performance in
+different configurations? *...* How do we *improve* their performance? *...*
+
+:::
+
+## Real-world performance evaluation
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **Characterize program and its execution environment?**
+  - How was the program implemented?
+  - What hardware runs in the execution environment?
+  - What software is installed on system and used by program?
+- {{< iconify fa6-solid gear >}} **Compare and improve the performance of the program?**
+  - What performance metrics are importance to measure?
+  - How to reliably measure a program's performance?
+  - What benchmarks will yield insights into performance?
+  - How to optimize the program to improve performance?
+
+:::
+
+## Wow, measuring and improving the performance of any complex program is very challenging! Why is that?
+
+::: {.fragment}
+
+- Differences in the execution environment
+- Difficulty in measuring the performance
+- Challenging to compare the performance
+- Hard to repeat and reproduce experiments
+- Results change as the program evolves
+- Caution needed to avoid over-optimization
+
+:::
+
+## Wait, what is the execution environment of a program?
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- Python interpreter version (e.g., Python 3.11 or Python 3.12)
+- Operating system (e.g., Linux, Windows, or macOS)
+- Hardware specifications (e.g., CPU and memory)
+- Installed libraries and their versions
+- Environment variables and configurations
+- Virtual environments or Docker containers
+- Power management settings on laptop
+- Network settings and connectivity
+
+:::
+
+## Learn more about algorithm analysis
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+{{< iconify fa6-solid book-open >}} Read chapters 1 and 2 in "[A First Course on
+Data Structures in Python](https://donsheehy.github.io/datastructures/)"
+
+:::
+
+::: {.column width="50%"}
+
+{{< iconify fa6-brands github >}} Overview the `ds2` package in
+[donsheehy/datastructures](https://github.com/donsheehy/datastructures) book and package code
+
+:::
+
+::::
+
+::: {.fragment .fade-down style="margin-top: -0.15em; font-size: 0.9em;"}
+
+- The FCDSP book is both "simple" and "complex"
+- Coverage of introductory topics:
+  - Python programming
+  - Object-oriented design
+  - Software testing
+- Data structures, algorithms, algorithmic paradigms
+- Experimental and theoretical analysis of performance
+
+:::
+
+## Algorithm analysis in the time of generative artificial intelligence
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- GitHub Copilot generates an algorithm or a data structure:
+  - Is the generated code correct and efficient?
+  - Can the generated code be optimized?
+  - Is the generated code easy to understand and maintain?
+  - Can you integrate the generated code into your system?
+  - Can you conduct experiments to evaluate performance?
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: -0.1em; font-size: 0.8em;"}
+
+{{< iconify fa6-solid lightbulb >}} Algorithm engineers who use software
+engineering tools, including code generators, are responsible for ensuring
+correctness and efficiency!
+
+:::
+
+# How can we accurately characterize the program's execution environment?
+
+- *Sensing* properties of a system with Python
+- *Characterizing* system performance with micro-benchmarks
+
+## Using the `systemsense` tool
+
+::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
+
+```{.text  code-line-numbers="false"}
+Commands
+benchmarkinfo: Benchmark the system used for experiments.
+completeinfo: Detect information about and then benchmark the system used for experiments.
+systeminfo: Detect all relevant information about the system used for experiments.
+```
+
+:::
+
+::: {.fragment .fade-up style="font-size: 0.9em;"}
+
+- `systeminfo`: use packages like `psutil` to collect relevant information
+about the execution environment, suitable for characterizing and comparing
+local and cloud-based systems
+- `benchmarkinfo`: use packages like `timeit` to run simple micro-benchmarks
+involving basic operations so as to characterize and compare baseline system
+performance
+- Tools: Install `python`, `mise`, `asdf`, and/or `devenv`, and `poetry`
+
+:::
+
+## Detecting CPU details
+
+```python
+def get_cpu() -> Dict[str, str]:
+    """Return information about the current CPU in the system."""
+    # detect the name of the function in
+    # which this source code exists
+    function_name = inspect.stack()[0][3]
+    # parse out the second part of the name after
+    # the underscore character
+    function_name = function_name.split("_")[1]
+    # create a dictionary with the function's
+    # purpose as the key and the value as
+    # the return of the function that collects it
+    return {function_name: str(platform.machine())}
+```
+
+::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- Use the `inspect` package to detect the name of the function
+- Use the `platform` package to detect the CPU architecture
+- Ensure that the function works in all execution environments!
+
+:::
+
+## Detecting disk details
+
+```python
+def get_disk() -> Dict[str, str]:
+    """Return disk space usage."""
+    function_name = inspect.stack()[0][3]
+    function_name = function_name.split("_")[1]
+    if platform.system() == constants.system.Windows:
+        total_disk = psutil.disk_usage("C:\\").total
+        used_disk = psutil.disk_usage("C:\\").used
+    else:
+        total_disk = psutil.disk_usage("/").total
+        used_disk = psutil.disk_usage("/").used
+    total_disk_gb = total_disk / (1024**3)
+    used_disk_gb = used_disk / (1024**3)
+    disk = f"Using {used_disk_gb:.2f} GB of {total_disk_gb:.2f} GB"
+    return {function_name: disk}
+```
+
+::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- Use the `psutil` package to detect disk usage details
+- Customize the function for different operating systems
+
+:::
+
+## Performing a micro-benchmark
+
+```{.python code-line-numbers="1-3|4-5|6-14|15|1-15"}
+def time_benchmark_concatenation(
+    repeat: int = 3, number: int = 100000, size: int = 100
+) -> Dict[str, str]:
+    """Time the benchmark_concatenation function."""
+    function_name = inspect.stack()[0][3].split(_)[2]
+    performance_list = timeit.repeat(
+        "benchmark.benchmark_concatenation(size)",
+        repeat=repeat,
+        setup=f"""
+from systemsense import benchmark
+size = {size}
+        """,
+        number=number,
+    )
+    return {function_name: str(performance_list)}
+```
+
+::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- Use `timeit` to benchmark string concatenation function
+- Call function subject to benchmarking multiple times
+
+:::
+
+## Important software and processes
+
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
+
+- **Algorithm Engineering Projects**
+  - Latest version of the Python programming language
+  - Use `mise` or `asdf` to manage Python versions
+  - Use `poetry` to manage Python packages
+  - Use `git` with instructor-provided repositories
+
+:::
+
+::: {.fragment .fade style="margin-top: -0.45em; font-size: 0.875em;"}
+
+- **Algorithm All-Hands Projects**
+  - Use the same tools as in the engineering projects
+  - Use `git` and GitHub flow on the course web site's repository
+  - Use `quarto` to render a preview of the course web site
+  - Use the Quarto VS Code extension to run code segments
+
+:::
+
+## You must have all of the required programs installed and running! Make sure that your tools work correctly!
+
+::: {.fragment .callout-note icon=true title="Tips for effective algorithm engineering"}
+
+- Devote time out of class to installing the necessary tools
+- Confirm that the tools work during the first lab session
+- Run and enhance all of the source code in the web site
+- Complete the first algorithm engineering project on time
+- Contribute to the first algorithm all-hands project
+- Prepare for the first algorithm engineering skill-check
+
+{{< iconify fa6-solid rocket >}} **Get ready for a challenging and exciting introduction to algorithmology!**
+
+:::
+
+## Overall goals of "algorithmology"
+
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
+
+- **Algorithm Engineering**:
+  - Design and implement algorithms and data structures
+  - Test all aspects of the system to ensure correctness
+  - Make a benchmark framework to measure performance
+- **Algorithm Evaluation**:
+  - Design experiments to answer research questions
+  - Conduct experiments and collect accurate data sets
+  - Analyze and visualize data to draw conclusions
+- **Communicate** the results and conclusion of algorithm evaluation
+- **Check syllabus for details about the Algorithm Analysis course!**
+
+:::

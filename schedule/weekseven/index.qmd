@@ -1,0 +1,42 @@
+---
+title: Stacks, Queues, and Deques
+description: "Explore Basic Abstract Data Types"
+date: 2025-02-22
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Exploration
+
+- {{< iconify fa6-solid book-open size=18px >}} Read chapters 6 and 7 in [A
+First Course on Data Structures in
+Python](https://donsheehy.github.io/datastructures/)
+- {{< iconify fa6-brands github size=18px >}} Try out the implementations of
+`Stack`, `Queue`, and `Deque` in the `ds2` package of
+[donsheehy/datastructures](https://github.com/donsheehy/datastructures/). Can
+you write your own tests cases for these data structures? Can you use these
+data structures in your own program?
+- {{< iconify fa6-solid book size=18px >}} Note that, along with chapter 8,
+chapter 7 will again be the focus for next week
+
+## Activities
+
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
+Stacks, Queues, and Deques
+  - Explore the concept of an abstract data type (ADT)
+  - Understand implementation trade-offs for stacks, queues, and deques
+  - Use asymptotic analysis to characterize performance of an ADT
+  - Enhance an ADT implementation with useful exception handling
+  - Examine Python source code segments to illustrate key points
+- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Continue
+algorithm engineering project four (see the [prior week](../weeksix/) for
+details about this project) and take mid-term examination one
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekseven/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Seven: Implementing Stack, Queues, and Deques](../../slides/weekseven/)
