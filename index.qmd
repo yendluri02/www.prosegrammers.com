@@ -132,7 +132,7 @@ for metric, value in summary.items():
     print(f"{metric.replace('_', ' ').title()}: {value}")
 ```
 
-## Resources for Your Document Engineering Adventure
+## Document Engineering Resources
 
 Ready to embark on your journey as a prosegrammer? Start exploring here:
 
@@ -150,11 +150,11 @@ programming skills and their ability to create exceptional documentation.
 Interested in connecting with other aspiring prosegrammers? Please join the
 [Prosegrammers Discord Server](https://discord.gg/5HdxuqjUvK) and join the
 conversation about document engineering, Python programming, and technical
-writing! If you are an on-campus learner at Allegheny College, you may also
-join the [Allegheny College Computer Science Discord
+writing! If you are an on-campus learner at Allegheny College, you may also join
+the [Allegheny College Computer Science Discord
 Server](https://discord.gg/CS2h9kXzX6). Finally, if you are an on-campus
-learner, you can schedule a meeting with the instructor during office hours by
-visiting the [Course Instructor's Appointment
+learner, you can schedule an office hours appointment by visiting the [Course
+Instructor's Appointment
 Scheduler](https://www.gregorykapfhammer.com/schedule/).
 
 :::
