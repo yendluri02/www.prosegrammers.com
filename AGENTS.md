@@ -220,12 +220,13 @@ contiguous.
 with a period.
 - **Comments:** Other comments start with a lowercase letter; preserve existing
 comments during refactoring.
-- **Imports:** Group imports in this order: standard library, third-party, local
-imports. Use absolute imports (`from pytest_brightest.module import`). Finally,
-make sure that all imports are placed at the top of the file. Do not place
-imports into the middle of a file or even at the start of a function or class.
-- **Formatting:** Use `ruff format` (line length 79 for lint, 88 for `isort`);
-trailing commas enabled.
+- **Imports:** Unless specified otherwise, do not use any imports that are not
+a part of the standard library. Specifically avoid using imports for packages
+that are available through PyPI or Conda. Use absolute imports whenever
+importing a module from the standard library or from provided source code.
+Finally, make sure that all imports are placed at the top of the file. Do not
+place imports into the middle of a file or at the start of a function or class.
+- **Formatting:** Confirm a line length of 79 for linting purposes.
 - **Types:** All functions must have type hints for parameters and return
 values.
 - **Naming:** snake_case for functions/variables, PascalCase for classes,
@@ -234,7 +235,6 @@ UPPER_SNAKE_CASE for constants.
 string paths.
 - **Error handling:** Use specific exceptions, not generic `Exception`; provide
 meaningful error messages.
-
 
 ## Agent Rules
 
