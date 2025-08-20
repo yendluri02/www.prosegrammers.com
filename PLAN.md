@@ -18,3 +18,39 @@ the focus of a course on document engineering.
 the `_quarto.yml` file.
 
 ## Support for Content
+
+### Support for Index.qmd Revision Content
+
+#### Definition and Etymology of "Prosegrammer"
+
+- The term "prosegrammer" effectively combines "prose" (written text) and
+"programmer" (software developer)
+- This portmanteau reflects the interdisciplinary nature of document engineering
+- Similar compound terms exist in technical fields (e.g., "bioinformatics"
+combines biology and informatics)
+
+#### Document Engineering as Academic Field
+
+- Document engineering is recognized as a legitimate academic discipline
+combining computer science and technical communication
+- Research in this field includes automated document generation, content
+management systems, and text analytics
+- Universities offer courses in technical writing, computational linguistics,
+and information design that align with document engineering principles
+
+#### Python for Document Processing
+
+- Python's string manipulation capabilities, regex support, and libraries like
+NLTK make it ideal for document analysis
+- The `string` module provides built-in methods for text cleaning and processing
+- Dictionary-based word frequency analysis is a standard technique in natural
+language processing and computational linguistics
+
+#### Document Analysis Metrics
+
+- Word count, sentence count, and readability metrics are standard measures in
+content analysis
+- The Flesch-Kincaid readability score and similar metrics rely on
+words-per-sentence calculations
+- Document summary statistics help technical writers assess and improve content
+quality
