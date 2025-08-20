@@ -28,17 +28,23 @@ listing:
 ### High-Level Overview
 
 - **Module One**: 
-  - **Topic**: Algorithm Analysis Foundations
+  - **Topic**: Document Engineering Foundations
   - **Weeks**: One through six
-  - **Chapters**: One through five in [A First Course on Data Structures in Python](https://donsheehy.github.io/datastructures/)
+  - **Topics**: 
+    - **Documentation**: Diataxis, README-driven development, Quarto
+    - **Engineering**: Python fundamentals, Git, GitHub, AI coding agents
 - **Module Two**:
-  - **Topic**: Algorithmic Building Blocks
+  - **Topic**: Document Engineering Building Blocks
   - **Weeks**: Seven through eleven
-  - **Chapters**: Six through fourteen in [A First Course on Data Structures in Python](https://donsheehy.github.io/datastructures/)
+  - **Topics**: 
+    - **Documentation**: Zettelkasten, Digital Gardens, Quarto
+    - **Engineering**: Intermediate Python programming, AI coding agents
 - **Module Three**:
-  - **Topic**: Advanced Data Structures
+  - **Topic**: Advanced Document Engineering
   - **Weeks**: Twelve through sixteen
-  - **Chapters**: Fifteen through twenty-one in [A First Course on Data Structures in Python](https://donsheehy.github.io/datastructures/)
+  - **Topics**: 
+    - **Documentation**: Reproducibility, Software Testing, Quarto
+    - **Engineering**: Advanced Python programming, AI coding agents
 
 ### Schedule Details
 
