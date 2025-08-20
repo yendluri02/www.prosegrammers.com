@@ -140,7 +140,19 @@ instance, the specified port is already in use. If you encounter this error,
 then you should consider manually specifying a different port or using the
 `quarto render` command for a specific Quarto-based Markdown file.
 
-## High-Level Rules
+## Command Reference
+
+Key commands for working with this Quarto project:
+
+- `quarto check` - Check for broken links and other issues
+- `quarto preview` - Start local development server
+- `quarto render` - Render specific files
+- `quarto preview <file.qmd>` - Preview specific slide deck or file
+
+Always use the command-line shell to execute these commands and verify
+successful completion.
+
+## Gemini Agent Rules
 
 These are the high-level rules about modifying the files in this repository:
 
