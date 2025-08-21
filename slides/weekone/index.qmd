@@ -1,7 +1,7 @@
 ---
-title: "Introduction to Algorithm Analysis"
-description: "How can we use Python packages to characterize the runtime environment used during experiments?"
-date: "2025-01-13"
+title: "Introduction to Document Engineering"
+description: "Exploring tools for document engineering with Python"
+date: "2025-08-25"
 date-format: long
 author: Gregory M. Kapfhammer
 execute:
@@ -18,216 +18,269 @@ format:
     footer: "Prosegrammers"
 ---
 
-# Algorithm analysis
+# Document engineering
 
 ::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
 
-- {{< iconify fa6-solid lightbulb >}} **What is algorithm analysis?**
-    - Data structures that organize data
-    - Algorithms that process data structures
-    - Experimental and theoretical analysis
-    - "Algorithmology" is both *science* and *engineering*
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
 
 :::
 
 ::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
 
 - {{< iconify fa6-solid lightbulb >}} **Why is it important?**
-    - System performance is critical
-        - Poor performance causes system failure
-        - Slow systems are not user-friendly
-        - Slow algorithms increase overall cost
+    - Documentation quality affects software success
+        - Poor docs cause user confusion
+        - Clear docs increase adoption
+        - Automated docs reduce maintenance cost
 
 :::
 
-## Algorithm analysis process
+## Becoming a prosegrammer
 
 ::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
 
-- {{< iconify fa6-solid gear >}} **Design, implement, and test**
-  - Data structures and algorithms
-  - Benchmark framework
-  - Data analysis tools
-- {{< iconify fa6-solid gear >}} **Create execution environments**
-  - Repeatable and reproducible
-  - Controlled and varied
-  - Local and in the cloud
-- {{< iconify fa6-solid lightbulb >}} **Use science and engineering to study system performance!**
+- {{< iconify fa6-solid gear >}} **Master Python programming**
+  - Text processing and analysis
+  - Document creation and manipulation
+  - Automation tools for writing
+- {{< iconify fa6-solid gear >}} **Create compelling documentation**
+  - Clear and professional writing
+  - Interactive documents with code
+  - Version control for documents
+- {{< iconify fa6-solid lightbulb >}} **Use science and engineering to analyze and improve documents!**
 
 :::
 
-## How fast is this program?
+## What does a prosegrammer do?
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- **Prose** (written word) meets **Programming** (software development)
+- Generate reports from data automatically
+- Build interactive documentation systems  
+- Create tools that transform and analyze text
+- Automate repetitive writing tasks
+- Analyze large collections of documents
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid microscope >}} How do we *create* better documents using
+code? *...* How do we *analyze* text data to gain insights? *...* How do we
+*automate* documentation workflows? *...*
+
+:::
+
+## Analyzing text with Python
 
 ```{python}
-from typing import List
-def duplicates(input_list: List[int]) -> bool:
-    """Determine whether or not the input list contains a duplicate value."""
-    n = len(input_list)
-    for i in range(n):
-        for j in range(n):
-            if i != j and input_list[i] == input_list[j]:
-                return True
-    return False
+from typing import Dict
+import string
 
-assert(duplicates([1,2,6,3,4,5,6,7,8]))
-assert(not duplicates([1,2,3,4]))
-print(duplicates([1,2,6,3,4,5,6,7,8]))
-print(not duplicates([1,2,3,4]))
+def word_frequency(text: str) -> Dict[str, int]:
+    """Analyze text and return a dictionary of word frequencies."""
+    cleaned_text = text.lower().translate(str.maketrans('', '', string.punctuation))
+    words = cleaned_text.split()
+    frequency_dict = {}
+    for word in words:
+        frequency_dict[word] = frequency_dict.get(word, 0) + 1
+    return frequency_dict
+
+# example text about document engineering
+sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill. Programming helps automate document creation."
+
+# analyze the text and display results
+word_counts = word_frequency(sample_text)
+print("Word Frequencies:")
+for word, count in sorted(word_counts.items()):
+    print(f"'{word}': {count}")
 ```
 
 ::: {.fragment style="margin-top: -0.25em; font-size: 0.80em;"}
 
-- **Analytical evaluation**: prove performance characteristics
-- **Experimental evaluation**: measure performance in practice
+- **Text analysis**: fundamental skill for prosegrammers
+- **Word frequency**: helps understand document content patterns
 
 :::
 
-## Interact with `duplicates`
+## Try the `word_frequency` function
 
 ```{pyodide}
 #| autorun: true
 #| max-lines: 15
-from typing import List
-def duplicates(input_list: List[int]) -> bool:
-    """Determine whether or not the input list contains a duplicate value."""
-    n = len(input_list)
-    for i in range(n):
-        for j in range(n):
-            if i != j and input_list[i] == input_list[j]:
-                return True
-    return False
+from typing import Dict
+import string
 
-assert(duplicates([1,2,6,3,4,5,6,7,8]))
-assert(not duplicates([1,2,3,4]))
-print(duplicates([1,2,6,3,4,5,6,7,8]))
-print(not duplicates([1,2,3,4]))
+def word_frequency(text: str) -> Dict[str, int]:
+    """Analyze text and return a dictionary of word frequencies."""
+    cleaned_text = text.lower().translate(str.maketrans('', '', string.punctuation))
+    words = cleaned_text.split()
+    frequency_dict = {}
+    for word in words:
+        frequency_dict[word] = frequency_dict.get(word, 0) + 1
+    return frequency_dict
+
+# example text about document engineering
+sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill. Programming helps automate document creation."
+
+# analyze the text and display results
+word_counts = word_frequency(sample_text)
+print("Word Frequencies:")
+for word, count in sorted(word_counts.items()):
+    print(f"'{word}': {count}")
 ```
 
 ::: {.fragment style="margin-top: -0.25em; font-size: 0.80em;"}
 
-- **Important question**: is this function implemented correctly?
+- **Important question**: what patterns do you notice in the word frequencies?
 
 :::
 
-## Create benchmark for `duplicates`
+## Advanced document analysis
 
 ```{python}
-from typing import Callable, List
-import time
+import re
+from typing import Dict, Any
 
-def timetrials(function: Callable, n: int, trials: int = 10) -> float:
-    """Time a function with an input of size n for trials number of times."""
-    totaltime = 0
-    for _ in range(trials):
-        start = time.time()
-        function(list(range(n)))
-        totaltime += time.time() - start
-    print("Average time =%10.7f (s) for n = %d" % (totaltime/trials, n))
-    return totaltime/trials
+def document_summary(text: str) -> Dict[str, Any]:
+    """Generate a comprehensive summary of document statistics."""
+    # count words (excluding punctuation-only tokens)
+    words = [word for word in text.split() if any(char.isalnum() for char in word)]
+    word_count = len(words)
+    # count sentences (simple approach using sentence-ending punctuation)
+    sentences = re.split(r'[.!?]+', text)
+    sentence_count = len([s for s in sentences if s.strip()])
+    # count paragraphs (assuming double newlines separate paragraphs)
+    paragraphs = [p for p in text.split('\n\n') if p.strip()]
+    paragraph_count = len(paragraphs)
+    # calculate averages for words and paragraphs
+    avg_words_per_sentence = word_count / sentence_count if sentence_count > 0 else 0
+    avg_sentences_per_paragraph = sentence_count / paragraph_count if paragraph_count > 0 else 0
+    return {
+        'word_count': word_count,
+        'sentence_count': sentence_count,
+        'paragraph_count': paragraph_count,
+        'avg_words_per_sentence': round(avg_words_per_sentence, 1),
+        'avg_sentences_per_paragraph': round(avg_sentences_per_paragraph, 1)
+    }
 ```
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.80em;"}
 
-- `timetrial`: time a provided `function` with an input of size `n`
-- Use the `time.time` function to compute `start` for each trial
-- Compute the elapsed time using `totaltime += time.time() - start`
-- Use `print` to display the average time for `n` and return the average
+- `document_summary`: analyzes text structure and readability
+- Uses `re` for sentence detection and string methods for word counting
+- Provides essential metrics for document quality assessment
 
 :::
 
-## Run benchmark for `duplicates`
+## Test document analysis tools
 
 ```{python}
 #| freeze: auto
-# conduct a doubling experiment for a provided function
-timings = []
-for n in [50, 100, 200, 400, 800, 1600, 3200]:
-    timings.append(timetrials(duplicates, n))
+# define an example document about prosegrammers
+sample_document = """
+Prosegrammers are skilled professionals who combine programming expertise with writing abilities. They create tools that help generate, analyze, and improve documents.
+
+Document engineering is an exciting field that leverages technology to enhance written communication. Python provides excellent libraries for text processing, making it an ideal language for prosegrammers.
+
+By mastering both code and prose, prosegrammers can automate repetitive writing tasks, analyze large collections of documents, and create dynamic content that adapts to different audiences.
+"""
+
+# analyze the document using the defined summary function
+summary = document_summary(sample_document.strip())
+print("Document Analysis Summary:")
+# display the results in a simple format
+for metric, value in summary.items():
+    print(f"{metric.replace('_', ' ').title()}: {value}")
 ```
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.85em;"}
 
 - {{< iconify game-icons team-idea >}} **Discuss in your teams:**
-    - When input size doubles, how does the execution time change?
-    - What is the likely worst-case time complexity of `duplicates`?
-    - What does this tell us about the performance of `duplicates`?
+    - What insights do these metrics provide about document readability?
+    - How could prosegrammers use these tools in real projects?
+    - What other document analysis features would be useful?
 
 :::
 
-## Examples of four programs to study through performance benchmarks
+## Examples of four tools that prosegrammers use for document engineering
 
-- Terminal window shell like `bash` or `zsh`
-- Terminal prompt like `powerlevel10k` or `starship`
-- Web browser like `firefox` or `chrome`
-- Text editor like `vim` or `emacs`
+- Text editor like VS Code or Vim for writing
+- Version control like Git for tracking document changes  
+- Documentation generator like Quarto or Sphinx
+- Static site generator like Hugo or Jekyll
 
 ::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
 
-{{< iconify fa6-solid microscope >}} How do we *characterize* the program and
-its execution environment? *...* How do we *compare* their performance in
-different configurations? *...* How do we *improve* their performance? *...*
+{{< iconify fa6-solid microscope >}} How do we *characterize* effective document
+tools? *...* How do we *compare* their features for different projects? *...*
+How do we *integrate* them into efficient workflows? *...*
 
 :::
 
-## Real-world performance evaluation
+## Real-world document engineering challenges
 
 ::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
 
-- {{< iconify fa6-solid gear >}} **Characterize program and its execution environment?**
-  - How was the program implemented?
-  - What hardware runs in the execution environment?
-  - What software is installed on system and used by program?
-- {{< iconify fa6-solid gear >}} **Compare and improve the performance of the program?**
-  - What performance metrics are importance to measure?
-  - How to reliably measure a program's performance?
-  - What benchmarks will yield insights into performance?
-  - How to optimize the program to improve performance?
+- {{< iconify fa6-solid gear >}} **Characterize documents and their creation process?**
+  - How are documents currently written and maintained?
+  - What tools and workflows are being used?
+  - What are the pain points in the current process?
+- {{< iconify fa6-solid gear >}} **Compare and improve document workflows?**
+  - What metrics matter for document quality and efficiency?
+  - How to measure the effectiveness of documentation?
+  - What tools will improve the writing and publishing process?
+  - How to optimize workflows to reduce manual effort?
 
 :::
 
-## Wow, measuring and improving the performance of any complex program is very challenging! Why is that?
+## Wow, creating and maintaining high-quality documentation for complex projects is very challenging! Why is that?
 
 ::: {.fragment}
 
-- Differences in the execution environment
-- Difficulty in measuring the performance
-- Challenging to compare the performance
-- Hard to repeat and reproduce experiments
-- Results change as the program evolves
-- Caution needed to avoid over-optimization
+- Different audiences need different formats
+- Documents must stay synchronized with code
+- Collaboration on documents is often difficult  
+- Maintaining consistency across large projects
+- Balancing automation with human creativity
+- Ensuring accessibility and usability
 
 :::
 
-## Wait, what is the execution environment of a program?
+## Wait, what is the document engineering environment?
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
-- Python interpreter version (e.g., Python 3.11 or Python 3.12)
-- Operating system (e.g., Linux, Windows, or macOS)
-- Hardware specifications (e.g., CPU and memory)
-- Installed libraries and their versions
-- Environment variables and configurations
-- Virtual environments or Docker containers
-- Power management settings on laptop
-- Network settings and connectivity
+- Text editor with syntax highlighting and extensions
+- Version control system (e.g., Git with GitHub)
+- Document format (e.g., Markdown, reStructuredText, LaTeX)
+- Static site generator (e.g., Quarto, Hugo, Jekyll)
+- Automation tools (e.g., GitHub Actions, pre-commit hooks)
+- Collaboration platforms and review workflows
+- Deployment targets (e.g., GitHub Pages, Netlify)
+- Package managers for dependencies
 
 :::
 
-## Learn more about algorithm analysis
+## Learn more about document engineering
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-{{< iconify fa6-solid book-open >}} Read chapters 1 and 2 in "[A First Course on
-Data Structures in Python](https://donsheehy.github.io/datastructures/)"
+{{< iconify fa6-solid book-open >}} Explore the [Quarto documentation](https://quarto.org/docs/) and [Python documentation](https://docs.python.org/)
 
 :::
 
 ::: {.column width="50%"}
 
-{{< iconify fa6-brands github >}} Overview the `ds2` package in
-[donsheehy/datastructures](https://github.com/donsheehy/datastructures) book and package code
+{{< iconify fa6-brands github >}} Review exemplary projects like [Django docs](https://github.com/django/django) and [FastAPI docs](https://github.com/tiangolo/fastapi)
 
 :::
 
@@ -235,195 +288,222 @@ Data Structures in Python](https://donsheehy.github.io/datastructures/)"
 
 ::: {.fragment .fade-down style="margin-top: -0.15em; font-size: 0.9em;"}
 
-- The FCDSP book is both "simple" and "complex"
-- Coverage of introductory topics:
-  - Python programming
-  - Object-oriented design
-  - Software testing
-- Data structures, algorithms, algorithmic paradigms
-- Experimental and theoretical analysis of performance
+- Document engineering requires both technical and writing skills
+- Key areas of focus:
+  - Python programming and text processing
+  - Markdown and markup languages  
+  - Version control for documents
+  - Automation and workflow optimization
+- Analysis of document quality and user experience
 
 :::
 
-## Algorithm analysis in the time of generative artificial intelligence
+## Document engineering in the time of generative artificial intelligence
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
-- GitHub Copilot generates an algorithm or a data structure:
-  - Is the generated code correct and efficient?
-  - Can the generated code be optimized?
-  - Is the generated code easy to understand and maintain?
-  - Can you integrate the generated code into your system?
-  - Can you conduct experiments to evaluate performance?
+- AI tools like GitHub Copilot, Google Gemini CLI, or Claude generate content:
+  - Is the generated text accurate and well-written?
+  - Can the generated content be improved and personalized?
+  - Is the generated text clear, accessible, and appropriate?
+  - Can you integrate AI-generated content into your workflow?
+  - Can you maintain quality standards while using AI assistance?
 
 :::
 
 ::: {.fragment .fade .boxed-content style="margin-top: -0.1em; font-size: 0.8em;"}
 
-{{< iconify fa6-solid lightbulb >}} Algorithm engineers who use software
-engineering tools, including code generators, are responsible for ensuring
-correctness and efficiency!
+{{< iconify fa6-solid lightbulb >}} Prosegrammers who use AI writing and coding
+tools are responsible for ensuring quality, accuracy, and ethical standards!
 
 :::
 
-# How can we accurately characterize the program's execution environment?
+# How can we setup an effective document engineering environment?
 
-- *Sensing* properties of a system with Python
-- *Characterizing* system performance with micro-benchmarks
+- *Installing* essential tools for prosegrammers
+- *Configuring* development environment for document work
 
-## Using the `systemsense` tool
+## Essential tools for prosegrammers
 
 ::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
 
 ```{.text  code-line-numbers="false"}
-Commands
-benchmarkinfo: Benchmark the system used for experiments.
-completeinfo: Detect information about and then benchmark the system used for experiments.
-systeminfo: Detect all relevant information about the system used for experiments.
+Tools for Document Engineering
+Terminal: Command-line interface for running tools and scripts
+Git: Version control for tracking document changes
+GitHub: Cloud platform for collaboration and hosting
+VS Code: Text editor with extensions for writing and coding
 ```
 
 :::
 
 ::: {.fragment .fade-up style="font-size: 0.9em;"}
 
-- `systeminfo`: use packages like `psutil` to collect relevant information
-about the execution environment, suitable for characterizing and comparing
-local and cloud-based systems
-- `benchmarkinfo`: use packages like `timeit` to run simple micro-benchmarks
-involving basic operations so as to characterize and compare baseline system
-performance
-- Tools: Install `python`, `mise`, `asdf`, and/or `devenv`, and `poetry`
+- **Terminal**: Essential for running command-line tools, executing scripts,
+and automating document workflows. Available on all operating systems (Windows
+Terminal, macOS Terminal, or Linux terminal emulators).
+- **Git and GitHub**: Industry-standard version control and collaboration
+platform for tracking changes in documents and code, enabling team-based
+writing and review workflows.
+- **Testing**: Run `git --version` and create a test repository on GitHub
 
 :::
 
-## Detecting CPU details
+## Installing UV and Python
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **UV: Modern Python package and project manager**
+  - Install from [astral-sh.github.io/uv](https://astral-sh.github.io/uv/)
+  - Cross-platform: `curl -LsSf https://astral.sh/uv/install.sh | sh` (Unix)
+  - Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
+- {{< iconify fa6-solid gear >}} **Python 3.12+ via UV (recommended approach)**
+  - Use `uv python install 3.12` to install Python
+  - Create virtual environments with `uv venv`
+  - Install packages with `uv add package-name`
+- {{< iconify fa6-solid lightbulb >}} **Why UV for prosegrammers?** Fast, reliable dependency management and virtual environment handling!
+
+:::
+
+## Setting up VS Code for document engineering
 
 ```python
-def get_cpu() -> Dict[str, str]:
-    """Return information about the current CPU in the system."""
-    # detect the name of the function in
-    # which this source code exists
-    function_name = inspect.stack()[0][3]
-    # parse out the second part of the name after
-    # the underscore character
-    function_name = function_name.split("_")[1]
-    # create a dictionary with the function's
-    # purpose as the key and the value as
-    # the return of the function that collects it
-    return {function_name: str(platform.machine())}
+# Example VS Code extensions for prosegrammers
+extensions = [
+    "ms-python.python",           # Python development
+    "quarto.quarto",             # Quarto documents
+    "yzhang.markdown-all-in-one", # Markdown editing
+    "ms-vscode.vscode-json",     # JSON configuration
+    "github.vscode-github-actions", # GitHub workflow editing
+]
 ```
 
 ::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
 
-- Use the `inspect` package to detect the name of the function
-- Use the `platform` package to detect the CPU architecture
-- Ensure that the function works in all execution environments!
+- Install VS Code from [code.visualstudio.com](https://code.visualstudio.com/)
+- Use built-in extension marketplace to install prosegrammer tools
+- **Testing**: Create a `.qmd` file and verify syntax highlighting works
 
 :::
 
-## Detecting disk details
+## Installing Quarto for dynamic documents
 
-```python
-def get_disk() -> Dict[str, str]:
-    """Return disk space usage."""
-    function_name = inspect.stack()[0][3]
-    function_name = function_name.split("_")[1]
-    if platform.system() == constants.system.Windows:
-        total_disk = psutil.disk_usage("C:\\").total
-        used_disk = psutil.disk_usage("C:\\").used
-    else:
-        total_disk = psutil.disk_usage("/").total
-        used_disk = psutil.disk_usage("/").used
-    total_disk_gb = total_disk / (1024**3)
-    used_disk_gb = used_disk / (1024**3)
-    disk = f"Using {used_disk_gb:.2f} GB of {total_disk_gb:.2f} GB"
-    return {function_name: disk}
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **Quarto: Scientific and technical publishing**
+  - Download from [quarto.org](https://quarto.org/docs/get-started/)
+  - Cross-platform installer available for Windows, macOS, Linux
+  - Combines code, text, and visualizations in documents
+- {{< iconify fa6-solid gear >}} **VS Code Quarto extension**
+  - Install the official Quarto extension in VS Code
+  - Enables live preview and code execution in `.qmd` files
+  - Provides syntax highlighting and auto-completion
+- {{< iconify fa6-solid lightbulb >}} **Why Quarto for prosegrammers?** Create reproducible, interactive documents that blend prose and programming!
+
+:::
+
+## Node.js tools for prosegrammers
+
+```bash
+# Install Node.js and npm from nodejs.org
+# Then use npx to run tools without permanent installation
+npx @google/generative-ai-cli --version  # Google Gemini CLI
+npx opencode --version                   # OpenCode AI assistant
 ```
 
 ::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
 
-- Use the `psutil` package to detect disk usage details
-- Customize the function for different operating systems
+- **Node.js**: JavaScript runtime enabling web-based documentation tools
+- **NPX**: Run packages without installing globally, keeps system clean
+- **Testing**: Run `node --version` and `npm --version` to verify installation
 
 :::
 
-## Performing a micro-benchmark
+## GitHub Student Benefits and Copilot
 
-```{.python code-line-numbers="1-3|4-5|6-14|15|1-15"}
-def time_benchmark_concatenation(
-    repeat: int = 3, number: int = 100000, size: int = 100
-) -> Dict[str, str]:
-    """Time the benchmark_concatenation function."""
-    function_name = inspect.stack()[0][3].split(_)[2]
-    performance_list = timeit.repeat(
-        "benchmark.benchmark_concatenation(size)",
-        repeat=repeat,
-        setup=f"""
-from systemsense import benchmark
-size = {size}
-        """,
-        number=number,
-    )
-    return {function_name: str(performance_list)}
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **GitHub Student Developer Pack**
+  - Free access to premium developer tools and services
+  - Apply at [education.github.com](https://education.github.com/pack)
+  - Requires verification with .edu email or student ID
+- {{< iconify fa6-solid gear >}} **GitHub Copilot Pro for Students**
+  - AI-powered code completion and generation
+  - Free for verified students and educators
+  - Integrates with VS Code and other editors
+- {{< iconify fa6-solid lightbulb >}} **Why GitHub tools for prosegrammers?** Essential for collaborative document development and AI-assisted writing!
+
+:::
+
+## Testing your prosegrammer setup
+
+```bash
+# Essential verification commands
+git --version                    # Check Git installation
+python --version                 # Check Python (via UV)
+quarto --version                # Check Quarto installation
+code --version                  # Check VS Code installation
+uv --version                    # Check UV package manager
 ```
 
 ::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
 
-- Use `timeit` to benchmark string concatenation function
-- Call function subject to benchmarking multiple times
+- **Test each tool individually** before starting projects
+- **Create a test document** with code and text to verify integration
+- **Consult documentation** links when troubleshooting: [UV docs](https://docs.astral.sh/uv/), [Quarto docs](https://quarto.org/docs/), [VS Code docs](https://code.visualstudio.com/docs)
 
 :::
 
-## Important software and processes
+## Important tools and workflows for prosegrammers
 
 ::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
 
-- **Algorithm Engineering Projects**
-  - Latest version of the Python programming language
-  - Use `mise` or `asdf` to manage Python versions
-  - Use `poetry` to manage Python packages
-  - Use `git` with instructor-provided repositories
+- **Document Engineering Projects**
+  - Latest version of Python via UV package manager
+  - Use UV to manage virtual environments and dependencies
+  - Use Git with instructor-provided document repositories
+  - Create, edit, and preview documents with Quarto and VS Code
 
 :::
 
 ::: {.fragment .fade style="margin-top: -0.45em; font-size: 0.875em;"}
 
-- **Algorithm All-Hands Projects**
-  - Use the same tools as in the engineering projects
-  - Use `git` and GitHub flow on the course web site's repository
-  - Use `quarto` to render a preview of the course web site
-  - Use the Quarto VS Code extension to run code segments
+- **Collaborative Document Projects**
+  - Use the same tools as in individual projects
+  - Use Git and GitHub flow for collaborative writing workflows
+  - Use Quarto to render previews of shared documentation
+  - Use VS Code extensions to run and test code segments in documents
 
 :::
 
-## You must have all of the required programs installed and running! Make sure that your tools work correctly!
+## You must have all required tools installed and working! Make sure your document engineering setup is functional!
 
-::: {.fragment .callout-note icon=true title="Tips for effective algorithm engineering"}
+::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
 
-- Devote time out of class to installing the necessary tools
-- Confirm that the tools work during the first lab session
-- Run and enhance all of the source code in the web site
-- Complete the first algorithm engineering project on time
-- Contribute to the first algorithm all-hands project
-- Prepare for the first algorithm engineering skill-check
+- Devote time outside class to installing and configuring tools
+- Confirm that all tools work during the first lab session
+- Create and render test documents with the provided examples
+- Complete the first document engineering project on time
+- Contribute to collaborative documentation projects
+- Prepare for technical skill demonstrations
 
-{{< iconify fa6-solid rocket >}} **Get ready for a challenging and exciting introduction to algorithmology!**
+{{< iconify fa6-solid rocket >}} **Get ready for an exciting journey into document engineering!**
 
 :::
 
-## Overall goals of "algorithmology"
+## Overall goals of "document engineering"
 
 ::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
 
-- **Algorithm Engineering**:
-  - Design and implement algorithms and data structures
-  - Test all aspects of the system to ensure correctness
-  - Make a benchmark framework to measure performance
-- **Algorithm Evaluation**:
-  - Design experiments to answer research questions
-  - Conduct experiments and collect accurate data sets
-  - Analyze and visualize data to draw conclusions
-- **Communicate** the results and conclusion of algorithm evaluation
-- **Check syllabus for details about the Algorithm Analysis course!**
+- **Document Creation**:
+  - Design and implement document generation workflows
+  - Test all aspects of documents to ensure quality and accuracy
+  - Create frameworks for automated document production
+- **Document Analysis**:
+  - Design experiments to answer questions about document effectiveness
+  - Collect and analyze data about document usage and quality
+  - Visualize insights to improve documentation strategies
+- **Communicate** results and best practices for document engineering
+- **Check syllabus for details about the Document Engineering course!**
 
 :::
