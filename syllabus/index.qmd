@@ -95,13 +95,10 @@ at Allegheny College.
 Allegheny College’s educational program is designed so that its graduates are able to:
 
 - **AC-1**: Think critically and creatively.
-
 - **AC-2**: Communicate clearly and persuasively as speakers and writers.
-
 - **AC-3**: Invoke multiple ways of understanding to organize and evaluate
 evidence, and to interpret and make sense of their experiences and the
 experiences of others.
-
 - **AC-4**: Apply their knowledge and learning to engage in informed debate,
 and to analyze and solve problems.
 
@@ -208,11 +205,29 @@ to complete the examination.
 
 ::: {.callout-note appearance="minimal" title="Additional Assessment Details" collapse="false"}
 
-- **Class Participation**: three total reports available at conclusion of the
+- **Class Participation**: Grade reported at conclusion of each of the three
+course modules.
+
+- **Final Executable Examination**: Grade automatically reported at end of
+examination period.
+
+- **Document Engineering Skill-Checks**: Grade automatically reported at end of
+a Friday classroom session; there are two skill-check assessments for each of the
 three course modules.
 
-- **Final Executable Examination**: grade automatically reported at end of
-examination period.
+- **Document Engineering Knowledge-Checks**: Grade reported at conclusion of a
+course module; there is one in-person knowledge-check assessment for each of
+the three course modules.
+
+- **Document Engineering Presentations**: There are two types of these
+team-based presentations: Document Engineering Concept Overviews (DECO) and
+Document Engineering Project Critiques (DEPC). A grade is reported one-week
+after the completion of the presentation for both the presenting team and the
+evaluation team. For their DECO and DEPC work, each student will receive
+**three** assessments for presentations and **three** assessments for their
+evaluations.
+
+- **Document Engineering Tool Building Projects**: There are two types of these
 
 :::
 
