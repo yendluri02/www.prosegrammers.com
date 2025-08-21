@@ -252,7 +252,10 @@ file but you should follow them for whatever slide you are working on.
 
 **Important**: Always complete this verification process before finalizing slides.
 The visual presentation quality directly affects the effectiveness of course
-delivery and student engagement.
+delivery and student engagement. If you make any temporary files, like the
+slide-verify.png file, please make sure to "clean up" after yourself by
+deleting that file --- and only that file --- after you have verified that
+the layout is correct and that you have followed all of these standards.
 
 ## High-Level Rules
 
