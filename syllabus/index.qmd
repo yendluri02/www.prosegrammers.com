@@ -108,7 +108,7 @@ and to analyze and solve problems.
 Computer Science 104 at Allegheny College is a course taken by all Software
 Engineering majors and often taken by many students who major or minor in
 Computer Science, Data Science, or Informatics. Graduates with the Software
-Engineering major --- who all take the Computer Science 202 course --- must
+Engineering major --- who all take the Computer Science 104 course --- must
 demonstrate their attainment of these learning objectives:
 
 - **SE-1**: While working in a team, can effectively design, implement,
@@ -121,7 +121,7 @@ a software engineering project.
 - **SE-4**: Uses effective oral and written communication methods to explain
 both the technical and product-use details of a software artifact.
 
-The specific learning objectives for Computer Science 202 are as follows:
+The specific learning objectives for Computer Science 104 are as follows:
 
 - **CS-104-1**: Describe and explain processes such as software installation or
 design for a variety of technical and non-technical audiences ranging from
