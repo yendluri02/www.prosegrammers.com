@@ -199,18 +199,52 @@ quarto check
 
 This command will check for broken links, missing resources, and other potential problems.
 
-### Previewing the Site
+### Verifying Slide Layout and Presentation Quality
 
-To preview the entire website locally, use the Bash tool to run:
+Before completing slide creation, verify that slides meet presentation standards
+and layout guidelines. Slides must be visually verified to ensure proper
+formatting and readability in presentation mode.
 
-```bash
-quarto preview
-```
+#### Step-by-Step Slide Verification Process
 
-This will start a local web server and open the site in a browser. The site will
-automatically reload when you make changes to the source files. If you encounter
-a port-in-use error, consider manually specifying a different port or using the
-`quarto render` command for a specific Quarto-based Markdown file.
+1. **Render slides to HTML format**:
+   ```bash
+   quarto render slides/weekone/index.qmd
+   ```
+
+2. **Start local preview server**:
+   ```bash
+   quarto preview slides/weekone/index.qmd --port 8081
+   ```
+
+3. **Visual verification checklist**:
+   - Navigate through each slide using arrow keys or slide controls
+   - Verify titles fit on one line (or maximum two lines if necessary)
+   - Check that content does not overflow slide boundaries
+   - Ensure font sizes are readable and appropriate
+   - Confirm fragments and incremental content display correctly
+   - Verify icons and formatting render properly
+
+4. **Title length verification**:
+   - Titles should fit on a single line at 1920x1080 resolution
+   - If title spans two lines, it must fill those lines nearly completely
+   - Use concise, descriptive titles (prefer "Essential tools" over "Four 
+     essential document engineering tools")
+
+5. **Content overflow check**:
+   - Ensure bullet points, code blocks, and text fit within slide boundaries
+   - Check that boxed content and fragments are properly positioned
+   - Verify code examples display without horizontal scrolling
+
+6. **Cross-browser compatibility** (optional but recommended):
+   ```bash
+   chromium-browser --headless --disable-gpu --window-size=1920,1080 \
+     --screenshot=slide-verify.png http://localhost:8081/slides/weekone/index.html
+   ```
+
+**Important**: Always complete this verification process before finalizing slides.
+The visual presentation quality directly affects the effectiveness of course
+delivery and student engagement.
 
 ## High-Level Rules
 
