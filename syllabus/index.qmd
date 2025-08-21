@@ -45,20 +45,21 @@ necessity, the meeting before yours may run late.
 
 ### Course Description
 
-A study of fundamental methods for designing and implementing algorithms and
-analyzing their efficiency. While developing expertise in select models of
-computation and the key mathematical and experimental approaches to studying
-algorithm efficiency, students investigate different types of algorithms through
-hands-on activities that often require teamwork. Students also learn how to
-determine whether a problem can be efficiently solved by an algorithm that is
-implemented as a computer program. During a weekly laboratory session students
-use state-of-the-art technology to complete projects, reporting on their results
-through both written documents and oral presentations. Students are invited to
-use their own departmentally approved laptop in this course; a limited number of
-laptops are available for use during class and lab sessions.
+An introduction to creation of effective documents and documentation using
+industry-standard approaches to creating and treating “documentation as code.”
+Participating in project-based and hands-on activities, students create
+purpose-driven digital writing with special attention to forms, formats, and
+conventions expected of contemporary technical communication. Students also gain
+experience with creating collaborative and ethically-consistent content working
+in a team-based setting. During a weekly laboratory session students employ
+contemporary software tools to complete technical documentation projects,
+reporting on their results through both written reflections and oral
+presentations. Students are invited to use their own departmentally approved
+laptop in this course; a limited number of laptops are available for use during
+class and lab sessions. 
 
-- **Prerequisite**: CMPSC 101
-- **Distribution Requirements**: QR, SP
+- **Prerequisite**: None
+- **Distribution Requirements**: HE, SP
 
 ::: {.callout-note appearance="minimal" title="Explaining the Distribution Requirements" collapse="false"}
 
