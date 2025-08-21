@@ -17,6 +17,40 @@ the focus of a course on document engineering.
 - [X] Give the correct link to the discord server, which is specified in
 the `_quarto.yml` file.
 
+### Create Slides for Week One in `slides/weekone/index.qmd`
+
+- [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
+explains the theme of the course on document engineering.
+- [ ] Review the content in the `index.qmd` file in the root of the repository
+that explains the idea of a "Prosegrammer" and the concept of document
+engineering.
+- [ ] Following the guidelines for creating slides, translate the content
+in the `index.qmd` in the root of the repository to slides that introduce
+the course in the `slides/weekone/index.qmd` file.
+- [ ] After finishing the slides that introduce the course, create more slides
+that introduce the following technologies and explain how to install them:
+    - Terminal window
+    - Git, GitHub, and GitHub CLI (i.e., `gh`)
+    - Register for a free GitHub Student Developer Pack
+    - Register for the free use of GitHub Copilot at the pro level
+    - VS Code
+    - `uv` (stress the use of `uv` for venvs, dependencies, and Python installation)
+    - Python 3.12 or 3.13 (which should come from using the `uv` tool)
+    - Quarto
+    - Quarto extension for VS Code
+    - Customize VS Code by picking a theme and installing extensions
+    - Npm and Node.js and all affiliated tools like `npx`
+    - 
+- [ ] Ensure that the instructions in the slides from the previous step will
+work correctly regardless of the operating system (Windows, MacOS, Linux).
+- [ ] Ensure that the instructions for installing each of the aforementioned
+tools clearly explain what the tool does, why it is important, and how it
+can help a prosegrammer to create, maintain, and analyze documents.
+- [ ] Ensure that the instructions for installing each of the aforementioned
+tools stress the importance of testing the setup to make sure that they are
+working. There should be links to online documentation that a learner can
+read if they have trouble installing or testing any of the tools.
+
 ## Support for Content
 
 ### Support for Index.qmd Revision Content
