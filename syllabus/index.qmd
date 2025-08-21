@@ -137,9 +137,9 @@ the Software Engineering program learning objectives that in turn support the
 attainment of the College's learning objectives. Throughout this course, the
 instructor will reference these learning objectives, connect them to the course
 activities, and invite students to reflect on their attainment of them. In
-addition to administering an assessment of learning objective attainment through
-the final examination, the course instructor will ask students to complete a
-self assessment of their attainment of these learning objectives.
+addition to administering an assessment of learning objective attainment as a
+part of the final examination, the course instructor will ask students to
+complete a self assessment of their attainment of these learning objectives.
 
 ### Course Policies
 
