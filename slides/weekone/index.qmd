@@ -209,7 +209,7 @@ for metric, value in summary.items():
 
 :::
 
-## Examples of four tools that prosegrammers use for document engineering
+## Four essential document engineering tools
 
 - Text editor like VS Code or Vim for writing
 - Version control like Git for tracking document changes  
