@@ -351,7 +351,7 @@ assessments.
 ### Weekly Cadence
 
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
-  - Document engineering deep-dive presentations by instructor
+  - Document engineering deep-dive presentations by the course instructor
   - Technical and engineering knowledge and skills in the field of document
   engineering
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
@@ -377,20 +377,19 @@ assessment policies:
 ##### Assignment Submission
 
 All assignments will have a stated due date shared through GitHub, GitHub
-Classroom, and/or the [Algorithmology Discord](https://discord.gg/YHjhQaBnme).
+Classroom, and/or the [Document Engineering Discord](https://discord.gg/5HdxuqjUvK).
 No credit will be awarded for any course work that you submit to the incorrect
-GitHub repository or web site. Unless special advance arrangements are made with
+GitHub repository or website. Unless special advance arrangements are made with
 the instructor to address extenuating circumstances or a student pays a document
 engineering token, no work will be accepted after the deadline.
 
 ##### Assignment Evaluation
 
 Using a report that the instructor shares with you through your GitHub
-repositories devoted to work in the field of algorithm analysis, you will
-privately receive a grade for and feedback on your course projects. Your grade
-will be a function of whether or not you (a) completed work that fulfills the
-project's specification and (b) submitted it by the deadline to the stated
-platform.
+repositories devoted to work in the field of document engineering, you will
+privately receive a grade for and feedback on your projects. Your grade will be
+a function of whether or not you (a) completed work that fulfills the project's
+specification and (b) submitted it by the deadline to the stated platform.
 
 ##### Document Engineering Tokens
 
@@ -401,17 +400,18 @@ either a document engineering skill-check or knowledge-check. Students cannot
 use a token for the final executable examination, a DECO presentation or
 evaluation, a DEPC presentation or evaluation, or any part of any phase of a
 document engineering tool-building project. Outside of using these five tokens
-or severe, extenuating, and unexpected circumstances that are well documented,
-the instructor will not grant any requests for extensions or assignment
-re-reassessments.
+--- or severe, extenuating, and unexpected circumstances that are well
+documented --- the instructor will not grant any requests for extensions or
+assignment re-reassessments.
 
 ##### Course Attendance
 
 It is mandatory for all students to attend every one of the course sessions. If,
-due to extenuating circumstances, you will not be able to attend a session,
-then, whenever possible, please communicate with the instructor at least one
-week in advance to describe your situation. Students who have any signs of
-illness should not attend any in-person course sessions.
+due to extenuating circumstances beyond your reasonable control, you will not be
+able to attend a session, then, whenever possible, please communicate with the
+instructor at least one week in advance to describe your situation. Students who
+have any signs of illness should not attend any of the in-person course or
+laboratory sessions.
 
 ##### Class Preparation
 
@@ -427,8 +427,7 @@ class discussions. To help students remain organized and to effectively prepare
 for classes, the instructor will maintain a list of [course
 slides](../slides/index.qmd) and a [course schedule](../schedule/index.qmd)
 with reading assignments, programming suggestions, and other important
-information about the course (e.g., references to the algorithm engineering
-projects).
+information about the course.
 
 #### Seeking Assistance
 
@@ -452,15 +451,16 @@ Server](https://discord.gg/CS2h9kXzX6).
 This course will primarily use GitHub and Discord for all course communication.
 We will use GitHub for the sharing of both source code and documentation for
 course projects and for reporting issues in those materials. We will use two
-distinct Discord servers for all course discussions. The [Document
-Engineering Discord Server](https://discord.gg/5HdxuqjUvK) provides a way for
-members of the developer development community to use text and video to chat
-with each other and will be the main forum for discussing the professional and
-technical content in the field of algorithm analysis. The [Allegheny College
-Computer Science Discord Server](https://discord.gg/CS2h9kXzX6) will be the main
-forum for Department of Computer Science announcements. Finally, any content
-that a student wants the instructor to assess (e.g., the work for an algorithm
-engineering project) must be in a GitHub repository.
+distinct Discord servers for all course discussions. The [Document Engineering
+Discord Server](https://discord.gg/5HdxuqjUvK) provides a way for members of the
+document engineering community to use text and video to chat with each other and
+will be the main forum for discussing the professional and technical content in
+the field of this course. The [Allegheny College Computer Science Discord
+Server](https://discord.gg/CS2h9kXzX6) will be the main forum for Department of
+Computer and Information Science announcements. Finally, any content that a
+student wants the instructor to assess (e.g., the work for a document
+engineering tool building project) must be in a GitHub repository created by a
+GitHub Classroom affiliated link.
 
 #### Using Email
 
@@ -470,7 +470,7 @@ instructor will sometimes use email to send announcements about important
 matters such as changes in the schedule. It is your responsibility to check your
 email at least once a day and to ensure that you can reliably send and receive
 emails. This class policy is based on the statement about the use of email that
-appears in *The Compass*, the College's student handbook; please see the course
+appears in *The Compass*, the College's student handbook; please see the
 instructor if you do not have this handbook.
 
 #### Honor Code
@@ -479,10 +479,10 @@ The Allegheny College Academic bulletin describes The Academic Honor Program
 that governs the entire academic program at Allegheny College. The Honor Program
 applies to all work that is submitted for academic credit or to meet non-credit
 requirements for graduation at Allegheny College. This includes all work
-assigned for this class (e.g., executable examinations and course assignments).
-All students who have enrolled in the College will work under the Honor Program.
-Each student who matriculates at the College acknowledges this Honor Code
-pledge:
+assigned for this class (e.g., skill checks, knowledge checks, executable
+examinations, and course projects). All students who have enrolled in the
+College will work under the Honor Program. Each student who matriculates at the
+College acknowledges this Honor Code pledge:
 
 > I hereby recognize and pledge to fulfill my responsibilities, as
 > defined in the Honor Code, and to maintain the integrity of both
@@ -498,26 +498,29 @@ frameworks, automated debuggers, and code generators (e.g., systems that
 leverage large language models like GitHub Copilot) and documentation sites such
 as StackOverflow, they must take final responsibility for all of the source code
 and documentation that they submit for this course, including artifacts that are
+automatically generated by a software tool like an AI coding assistant such as
+Gemini or OpenCode.
+
+This policy means that every student must work as an effective documentation
+engineer by documenting the sources for their work and verifying the
+correctness, maintainability, and long-term reliability of all source code and
+documentation that they submit. As such, students who use software tools to
+create content are responsible for citing their sources and demonstrating their
+understanding of it as a part of any follow-on assessment. Moreover, all
+students in the class are responsible for all of the source code and
+documentation submitted to the GitHub repository that hosts the course projects,
+including any tool-generated software artifacts. This means that every student
+should be able to answer questions, during either an in-person or online
+discussion, about any document engineering content, including that which was
 automatically generated by a software tool.
 
-This means that every student must work as an effective algorithm engineer by
-documenting the sources for their work and verifying the correctness,
-maintainability, and long-term reliability of all source code and documentation
-that they submit. As such, students who use software tools to create content are
-responsible for citing their sources and demonstrating their understanding of it
-as a part of any follow-on assessment. Moreover, all students in the class are
-responsible for all of the source code and documentation submitted to the GitHub
-repository that hosts the course projects, including any tool-generated software
-artifacts. This means that every student should be able to answer questions,
-during either an in-person or online discussion, about any algorithm engineering
-content, including that which was automatically generated by a software tool.
-
-Students who are effective algorithm engineers also pledge to abide by the [ACM
-Code of Ethics and Professional Conduct](https://www.acm.org/code-of-ethics).
-Unless the students in this course furnish a different governing contract, they
-also pledge to follow the principles espoused by exemplary technical
-organizations, such as [Oxide Computer](https://oxide.computer/) and its public
-statement of [mission and principles](https://oxide.computer/principles).
+Students who are effective algorithm engineers also pledge to abide by the
+[ACM Code of Ethics and Professional
+Conduct](https://www.acm.org/code-of-ethics). Unless the students in this course
+furnish a different governing contract, they also pledge to follow the
+principles espoused by exemplary technical organizations, such as [Oxide
+Computer](https://oxide.computer/) and its public statement of [mission and
+principles](https://oxide.computer/principles).
 
 #### Disability Services
 
@@ -535,9 +538,10 @@ Mythical Man Month* that "the magic of myth and legend has come true in our
 time." Software is a pervasive aspect of our society that changes how we think
 and act. High quality and efficient software also has the potential to
 positively influence the lives of many people. Let's embark on this journey of
-discovery and innovation, harnessing the power of algorithms to efficiently
-solve complex problems with software. At the start of this class, I invite you
-to join together in an adventure in algorithm analysis!
+discovery and innovation, as we learn how to become "prosegrammers" who can
+harness the power of software and its top-notch documentation. At the start of
+this class, I invite you to join together in an adventure in document
+engineering!
 
 ::: {.callout-note appearance="minimal" title="External Learners"}
 
