@@ -343,81 +343,30 @@ assessments.
 #### Important Dates
 
 - **Final Executable Examination**
-    - **Examination Code**: D
-    - **Date**: May 2, 2025
+    - **Examination Code**: G
+    - **Date**: Wednesday, December 10, 2025
     - **Time**: 9:00 AM -- 12:00 Noon
     - **Location**: Alden 109
 
 ### Weekly Cadence
 
-- {{< iconify fa6-solid people-line size=18px >}} **Monday**:
-Instructor-led document engineering deep-dive
-  - Introduction to scientific, technical, and engineering topics:
-    - Data structures and algorithms
-    - Performance evaluation techniques
-    - Software engineering best practices
-    - Prepare for these projects:
-      - Algorithm engineering project
-      - Algorithm all-hands project
-    - Prepare for these assessments:
-      - Midterm examination
-      - Final examination
-      - Skill-checks
-- {{< iconify game-icons team-idea size=18px >}} **Thursday and Friday**:
-Algorithm All-Hands Projects
-    - **Cadence**: Two weeks devoted to **phase one**, two weeks for **phase
-    two**, and finally one week for **phase three**. Complete these tasks during
-    the second halves of Thursday's classroom session and Friday's laboratory
-    session.
-    - {{< iconify fa6-solid users-gear size=18px >}} **Phase One**: Building on
-    the course's prior scientific and engineering content, prepare a research
-    question and design an experiment to answer it
-        - **Goal**: *Scientific study in algorithmology*
-          - Propose research question connect to current module
-          - Specify evaluation metrics used to answer research question
-          - Design an experiment to measure evaluation metrics
-          - Assign tasks for the remaining phases of the project
-    - {{< iconify fa6-solid users-gear size=18px >}} **Phase Two**: Leveraging
-    prior work, implement all needed software tools and apply them when
-    conducting the experiment designed in the prior phase
-        - **Goal**: *Engineering effort in algorithmology*
-          - Identify useful function(s) for refinement
-          - Explain steps for improving the function(s)
-          - Create a pull request and follow it through review
-          - Give an overview of the completed function(s)
-          - Give a demonstration of a command-line tool using the function(s)
-    - {{< iconify fa6-solid users-gear size=18px >}} **Phase Three**: Leveraging
-    prior work, answer the research question
-        - **Goal**: *Effective communication in algorithmology*
-          - Analyze and interpret the results
-          - Create a web-based report to present and discuss the results
-          - Collaboratively publish the report to the course web site
-          - Present the report and participate in a discussion session
-          - Provide thorough answer(s) to the chosen research question
-
-- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Algorithm
-Engineering Project
-  - {{< iconify fa6-solid gear size=18px >}} **Week One**: Design, implement,
-  test, and document software tools
-      - Data structure(s) and algorithm(s)
-      - Benchmark evaluation framework
-      - Data analysis and visualization tools
-  - {{< iconify fa6-solid gear size=18px >}} **Week Two**: Design, conduct, and
-  report on an experiment
-    - Demonstrate implementation of completed system
-    - Document the experimental design
-    - Pose research question(s)
-    - Define evaluation metrics
-    - Conduct the experiment
-    - Analyze and interpret the results
-    - Draw conclusions and make recommendations
-
-- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Skill-Checks
-and Executable Examinations
-  - {{< iconify fa6-solid gear size=18px >}} **Skill-Check**: Completed during
-  the last 45-minutes of the laboratory session
-  - {{< iconify fa6-solid gear size=18px >}} **Examination**: Completed during
-  the entire laboratory session
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Document engineering deep-dive presentations by instructor
+  - Technical and engineering knowledge and skills in the field of document
+  engineering
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Document engineering presentations and evaluations by student teams
+  - Two types of presentations: Document Engineering Concept Overviews (DECO)
+  and Document Engineering Project Critiques (DEPC)
+  - Teams and presentation topics assigned at the start of a course module
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Complete tasks for document engineering tool-building projects
+  - Individual project completion, with instructor and student technical leader
+  support
+  - Give demonstrations to and receive feedback from the course instructor
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Use GitHub, VS Code, and Python to complete document engineering skill-checks
+  - Complete in-person document engineering knowledge-checks
 
 #### Assessment Policies
 
@@ -442,21 +391,18 @@ will be a function of whether or not you (a) completed work that fulfills the
 project's specification and (b) submitted it by the deadline to the stated
 platform.
 
-##### Algorithmology Tokens
+##### Document Engineering Tokens
 
-Students may "spend" up to three algorithmology "tokens" that they may use to
-secure seven days of additional time to complete a project. You can either
-preemptively spend a token after missing a deadline for an assignment or,
-alternatively, spend the token to improve a project after receiving its
-assessment. For instance, a student may choose to spend a token by asking the
-instructor to reevaluate one of the algorithm engineering projects. With the
-exception of the final examination, students may also spend a token to re-take
-a skill-check or an executable examination. Students are encouraged to pay a
-token for the re-take of a skill-check or an executable examination no more
-than 48 hours after the completion of the original assessment. Outside of using
-these three tokens or severe, extenuating, and unexpected circumstances that
-are well documented, the instructor will not grant any requests for extensions
-or re-reassessment.
+Students may "spend" up to five "tokens" that they may use to secure seven days
+of additional time to complete a project. After using a provided GitHub
+repository to request their use of a token, students may use a token to re-take
+either a document engineering skill-check or knowledge-check. Students cannot
+use a token for the final executable examination, a DECO presentation or
+evaluation, a DEPC presentation or evaluation, or any part of any phase of a
+document engineering tool-building project. Outside of using these five tokens
+or severe, extenuating, and unexpected circumstances that are well documented,
+the instructor will not grant any requests for extensions or assignment
+re-reassessments.
 
 ##### Course Attendance
 
@@ -488,14 +434,14 @@ projects).
 Students who are struggling to understand the knowledge and skills developed in
 this course are encouraged to seek assistance from the course instructor and/or
 the student technical leaders. Students should, within the bounds of the Honor
-Code, ask and answer questions on the [Algorithmology Discord
-Server](https://discord.gg/YHjhQaBnme); please request assistance from the
+Code, ask and answer questions on the [Document Engineering Discord
+Server](https://discord.gg/5HdxuqjUvK); please request assistance from the
 instructor and student technical leaders first through public Discord channels
 before sending an email or a direct message. Students who need more assistance
 are invited to schedule a meeting through the [instructor's appointment
 scheduler](https://www.gregorykapfhammer.com/schedule/) and come to the meeting
-with details about their question. Students can see the office hour schedule
-for student technical leaders by viewing the list of [student technical
+with details about their question. Students can see the office hour schedule for
+student technical leaders by viewing the list of [student technical
 leaders](https://www.cis.allegheny.edu/teaching/technicalleaders/) and by
 monitoring announcements in the [Allegheny College Computer Science Discord
 Server](https://discord.gg/CS2h9kXzX6).
@@ -505,20 +451,20 @@ Server](https://discord.gg/CS2h9kXzX6).
 This course will primarily use GitHub and Discord for all course communication.
 We will use GitHub for the sharing of both source code and documentation for
 course projects and for reporting issues in those materials. We will use two
-distinct Discord servers for all course discussions. The [Algorithmology
-Discord Server](https://discord.gg/YHjhQaBnme) provides a way for members of
-the developer development community to use text and video to chat with each
-other and will be the main forum for discussing the professional and technical
-content in the field of algorithm analysis. The [Allegheny College Computer
-Science Discord Server](https://discord.gg/CS2h9kXzX6) will be the main forum
-for Department of Computer Science announcements. Finally, any content that a
-student wants the instructor to assess (e.g., the work for an algorithm
+distinct Discord servers for all course discussions. The [Document
+Engineering Discord Server](https://discord.gg/5HdxuqjUvK) provides a way for
+members of the developer development community to use text and video to chat
+with each other and will be the main forum for discussing the professional and
+technical content in the field of algorithm analysis. The [Allegheny College
+Computer Science Discord Server](https://discord.gg/CS2h9kXzX6) will be the main
+forum for Department of Computer Science announcements. Finally, any content
+that a student wants the instructor to assess (e.g., the work for an algorithm
 engineering project) must be in a GitHub repository.
 
 #### Using Email
 
-Although we will primarily use the [Algorithmology Discord
-Server](https://discord.gg/YHjhQaBnme) for class communication, the course
+Although we will primarily use the [Document Engineering Discord
+Server](https://discord.gg/5HdxuqjUvK) for class communication, the course
 instructor will sometimes use email to send announcements about important
 matters such as changes in the schedule. It is your responsibility to check your
 email at least once a day and to ensure that you can reliably send and receive
@@ -541,16 +487,16 @@ pledge:
 > defined in the Honor Code, and to maintain the integrity of both
 > myself and the College community as a whole.
 
-#### Effective Algorithm Engineering
+#### Effective Document Engineering
 
-Students who create the source code and documentation for their algorithm
-engineering and algorithm all-hands projects should ensure the implementation of
-a high-quality final product. While students are permitted to use a wide variety
-of algorithm engineering tools, such as integrated development environments,
-testing frameworks, automated debuggers, and code generators (e.g., systems that
+Students who create the source code and documentation for their document
+engineering projects should ensure the implementation of a high-quality final
+product. While students are permitted to use a wide variety of document
+engineering tools, such as integrated development environments, testing
+frameworks, automated debuggers, and code generators (e.g., systems that
 leverage large language models like GitHub Copilot) and documentation sites such
-as StackOverflow, they must take responsibility for all of the source code and
-documentation that they submit for this course, including artifacts that are
+as StackOverflow, they must take final responsibility for all of the source code
+and documentation that they submit for this course, including artifacts that are
 automatically generated by a software tool.
 
 This means that every student must work as an effective algorithm engineer by
@@ -594,13 +540,13 @@ to join together in an adventure in algorithm analysis!
 
 ::: {.callout-note appearance="minimal" title="External Learners"}
 
-This syllabus is for learners who enrolled in a for-credit Algorithm Analysis
+This syllabus is for learners who enrolled in a for-credit Document Engineering
 course in the [Department of Computer and information
 Science](https://www.cis.allegheny.edu/) at [Allegheny
 College](https://www.allegheny.edu/). Even though external learners are not
 bound by this syllabus, they can rely on the
-[Algorithmology](https://github.com/TeamDevDev/www.developerdevelopment.com/graphs/contributors)
-team and the members of the [Algorithmology
-Discord](https://discord.gg/phSQfB8bZx).
+[Prosegrammers](https://github.com/prosegrammers/www.prosegrammers.com) team
+and the members of the [Document Engineering Discord
+Server](https://discord.gg/5HdxuqjUvK)
 
 :::
