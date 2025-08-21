@@ -33,6 +33,9 @@ should revise all the technical content in these slides to fit into a course
 about document engineering. However, you should also use this content in these
 slides as good examples for what your generated slides should look like. Make
 sure to use similar formatting, layout, and content as the provided slides.
+- [ ] The slides that introduce the course should contain Python source code
+like that which you found in the `index.qmd` file in the root of the repository.
+Make sure that students can run this source code and see the output.
 - [ ] After finishing the slides that introduce the course, create more slides
 that introduce the following technologies and explain how to install them:
     - Terminal window
