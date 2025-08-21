@@ -171,7 +171,7 @@ the file called `PLAN.md` that is in the root of this repository. If you are
 creating new content for `slides/weekone/index.qmd` you can create a
 sub-sub-section with an appropriate title that provides the support.
 
-## Claude-Specific Guidelines for OpenCode
+## Claude-Specific and GPT-Specific Guidelines for OpenCode
 
 As Claude Sonnet 4 (or another large language model like GPT4.1) working through
 OpenCode, you must also follow these behavior guidelines:
