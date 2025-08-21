@@ -226,6 +226,10 @@ responsible for posing questions to the presenting team and evaluating the
 presentation. For both DECO and DEPC presentations, both the presentation and
 evaluation teams will receive a grade for their submitted work.
 
+- **Document Engineering Tool-Building Projects**: Completed by individually in
+three stages, these projects will enable students to build and evaluate a
+complete document engineering pipeline in the Python programming language. The
+
 ::: {.callout-note appearance="minimal" title="Additional Assessment Details"
 collapse="false"}
 
@@ -253,7 +257,7 @@ evaluation team. For their DECO and DEPC work, each student will receive
 **three** assessments for presentations and **three** assessments for their
 evaluations.
 
-- **Document Engineering Tool Building Projects**: There are two types of grades
+- **Document Engineering Tool-Building Projects**: There are two types of grades
 reported for these projects: demonstration grades and module-level project
 grades. A grade is reported one-week after the completion of a demonstration or
 the final submission of their project at the end of a course module. For their
