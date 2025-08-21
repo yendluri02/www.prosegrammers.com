@@ -43,8 +43,10 @@ that introduce the following technologies and explain how to install them:
     - Register for a free GitHub Student Developer Pack
     - Register for the free use of GitHub Copilot at the pro level
     - VS Code
-    - `uv` (stress the use of `uv` for venvs, dependencies, and Python
-    installation)
+    - `uv` (stress the use of `uv` for virtual environments, dependencies, and
+    Python installation, especially focusing on the fact that a learner
+    should not use alternative mechanisms for installing Python or any of
+    the other aforementioned tasks like creating virtual environments)
     - Python 3.12 or 3.13 (which should come from using the `uv` tool)
     - Quarto
     - Quarto extension for VS Code
