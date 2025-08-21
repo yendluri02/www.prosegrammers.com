@@ -93,7 +93,7 @@ def word_frequency(text: str) -> Dict[str, int]:
     return frequency_dict
 
 # example text about document engineering
-sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill. Programming helps automate document creation."
+sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill."
 
 # analyze the text and display results
 word_counts = word_frequency(sample_text)
@@ -113,7 +113,7 @@ for word, count in sorted(word_counts.items()):
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 15
+#| max-lines: 10
 from typing import Dict
 import string
 
@@ -126,12 +126,9 @@ def word_frequency(text: str) -> Dict[str, int]:
         frequency_dict[word] = frequency_dict.get(word, 0) + 1
     return frequency_dict
 
-# example text about document engineering
-sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill. Programming helps automate document creation."
-
-# analyze the text and display results
+# test with sample text
+sample_text = "Document engineering combines programming with writing."
 word_counts = word_frequency(sample_text)
-print("Word Frequencies:")
 for word, count in sorted(word_counts.items()):
     print(f"'{word}': {count}")
 ```
@@ -142,7 +139,7 @@ for word, count in sorted(word_counts.items()):
 
 :::
 
-## Advanced document analysis
+## Document analysis function
 
 ```{python}
 import re
@@ -159,12 +156,11 @@ def document_summary(text: str) -> Dict[str, Any]:
     # count paragraphs (assuming double newlines separate paragraphs)
     paragraphs = [p for p in text.split('\n\n') if p.strip()]
     paragraph_count = len(paragraphs)
-    # calculate averages for words and paragraphs
+    # calculate averages
     avg_words_per_sentence = word_count / sentence_count if sentence_count > 0 else 0
     avg_sentences_per_paragraph = sentence_count / paragraph_count if paragraph_count > 0 else 0
     return {
-        'word_count': word_count,
-        'sentence_count': sentence_count,
+        'word_count': word_count, 'sentence_count': sentence_count,
         'paragraph_count': paragraph_count,
         'avg_words_per_sentence': round(avg_words_per_sentence, 1),
         'avg_sentences_per_paragraph': round(avg_sentences_per_paragraph, 1)
@@ -174,12 +170,11 @@ def document_summary(text: str) -> Dict[str, Any]:
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.80em;"}
 
 - `document_summary`: analyzes text structure and readability
-- Uses `re` for sentence detection and string methods for word counting
-- Provides essential metrics for document quality assessment
+- Uses `re` for sentence detection and provides essential quality metrics
 
 :::
 
-## Test document analysis tools
+## Testing document analysis
 
 ```{python}
 #| freeze: auto
@@ -187,18 +182,19 @@ def document_summary(text: str) -> Dict[str, Any]:
 sample_document = """
 Prosegrammers are skilled professionals who combine programming expertise with writing abilities. They create tools that help generate, analyze, and improve documents.
 
-Document engineering is an exciting field that leverages technology to enhance written communication. Python provides excellent libraries for text processing, making it an ideal language for prosegrammers.
+Document engineering is an exciting field that leverages technology to enhance written communication. Python provides excellent libraries for text processing.
 
-By mastering both code and prose, prosegrammers can automate repetitive writing tasks, analyze large collections of documents, and create dynamic content that adapts to different audiences.
+By mastering both code and prose, prosegrammers can automate repetitive writing tasks, analyze large collections of documents, and create dynamic content.
 """
 
 # analyze the document using the defined summary function
 summary = document_summary(sample_document.strip())
 print("Document Analysis Summary:")
-# display the results in a simple format
 for metric, value in summary.items():
     print(f"{metric.replace('_', ' ').title()}: {value}")
 ```
+
+## Discuss analysis results
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.85em;"}
 
@@ -209,7 +205,7 @@ for metric, value in summary.items():
 
 :::
 
-## Essential tools for prosegramming
+## Essential tools
 
 - Text editor like VS Code or Vim for writing
 - Version control like Git for tracking document changes  
@@ -224,7 +220,7 @@ How do we *integrate* them into efficient workflows? *...*
 
 :::
 
-## Real-world document engineering challenges
+## Real-world engineering challenges
 
 ::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
 
@@ -240,7 +236,7 @@ How do we *integrate* them into efficient workflows? *...*
 
 :::
 
-## Wow, creating and maintaining high-quality documentation for complex projects is very challenging! Why is that?
+## Why is documentation challenging?
 
 ::: {.fragment}
 
@@ -253,7 +249,7 @@ How do we *integrate* them into efficient workflows? *...*
 
 :::
 
-## Wait, what is the document engineering environment?
+## Document engineering environment
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
@@ -298,7 +294,7 @@ How do we *integrate* them into efficient workflows? *...*
 
 :::
 
-## Document engineering in the time of generative artificial intelligence
+## Document engineering with AI
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
@@ -318,7 +314,7 @@ tools are responsible for ensuring quality, accuracy, and ethical standards!
 
 :::
 
-# How can we setup an effective document engineering environment?
+## Development environment setup
 
 - *Installing* essential tools for prosegrammers
 - *Configuring* development environment for document work
@@ -365,7 +361,7 @@ writing and review workflows.
 
 :::
 
-## Setting up VS Code for document engineering
+## Setting up VS Code for documents
 
 ```python
 # Example VS Code extensions for prosegrammers
@@ -386,7 +382,7 @@ extensions = [
 
 :::
 
-## Installing Quarto for dynamic documents
+## Installing Quarto for documents
 
 ::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
 
@@ -454,7 +450,7 @@ uv --version                    # Check UV package manager
 
 :::
 
-## Important tools and workflows for prosegrammers
+## Prosegrammer tools and workflows
 
 ::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
 
@@ -476,7 +472,7 @@ uv --version                    # Check UV package manager
 
 :::
 
-## You must have all required tools installed and working! Make sure your document engineering setup is functional!
+## Setup requirements for prosegrammers
 
 ::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
 
@@ -491,7 +487,7 @@ uv --version                    # Check UV package manager
 
 :::
 
-## Overall goals of "document engineering"
+## Goals of document engineering
 
 ::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
 
