@@ -346,8 +346,8 @@ examination.
 
 ### Weekly Cadence
 
-- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
-Algorithm Analysis Exposition
+- {{< iconify fa6-solid people-line size=18px >}} **Monday**:
+Instructor-led document engineering deep-dive
   - Introduction to scientific, technical, and engineering topics:
     - Data structures and algorithms
     - Performance evaluation techniques
