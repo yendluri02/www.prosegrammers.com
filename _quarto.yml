@@ -11,6 +11,7 @@ project:
     navigate: false
   render:
     - "*.qmd"
+    - "!AGENTS.qmd"
     - "!PLAN.qmd"
     - "!GEMINI.qmd"
 
