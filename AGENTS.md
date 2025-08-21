@@ -207,6 +207,12 @@ formatting and readability in presentation mode.
 
 #### Step-by-Step Slide Verification Process
 
+**Important**: Do not stop working on a feature to improve the slides
+until you have verified that the slides meet presentation standards and layout.
+You can use each of the following steps to verify that layout of slides. Please
+note that these instructions are customized for the `slides/weekone/index.qmd`
+file but you should follow them for whatever slide you are working on.
+
 1. **Render slides to HTML format**:
    ```bash
    quarto render slides/weekone/index.qmd
@@ -224,6 +230,8 @@ formatting and readability in presentation mode.
    - Ensure font sizes are readable and appropriate
    - Confirm fragments and incremental content display correctly
    - Verify icons and formatting render properly
+   - Confirm that there is not too much blank space at the bottom
+     of the slide
 
 4. **Title length verification**:
    - Titles should fit on a single line at 1920x1080 resolution
