@@ -59,30 +59,31 @@ title of this course's website is "Prosegrammers". The term "Prosegrammers" is a
 
 ### Editing Existing Content
 
-1.  Use the Read tool to examine the relevant `.qmd` file for the page that 
+1.  Use the Read tool to examine the relevant `.qmd` file for the page that
     requires editing (e.g., `syllabus/index.qmd` for the syllabus).
-2.  Use the Edit tool to make the necessary changes to the text, code, or other 
+2.  Use the Edit tool to make the necessary changes to the text, code, or other
     content within the file.
-3.  After making changes, use the Bash tool to preview the site with 
-    `quarto preview` or `quarto render` to ensure changes are rendered correctly.
+3.  After making changes, use the Bash tool to preview the site with `quarto
+    preview` or `quarto render` to ensure changes are rendered correctly.
 
 ### Adding New Content (e.g., Assignment Descriptions)
 
-1.  Use the Write tool to create a new `.qmd` file in the appropriate directory 
+1.  Use the Write tool to create a new `.qmd` file in the appropriate directory
     (e.g., a new subdirectory in `schedule/`).
 2.  Add the content to the new file using Markdown.
-3.  If the new page should appear in the site navigation, use the Edit tool to 
+3.  If the new page should appear in the site navigation, use the Edit tool to
     add a link to it in the `navbar` section of the `_quarto.yml` file.
-4.  Use the Bash tool to preview the site to verify that the new page is 
+4.  Use the Bash tool to preview the site to verify that the new page is
     accessible and renders correctly.
 
 ## Creating Slides
 
 Slides for this project are created using Quarto and reveal.js.
 
-1.  Use the Write tool to create a new `index.qmd` file for the slide deck (e.g., 
-    in the `slides/` directory). When you add a new slide deck, always make sure 
-    that it is in its own sub-directory inside of the `slides/` directory.
+1.  Use the Write tool to create a new `index.qmd` file for the slide deck
+    (e.g., in the `slides/` directory). When you add a new slide deck, always
+    make sure that it is in its own sub-directory inside of the `slides/`
+    directory.
 2.  Add the following YAML header to the top of the file to specify the
     `revealjs` format:
 
@@ -108,9 +109,62 @@ format:
 ---
 ```
 
-3.  Use Markdown headings to create slides. A level 2 heading (`##`) creates a new slide.
+3.  Use Markdown headings to create slides. A level 2 heading (`##`) creates a
+    new slide.
 4.  Add content (text, images, code blocks) to each slide.
-5.  Use the Bash tool with `quarto preview` on the specific `.qmd` file to see the rendered slides.
+5.  Use the Bash tool with `quarto preview` on the specific `.qmd` file to see
+    the rendered slides.
+6.  Slides should always contain suitable icons that help to illustrate a key
+    point. Here is an example of the approach to creating the icons: `{{<
+iconify fa6-solid lightbulb >}}`.
+7.  Make all the points in the slides short and clear, and easy to read.
+8.  Do not write points in the slides are long sentences.
+9.  Always provide evidence to support the points that you make in the slides.
+10. Use `fragment` and `incremental inside of the slides to ensure that content
+    displays appropriately through the use of Quarto and the reveal.js framework.
+11. Add source code segments using fenced code blocks. Here is an example of what
+    a fenced code block would look like for Python code:
+
+```{python}
+from typing import List
+def duplicates(input_list: List[int]) -> bool:
+    """Determine whether or not the input list contains a duplicate value."""
+    n = len(input_list)
+    for i in range(n):
+        for j in range(n):
+            if i != j and input_list[i] == input_list[j]:
+                return True
+    return False
+
+assert(duplicates([1,2,6,3,4,5,6,7,8]))
+assert(not duplicates([1,2,3,4]))
+print(duplicates([1,2,6,3,4,5,6,7,8]))
+print(not duplicates([1,2,3,4]))
+```
+
+12. When it is appropriate for a learner to actually run the source code segment,
+    then use `pyodide` to provide an editable environment and run the code.
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 15
+from typing import List
+def duplicates(input_list: List[int]) -> bool:
+    """Determine whether or not the input list contains a duplicate value."""
+    n = len(input_list)
+    for i in range(n):
+        for j in range(n):
+            if i != j and input_list[i] == input_list[j]:
+                return True
+    return False
+
+assert(duplicates([1,2,6,3,4,5,6,7,8]))
+assert(not duplicates([1,2,3,4]))
+print(duplicates([1,2,6,3,4,5,6,7,8]))
+print(not duplicates([1,2,3,4]))
+```
+
+
 
 ## Content Verification
 
