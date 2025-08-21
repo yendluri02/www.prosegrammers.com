@@ -143,7 +143,9 @@ print(not duplicates([1,2,3,4]))
 ```
 
 12. When it is appropriate for a learner to actually run the source code segment,
-    then use `pyodide` to provide an editable environment and run the code.
+    then use `pyodide` to provide an editable environment and run the code. Here is
+    an example of what a fenced code block would look like for Python code that
+    uses `pyodide` in the content of Quarto and slides created with reveal.js:
 
 ```{pyodide}
 #| autorun: true
@@ -164,7 +166,23 @@ print(duplicates([1,2,6,3,4,5,6,7,8]))
 print(not duplicates([1,2,3,4]))
 ```
 
-
+13.  After a source code segment, always have a key take-home message or a
+     question that can prompt discussion or reflection about the code.
+14.  Use bold and italics to draw out labels or key take-home messages.
+15.  The title for a slide should normally fit into a single line. When
+     it is not possible for it to fit on a single line, then it should always
+     fill at most two lines and fill those two lines (nearly) completely.
+     In the context of "filling the line" this requirement comes from the
+     perspective of the display of the slide inside of the web browser.
+16.  All source code words should be displayed using single backticks
+     as in a variable name like `display_name` or `input_list`.
+17.  The slides should have an appropriate balance of text and code segments
+     and a layout that is both predictable and consistent but also varied
+     enough to be interesting and engaging.
+18.  Sometimes the text at the bottom of a slide should use:
+     `{.fragment .fade .boxed-content style="font-size: 1.0em;"}` to create
+     some "boxed content" that highlights a key point that learners should 
+    understand and remember after the presentation of the slide.
 
 ## Content Verification
 
