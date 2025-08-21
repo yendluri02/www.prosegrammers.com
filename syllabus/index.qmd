@@ -183,9 +183,9 @@ their computer to take the final examination on the scheduled date and to
 complete it in the stated location while taking no more than the required amount
 of time. The cumulative final is an executable examination that a student will
 complete through the use of GitHub, VS Code, and the Python programming tools
-installed on their laptops. Students may use external sources, including
-artificial intelligence coding assistants, during the completion of the final
-examination provided that they cite these sources and explain how they used them
+installed on their laptops. During the completion of the final examination,
+students may use external sources, including artificial intelligence coding
+assistants, provided that they cite these sources and explain how they used them
 to complete the final examination.
 
 - **Document Engineering Skill-Checks**: Completed during a Friday classroom
@@ -197,10 +197,10 @@ skill-checks on the scheduled date and to complete it in the stated location
 while taking no more than the required amount of time. Designed to prepare
 learners for the final executable examination, each skill-check is an executable
 assessment that students complete through the use of GitHub, VS Code, and the
-Python programming tools on their laptops. Students may use external sources,
-including artificial intelligence coding assistants, during the completion of a
-skill-check provided that they cite these sources and explain how they used them
-to complete the examination.
+Python programming tools on their laptops. During the completion of a
+skill-check, students may use external sources, including artificial
+intelligence coding assistants, provided that they cite these sources and
+explain how they used them to complete the examination.
 
 - **Document Engineering Knowledge-Checks**: Completed during a Friday classroom
 session, these knowledge-checks are in-person, cumulative assessments covering
@@ -224,11 +224,25 @@ open-source software project. For each teach assigned to give either a DECO or a
 DEPC presentation, there will be another assigned team of students that is
 responsible for posing questions to the presenting team and evaluating the
 presentation. For both DECO and DEPC presentations, both the presentation and
-evaluation teams will receive a grade for their submitted work.
+evaluation teams will receive a grade for their submitted work. Although
+students may use external sources, including artificial coding assistants,
+during the completion of their presentation materials, they must cite their
+sources. Except for the presentation slides published on the course website, the
+presenters may not use any external sources during either the presentation or
+the evaluation phases.
 
-- **Document Engineering Tool-Building Projects**: Completed by individually in
-three stages, these projects will enable students to build and evaluate a
-complete document engineering pipeline in the Python programming language. The
+- **Document Engineering Tool-Building Projects**: Completed individually in
+three stages that span the entire academic semester, these projects enable
+students to build and evaluate a complete document engineering pipeline in the
+Python programming language. At the start of each of the three course modules, a
+student will receive a project description for one phrase of the document
+engineering pipeline. During the remainder of the module, a student will
+complete four demonstrations during the laboratory sessions and then submit a
+complete, working, well-documented project and a final project report at the end
+of the module. During the completion of a tool-building project, students may
+use external sources, including artificial intelligence coding assistants,
+provided that they cite these sources and explain how they used them to complete
+the project.
 
 ::: {.callout-note appearance="minimal" title="Additional Assessment Details"
 collapse="false"}
