@@ -164,17 +164,16 @@ percentages during the academic semester.
 These assessment categories have the following definitions:
 
 - **Class Participation**: Students are expected to regularly attend and
-actively participate in all of the class and laboratory sessions, as outlined
-on the [course schedule](../schedule/index.qmd). After either an unexcused
+actively participate in all of the class and laboratory sessions, as outlined on
+the [course schedule](../schedule/index.qmd). After either an unexcused
 absence or a late attendance to either a class or a laboratory session, a
-student's weekly class participation grade will be reduced. Students who need
-to miss class or attend class late for an excused reason should communicate
-their situation to the course instructor in a timely fashion. A student's
-weekly class participation grade will be reduced if they are frequently
-observed, during either class or laboratory sessions, undertaking
-non-course-related activities like viewing email, social media, or other
-content not about algorithm analysis. 
-
+student's weekly class participation grade will be reduced. Students who need to
+miss class or attend class late for an excused reason should use email to
+communicate their situation to the course instructor in a timely fashion. A
+student's weekly class participation grade will be reduced if they are
+frequently observed, during either class or laboratory sessions, undertaking
+non-course-related activities like viewing email, social media, or other content
+not about document engineering.
 
 - **Final Executable Examination**: The final examination is an online,
 executable, cumulative assessment covering all of the material during all of the
@@ -205,19 +204,21 @@ to complete the examination.
 
 ::: {.callout-note appearance="minimal" title="Additional Assessment Details" collapse="false"}
 
-- **Class Participation**: Grade reported at conclusion of each of the three
-course modules.
+- **Class Participation**: One grade reported at the conclusion of each of the
+**three** course modules.
 
-- **Final Executable Examination**: Grade automatically reported at end of
-examination period.
+- **Final Executable Examination**: **One** grade automatically reported at end
+of examination period.
 
 - **Document Engineering Skill-Checks**: Grade automatically reported at end of
-a Friday classroom session; there are two skill-check assessments for each of the
-three course modules.
+a Friday classroom session. Since there are two skill-check assessments for each
+of the three course modules, a student will receive a total of **six**
+assessments reports for their skill-checks.
 
 - **Document Engineering Knowledge-Checks**: Grade reported at conclusion of a
-course module; there is one in-person knowledge-check assessment for each of
-the three course modules.
+course module. Since there is one in-person knowledge-check assessment for each of
+the three course modules, a student will receive a total of **three**
+assessments for their knowledge-checks.
 
 - **Document Engineering Presentations**: There are two types of these
 team-based presentations: Document Engineering Concept Overviews (DECO) and
@@ -227,7 +228,13 @@ evaluation team. For their DECO and DEPC work, each student will receive
 **three** assessments for presentations and **three** assessments for their
 evaluations.
 
-- **Document Engineering Tool Building Projects**: There are two types of these
+- **Document Engineering Tool Building Projects**: There are two types of grades
+reported for these projects: demonstration grades and module-level project
+grades. A grade is reported one-week after the completion of a demonstration or
+the final submission of their project at the end of a course module. For their
+work on the document engineering tools, a student will receive a total of
+**twelve** demonstration assessments and **three** module-level project
+assessments.
 
 :::
 
