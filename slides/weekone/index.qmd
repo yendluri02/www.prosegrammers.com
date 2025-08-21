@@ -209,7 +209,7 @@ for metric, value in summary.items():
 
 :::
 
-## Four essential document engineering tools
+## Essential tools for prosegramming
 
 - Text editor like VS Code or Vim for writing
 - Version control like Git for tracking document changes  
