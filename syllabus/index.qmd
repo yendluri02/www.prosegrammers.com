@@ -211,7 +211,7 @@ field of document engineering, with a focus on both the material presented and
 discussed during class and investigated as a part of the document engineering
 tool building projects. Students may not use any external sources (e.g.,
 artificial intelligence assistants, online sources, or written notes) or devices
-(e.g., laptop, tablet, or mobile phone) during a knowledge-check.
+(e.g., laptop, tablet, or mobile phone) during an in-person knowledge check.
 
 - **Document Engineering Presentations**: Completed by assigned teams of
 students during a Wednesday classroom session, these in-person presentations are
@@ -321,28 +321,27 @@ assessments.
   - **All-College Programming**: Week Eleven 
   - **Thanksgiving Break**: Week Fourteen
   - **End Semester**: Week Sixteen
-- **Examinations**:
-  - **Midterm Exam One**: Week Seven
-  - **Midterm Exam Two**: Week Twelve
-  - **Final Exam**: Week Sixteen
+  - **Final Examination**: Week Sixteen
 - **Document Engineering Skill-Checks**:
   - **Skill-Check One**: Week Two
   - **Skill-Check Two**: Week Three
-- **Document Engineering Skill-Checks**:
-  - **Skill-Check One**: Week Two
-  - **Skill-Check Two**: Week Three
-
+  - **Skill-Check Three**: Week Seven
+  - **Skill-Check Four**: Week Eight
+  - **Skill-Check Five**: Week Twelve
+  - **Skill-Check Six**: Week Thirteen
+- **Document Engineering Knowledge-Checks**:
+  - **Knowledge-Check One**:
+    - *First Half of Class*: Week Four
+    - *Second Half of Class*: Week Five
+  - **Knowledge-Check Two**:
+    - *First Half of Class*: Week Nine
+    - *Second Half of Class*: Week Ten
+  - **Knowledge-Check Three**:
+    - *First Half of Class*: Week Fourteen
+    - *Second Half of Class*: Week Fifteen
 
 #### Important Dates
 
-- **Midterm Executable Examination One**
-    - **Date**: February 28, 2025
-    - **Time**: 2:30 -- 4:00 PM
-    - **Location**: Alden 109
-- **Midterm Executable Examination Two**
-    - **Date**: April 4, 2025
-    - **Time**: 2:30 -- 4:00 PM
-    - **Location**: Alden 109
 - **Final Executable Examination**
     - **Examination Code**: D
     - **Date**: May 2, 2025
