@@ -147,6 +147,10 @@ tools and projects that combine programming with technical writing.
 learning objectives, explaining how on-campus learners will develop both their
 programming skills and their ability to create exceptional documentation.
 
+- The [course slides](./slides/index.qmd) offers links to the slides created
+by both the instructor and the prosegrammers who are learning more about
+document engineering.
+
 ::: {.callout-note appearance="minimal" title="Prosegrammers Community Resources"}
 
 Interested in connecting with other aspiring prosegrammers? Please join the
