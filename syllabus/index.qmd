@@ -188,7 +188,7 @@ artificial intelligence coding assistants, during the completion of the final
 examination provided that they cite these sources and explain how they used them
 to complete the final examination.
 
-- **Document Engineering Skill-Checks**: Completing during a Friday classroom
+- **Document Engineering Skill-Checks**: Completed during a Friday classroom
 session, these skill-checks are online, cumulative assessments covering all
 prior technical material from the prior course sessions, as outlined on the
 [course schedule](../schedule/index.qmd). Unless prior arrangements are made
@@ -202,7 +202,19 @@ including artificial intelligence coding assistants, during the completion of a
 skill-check provided that they cite these sources and explain how they used them
 to complete the examination.
 
-::: {.callout-note appearance="minimal" title="Additional Assessment Details" collapse="false"}
+- **Document Engineering Knowledge-Checks**: Completed during a Friday classroom
+session, these knowledge-checks are in-person, cumulative assessments covering
+all prior technical material from the prior course sessions, as outlined on the
+[course schedule](../schedule/index.qmd). All students should be prepared to
+answer questions  about the conceptual knowledge and technical skills in the
+field of document engineering, with a focus on both the material presented and
+discussed during class and investigated as a part of the document engineering
+tool building projects. Students may not use any external sources (e.g.,
+artificial intelligence assistants, online sources, or written notes) or devices
+(e.g., laptop, tablet, or mobile phone) during a knowledge-check.
+
+::: {.callout-note appearance="minimal" title="Additional Assessment Details"
+collapse="false"}
 
 - **Class Participation**: One grade reported at the conclusion of each of the
 **three** course modules.
