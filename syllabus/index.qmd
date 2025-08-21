@@ -105,25 +105,21 @@ experiences of others.
 - **AC-4**: Apply their knowledge and learning to engage in informed debate,
 and to analyze and solve problems.
 
-Computer Science 202 at Allegheny College is a core course in the Computer
-Science major. Graduates with the Computer Science major --- who all take the
-Computer Science 202 course --- must demonstrate their attainment of these
-learning objectives:
+Computer Science 104 at Allegheny College is a course in the taken by all
+Software Engineering majors and often taken by many students who major or minor
+in Computer Science, Data Science, or Informatics. Graduates with the Software
+Engineering major --- who all take the Computer Science 202 course ---
+must demonstrate their attainment of these learning objectives:
 
-- **CS-1**: Demonstrate and be able to communicate the knowledge of data types,
-algorithms, and mathematical principles behind discrete objects.
-
-- **CS-2**: Use scientific and theoretical methods to design, implement,
-evaluate, deploy, improve, maintain, and document software and hardware systems.
-
-- **CS-3**: Apply and articulate key concepts from a specialization area where
-the interconnection between software and hardware is important and evident.
-
-- **CS-4**: Able to communicate technical details of the produced software and
-hardware artifacts both in writing and orally.
-
-All five of the Computer Science major's learning objectives support the **QR**
-and **SP** distribution requirements and the College's learning objectives.
+- **SE-1**: While working in a team, can effectively design, implement,
+evaluate, improve, and document a solution to a problem delivered as a
+maintainable software system.
+- **SE-2**: Demonstrates competency in the theories, models, and practices of
+project domains that require the engineering of software.
+- **SE-3**: Can effectively manage and predict the cost, scope, and deadline of
+a software engineering project.
+- **SE-4**: Uses effective oral and written communication methods to explain
+both the technical and product-use details of a software artifact.
 
 The specific learning objectives for Computer Science 202 are as follows:
 
