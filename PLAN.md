@@ -105,3 +105,54 @@ content analysis
 words-per-sentence calculations
 - Document summary statistics help technical writers assess and improve content
 quality
+
+### Support for Week One Slides Content
+
+#### Document Engineering Definition and Scope
+
+- Document engineering combines computational methods with technical writing
+principles, as evidenced by academic programs at institutions like Carnegie
+Mellon and MIT that integrate technical communication with computer science
+- The field encompasses automated document generation, content analysis, and
+workflow optimization, supported by research in computational linguistics and
+information science
+
+#### Python for Text Processing and Analysis
+
+- Python's built-in `string` module and `re` library provide robust text
+processing capabilities that are fundamental to document engineering tasks
+- Word frequency analysis using dictionary-based counting is a standard
+technique in natural language processing, as demonstrated in NLTK documentation
+and computational linguistics textbooks
+- Document statistics like word count, sentence count, and readability metrics
+are established measures in content analysis research
+
+#### Development Tools for Document Engineering
+
+- VS Code with Quarto extension provides integrated development environment for
+combining code and prose, as documented in Quarto's official documentation
+- UV package manager represents modern Python dependency management, following
+best practices from Python Enhancement Proposals (PEPs) and recommendations
+from the Python Software Foundation
+- Git and GitHub form the industry standard for version control and
+collaboration, with widespread adoption in both software development and
+academic publishing workflows
+
+#### Cross-Platform Tool Installation
+
+- Installation instructions for UV, Python, and Quarto are designed to work
+across Windows, macOS, and Linux systems, following each tool's official
+documentation and installation guides
+- Command-line verification methods (`--version` flags) provide standard
+approaches for confirming successful installations across operating systems
+- Documentation links provided (UV docs, Quarto docs, VS Code docs) offer
+official troubleshooting resources maintained by tool creators
+
+#### AI Tool Responsibility
+
+- Responsible use of AI coding assistants is emphasized in academic literature
+on AI ethics and educational guidelines from institutions implementing AI tools
+in curricula
+- The principle that users remain responsible for AI-generated content aligns
+with emerging best practices in AI-assisted writing and coding, as outlined by
+organizations like the ACM and IEEE
