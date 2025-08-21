@@ -139,7 +139,10 @@ The learning objectives for Computer Science 104 enable the attainment of both
 the Software Engineering program learning objectives that in turn support the
 attainment of the College's learning objectives. Throughout this course, the
 instructor will reference these learning objectives, connect them to the course
-activities, and invite students to reflect on their attainment of them.
+activities, and invite students to reflect on their attainment of them. In
+addition to administering an assessment of learning objective attainment through
+the final examination, the course instructor will ask students to complete a
+self assessment of their attainment of these learning objectives.
 
 ### Course Policies
 
@@ -153,12 +156,12 @@ percentages during the academic semester.
 
 | Category                           | Percentage |
 |------------------------------------|------------|
-| Class Participation                |   5%       |
-| Midterm Examinations               |  20%       |
-| Final Examination                  |  10%       |
-| Algorithm All-Hands Projects       |  15%       |
-| Algorithm Engineering Projects     |  30%       |
-| Algorithm Engineering Skill-Checks |  20%       |
+| Class Participation                |  10%       |
+| Executable Final Examination                  |  10%       |
+| Document Engineering Presentations       |  15%       |
+| Document Engineering Skill-Checks  |  10%       |
+| Document Engineering Knowledge-Checks  |  10%       |
+| Document Engineering Tool Building Projects     |  30%       |
 
 
 These assessment categories have the following definitions:
