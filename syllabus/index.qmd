@@ -154,14 +154,14 @@ presents itself, the course instructor may, for instance, change the assigned
 percentages during the academic semester.
 
 
-| Category                           | Percentage |
-|------------------------------------|------------|
-| Class Participation                |  10%       |
-| Executable Final Examination                  |  10%       |
-| Document Engineering Presentations       |  15%       |
-| Document Engineering Skill-Checks  |  10%       |
-| Document Engineering Knowledge-Checks  |  10%       |
-| Document Engineering Tool Building Projects     |  30%       |
+| Category                                 | Percentage |
+|-------------------------------------------|------------|
+| Class Participation                       |    10%     |
+| Final Executable Examination              |    10%     |
+| Document Engineering Skill-Checks         |    10%     |
+| Document Engineering Knowledge-Checks     |    10%     |
+| Document Engineering Presentations        |    30%     |
+| Document Engineering Tool-Building Projects|    30%     |
 
 
 These assessment categories have the following definitions:
