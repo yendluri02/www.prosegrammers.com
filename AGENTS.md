@@ -182,7 +182,11 @@ print(not duplicates([1,2,3,4]))
 18.  Sometimes the text at the bottom of a slide should use:
      `{.fragment .fade .boxed-content style="font-size: 1.0em;"}` to create
      some "boxed content" that highlights a key point that learners should 
-    understand and remember after the presentation of the slide.
+     understand and remember after the presentation of the slide.
+19.  If the code segment is too long and it will require scrolling across
+     a lengthy code block, then break up the code block into multiple slides.
+20.  Make sure that any slide with a code block includes enough space to see
+     most, if not all of, the output produced by the source code block.
 
 ## Content Verification
 
