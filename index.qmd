@@ -33,13 +33,14 @@ College](https://www.allegheny.edu/), the resources and projects are all
 publicly available. This course teaches you to harness Python's power for
 creating and manipulating documents, from simple text processing to building
 sophisticated documentation systems. You'll learn to use tools like [Jupyter
-Notebooks](https://jupyter.org/) and [Quarto](https://quarto.org/) to create interactive documents that
-blend code, text, and visualizations. Throughout the course, you'll also develop
-skills in reading and critiquing documentation for popular open-source projects,
-ensuring you can both create and consume high-quality technical writing. In
-addition to learning more about version control, Git, and GitHub, emerging
-prosegrammers will also learn how to use artificial intelligence (AI) assistants
-[GitHub Copilot](https://github.com/features/copilot), [Google Gemini
+Notebooks](https://jupyter.org/) and [Quarto](https://quarto.org/) to create
+interactive documents that blend code, text, and visualizations. Throughout the
+course, you'll also develop skills in reading and critiquing documentation for
+popular open-source projects, ensuring you can both create and consume
+high-quality technical writing. In addition to learning more about version
+control, Git, and GitHub, emerging prosegrammers will also learn how to use
+artificial intelligence (AI) assistants [GitHub
+Copilot](https://github.com/features/copilot), [Google Gemini
 CLI](https://github.com/google-gemini/gemini-cli), and
 [OpenCode](https://opencode.ai/) to create, revise, and extend both
 documentation and source code. Check out the [schedule](schedule/index.qmd)
@@ -80,14 +81,15 @@ for word, count in sorted(word_counts.items()):
     print(f"'{word}': {count}")
 ```
 
-Building on the previous example, let's explore how prosegrammers can create
-more sophisticated document analysis tools! The following code demonstrates a
-`document_summary` function that provides key insights about any text document.
-This function calculates statistics like word count, sentence count, and average
-words per sentence, all of which are essential metrics for document engineers
-who need to analyze and improve written content. Watch how Python makes complex
-document analysis tasks straightforward and accessible. And, notice how the
-website displays the output from running this function with an input!
+Building on the previous source code example, let's explore how prosegrammers
+can create more sophisticated document analysis tools! The following code
+demonstrates a `document_summary` function that provides key insights about any
+text document. This function calculates statistics like word count, sentence
+count, and average words per sentence, all of which are essential metrics for
+document engineers who need to analyze and improve written content. Watch how
+Python makes complex document analysis tasks straightforward and accessible.
+And, notice how the website displays the output from running this function with
+an input!
 
 ```{python}
 import re
@@ -127,7 +129,7 @@ By mastering both code and prose, prosegrammers can automate repetitive writing 
 # analyze the document using the defined summary function
 summary = document_summary(sample_document.strip())
 print("Document Analysis Summary:")
-# display the results in a user-friendly format
+# display the results in a simple format
 for metric, value in summary.items():
     print(f"{metric.replace('_', ' ').title()}: {value}")
 ```
