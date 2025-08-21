@@ -63,14 +63,15 @@ class and lab sessions.
 
 ::: {.callout-note appearance="minimal" title="Explaining the Distribution Requirements" collapse="false"}
 
-- **Quantitative Reasoning (QR)**: Quantitative Reasoning is the ability to
-understand, investigate, communicate, and contextualize numerical, symbolic, and
-graphical information towards the exploration of natural, physical, behavioral,
-or social phenomena.
+- **Quantitative Reasoning (HE)**: The study of Human Experience explores human
+physical, mental, emotional, and/or spiritual experiences as conveyed in texts
+broadly defined. Through engagement with such texts, students develop an
+appreciation for human experiences and their representations.
 
 - **Learning Outcome**: Students who successfully complete this requirement will
-demonstrate an understanding of how to interpret numeric data and/or their
-graphical or symbolic representations.
+demonstrate an understanding of how to interpret human experiences as conveyed
+in texts (including works of visual and performance art, rituals, cultural
+artifacts and traditions, and/or the written and spoken word).
 
 - **Scientific Process and Knowledge (SP)**: Courses involving Scientific
 Process and Knowledge aim to convey an understanding of what is known or can be
@@ -81,6 +82,11 @@ citizens who can engage productively in problem solving.
 - **Learning Outcome**: Students who successfully complete this requirement will
 demonstrate an understanding of the nature, approaches, and domain of scientific
 inquiry.
+
+Please refer to the [description of the learning outcomes for the distribution
+requirements](https://sites.allegheny.edu/registrar/academic-policies/graduation-requirements/distribution-requirement/distribution-requirements-learning-outcomes/)
+to learn more about how they play a central role in the educational experience
+at Allegheny College.
 
 :::
 
@@ -154,21 +160,6 @@ The learning objectives for Computer Science 202 enable the attainment of the CS
 program learning objectives that in turn support the attainment of the College's
 learning objectives.
 
-### Course Textbooks
-
-- {{< iconify fa6-solid book-open >}} Online textbook called [A First Course on
-Data Structures in Python](https://donsheehy.github.io/datastructures/)
-
-- {{< iconify fa6-brands github >}} The `ds2` package in the 
-[donsheehy/datastructures](https://github.com/donsheehy/datastructures)  GitHub
-repository
-
-The online textbook and the `ds2` package serve as the starting point for
-additional content developed by the course instructor. Finally, extensive
-details about the content that the course covers in the textbook are available
-in the [course schedule](../schedule/index.qmd) and the [course
-slides](../slides/index.qmd).
-
 ### Course Policies
 
 #### Assessment
@@ -178,6 +169,7 @@ categories. All of these percentages are approximate and, if the need to do so
 presents itself, the course instructor may, for instance, change the assigned
 percentages during the academic semester.
 
+
 | Category                           | Percentage |
 |------------------------------------|------------|
 | Class Participation                |   5%       |
@@ -186,6 +178,7 @@ percentages during the academic semester.
 | Algorithm All-Hands Projects       |  15%       |
 | Algorithm Engineering Projects     |  30%       |
 | Algorithm Engineering Skill-Checks |  20%       |
+
 
 These assessment categories have the following definitions:
 
