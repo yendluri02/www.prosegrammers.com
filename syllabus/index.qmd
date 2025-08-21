@@ -178,85 +178,43 @@ observed, during either class or laboratory sessions, undertaking
 non-course-related activities like viewing email, social media, or other
 content not about algorithm analysis. 
 
-- **Midterm Examinations**: Each midterm examination is an online, executable,
-and cumulative assessment covering all prior material from the course sessions,
-as outlined on the [course schedule](../schedule/index.qmd). Unless prior
-arrangements are made with the instructor, all students should use their
-computer to take these tests on the scheduled date and to complete it in the
-stated location while taking no more than the required amount of time. The
-midterm is an executable examination completed through the use of GitHub, VS
-Code, and the Python programming tools installed on a student's laptop. Students
-may use external sources, including artificial intelligence coding assistants,
-during the completion of the midterm examination provided that they cite these
-sources and explain how they used them to complete the examination.
 
-- **Final Examination**: The final examination is an online, executable,
-cumulative assessment covering all of the material during all of the course
-sessions, as outlined on the [course schedule](../schedule/index.qmd). Unless
-prior arrangements are made with the instructor, all students should use their
-computer to take the final examination on the scheduled date and to complete it
-in the stated location while taking no more than the required amount of time.
-The cumulative final is an executable examination that a student will complete
-through the use of GitHub, VS Code, and the Python programming tools installed
-on their laptops. Students may use external sources, including artificial
-intelligence coding assistants, during the completion of the final examination
-provided that they cite these sources and explain how they used them to complete
-the examination.
+- **Final Executable Examination**: The final examination is an online,
+executable, cumulative assessment covering all of the material during all of the
+course sessions, as outlined on the [course schedule](../schedule/index.qmd).
+Unless prior arrangements are made with the instructor, all students should use
+their computer to take the final examination on the scheduled date and to
+complete it in the stated location while taking no more than the required amount
+of time. The cumulative final is an executable examination that a student will
+complete through the use of GitHub, VS Code, and the Python programming tools
+installed on their laptops. Students may use external sources, including
+artificial intelligence coding assistants, during the completion of the final
+examination provided that they cite these sources and explain how they used them
+to complete the final examination.
 
-- **Algorithm All-Hands Projects**: These team-based projects enable students to
-explore both the scientific and engineering aspects of algorithm analysis, as
-outlined in the [course schedule](../schedule/index.qmd). During the
-completion of a *scientific study* phase of algorithm analysis, students will
-work in a team to propose an original research question and design an experiment
-to answer it. When completing an *engineering effort* phase of algorithm
-analysis, students work in a team as they design, implement, document, test, and
-maintain software tools that support the rigorous evaluation of the performance
-(e.g., time or space overhead) of a Python program or a feature of the Python
-programming language. The completion of this tool should be managed through a
-GitHub repository that the team creates and to which all team members
-contribute. The conclusion of an algorithm all-hands project involves the
-team-based creation, publication, and oral presentation of a report that
-overviews all of the experiences during the completion of the scientific study
-and engineering effort tasks for answering an original research question in the
-field of algorithm analysis. As evidenced by commits to the GitHub repository of
-the course web site and their participation in the algorithm all-hands session,
-all students should contribute to the writing, revision, presentation, and
-discussion of the algorithm all-hands project reports. Finally, students may use
-external sources, including artificial intelligence coding assistants, during
-the completion of an algorithm all-hands project provided that they cite these
-sources and explain how they used them to complete their part(s) of an algorithm
-all-hands project.  
-
-- **Algorithm Engineering Projects**: These projects enable students to explore
-both the scientific and engineering aspects of algorithm analysis, as outlined
-in the [course schedule](../schedule/index.qmd). During the completion of this
-two-week project, students will design and implement a software system suitable
-for conducting experiments and then use it answer research questions that
-connect to previously discussed scientific content, as outlined in the [course
-schedule](../schedule/index.qmd). After implementing the benchmarking system,
-students will propose and formally state research questions and then discuss
-them with the course instructor during a laboratory session. Finally, students
-will conduct experiments to answer these research questions, collect data,
-analyze the results, and write a report that explains the results in the
-context of the implemented system. Students may use external sources, including
-artificial intelligence coding assistants, during the completion of an
-algorithm all-hands project provided that they cite these sources and explain
-how they used them to complete the various components of an algorithm
-engineering project.
-
-- **Algorithm Engineering Skill-Checks**: Completing during the second half of a
-laboratory session, these skill-checks are online, cumulative assessments
-covering all prior technical material from the course sessions, as outlined on
-the [course schedule](../schedule/index.qmd). Unless prior arrangements are made
+- **Document Engineering Skill-Checks**: Completing during a Friday classroom
+session, these skill-checks are online, cumulative assessments covering all
+prior technical material from the prior course sessions, as outlined on the
+[course schedule](../schedule/index.qmd). Unless prior arrangements are made
 with the instructor, all students should use their computer to take these
 skill-checks on the scheduled date and to complete it in the stated location
 while taking no more than the required amount of time. Designed to prepare
-learners for an examination, each skill-check is an executable assessment that
-students complete through the use of GitHub, VS Code, and the Python programming
-tools on their laptops. Students may use external sources, including artificial
-intelligence coding assistants, during the completion of a skill-check provided
-that they cite these sources and explain how they used them to complete the
-examination.
+learners for the final executable examination, each skill-check is an executable
+assessment that students complete through the use of GitHub, VS Code, and the
+Python programming tools on their laptops. Students may use external sources,
+including artificial intelligence coding assistants, during the completion of a
+skill-check provided that they cite these sources and explain how they used them
+to complete the examination.
+
+::: {.callout-note appearance="minimal" title="Additional Assessment Details" collapse="false"}
+
+- **Class Participation**: three total reports available at conclusion of the
+three course modules.
+
+- **Final Executable Examination**: grade automatically reported at end of
+examination period.
+
+:::
 
 ## Course Schedule
 
