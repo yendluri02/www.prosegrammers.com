@@ -366,7 +366,8 @@ assessments.
   - Give demonstrations to and receive feedback from the course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use GitHub, VS Code, and Python to complete document engineering skill-checks
-  - Complete in-person document engineering knowledge-checks
+  - Complete in-person document engineering knowledge-checks in instructor's
+  office
 
 #### Assessment Policies
 
@@ -378,9 +379,9 @@ assessment policies:
 All assignments will have a stated due date shared through GitHub, GitHub
 Classroom, and/or the [Algorithmology Discord](https://discord.gg/YHjhQaBnme).
 No credit will be awarded for any course work that you submit to the incorrect
-GitHub repository or web site. Unless special advance arrangements are made
-with the instructor to address extenuating circumstances, no work will be
-accepted after the deadline.
+GitHub repository or web site. Unless special advance arrangements are made with
+the instructor to address extenuating circumstances or a student pays a document
+engineering token, no work will be accepted after the deadline.
 
 ##### Assignment Evaluation
 
