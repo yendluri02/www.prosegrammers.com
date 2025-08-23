@@ -251,7 +251,7 @@ request.
 three stages that span the entire academic semester, these projects enable
 students to build and evaluate a complete document engineering pipeline in the
 Python programming language. At the start of each of the three course modules, a
-student will receive a project description for one phrase of the document
+student will receive a project description for one phase of the document
 engineering pipeline. During the remainder of the module, a student will
 complete four demonstrations during the laboratory sessions and then submit a
 complete, working, well-documented project and a final project report at the end
