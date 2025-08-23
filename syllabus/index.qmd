@@ -463,14 +463,14 @@ suggestions, and other important information about the course.
 #### Seeking Assistance
 
 Students who are struggling to understand the knowledge and skills developed in
-this course on document engineering are encouraged to seek assistance from the
-course instructor and/or the student technical leaders. Students should, within
-the bounds of the Honor Code, ask and answer questions on the [Document
-Engineering Discord Server](https://discord.gg/5HdxuqjUvK); please request
-assistance from the instructor and student technical leaders first through
-public Discord channels before sending an email or a direct message. Students
-who need more assistance are invited to schedule a meeting through the
-[instructor's appointment
+this course's exploration of document engineering are encouraged to seek
+assistance from the instructor and/or the student technical leaders.
+Students should, within the bounds of the Honor Code, ask and answer questions
+on the [Document Engineering Discord Server](https://discord.gg/5HdxuqjUvK);
+please request assistance from the instructor and student technical leaders
+first through public Discord channels before sending an email or a direct
+message. Students who need more assistance are invited to schedule a meeting
+through the [instructor's appointment
 scheduler](https://www.gregorykapfhammer.com/schedule/) and come to the meeting
 with details about their question. Students can see the office hour schedule for
 student technical leaders by viewing the list of [student technical
