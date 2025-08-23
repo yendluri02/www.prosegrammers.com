@@ -160,6 +160,17 @@ footer {
   margin-bottom: 0;
 }
 
+.blockquote {
+	font-size: inherit;
+	color: #333333;
+}
+
+blockquote {
+	margin: 0 0 0 1rem;
+	padding: .625rem 1.25rem;
+	border-left: .25rem solid #7a4e99;
+}
+
 div.quarto-post a {
   color: #212529;
   text-decoration: none;
