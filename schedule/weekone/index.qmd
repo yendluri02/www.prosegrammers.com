@@ -1,71 +1,27 @@
 ---
-title: Equipping Algorithm Engineers
-description: "Ensure Success in Algorithm Analysis"
-date: 2025-01-13
+title: Equipping Document Engineers
+description: "Ensure Success in Document Engineering"
+date: 2025-08-25
 layout: full
 toc: true
 toc-expand: 3
 ---
 
-## Exploration
-
-- {{< iconify fa6-solid book-open size=18px >}} Read chapter 1 of [A First
-Course on Data Structures in
-Python](https://donsheehy.github.io/datastructures/)
-- {{< iconify fa6-brands github size=18px >}} Overview the `ds2` package in
-[donsheehy/datastructures](https://github.com/donsheehy/datastructures)
-
 ## Activities
 
-- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
-Course introduction
-  - Introduction to algorithm engineering
-  - Overview of a course on algorithm analysis
-  - Prepare for an algorithm engineering project
-- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Algorithm
-engineering project one
-
-## Project
-
-### Goal
-
-To build and use a Python program, called `systemsense`, that makes it possible
-to "sense" the characteristics of an execution platform and characterize its
-performance with microbenchmarks, thereby setting the stage for
-future algorithm engineering projects.
-
-### Steps
-
-- Click the link provided in Discord to get started on this project
-- Review {{< iconify fa6-brands github size=18px >}} [System
-Sense](https://github.com/Algorithmology/algorithmology-setup-starter) as a
-public reference repository
-- Install the project's dependencies using `devenv` and/or `poetry`
-- Follow the instructions to complete the project
-- Schedule [office hours](https://www.gregorykapfhammer.com/schedule/) if you
-have questions
-
-::: {.callout-note appearance="minimal" title="Student Insights" collapse="false"}
-
-Students who completed this project shared these insights:
-
-- "If a function is not fully tested, any number of bugs could come up during the
-process of running and evaluating it, muddying the performance results."
-**Mordred Boulais**
-
-- "Operating systems each store and reference their own diagnostic information in
-distinct ways. Although some operating systems and computer architectures are
-obsolete from the perspective of a developer, it is important to note that each
-operating system and processor architecture was built for a specific purpose,
-just like we as humans are made with a specific purpose." **Simon Jones**
-
-- "The way modules, files, and function were written ensured that students with
-different computers would have comparable results. This is important so that
-going forward we can accurately compare our results. Metaphorically speaking, we
-need to compare apples to apples and oranges to oranges and not apples to
-oranges." **Rebekah Rudd**
-
-:::
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - No class due to the fact that the semester has not started yet
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Preparation for document engineering presentations and evaluations by student teams
+  - As outlined on the course schedule, teams give two types of presentations:
+     - Document Engineering Concept Overviews (DECO)
+     - Document Engineering Project Critiques (DEPC)
+  - Teams and presentation topics assigned at the start of a course module
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Demonstration order is randomly generated and announced incrementally
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Use GitHub, VS Code, and Python to complete document engineering
+  skill-checks
 
 ## Slides
 
@@ -73,4 +29,4 @@ oranges." **Rebekah Rudd**
 <iframe class="slide-deck" src="../../slides/weekone/"></iframe>
 ```
 
-{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week One: Introduction to Algorithm Analysis](../../slides/weekone/)
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week One: Introduction to Document Engineering](../../slides/weekone/)
