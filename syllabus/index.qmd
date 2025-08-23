@@ -266,13 +266,13 @@ collapse="false"}
 - **Class Participation**: One grade reported at the conclusion of each of the
 **three** course modules.
 
-- **Final Executable Examination**: **One** grade automatically reported at end
-of examination period.
+- **Final Executable Examination**: Grade automatically reported at end
+of **one** examination period.
 
 - **Document Engineering Skill-Checks**: Grade automatically reported at end of
 a Friday classroom session. Since there are two skill-check assessments for each
 of the three course modules, a student will receive a total of **six**
-assessments reports for their skill-checks.
+assessment reports for their skill-checks.
 
 - **Document Engineering Knowledge-Checks**: Grade reported at conclusion of a
 course module. Since there is one in-person knowledge-check assessment for each of
@@ -292,8 +292,8 @@ reported for these projects: demonstration grades and module-level project
 grades. A grade is reported one-week after the completion of a demonstration or
 the final submission of their project at the end of a course module. For their
 work on the document engineering tools, a student will receive a total of
-**twelve** demonstration assessments and **three** module-level project
-assessments.
+**twelve** demonstration assessments and **three** detailed, module-level
+project assessments.
 
 :::
 
