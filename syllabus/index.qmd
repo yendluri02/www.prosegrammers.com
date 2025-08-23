@@ -435,23 +435,26 @@ due to extenuating circumstances beyond your reasonable control, you will not be
 able to attend a session, then, whenever possible, please communicate with the
 instructor at least one week in advance to describe your situation. Students who
 have any signs of illness should not attend any of the in-person course or
-laboratory sessions.
+laboratory sessions. After a student misses two weeks of class and laboratory
+sessions (i.e., misses a total of **six classes** and **two laboratory
+sessions**), a student's final grade in the course will be reduced by one letter
+grade.
 
 ##### Class Preparation
 
 In order to minimize confusion and maximize learning, students must invest time
-to prepare for the class sessions that focus on professional development,
-technical development, and project development. Although the course instructor
-and the student technical leaders will always be available to serve as guide
-for individual students, teams of students, and the entire class, it is
-expected that students will volunteer to lead and actively contribute to all
-class sessions. Only those students who have prepared for class by reading and
-running the assigned material will be able to effectively participate in these
-class discussions. To help students remain organized and to effectively prepare
-for classes, the instructor will maintain a list of [course
-slides](../slides/index.qmd) and a [course schedule](../schedule/index.qmd)
-with reading assignments, programming suggestions, and other important
-information about the course.
+to prepare for the class sessions that focus on the concepts, tasks, and tools
+of document engineering. Although the course instructor and the student
+technical leaders will always be available to serve as guide for individual
+students, teams of students, and the entire class, it is expected that students
+will volunteer to lead and actively contribute to all class sessions. Only those
+students who have prepared for class by reading and running the assigned
+material and completing the assigned projects will be able to effectively
+participate in these class discussions. To help students remain organized and to
+effectively prepare for classes, the instructor will maintain a list of
+[course slides](../slides/index.qmd) and a [course
+schedule](../schedule/index.qmd) with reading assignments, programming
+suggestions, and other important information about the course.
 
 #### Seeking Assistance
 
