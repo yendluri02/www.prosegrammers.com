@@ -315,7 +315,7 @@ project assessments.
   - **Subjects for Critique**: [ruff](https://astral.sh/ruff) and
   [Quarto](https://quarto.org/)
   - **Technical Topics**: 
-    - **Documentation**: [Zettelkasten](https://zettelkasten.de/), [Digital gardens](https://github.com/MaggieAppleton/digital-gardeners)
+    - **Documentation**: [Literate programming](https://guides.nyu.edu/datascience/literate-prog), [Localization](https://developer.mozilla.org/en-US/docs/Glossary/Localization)
     - **Engineering**: Intermediate Python programming, AI coding agents, Quarto
 - **Module Three**:
   - **Topic**: Advanced Document Engineering
@@ -323,7 +323,7 @@ project assessments.
   [Pyrefly](https://pyrefly.org/) and [Quarto](https://quarto.org/)
   - **Weeks**: Twelve through sixteen
   - **Topics**: 
-    - **Documentation**: [Literate programming](https://guides.nyu.edu/datascience/literate-prog), [Localization](https://developer.mozilla.org/en-US/docs/Glossary/Localization)
+    - **Documentation**: [Zettelkasten](https://zettelkasten.de/), [Digital gardens](https://github.com/MaggieAppleton/digital-gardeners)
     - **Engineering**: Advanced Python programming, Context engineering, Quarto
 
 ### Schedule Details
@@ -370,18 +370,26 @@ project assessments.
   - Document engineering deep-dive presentations by the course instructor
   - Technical and engineering knowledge and skills in the field of document
   engineering
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
+  - Presentation teams finalize GitHub pull request for presentation by 11:59 PM
+  - Excepting documented, extenuating circumstances, no content allowed after
+  deadline
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Document engineering presentations and evaluations by student teams
-  - Two types of presentations: Document Engineering Concept Overviews (DECO)
-  and Document Engineering Project Critiques (DEPC)
+  - As outlined on the course schedule, teams give two types of presentations:
+     - Document Engineering Concept Overviews (DECO)
+     - Document Engineering Project Critiques (DEPC)
   - Teams and presentation topics assigned at the start of a course module
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
-  - Complete tasks for document engineering tool-building projects
+  - Across five weeks, complete tasks for document engineering tool-building
+  projects
   - Individual project completion, with instructor and student technical leader
   support
   - Give demonstrations to and receive feedback from the course instructor
+  - Demonstration order is randomly generated and announced incrementally
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
-  - Use GitHub, VS Code, and Python to complete document engineering skill-checks
+  - Use GitHub, VS Code, and Python to complete document engineering
+  skill-checks
   - Complete in-person document engineering knowledge-checks in instructor's
   office
 
