@@ -182,11 +182,11 @@ Unless prior arrangements are made with the instructor, all students should use
 their computer to take the final examination on the scheduled date and to
 complete it in the stated location while taking no more than the required amount
 of time. The cumulative final is an executable examination that a student will
-complete through the use of GitHub, VS Code, and the Python programming tools
-installed on their laptops. During the completion of the final examination,
-students may use external sources, including artificial intelligence coding
-assistants, provided that they cite these sources and explain how they used them
-to complete the final examination.
+complete through the use of GitHub, a text editor like VS Code, and the Python
+programming tools installed on their laptops. During the completion of the final
+examination, students may use external sources, including artificial
+intelligence coding assistants, provided that they cite these sources and
+explain how they used them to complete the final examination.
 
 - **Document Engineering Skill-Checks**: Completed during a Friday classroom
 session, these skill-checks are online, cumulative assessments covering all
@@ -196,11 +196,11 @@ with the instructor, all students should use their computer to take these
 skill-checks on the scheduled date and to complete it in the stated location
 while taking no more than the required amount of time. Designed to prepare
 learners for the final executable examination, each skill-check is an executable
-assessment that students complete through the use of GitHub, VS Code, and the
-Python programming tools on their laptops. During the completion of a
-skill-check, students may use external sources, including artificial
-intelligence coding assistants, provided that they cite these sources and
-explain how they used them to complete the examination.
+assessment that students complete through the use of GitHub, a text editor like
+VS Code, and the Python programming tools on their laptops. During the
+completion of a skill-check, students may use external sources, including
+artificial intelligence coding assistants, provided that they cite these sources
+and explain how they used them to complete the examination.
 
 - **Document Engineering Knowledge-Checks**: Completed during a Friday classroom
 session, these knowledge-checks are in-person, cumulative assessments covering
@@ -220,16 +220,32 @@ Project Critiques (DEPC). During a DECO presentation, a team of students will
 teach the entire class on a specific document engineering concept like Diataxis
 or README-driven development. During a DEPC presentation, a team of students
 will use all prior course material to critique the documentation of an assigned
-open-source software project. For each teach assigned to give either a DECO or a
+open-source software project. For each team assigned to give either a DECO or a
 DEPC presentation, there will be another assigned team of students that is
 responsible for posing questions to the presenting team and evaluating the
 presentation. For both DECO and DEPC presentations, both the presentation and
-evaluation teams will receive a grade for their submitted work. Although
-students may use external sources, including artificial coding assistants,
-during the completion of their presentation materials, they must cite their
-sources. Except for the presentation slides published on the course website, the
-presenters may not use any external sources during either the presentation or
-the evaluation phases.
+evaluation teams will receive a grade for their submitted work. Although both
+the presentation and examination teams may use external sources, including
+artificial coding assistants, during the completion of their materials, they
+must cite their sources. Except for the slides published on the course website,
+the presenters may not use any external sources during either the presentation
+or the evaluation phases. All document engineering presentations must be
+completed through the use of [Quarto](https://quarto.org/),
+[RevealJS](https://revealjs.com/),
+[Markdown](https://www.markdownguide.org/), [Git](https://git-scm.com/),
+[GitHub](https://github.com/), and the [GitHub Flow
+model](https://docs.github.com/en/get-started/quickstart/github-flow). All work
+for a presentation must be available, in final form, as a pull request in the
+[GitHub repository for the course web
+site](https://github.com/prosegrammers/www.prosegrammers.com), no later than
+11:59 PM on the day before the team is scheduled to present. Each student member
+of a presentation team must use Git and their own GitHub account to commit their
+work through to the [pull
+request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+that their team creates for the presentation. In addition to giving the
+presentation itself, every student on a presentation team must make a
+contribution to the presentation slides in the form of commits to the pull
+request.
 
 - **Document Engineering Tool-Building Projects**: Completed individually in
 three stages that span the entire academic semester, these projects enable
