@@ -574,7 +574,7 @@ timely fashion.
 In reference to software, Frederick P. Brooks, Jr. wrote in chapter one of *The
 Mythical Man Month* that "the magic of myth and legend has come true in our
 time." Software is a pervasive aspect of our society that changes how we think
-and act. High quality and efficient software also has the potential to
+and act. High quality and well-documented software also has the potential to
 positively influence the lives of many people. Let's embark on this journey of
 discovery and innovation, as we learn how to become "prosegrammers" who can
 harness the power of software and its top-notch documentation. At the start of
