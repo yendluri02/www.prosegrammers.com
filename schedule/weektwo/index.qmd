@@ -12,9 +12,8 @@ toc-expand: 3
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
   - No class due to the fact that it is Labor Day
 - {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
-  - [Diátaxis: A systematic approach to technical documentation authoring]()
-  - DECO1 presentation completed through the use of
-  [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),
+  - [DECO1 presentation](/slides/deco/weektwo/index.qmd) completed through the
+  use of [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),
   [Markdown](https://www.markdownguide.org/), [Git](https://git-scm.com/),
   [GitHub](https://github.com/), and the [GitHub Flow
   model](https://docs.github.com/en/get-started/quickstart/github-flow).
@@ -23,21 +22,14 @@ toc-expand: 3
   site](https://github.com/prosegrammers/www.prosegrammers.com), no later than
   11:59 PM.
   - Each DECO1 team member must use Git and their own GitHub account to commit
-  their work through to the [pull
+  their work to the [pull
   request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   for their team's slides.
-
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
-  - Prepare for document engineering presentations and evaluations by teams
-  - As outlined in the [syllabus](../../syllabus/index.qmd), teams give two
-  types of presentations:
-     - Document Engineering Concept Overviews (DECO)
-     - Document Engineering Project Critiques (DEPC)
+  - Team-based delivery of [DECO1
+  presentation](/slides/deco/weektwo/index.qmd)
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
-  - Installation of required software tools for document engineering
-  - Release the schedule for the two types of presentations:
-     - Document Engineering Concept Overviews (DECO)
-     - Document Engineering Project Critiques (DEPC)
-  - Teams meet to confirm contact information and plan their presentations
+  - Release of the first document engineering tool-building project
+  - Students meet with instructors and student technical leaders
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
-  - Students demonstrate setup for GitHub, VS Code, and Python through `uv`
+  - Use installed software tools for document engineering skill-check one
