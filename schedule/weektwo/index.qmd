@@ -29,6 +29,7 @@ toc-expand: 3
   - Team-based delivery of [DECO1
   presentation](/slides/deco/weektwo/index.qmd)
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Instructor-led document engineering deep-dive on Python programming
   - Release of the first document engineering tool-building project
   - Students meet with instructors and student technical leaders
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
