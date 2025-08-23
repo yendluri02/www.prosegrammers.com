@@ -1,7 +1,7 @@
 ---
-title: Runtime Analysis
-description: "Characterize Performance with Experiments"
-date: 2025-02-10
+title: "Advanced Quarto Documents"
+description: "Creating Dynamic Content with Quarto"
+date: 2025-09-22
 layout: full
 toc: true
 toc-expand: 3

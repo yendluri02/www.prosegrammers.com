@@ -1,7 +1,7 @@
 ---
 title: Object-Oriented Programming
-description: "Understand Basics of Object-Oriented Programming"
-date: 2025-01-27
+description: "Explore Basics of Object-Oriented Programming"
+date: 2025-09-08
 layout: full
 toc: true
 toc-expand: 3
