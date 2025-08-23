@@ -1,7 +1,9 @@
 # Basic configuration for a Quarto website
+# --> Render any Quarto markdown files
 # --> Do not render any markdown
 # files that are in the repository
 # as a configuration file for an agent
+# (e.g., the GEMINI.md file)
 project:
   type: website
   preview:
@@ -12,8 +14,8 @@ project:
   render:
     - "*.qmd"
     - "!AGENTS.qmd"
-    - "!PLAN.qmd"
     - "!GEMINI.qmd"
+    - "!PLAN.qmd"
 
 # Define all parameters for the website
 website:
@@ -41,11 +43,9 @@ website:
       - text: "{{< iconify fa github size=18px >}}"
         href: https://github.com/prosegrammers/
       - text: "{{< iconify fa github-square size=18px >}}"
-        href: https://github.com/prosegrammers/prosegrammers/
+        href: https://github.com/prosegrammers/www.prosegrammers.com/
       - text: "{{< iconify bi discord size=19px >}}"
         href: https://discord.gg/5HdxuqjUvK
-      - text: "{{< iconify bi rss-fill size=18px >}}"
-        href: "blog/index.xml"
 
 format:
   html:
