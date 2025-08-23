@@ -38,10 +38,10 @@ interactive documents that blend code, text, and visualizations. Throughout the
 course, you'll also develop skills in reading and critiquing documentation for
 popular open-source projects, ensuring you can both create and consume
 high-quality technical writing. In addition to learning more about version
-control, Git, and GitHub, emerging prosegrammers will also learn how to use
-artificial intelligence (AI) assistants [GitHub
-Copilot](https://github.com/features/copilot), [Google Gemini
-CLI](https://github.com/google-gemini/gemini-cli), and
+control, [Git](https://git-scm.com/), and [GitHub](https://github.com/),
+emerging prosegrammers will also learn how to use artificial intelligence (AI)
+assistants [GitHub Copilot](https://github.com/features/copilot), [Google
+Gemini CLI](https://github.com/google-gemini/gemini-cli), and
 [OpenCode](https://opencode.ai/) to create, revise, and extend both
 documentation and source code. Check out the [schedule](schedule/index.qmd)
 and [slides](slides/index.qmd) to begin your journey as a prosegrammer!
