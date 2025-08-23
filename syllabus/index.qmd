@@ -430,15 +430,19 @@ assignment re-reassessments.
 
 ##### Course Attendance
 
-It is mandatory for all students to attend every one of the course sessions. If,
-due to extenuating circumstances beyond your reasonable control, you will not be
-able to attend a session, then, whenever possible, please communicate with the
-instructor at least one week in advance to describe your situation. Students who
-have any signs of illness should not attend any of the in-person course or
-laboratory sessions. After a student misses two weeks of class and laboratory
+It is mandatory for all students to attend every one of the course sessions with
+all the equipment needed for this course, including a laptop, a laptop power
+supply, and a web-enabled device that can scan a QR code (e.g., a mobile phone
+or a tablet). If, due to extenuating circumstances beyond your reasonable
+control, you will not be able to attend a session, then, whenever possible,
+please communicate with the instructor at least one week in advance to describe
+your situation.  After a student misses two weeks of class and laboratory
 sessions (i.e., misses a total of **six classes** and **two laboratory
 sessions**), a student's final grade in the course will be reduced by one letter
-grade.
+grade. Students who have any signs of illness should not attend any of the
+in-person course or laboratory sessions. With that said, missing class for any
+reason --- including illness or attendance at any College-approved event ---
+will still be recorded by the instructor as a course absence.
 
 ##### Class Preparation
 
