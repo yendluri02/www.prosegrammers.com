@@ -140,12 +140,14 @@ Ready to embark on your journey as a prosegrammer? Start exploring here:
 
 - The [sixteen-week course schedule](./schedule/index.qmd) provides detailed
 insights into each step that learners should take to emerge as skilled
-prosegrammers, including reading assignments focused on document engineering
-tools and projects that combine programming with technical writing.
+prosegrammers, including assignments focused on document engineering tools,
+critiques of documentation sites, and projects that combine programming with
+writing.
 
 - The [course syllabus](./syllabus/index.qmd) introduces the course and its
 learning objectives, explaining how on-campus learners will develop both their
-programming skills and their ability to create exceptional documentation.
+programming skills and their ability to use tools to create and maintain
+exceptional documentation.
 
 - The [course slides](./slides/index.qmd) offers links to the slides created
 by both the instructor and the prosegrammers who are learning more about
