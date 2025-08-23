@@ -24,7 +24,7 @@ toc-expand: 3
      - Document Engineering Project Critiques (DEPC)
   - Teams meet to confirm contact information and plan their presentations
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
-  - Demonstrate setup for GitHub, VS Code, and Python through `uv`
+  - Students demonstrate setup for GitHub, VS Code, and Python through `uv`
 
 ## Slides
 
