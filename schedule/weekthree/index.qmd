@@ -7,34 +7,29 @@ toc: true
 toc-expand: 3
 ---
 
-## Exploration
-
-- {{< iconify fa6-solid book-open size=18px >}} Read chapter 3 of [A First
-Course on Data Structures in
-Python](https://donsheehy.github.io/datastructures/)
-- {{< iconify fa6-brands github size=18px >}} Overview objects in `ds2` package
-of [donsheehy/datastructures](https://github.com/donsheehy/datastructures)
-
 ## Activities
 
-- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
-Object-oriented programming
-  - Review the goals of object-oriented programming
-  - Review the principles of object-oriented programming
-    - Abstraction
-    - Inheritance
-    - Encapsulation
-    - Polymorphism
-  - Examine source code segments to illustrate trade-offs
-  - Conduct experiments to measure performance of object-orientation
-- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Continue
-algorithm engineering project two (see the [prior week](../weektwo/) for
-details about this project)
-
-## Slides
-
-```{=html}
-<iframe class="slide-deck" src="../../slides/weekthree/"></iframe>
-```
-
-{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Three: Object-Oriented Programming in Python](../../slides/weekthree/)
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Instructor-led document engineering deep-dive on object-oriented programming
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
+  - [DECO1 presentation](/slides/deco/weektwo/index.qmd) completed through the
+  use of [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),
+  [Markdown](https://www.markdownguide.org/), [Git](https://git-scm.com/),
+  [GitHub](https://github.com/), and the [GitHub Flow
+  model](https://docs.github.com/en/get-started/quickstart/github-flow).
+  - Presentation available, in final form, as a pull request in the [GitHub
+  repository for the course web
+  site](https://github.com/prosegrammers/www.prosegrammers.com), no later than
+  11:59 PM.
+  - Each DECO1 team member must use Git and their own GitHub account to commit
+  their work to the [pull
+  request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+  for their team's slides.
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Team-based delivery of [DECO1
+  presentation](/slides/deco/weektwo/index.qmd)
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Release of the first document engineering tool-building project
+  - Students meet with instructors and student technical leaders
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Use installed software tools for document engineering skill-check one
