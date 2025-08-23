@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Document Engineering"
-description: "Exploring tools for document engineering with Python"
+description: "Exploring document engineering with Python"
 date: "2025-08-25"
 date-format: long
 author: Gregory M. Kapfhammer
