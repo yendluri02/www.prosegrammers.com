@@ -1,75 +1,25 @@
 ---
 title: Software Testing
 description: "Ensuring Python Program Correctness"
-date: 2025-10-06
+date: 2025-09-29
 layout: full
 toc: true
 toc-expand: 3
 ---
 
-## Exploration
-
-- {{< iconify fa6-solid book-open size=18px >}} Read chapter 5 of [A First
-Course on Data Structures in
-Python](https://donsheehy.github.io/datastructures/)
-- {{< iconify fa6-brands github size=18px >}} Experimentally evaluate
-performance of algorithms, data structures, and systems in the `ds2` package of
-[donsheehy/datastructures](https://github.com/donsheehy/datastructures/)
-- {{< iconify fa6-solid book size=18px >}} Note that next week we will cover a new chapter of the book!
-
 ## Activities
 
-- {{< iconify fa6-solid people-line size=18px >}} **Tuesday and Thursday**:
-Analytical Evaluation
-  - Further understand why program performance is critically important
-  - Characterize performance patterns in Python programs
-  - Use asymptotic analysis to characterize performance
-  - Examine Python source code segments to illustrate key points
-- {{< iconify fa6-solid diagram-project size=18px >}} **Friday**: Submit
-algorithm engineering project three, start algorithm engineering project four,
-and give presentations for the first algorithm all-hands session
-
-## Project
-
-### Goal
-
-To build and use a Python program, called `filesorter`, that runs benchmarks to
-study the performance of sorting different types of data stored in a CSV file.
-
-### Steps
-
-- Click the link provided in Discord to get started on this project
-- Reference {{< iconify fa6-brands github size=18px >}} [File
-Sorting](https://github.com/Algorithmology/file-sorting-starter) as a public
-reference repository
-- Install the project's dependencies using `devenv` and/or `poetry`
-- Follow the instructions to complete the project:
-  - **Week 1**: Implement all of the modules in `filesorter`
-  - **Week 2**: Design and conduct experiments and document experimental results
-- Schedule [office hours](https://www.gregorykapfhammer.com/schedule/) if you
-have questions
-
-::: {.callout-note appearance="minimal" title="Student Insights" collapse="false"}
-Students who completed this project shared these insights:
-
-- "The main take home point for me was how impactful the input file size is to
-runtime as well as the running time analysis. We can double the input size and
-it will show us the function by which the time increases. In this project,
-different methods produce the same output but exhibit different efficiency
-characteristics." **Pallas Athena-Cain**
-
-- "This experiment revealed how confounding variables, such as function design,
-play a role in the results gathered from outcome variables, such as time
-overhead. Striking the right balance between these aspects is key in developing
-the most efficient approach to sorting data quickly, yet also accurately."
-**Chloe Bonson**
-
-:::
-
-## Slides
-
-```{=html}
-<iframe class="slide-deck" src="../../slides/weeksix/"></iframe>
-```
-
-{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Six: Running Time Analysis through Theoretical Evaluation](../../slides/weeksix/)
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Instructor-led deep-dive on software testing for Python programs
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
+  - No material due since it is the last week of the module
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Release the schedule for the two types of presentations in the next module:
+     - Document Engineering Concept Overviews (DECO)
+     - Document Engineering Project Critiques (DEPC)
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Finish working on first document engineering tool-building project
+  - Students meet with the student technical leaders
+  - Students give final in-person demonstration to course instructor
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Submit completed first document engineering tool-building project 
