@@ -1,5 +1,5 @@
 ---
-title: "Using README-Driven Documentation"
+title: "Understanding README-Driven Documentation"
 description: "Use READMEs for documentation"
 date: "2025-09-10"
 date-format: long
@@ -10,7 +10,7 @@ format:
   revealjs:
     completion: true
     theme: default
-    css: ../css/styles.css
+    css: ../../css/styles.css
     history: false
     scrollable: true
     transition: slide
