@@ -16,15 +16,15 @@ toc-expand: 3
   use of [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),
   [Markdown](https://www.markdownguide.org/), [Git](https://git-scm.com/),
   [GitHub](https://github.com/), and the [GitHub Flow
-  model](https://docs.github.com/en/get-started/quickstart/github-flow).
+  model](https://docs.github.com/en/get-started/quickstart/github-flow)
   - Presentation available, in final form, as a pull request in the [GitHub
   repository for the course web
   site](https://github.com/prosegrammers/www.prosegrammers.com), no later than
-  11:59 PM.
+  11:59 PM
   - Each DECO1 team member must use Git and their own GitHub account to commit
   their work to the [pull
   request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
-  for their team's slides.
+  for their team's slides
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Team-based delivery of [DECO1
   presentation](/slides/deco/weektwo/index.qmd)
