@@ -33,4 +33,4 @@ toc-expand: 3
   - Students meet with the student technical leaders
   - Students give in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
-  - Use installed software tools for document engineering skill-check one
+  - Use installed software tools for document engineering skill-check two
