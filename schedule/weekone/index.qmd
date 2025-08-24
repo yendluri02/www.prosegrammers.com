@@ -19,7 +19,7 @@ toc-expand: 3
      - Document Engineering Project Critiques (DEPC)
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - Installation of required software tools for document engineering
-  - Release the schedule for the two types of presentations:
+  - Release the schedule for the two types of presentations in this module:
      - Document Engineering Concept Overviews (DECO)
      - Document Engineering Project Critiques (DEPC)
   - Teams meet to confirm contact information and plan their presentations
