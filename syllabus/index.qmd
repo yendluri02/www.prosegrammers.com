@@ -173,7 +173,7 @@ communicate their situation to the course instructor in a timely fashion. A
 student's weekly class participation grade will be reduced if they are
 frequently observed, during either class or laboratory sessions, undertaking
 non-course-related activities like viewing email, browsing social media, or
-other looking at any other content not about document engineering.
+looking at any other content not about document engineering.
 
 - **Final Executable Examination**: The final examination is an online,
 executable, cumulative assessment covering all of the material during all of the
