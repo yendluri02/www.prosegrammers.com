@@ -200,7 +200,7 @@ assessment that students complete through the use of GitHub, a text editor like
 VS Code, and the Python programming tools on their laptops. During the
 completion of a skill-check, students may use external sources, including
 artificial intelligence coding assistants, provided that they cite these sources
-and explain how they used them to complete the examination.
+and explain how they used them to complete the skill-check.
 
 - **Document Engineering Knowledge-Checks**: Completed during a Friday classroom
 session, these knowledge-checks are in-person, cumulative assessments covering
