@@ -38,7 +38,7 @@ website:
       - slides/index.qmd
 
   page-footer:
-    left: '<a href="https://github.com/prosegrammers/prosegrammers/graphs/contributors" aria-label="Prosegrammers Maintainers">{{< iconify fa copyright >}} Prosegrammers</a>'
+    left: '<a href="https://github.com/prosegrammers/www.prosegrammers.com/graphs/contributors" aria-label="Prosegrammers Maintainers">{{< iconify fa copyright >}} Prosegrammers</a>'
     right:
       - text: "{{< iconify fa github size=18px >}}"
         href: https://github.com/prosegrammers/
