@@ -372,6 +372,8 @@ project assessments.
   engineering
 - {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
   - Presentation teams finalize GitHub pull request for presentation by 11:59 PM
+  - All content submitted to the pull request must be in its final form
+  - All students in a presentation team must contribute to the pull request
   - Excepting documented, extenuating circumstances, no content allowed after
   deadline
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
@@ -417,11 +419,11 @@ specification and (b) submitted it by the deadline to the stated platform.
 
 ##### Document Engineering Tokens
 
-Students may "spend" up to four "tokens" that they may use to secure seven days
-of additional time to complete a project. After using a provided GitHub
-repository to request their use of a token, students may use a token to re-take
-either a document engineering skill-check or knowledge-check. Students cannot
-use a token for the final executable examination, a DECO presentation or
+Students may "spend" up to four "tokens" that they may use to retake certain
+assessments. After using a provided GitHub repository to request their use of a
+token, ensuring that they follow all guidelines, students may use a token to
+re-take either a document engineering skill-check or knowledge-check. Students
+cannot use a token for the final executable examination, a DECO presentation or
 evaluation, a DEPC presentation or evaluation, or any part of any phase of a
 document engineering tool-building project. Outside of using these four tokens
 --- or severe, extenuating, and unexpected circumstances that are well
