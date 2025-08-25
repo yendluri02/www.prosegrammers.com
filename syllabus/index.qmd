@@ -436,13 +436,16 @@ power supply, and a web-enabled device that can scan a QR code (e.g., a mobile
 phone or a tablet). If, due to extenuating circumstances beyond your reasonable
 control, you will not be able to attend a session, then, whenever possible,
 please communicate with the instructor at least one week in advance to describe
-your situation.  After a student misses more than two weeks of class and
-laboratory sessions (i.e., misses more than a total of **six classes** and **two
-laboratory sessions**), their final grade in the course will be reduced by one
-letter grade. Students who have any signs of illness should not attend any of
-the in-person course or laboratory sessions. With that said, missing class for
-any reason --- including illness or attendance at any College-approved event ---
-will still be recorded by the instructor as a course absence.
+your situation. In the context of this course, "missing class" includes both
+coming to a class or laboratory session after attendance was taken (i.e., "being
+late" for class) or not attending the session. After a student misses more than
+two weeks of class and laboratory sessions (i.e., misses more than a total of
+**six classes** and **two laboratory sessions**), their final grade in the
+course will be reduced by one letter grade. Students who have any signs of
+illness should not attend any of the in-person course or laboratory sessions.
+With that said, missing class for any reason --- including illness or attendance
+at any College-approved event --- will still be recorded by the instructor as a
+course absence.
 
 ##### Class Preparation
 
