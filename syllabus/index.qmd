@@ -63,7 +63,7 @@ class and lab sessions.
 
 ::: {.callout-note appearance="minimal" title="Explaining the Distribution Requirements" collapse="false"}
 
-- **Quantitative Reasoning (HE)**: The study of Human Experience explores human
+- **Human Experience (HE)**: The study of Human Experience explores human
 physical, mental, emotional, and/or spiritual experiences as conveyed in texts
 broadly defined. Through engagement with such texts, students develop an
 appreciation for human experiences and their representations.
