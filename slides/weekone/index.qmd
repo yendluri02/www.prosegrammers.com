@@ -52,7 +52,7 @@ format:
   - Clear and professional writing
   - Interactive documents with code
   - Version control for documents
-- {{< iconify fa6-solid lightbulb >}} **Use science and engineering to analyze and improve documents!**
+- {{< iconify fa6-solid lightbulb >}} **Science and engineering to analyze & improve documents!**
 
 :::
 
@@ -69,15 +69,16 @@ format:
 
 :::
 
-::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
+::: {.fragment .fade .boxed-content style="margin-top: 0.1em; font-size: 0.85em;"}
 
-{{< iconify fa6-solid microscope >}} How do we *create* better documents using
+{{< iconify fa6-solid microscope >}} How do we *create* better documents with
 code? *...* How do we *analyze* text data to gain insights? *...* How do we
-*automate* documentation workflows? *...*
+*automate* documentation workflows? *...* How do we effectively use generative
+AI?
 
 :::
 
-## Analyzing text with Python
+## Python function for text analysis
 
 ```{python}
 from typing import Dict
@@ -91,7 +92,20 @@ def word_frequency(text: str) -> Dict[str, int]:
     for word in words:
         frequency_dict[word] = frequency_dict.get(word, 0) + 1
     return frequency_dict
+```
 
+::: {.fragment style="margin-top: -0.05em; font-size: 0.9em;"}
+
+- **Text analysis**: fundamental skill for prosegrammers
+- **Word frequency**: helps understand document content patterns
+- **Define function**: accept an input, process, make output
+- **Identify parts**: what are key parts to make function work?
+
+:::
+
+## Call the text analysis function
+
+```{python}
 # example text about document engineering
 sample_text = "Document engineering combines programming with writing. Writing clear documents requires skill."
 
