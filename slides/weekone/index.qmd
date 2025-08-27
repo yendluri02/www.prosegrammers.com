@@ -170,8 +170,8 @@ def document_summary(text: str) -> Dict[str, Any]:
     return {
         'word_count': word_count, 'sentence_count': sentence_count,
         'paragraph_count': paragraph_count,
-        'avg_words_per_sentence': round(avg_words_per_sentence, 1),
-        'avg_sentences_per_paragraph': round(avg_sentences_per_paragraph, 1)
+        'average_words_per_sentence': round(avg_words_per_sentence, 1),
+        'average_sentences_per_paragraph': round(avg_sentences_per_paragraph, 1)
     }
 ```
 
@@ -216,14 +216,21 @@ for metric, value in summary.items():
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.85em;"}
 
-- {{< iconify game-icons team-idea >}} **Discuss in your teams:**
+- {{< iconify game-icons team-idea >}} **Discuss `document_summary` in your teams:**
+    - How would you explain that this program works?
+    - What is the most confusing aspect of this code?
+    - What is thought-provoking about this approach?
+
+- {{< iconify game-icons team-idea >}} **Apply `document_summary` in your teams:**
     - What insights do these metrics provide about document readability?
     - How could prosegrammers use these tools in real projects?
     - What other document analysis features would be useful?
 
+- {{< iconify fa6-solid lightbulb >}} **Prosegrammers use programs to analyze prose!**
+
 :::
 
-## Essential tools
+## Essential tools for prosegrammers
 
 - Text editor like VS Code or Vim for writing
 - Version control like Git for tracking document changes  
@@ -235,6 +242,21 @@ for metric, value in summary.items():
 {{< iconify fa6-solid microscope >}} How do we *characterize* effective document
 tools? *...* How do we *compare* their features for different projects? *...*
 How do we *integrate* them into efficient workflows? *...*
+
+:::
+
+## Document engineering environment
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- Text editor with syntax highlighting and extensions
+- Version control system (e.g., Git with GitHub)
+- Document format (e.g., Markdown, reStructuredText, LaTeX)
+- Static site generator (e.g., Quarto, Hugo, Jekyll)
+- Automation tools (e.g., GitHub Actions, pre-commit hooks)
+- Collaboration platforms and review workflows
+- Deployment targets (e.g., GitHub Pages, Netlify)
+- Package managers for dependencies
 
 :::
 
@@ -267,20 +289,6 @@ How do we *integrate* them into efficient workflows? *...*
 
 :::
 
-## Document engineering environment
-
-::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
-
-- Text editor with syntax highlighting and extensions
-- Version control system (e.g., Git with GitHub)
-- Document format (e.g., Markdown, reStructuredText, LaTeX)
-- Static site generator (e.g., Quarto, Hugo, Jekyll)
-- Automation tools (e.g., GitHub Actions, pre-commit hooks)
-- Collaboration platforms and review workflows
-- Deployment targets (e.g., GitHub Pages, Netlify)
-- Package managers for dependencies
-
-:::
 
 ## Learn more about document engineering
 
