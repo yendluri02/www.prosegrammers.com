@@ -73,8 +73,8 @@ format:
 
 {{< iconify fa6-solid microscope >}} How do we *create* better documents with
 code? *...* How do we *analyze* text data to gain insights? *...* How do we
-*automate* documentation workflows? *...* How do we effectively use generative
-AI?
+*automate* documentation workflows? *...* How do we effectively use *generative
+AI*?
 
 :::
 
@@ -99,7 +99,7 @@ def word_frequency(text: str) -> Dict[str, int]:
 - **Text analysis**: fundamental skill for prosegrammers
 - **Word frequency**: helps understand document content patterns
 - **Define function**: accept an input, process, make output
-- **Identify parts**: what are key parts to make function work?
+- **Identify parts**: what are key parts to make this function work?
 
 :::
 
