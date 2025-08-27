@@ -584,12 +584,14 @@ timely fashion.
 In reference to software, Frederick P. Brooks, Jr. wrote in chapter one of *The
 Mythical Man Month* that "the magic of myth and legend has come true in our
 time." Software is a pervasive aspect of our society that changes how we think
-and act. High quality and well-documented software also has the potential to
-positively influence the lives of many people. Let's embark on this journey of
-discovery and innovation, as we learn how to become "prosegrammers" who can
-harness the power of software and its top-notch documentation. At the start of
-this class, I invite you to join together in an adventure in document
-engineering!
+and act. Since, as Frederick P. Brooks, Jr. also said that "Software entities
+are more complex for their size than perhaps any other human construct," it is
+important for software to be well-document. Indeed, high quality and
+well-documented software also has the potential to positively influence the
+lives of many people. Let's embark on this journey of discovery and innovation,
+as we learn how to become "prosegrammers" who can harness the power of software
+and its top-notch documentation. At the start of this class, I invite you to
+join together in an adventure in document engineering!
 
 ::: {.callout-note appearance="minimal" title="External Learners"}
 
