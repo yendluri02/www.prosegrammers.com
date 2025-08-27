@@ -350,6 +350,7 @@ these tools for our needs? *...* How do we use them for *teamwork*?
 - Automation tools (e.g., GitHub Actions, pre-commit hooks)
 - Deployment targets (e.g., GitHub Pages, Netlify)
 - Package managers for dependencies (e.g., Uv and npm)
+- **We will learn how to use these through the semester!**
 
 :::
 
