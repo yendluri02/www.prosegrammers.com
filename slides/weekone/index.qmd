@@ -322,6 +322,12 @@ all their work!
 
 :::
 
+# Let's set up your document engineering environment!
+
+- Laboratory session on Wednesday
+- Classroom session on Friday
+- Skill-check next Friday to confirm
+
 ## Essential tools for prosegrammers
 
 - Text editor like VS Code, Zed, or Neovim for writing
