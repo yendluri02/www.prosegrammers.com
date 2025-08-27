@@ -378,11 +378,14 @@ these tools for our needs? *...* How do we use them for *teamwork*?
 - [Git](https://git-scm.com/), [GitHub](https://github.com/), [GitHub
 Education](https://github.com/education), and [GitHub Student Developer
 Pack](https://education.github.com/pack)
-- [GitHub CLI](https://cli.github.com/) command-line program for interaction
+- [GitHub SSH
+Keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+and [GitHub CLI](https://cli.github.com/) command-line program for interaction
 with GitHub
 - Free GitHub Pro Subscription for [GitHub
 Copilot](https://github.com/features/copilot)
 - [VS Code](https://code.visualstudio.com/) or another suitable text editor
+(e.g., [Zed](https://zed.dev/) or [Neovim](https://neovim.io/))
 - [Quarto](https://quarto.org/) CLI and the Quarto plugin for your text editor
 - [Uv](https://docs.astral.sh/uv/) for [Python](https://www.python.org/)
 installation, virtual environment and dependency management
