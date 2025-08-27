@@ -357,12 +357,12 @@ these tools for our needs? *...* How do we use them for *teamwork*?
 
 - *Installing* essential tools for prosegrammers
 - *Configuring* development environment for document work
-- Complete these tasks during the first and second weeks
-- A skill-check during second week tests your setup
-- Please attend the **SOS Week** events to learn more!
-- Make sure to meet instructor and student technical leaders!
-- Don't hesitate to regularly ask questions in Discord!
-- Keep working and don't give up with setup tasks!
+  - Complete these tasks during the first and second weeks
+  - A skill-check during second week tests your setup
+  - Please attend the **SOS Week** events to learn more
+  - Work with instructor and student technical leaders
+  - Don't hesitate to regularly ask questions in Discord
+  - Keep working and don't give up with setup tasks
 
 ## Essential tools for prosegrammers
 
