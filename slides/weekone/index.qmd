@@ -116,14 +116,8 @@ for word, count in sorted(word_counts.items()):
     print(f"'{word}': {count}")
 ```
 
-::: {.fragment style="margin-top: -0.25em; font-size: 0.80em;"}
 
-- **Text analysis**: fundamental skill for prosegrammers
-- **Word frequency**: helps understand document content patterns
-
-:::
-
-## Try the `word_frequency` function
+## Try the `word_frequency` function!
 
 ```{pyodide}
 #| autorun: true
@@ -147,13 +141,13 @@ for word, count in sorted(word_counts.items()):
     print(f"'{word}': {count}")
 ```
 
-::: {.fragment style="margin-top: -0.25em; font-size: 0.80em;"}
+::: {.fragment style="margin-top: -0.3em; font-size: 0.75em;"}
 
 - **Important question**: what patterns do you notice in the word frequencies?
 
 :::
 
-## Document analysis function
+## Improved document analysis function
 
 ```{python}
 import re
@@ -181,14 +175,24 @@ def document_summary(text: str) -> Dict[str, Any]:
     }
 ```
 
-::: {.fragment style="margin-top: 0.1em; font-size: 0.80em;"}
+## Exploring `document_summary`
+
+::: {.fragment style="margin-top: 0em; font-size: 0.85em;"}
 
 - `document_summary`: analyzes text structure and readability
-- Uses `re` for sentence detection and provides essential quality metrics
+- Uses `re` for sentence detection and provides key quality metrics
+- Helps prosegrammers assess document effectiveness
+- Accepts as input a string of text and returns a dictionary of statistics
+- Different phases of text processing:
+  - Count the number of words
+  - Count the number of sentences
+  - Count the number of paragraphs
+  - Calculate the averages
+  - Return the results in a structured format
 
 :::
 
-## Testing document analysis
+## Running a document analysis
 
 ```{python}
 #| freeze: auto
