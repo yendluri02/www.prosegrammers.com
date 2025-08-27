@@ -230,36 +230,6 @@ for metric, value in summary.items():
 
 :::
 
-## Essential tools for prosegrammers
-
-- Text editor like VS Code, Zed, or Neovim for writing
-- Version control like Git for tracking document changes  
-- Documentation generator like Quarto or Sphinx
-- Generative AI tools like GitHub Copilot or Google Gemini CLI
-
-::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
-
-{{< iconify fa6-solid microscope >}} How do we *characterize* effective document
-tools? *...* How do we *compare* their features for different projects? *...*
-How do we *integrate* them into efficient workflows? *...* How do we *configure*
-these tools for our needs? *...* How do we use them for *teamwork*?
-
-:::
-
-## Document engineering environment
-
-::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
-
-- Text editor with syntax highlighting and extensions
-- Version control system (e.g., Git with GitHub)
-- Document format (e.g., Markdown, reStructuredText, LaTeX)
-- Static site generator (e.g., Quarto, Hugo, Jekyll)
-- Automation tools (e.g., GitHub Actions, pre-commit hooks)
-- Collaboration platforms and review workflows
-- Deployment targets (e.g., GitHub Pages, Netlify)
-- Package managers for dependencies
-
-:::
 
 ## Real-world engineering challenges
 
@@ -321,7 +291,7 @@ docs](https://github.com/tiangolo/fastapi) and [uv docs](https://docs.astral.sh/
 
 ::: {.fragment .fade-down style="margin-top: -0.15em; font-size: 0.85em;"}
 
-- Document engineering requires both technical and writing skills
+- Document engineering requires both **technical** and **writing** skills
 - **Key areas of focus for this course**:
   - Python programming and text processing
   - Markdown and markup languages  
@@ -335,7 +305,7 @@ docs](https://github.com/tiangolo/fastapi) and [uv docs](https://docs.astral.sh/
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
-- AI tools like GitHub Copilot, Google Gemini CLI, or Claude generate content:
+- Using AI tools like GitHub Copilot, Google Gemini CLI, or Claude:
   - Is the generated text accurate and well-written?
   - Can the generated content be improved and personalized?
   - Is the generated text clear, accessible, and appropriate?
@@ -347,7 +317,39 @@ docs](https://github.com/tiangolo/fastapi) and [uv docs](https://docs.astral.sh/
 ::: {.fragment .fade .boxed-content style="margin-top: -0.1em; font-size: 0.8em;"}
 
 {{< iconify fa6-solid lightbulb >}} Prosegrammers who use AI writing and coding
-tools are responsible for ensuring quality, accuracy, and ethical standards!
+tools are responsible for ensuring quality, accuracy, and ethical standards of
+all their work!
+
+:::
+
+## Essential tools for prosegrammers
+
+- Text editor like VS Code, Zed, or Neovim for writing
+- Version control like Git for tracking document changes  
+- Documentation generator like Quarto or Sphinx
+- Generative AI tools like GitHub Copilot or Google Gemini CLI
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid microscope >}} How do we *characterize* effective document
+tools? *...* How do we *compare* their features for different projects? *...*
+How do we *integrate* them into efficient workflows? *...* How do we *configure*
+these tools for our needs? *...* How do we use them for *teamwork*?
+
+:::
+
+## Document engineering environment
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- Text editor with syntax highlighting and extensions
+- Version control system (e.g., Git with GitHub)
+- Document format (e.g., Markdown, reStructuredText, LaTeX)
+- Static site generator (e.g., Quarto, Hugo, Jekyll)
+- Automation tools (e.g., GitHub Actions, pre-commit hooks)
+- Collaboration platforms and review workflows
+- Deployment targets (e.g., GitHub Pages, Netlify)
+- Package managers for dependencies
 
 :::
 
@@ -355,100 +357,21 @@ tools are responsible for ensuring quality, accuracy, and ethical standards!
 
 - *Installing* essential tools for prosegrammers
 - *Configuring* development environment for document work
+- Complete these tasks during the first and second weeks
+- A skill-check during second week tests your setup
+- Please attend the **SOS Week** events to learn more!
+- Make sure to meet instructor and student technical leaders!
+- Don't hesitate to regularly ask questions in Discord!
+- Keep working and don't give up with setup tasks!
 
 ## Essential tools for prosegrammers
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
+::: incremental
 
-```{.text  code-line-numbers="false"}
-Tools for Document Engineering
-Terminal: Command-line interface for running tools and scripts
-Git: Version control for tracking document changes
-GitHub: Cloud platform for collaboration and hosting
-VS Code: Text editor with extensions for writing and coding
-```
-
-:::
-
-::: {.fragment .fade-up style="font-size: 0.9em;"}
-
-- **Terminal**: Essential for running command-line tools, executing scripts,
-and automating document workflows. Available on all operating systems (Windows
-Terminal, macOS Terminal, or Linux terminal emulators).
-- **Git and GitHub**: Industry-standard version control and collaboration
-platform for tracking changes in documents and code, enabling team-based
-writing and review workflows.
-- **Testing**: Run `git --version` and create a test repository on GitHub
-
-:::
-
-## Installing UV and Python
-
-::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
-
-- {{< iconify fa6-solid gear >}} **UV: Modern Python package and project manager**
-  - Install from [astral-sh.github.io/uv](https://astral-sh.github.io/uv/)
-  - Cross-platform: `curl -LsSf https://astral.sh/uv/install.sh | sh` (Unix)
-  - Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`
-- {{< iconify fa6-solid gear >}} **Python 3.12+ via UV (recommended approach)**
-  - Use `uv python install 3.12` to install Python
-  - Create virtual environments with `uv venv`
-  - Install packages with `uv add package-name`
-- {{< iconify fa6-solid lightbulb >}} **Why UV for prosegrammers?** Fast, reliable dependency management and virtual environment handling!
-
-:::
-
-## Setting up VS Code for documents
-
-```python
-# Example VS Code extensions for prosegrammers
-extensions = [
-    "ms-python.python",           # Python development
-    "quarto.quarto",             # Quarto documents
-    "yzhang.markdown-all-in-one", # Markdown editing
-    "ms-vscode.vscode-json",     # JSON configuration
-    "github.vscode-github-actions", # GitHub workflow editing
-]
-```
-
-::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
-
-- Install VS Code from [code.visualstudio.com](https://code.visualstudio.com/)
-- Use built-in extension marketplace to install prosegrammer tools
-- **Testing**: Create a `.qmd` file and verify syntax highlighting works
-
-:::
-
-## Installing Quarto for documents
-
-::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
-
-- {{< iconify fa6-solid gear >}} **Quarto: Scientific and technical publishing**
-  - Download from [quarto.org](https://quarto.org/docs/get-started/)
-  - Cross-platform installer available for Windows, macOS, Linux
-  - Combines code, text, and visualizations in documents
-- {{< iconify fa6-solid gear >}} **VS Code Quarto extension**
-  - Install the official Quarto extension in VS Code
-  - Enables live preview and code execution in `.qmd` files
-  - Provides syntax highlighting and auto-completion
-- {{< iconify fa6-solid lightbulb >}} **Why Quarto for prosegrammers?** Create reproducible, interactive documents that blend prose and programming!
-
-:::
-
-## Node.js tools for prosegrammers
-
-```bash
-# Install Node.js and npm from nodejs.org
-# Then use npx to run tools without permanent installation
-npx @google/generative-ai-cli --version  # Google Gemini CLI
-npx opencode --version                   # OpenCode AI assistant
-```
-
-::: {.fragment .fade style="margin-top: 0.5em; font-size: 0.9em;"}
-
-- **Node.js**: JavaScript runtime enabling web-based documentation tools
-- **NPX**: Run packages without installing globally, keeps system clean
-- **Testing**: Run `node --version` and `npm --version` to verify installation
+- Text editor
+- Terminal window
+- Version control system
+- GitHub account
 
 :::
 
@@ -464,7 +387,8 @@ npx opencode --version                   # OpenCode AI assistant
   - AI-powered code completion and generation
   - Free for verified students and educators
   - Integrates with VS Code and other editors
-- {{< iconify fa6-solid lightbulb >}} **Why GitHub tools for prosegrammers?** Essential for collaborative document development and AI-assisted writing!
+- {{< iconify fa6-solid lightbulb >}} **Why GitHub tools?** Essential for
+collaboration!
 
 :::
 
@@ -487,29 +411,7 @@ uv --version                    # Check UV package manager
 
 :::
 
-## Prosegrammer tools and workflows
-
-::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
-
-- **Document Engineering Projects**
-  - Latest version of Python via UV package manager
-  - Use UV to manage virtual environments and dependencies
-  - Use Git with instructor-provided document repositories
-  - Create, edit, and preview documents with Quarto and VS Code
-
-:::
-
-::: {.fragment .fade style="margin-top: -0.45em; font-size: 0.875em;"}
-
-- **Collaborative Document Projects**
-  - Use the same tools as in individual projects
-  - Use Git and GitHub flow for collaborative writing workflows
-  - Use Quarto to render previews of shared documentation
-  - Use VS Code extensions to run and test code segments in documents
-
-:::
-
-## Setup requirements for prosegrammers
+## Setup requirements
 
 ::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
 
@@ -533,7 +435,6 @@ uv --version                    # Check UV package manager
   - Test all aspects of documents to ensure quality and accuracy
   - Create frameworks for automated document production
 - **Document Analysis**:
-  - Design experiments to answer questions about document effectiveness
   - Collect and analyze data about document usage and quality
   - Visualize insights to improve documentation strategies
 - **Communicate** results and best practices for document engineering
