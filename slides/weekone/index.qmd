@@ -342,21 +342,21 @@ these tools for our needs? *...* How do we use them for *teamwork*?
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
-- Text editor with syntax highlighting and extensions
+- Text editor with syntax highlighting and extensions (e.g., VS Code)
 - Version control system (e.g., Git with GitHub)
 - Document format (e.g., Markdown, reStructuredText, LaTeX)
 - Static site generator (e.g., Quarto, Hugo, Jekyll)
+- Collaboration platforms and review workflows (e.g, GitHub)
 - Automation tools (e.g., GitHub Actions, pre-commit hooks)
-- Collaboration platforms and review workflows
 - Deployment targets (e.g., GitHub Pages, Netlify)
-- Package managers for dependencies
+- Package managers for dependencies (e.g., Uv and npm)
 
 :::
 
 ## Development environment setup
 
-- *Installing* essential tools for prosegrammers
-- *Configuring* development environment for document work
+- **Installing** essential tools for prosegrammers
+- **Configuring** development environment for document work
   - Complete these tasks during the first and second weeks
   - A skill-check during second week tests your setup
   - Please attend the **SOS Week** events to learn more
@@ -368,15 +368,24 @@ these tools for our needs? *...* How do we use them for *teamwork*?
 
 ::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
 
-- Git and GitHub and GitHub Student Developer Pack
-- Gh command-line program for interaction with GitHub
-- Free GitHub Pro Subscription for GitHub Copilot
-- VS Code or another suitable text editor
-- Quarto CLI and the Quarto plugin for your text editor
-- Uv for Python installation, virtual environment and dependency management
-- Make sure that Uv has installed Python 3.12 or Python 3.13
-- The suite of tools from the Node Package Manager, include npm and npx
-- OpenCode and Google Gemini CLI for AI Coding Agents, runnable with npx
+- [Git](https://git-scm.com/), [GitHub](https://github.com/), [GitHub
+Education](https://github.com/education), and [GitHub Student Developer
+Pack](https://education.github.com/pack)
+- [GitHub CLI](https://cli.github.com/) command-line program for interaction
+with GitHub
+- Free GitHub Pro Subscription for [GitHub
+Copilot](https://github.com/features/copilot)
+- [VS Code](https://code.visualstudio.com/) or another suitable text editor
+- [Quarto](https://quarto.org/) CLI and the Quarto plugin for your text editor
+- [Uv](https://docs.astral.sh/uv/) for [Python](https://www.python.org/)
+installation, virtual environment and dependency management
+- Make sure that Uv has installed [Python](https://www.python.org/) 3.12 or
+Python 3.13
+- The suite of tools from the [Node Package Manager](https://www.npmjs.com/),
+include [npm](https://www.npmjs.com/) and [npx](https://www.npmjs.com/)
+- [OpenCode](https://opencode.ai/) and [Google Gemini
+CLI](https://github.com/google-gemini/gemini-cli) for AI Coding Agents, runnable
+with npx
 - Terminal window for running all of the aforementioned programs
 
 :::
