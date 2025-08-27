@@ -393,7 +393,8 @@ include [npm](https://www.npmjs.com/) and [npx](https://www.npmjs.com/)
 - [OpenCode](https://opencode.ai/) and [Google Gemini
 CLI](https://github.com/google-gemini/gemini-cli) for AI Coding Agents, runnable
 with npx
-- Terminal window for running all of the aforementioned programs
+- Terminal window (e.g., [Warp](https://www.warp.dev/)) for running all of the
+aforementioned programs
 
 :::
 
