@@ -99,7 +99,7 @@ def word_frequency(text: str) -> Dict[str, int]:
 - **Text analysis**: fundamental skill for prosegrammers
 - **Word frequency**: helps understand document content patterns
 - **Define function**: accept an input, process, make output
-- **Identify parts**: what are key parts to make this function work?
+- **Identify parts**: what are key parts that make this function work?
 
 :::
 
@@ -214,7 +214,7 @@ for metric, value in summary.items():
 
 ## Discuss analysis results
 
-::: {.fragment style="margin-top: 0.1em; font-size: 0.85em;"}
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
 - {{< iconify game-icons team-idea >}} **Discuss `document_summary` in your teams:**
     - How would you explain that this program works?
@@ -222,7 +222,7 @@ for metric, value in summary.items():
     - What is thought-provoking about this approach?
 
 - {{< iconify game-icons team-idea >}} **Apply `document_summary` in your teams:**
-    - What insights do these metrics provide about document readability?
+    - What insights do these metrics give on document readability?
     - How could prosegrammers use these tools in real projects?
     - What other document analysis features would be useful?
 
@@ -232,16 +232,17 @@ for metric, value in summary.items():
 
 ## Essential tools for prosegrammers
 
-- Text editor like VS Code or Vim for writing
+- Text editor like VS Code, Zed, or Neovim for writing
 - Version control like Git for tracking document changes  
 - Documentation generator like Quarto or Sphinx
-- Static site generator like Hugo or Jekyll
+- Generative AI tools like GitHub Copilot or Google Gemini CLI
 
 ::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
 
 {{< iconify fa6-solid microscope >}} How do we *characterize* effective document
 tools? *...* How do we *compare* their features for different projects? *...*
-How do we *integrate* them into efficient workflows? *...*
+How do we *integrate* them into efficient workflows? *...* How do we *configure*
+these tools for our needs? *...* How do we use them for *teamwork*?
 
 :::
 
@@ -264,11 +265,11 @@ How do we *integrate* them into efficient workflows? *...*
 
 ::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
 
-- {{< iconify fa6-solid gear >}} **Characterize documents and their creation process?**
+- {{< iconify fa6-solid gear >}} **Characterize documents and their creation process**
   - How are documents currently written and maintained?
   - What tools and workflows are being used?
   - What are the pain points in the current process?
-- {{< iconify fa6-solid gear >}} **Compare and improve document workflows?**
+- {{< iconify fa6-solid gear >}} **Compare and improve document workflows**
   - What metrics matter for document quality and efficiency?
   - How to measure the effectiveness of documentation?
   - What tools will improve the writing and publishing process?
@@ -289,6 +290,12 @@ How do we *integrate* them into efficient workflows? *...*
 
 :::
 
+::: fragment
+
+{{< iconify fa6-solid lightbulb >}} **During this academic semester you will
+overcome these challenges and become a proficient prosegrammer!**
+
+:::
 
 ## Learn more about document engineering
 
