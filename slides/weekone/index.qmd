@@ -366,12 +366,18 @@ these tools for our needs? *...* How do we use them for *teamwork*?
 
 ## Essential tools for prosegrammers
 
-::: incremental
+::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
 
-- Text editor
-- Terminal window
-- Version control system
-- GitHub account
+- Git and GitHub and GitHub Student Developer Pack
+- Gh command-line program for interaction with GitHub
+- Free GitHub Pro Subscription for GitHub Copilot
+- VS Code or another suitable text editor
+- Quarto CLI and the Quarto plugin for your text editor
+- Uv for Python installation, virtual environment and dependency management
+- Make sure that Uv has installed Python 3.12 or Python 3.13
+- The suite of tools from the Node Package Manager, include npm and npx
+- OpenCode and Google Gemini CLI for AI Coding Agents, runnable with npx
+- Terminal window for running all of the aforementioned programs
 
 :::
 
