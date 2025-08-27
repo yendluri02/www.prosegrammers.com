@@ -421,9 +421,9 @@ collaboration!
 ## Testing your prosegrammer setup
 
 ```bash
-# Essential verification commands
-git --version                    # Check Git installation
-python --version                 # Check Python (via UV)
+# Run these commands in your terminal window
+git --version                   # Check Git installation
+python --version                # Check Python (via UV)
 quarto --version                # Check Quarto installation
 code --version                  # Check VS Code installation
 uv --version                    # Check UV package manager
@@ -433,28 +433,34 @@ uv --version                    # Check UV package manager
 
 - **Test each tool individually** before starting projects
 - **Create a test document** with code and text to verify integration
-- **Consult documentation** links when troubleshooting: [UV docs](https://docs.astral.sh/uv/), [Quarto docs](https://quarto.org/docs/), [VS Code docs](https://code.visualstudio.com/docs)
+- **Consult documentation** links when troubleshooting
+- **Schedule office hours** with the course instructor
+- **Visit office hours** with the student technical leaders
+- {{< iconify fa6-solid rocket >}} **Have these setup by second
+Friday of the semester**!
 
 :::
 
-## Setup requirements
+## Overall document engineering setup
 
 ::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
 
 - Devote time outside class to installing and configuring tools
-- Confirm that all tools work during the first lab session
+- Confirm that most tools work during the first lab session
+- Successfully get all tools to work during the first lab session
 - Create and render test documents with the provided examples
 - Complete the first document engineering project on time
 - Contribute to collaborative documentation projects
-- Prepare for technical skill demonstrations
+- Prepare for first document engineering skill check
 
-{{< iconify fa6-solid rocket >}} **Get ready for an exciting journey into document engineering!**
+- {{< iconify fa6-solid rocket >}} **Get ready for an exciting journey into document engineering!**
+- {{< iconify fa6-solid lightbulb >}} **If you are having trouble, publicly ask for help on Discord!**
 
 :::
 
 ## Goals of document engineering
 
-::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.875em;"}
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.9em;"}
 
 - **Document Creation**:
   - Design and implement document generation workflows
@@ -464,6 +470,7 @@ uv --version                    # Check UV package manager
   - Collect and analyze data about document usage and quality
   - Visualize insights to improve documentation strategies
 - **Communicate** results and best practices for document engineering
-- **Check syllabus for details about the Document Engineering course!**
+- **Check [syllabus](/syllabus/index.qmd) for details about Document Engineering
+course!**
 
 :::
