@@ -297,28 +297,32 @@ overcome these challenges and become a proficient prosegrammer!**
 
 :::
 
-## Learn more about document engineering
+## Learn about document engineering
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-{{< iconify fa6-solid book-open >}} Explore the [Quarto documentation](https://quarto.org/docs/) and [Python documentation](https://docs.python.org/)
+{{< iconify fa6-solid book-open >}} Explore the [Quarto
+documentation](https://quarto.org/docs/) and [Python
+documentation](https://docs.python.org/) for details
 
 :::
 
 ::: {.column width="50%"}
 
-{{< iconify fa6-brands github >}} Review exemplary projects like [Django docs](https://github.com/django/django) and [FastAPI docs](https://github.com/tiangolo/fastapi)
+{{< iconify fa6-brands github >}} Review exemplary projects like [Django
+docs](https://github.com/django/django) and [FastAPI
+docs](https://github.com/tiangolo/fastapi) and [uv docs](https://docs.astral.sh/uv/)
 
 :::
 
 ::::
 
-::: {.fragment .fade-down style="margin-top: -0.15em; font-size: 0.9em;"}
+::: {.fragment .fade-down style="margin-top: -0.15em; font-size: 0.85em;"}
 
 - Document engineering requires both technical and writing skills
-- Key areas of focus:
+- **Key areas of focus for this course**:
   - Python programming and text processing
   - Markdown and markup languages  
   - Version control for documents
