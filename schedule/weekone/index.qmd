@@ -12,6 +12,7 @@ toc-expand: 3
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
   - No class due to the fact that the semester has not started yet
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Provide an overview of the course goals and objectives
   - Prepare for document engineering presentations and evaluations by teams
   - As outlined in the [syllabus](../../syllabus/index.qmd), teams give two
   types of presentations:
