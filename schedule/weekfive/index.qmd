@@ -12,8 +12,9 @@ toc-expand: 3
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
   - Instructor-led deep-dive on dynamic documentation with Quarto
 - {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
-  - [DEPC2 presentation](/slides/depc/weekfive/index.qmd) completed through the
-  use of [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),
+  - [DEPC1 presentation](/slides/depc/weekfour/index.qmd) completed through
+  the use of [Quarto](https://quarto.org/),
+  [RevealJS](https://revealjs.com/),
   [Markdown](https://www.markdownguide.org/), [Git](https://git-scm.com/),
   [GitHub](https://github.com/), and the [GitHub Flow
   model](https://docs.github.com/en/get-started/quickstart/github-flow)
@@ -21,16 +22,16 @@ toc-expand: 3
   repository for the course web
   site](https://github.com/prosegrammers/www.prosegrammers.com), no later than
   11:59 PM
-  - Each DEPC2 team member must use Git and their own GitHub account to commit
+  - Each DEPC1 team member must use Git and their own GitHub account to commit
   their work to the [pull
   request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   for their team's slides
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
-  - Team-based delivery of [DEPC2
-  presentation](/slides/depc/weekfive/index.qmd)
+  - Team-based delivery of [DEPC1
+  presentation](/slides/depc/weekfour/index.qmd)
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - Continue working on first document engineering tool-building project
-  - Students meet with the student technical leaders
+  - Students meet with the student technical leaders to receive assistance
   - Students give in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Randomly selected second-half of class completes document engineering
