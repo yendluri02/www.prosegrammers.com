@@ -14,9 +14,9 @@ toc-expand: 3
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Instructor-led document engineering deep-dive on Python programming
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
-  - Instructor-led document engineering deep-dive on Python programming
   - Overview of the first document engineering tool-building project
-  - Planning for the first document engineering tool-building project
+  - Students research for the document engineering tool-building project
   - Students meet with instructor and student technical leaders
+  - Students demonstrate installation of all required software tools
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check one
