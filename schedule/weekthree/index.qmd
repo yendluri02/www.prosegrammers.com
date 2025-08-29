@@ -30,7 +30,7 @@ toc-expand: 3
   presentation](/slides/deco/weektwo/index.qmd)
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - Release the first document engineering tool-building project
-  - Students meet with the student technical leaders
+  - Students meet with the course instructor and student technical leaders
   - At end of lab, students give in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check two
