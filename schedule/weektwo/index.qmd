@@ -11,12 +11,13 @@ toc-expand: 3
 
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
   - No class due to the fact that it is Labor Day
+  - Students review all materials on the course website
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Instructor-led document engineering deep-dive on Python programming
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - Overview of the first document engineering tool-building project
   - Students research for the document engineering tool-building project
-  - Students meet with instructor and student technical leaders
+  - Students meet with course instructor and student technical leaders
   - Students demonstrate installation of all required software tools
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check one
