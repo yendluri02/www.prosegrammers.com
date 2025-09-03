@@ -330,7 +330,7 @@ tags = {"python", "docs", "engineering", "tutorial", "python", "docs"}
 print("Lengths:", len(title), len(sections), len(metadata), len(properties), len(tags))
 ```
 
-<p class="codespacer">
+<p class="tightspacer">
 
 ```{pyodide}
 #| autorun: true
