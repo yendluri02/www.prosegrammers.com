@@ -83,9 +83,9 @@ print(result)
 ::: {.incremental .fade style="margin-top: -0.25em; font-size: 0.8em;"}
 
 - Calling the `create_greeting` function causes each line to run sequentially
-- First: concatenate name with "Hello, " and "!"
-- Second: add the welcome message to create full greeting
-- Third: return the complete message to caller
+- **First**: concatenate name with `"Hello, "` and `"!"`
+- **Second**: add the welcome message to create full greeting
+- **Third**: return the complete message to caller
 - **Document connection**: generating personalized content for reports!
 
 :::
@@ -144,15 +144,15 @@ print(counts)
 # Collections contain multiple values
 
 ::: {.fragment .fade-right}
-- {{< iconify fa6-solid lightbulb >}} **Strings**: `str` in Python
-- {{< iconify fa6-solid lightbulb >}} **Lists**: `list` in Python
-- {{< iconify fa6-solid lightbulb >}} **Tuples**: `tuple` in Python
-- {{< iconify fa6-solid lightbulb >}} **Dictionaries**: `dict` in Python
-- {{< iconify fa6-solid lightbulb >}} **Sets**: `set` in Python
+- {{< iconify fa6-solid font >}} **Strings**: `str` in Python
+- {{< iconify fa6-solid bars >}} **Lists**: `list` in Python
+- {{< iconify fa6-solid link >}} **Tuples**: `tuple` in Python
+- {{< iconify fa6-solid table >}} **Dictionaries**: `dict` in Python
+- {{< iconify fa6-solid tags >}} **Sets**: `set` in Python
 :::
 
 ::: {.fragment .fade-up style="margin-top: -0.5em;"}
-Let's explore each of these in greater detail!
+**Let's explore each of these in greater detail!**
 :::
 
 ## Creating and using a string
@@ -160,14 +160,13 @@ Let's explore each of these in greater detail!
 ```{pyodide}
 #| autorun: true
 #| max-lines: 5
-# strings store text data - perfect for documents!
 title = "Document Engineering: "
 subtitle = "A Beginner's Guide"
 full_title = title + subtitle
+page_number = str(42)
 print("Title type:", type(full_title))
 print("Full title:", full_title)
 print("Character at position 9:", full_title[9])
-page_number = str(42)
 print("Page as string:", page_number[0])
 ```
 
@@ -177,7 +176,6 @@ print("Page as string:", page_number[0])
 - What is the purpose of the `full_title[9]` notation?
 - What is the purpose of the `str` function?
 - What is the purpose of the `+` operator?
-- **Document connection**: combining text for titles and content!
 
 :::
 
@@ -185,7 +183,7 @@ print("Page as string:", page_number[0])
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 8
 # lists store multiple items - great for document sections!
 chapters = ["Introduction", "Basics", "Advanced", "Conclusion"]
 print("List type:", type(chapters))
@@ -218,14 +216,13 @@ print("Document format:", doc_info[3])
 print("Page count:", doc_info[4])
 ```
 
-::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.87em;"}
+::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.8em;"}
 
+- A `tuple` is an immutable collection of ordered values
 - What are some invalid operations on a `tuple`?
   - `doc_info[3] = "DOCX"`
   - `doc_info.append("English")`
   - `doc_info.remove("PDF")`
-  - `doc_info.insert("HTML")`
-  - `doc_info.pop()`
 - **Document connection**: storing fixed document properties!
 
 :::
