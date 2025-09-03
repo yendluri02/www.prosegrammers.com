@@ -589,13 +589,22 @@ print("First chapter:", chapter_titles[0])
 
 :::
 
+::: {.fragment .fade-right style="margin-top: -0.1em; font-size: 0.95em;"}
+
+- `chapter_titles` is a variable of type `list`
+- Each value inside of `chapter_titles` is a `str`
+- `chapter_titles[0]` accesses the first list element
+- `print` outputs text to the console or the slides
+
+:::
+
 ## Building your Python foundation
 
-::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+::: {.fragment style="margin-top: 0.1em; font-size: 0.85em;"}
 
 - **Master the fundamentals**: sequence, selection, iteration
 - **Understand collections**: strings, lists, tuples, dictionaries, sets
-- **Practice with document examples**: titles, chapters, metadata, keywords
+- **Use document examples**: titles, chapters, metadata, keywords
 - **Connect Python to document engineering**: 
   - Process text and analyze content
   - Organize document information systematically
@@ -605,7 +614,9 @@ print("First chapter:", chapter_titles[0])
 
 ::: {.fragment .fade .boxed-content style="margin-top: 0.1em; font-size: 0.85em;"}
 
-{{< iconify fa6-solid rocket >}} You're ready to become a prosegrammer! Python + documents = powerful automation and analysis capabilities!
+{{< iconify fa6-solid rocket >}} How exciting! You're ready to become a
+prosegrammer! **Python + documents = powerful automation and analysis
+capabilities!**
 
 :::
 
