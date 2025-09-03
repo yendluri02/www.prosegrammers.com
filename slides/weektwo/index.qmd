@@ -366,15 +366,13 @@ for item in doc_metadata:
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 5
 # working with document keywords and text
 document_tags = {"python", "tutorial", "beginners"}
 filename = "guide.pdf"
-
 print("Document Tags:")
 for tag in document_tags:
     print("  " + tag)
-
 print()
 print("Filename Characters:")
 for character in filename:
@@ -385,47 +383,45 @@ for character in filename:
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 14
+#| max-lines: 5
 # processing document properties
 document_info = {"title": "Python Guide", "pages": 150, "language": "English"}
 
 print("Method 1 - Keys only:")
 for key in document_info:
-    print(key, "->", document_info[key])
-
-print()
+    print("\t", key, "->", document_info[key])
 print("Method 2 - Items (key-value pairs):")
 for key, value in document_info.items():
-    print(key, "->", value)
-
-print()
+    print("\t", key, "->", value)
 print("Method 3 - Explicit keys:")
 for key in document_info.keys():
-    print(key, "->", document_info[key])
+    print("\t", key, "->", document_info[key])
 ```
 
-## Mutable and Immutable Collections
+## Mutable and immutable collections
 
 ::: {.fragment .fade-right}
 
 - **Mutable Collections**: *can be changed after creation*
-  - Lists (`list`) - great for document sections that may change
-  - Dictionaries (`dict`) - perfect for document properties
-  - Sets (`set`) - ideal for collections of unique keywords
+  - Lists (`list`): great for document sections that may change
+  - Dictionaries (`dict`): perfect for document properties
+  - Sets (`set`): ideal for collections of unique keywords
 
 :::
 
 ::: {.fragment .fade-right style="margin-top: -0.75em;"}
 
 - **Immutable Collections**: *cannot be changed after creation*
-  - Tuples (`tuple`) - excellent for fixed document metadata
-  - Strings (`str`) - text content that won't be modified
+  - Tuples (`tuple`): excellent for fixed document metadata
+  - Strings (`str`): text content that won't be modified
 
 :::
 
-::: {.fragment .fade-right style="margin-top: -0.5em; font-size: 0.9em;"}
+::: {.fragment .fade-right style="margin-top: -0.75em; font-size: 0.85em;"}
 
-- {{< iconify fa6-solid lightbulb >}} Understanding mutability helps prosegrammers choose the right collection type for document data!
+- {{< iconify fa6-solid lightbulb >}} **Understanding mutability helps
+prosegrammers choose the right collection type for document data! Carefully pick
+your collection!**
 
 :::
 
