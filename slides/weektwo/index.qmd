@@ -296,12 +296,12 @@ print("Keyword count:", len(keywords))
 # Operations to perform on most collections
 
 ::: {.fragment .fade-right}
-- {{< iconify fa6-solid lightbulb >}} Determine the *length* of a collection
-- {{< iconify fa6-solid lightbulb >}} *Add* an element to or *remove* element from a collection
-- {{< iconify fa6-solid lightbulb >}} *Access* an element in a collection
-- {{< iconify fa6-solid lightbulb >}} Determine if a collection *contains* an element
-- {{< iconify fa6-solid lightbulb >}} *Iterate* through all of the elements in a collection
-- {{< iconify fa6-solid lightbulb >}} *Slice* a collection to get a subset of its elements
+- {{< iconify fa6-solid ruler-horizontal >}} Determine the *length* of a collection
+- {{< iconify fa6-solid plus-minus >}} *Add* an element to or *remove* element from a collection
+- {{< iconify fa6-solid hand-pointer >}} *Access* an element in a collection
+- {{< iconify fa6-solid magnifying-glass >}} Determine if a collection *contains* an element
+- {{< iconify fa6-solid arrows-rotate >}} *Iterate* through all of the elements in a collection
+- {{< iconify fa6-solid scissors >}} *Slice* a collection to get a subset of its elements
 :::
 
 ## Sizing and slicing collections
