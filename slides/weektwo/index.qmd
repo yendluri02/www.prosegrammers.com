@@ -563,6 +563,15 @@ print("Title:", document_title, "| Pages:", page_count, "| Published:", is_publi
 
 :::
 
+::: {.fragment .fade-right style="margin-top: -0.1em; font-size: 0.95em;"}
+
+- `document_title` is a variable of type `str`
+- `page_count` is a variable of type `int`
+- `is_published` is a variable of type `bool`
+- `print` outputs text to the console or the slides
+
+:::
+
 ## Key features of Python: collections
 
 ::: fragment
