@@ -244,14 +244,25 @@ print("Document title:", document["title"])
 print("Page count:", document["pages"])
 ```
 
-::: {.incremental .fade-up style="margin-top: -0.1em; font-size: 0.825em;"}
+::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.8em;"}
 
-- The `dict` function creates an empty dictionary called `document`
-- Dictionaries store key-value pairs like `{"title": "Python Programming Guide"}`
-- The keys can be strings, numbers, or other hashable types
-- The values can be of any data type like `str`, `int`, and `float`
-- It is possible to lookup a value by its key as in `document["title"]`
-- **Document connection**: storing structured document information!
+- A dictionary stores **key-value pairs** in an **associative mapping**
+
+:::
+
+## Details about dictionary use
+
+::: {.incremental .fade-up style="margin-top: -0.1em; font-size: 0.925em;"}
+
+- **Let's explore further the source code from the previous slide**:
+    - The `dict` function make an empty dictionary `document`
+    - Dictionaries store key-value pairs like `{"title": "Python Programming
+    Guide"}`
+    - The keys can be strings, numbers, or other hashable types
+    - The values can be of any data type like `str`, `int`, and `float`
+    - It is possible to lookup a value by its key as in `document["title"]`
+    - **Document connection**: storing structured document information (e.g.,
+    pages in a chapter) in a mapping!
 
 :::
 
