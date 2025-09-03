@@ -152,7 +152,7 @@ print(counts)
 :::
 
 ::: {.fragment .fade-up style="margin-top: -0.5em;"}
-**Let's explore each of these in greater detail!**
+**Let's explore how these work and what are their differences!**
 :::
 
 ## Creating and using a string
