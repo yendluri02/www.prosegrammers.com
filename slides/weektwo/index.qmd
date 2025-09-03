@@ -349,15 +349,13 @@ print("First two metadata:", metadata[:2])  # ("Guide", "Engineering")
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 6
 # processing document sections and metadata
 chapters = ["Intro", "Setup", "Examples"]
 doc_metadata = ("Technical Guide", "v1.0", "2025", "English")
-
 print("Chapters:")
 for chapter in chapters:
     print("  " + chapter)
-
 print()
 print("Metadata:")
 for item in doc_metadata:
