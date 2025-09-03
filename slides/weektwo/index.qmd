@@ -417,7 +417,7 @@ for key in document_info.keys():
 
 :::
 
-::: {.fragment .fade-right style="margin-top: -0.75em; font-size: 0.85em;"}
+::: {.fragment .fade-up style="margin-top: -0.75em; font-size: 0.85em;"}
 
 - {{< iconify fa6-solid lightbulb >}} **Understanding mutability helps
 prosegrammers choose the right collection type for document data! Carefully pick
@@ -429,7 +429,7 @@ your collection!**
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 11
 # checking if content exists in document data
 title = "Python Programming"
 chapters = ["Introduction", "Basics", "Advanced", "Conclusion"]
@@ -449,7 +449,7 @@ print("'python' in keywords:", "python" in keywords)
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 11
 # testing for missing content in document data
 title = "Python Programming"
 chapters = ["Introduction", "Basics", "Advanced", "Conclusion"]
@@ -486,10 +486,8 @@ print("Found 'Python Guide':", result)
 
 ::: {.incremental .fade-right}
 
-- What is the type of the parameter called `library`?
-- What is the type of the parameter called `document_name`?
-- What is the return type of `find_document_in_library`?
-- How does Python implement `if document_name in library`?
+- How does `find_document_in_library` work?
+- Can you explain the its output? Can you enhance it? How?
 
 :::
 
@@ -512,15 +510,13 @@ result = check_document_property(doc_metadata, "PDF")
 print("Contains 'PDF' format:", result)
 ```
 
-::: {.incremental .fade-right}
+::: {.incremental .fade-right style="margin-top: -0.1em; font-size: 0.75em;"}
 
 - What is the type of the parameter called `metadata`?
 - What is the type of the parameter called `property_name`?
 - What is the return type of `check_document_property`?
-- How does Python implement `if property_name in metadata`?
 
 :::
-
 
 ## Key features of Python for beginners
 
