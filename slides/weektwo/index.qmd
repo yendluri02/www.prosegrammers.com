@@ -70,30 +70,28 @@ print(result)
 
 :::
 
-## Selection: Decide which operations will execute with conditionals
+## Selection: Use conditional logic
 
 ```{python}
-def format_document_title(title: str, formal: bool) -> str:
+def format_document_title(title: str, capitalized: bool) -> str:
     """Format a document title based on style preference."""
-    if formal:
+    if capitalized:
         formatted_title = title.upper()
         result = "DOCUMENT: " + formatted_title
     else:
         formatted_title = title.title()
-        result = "Doc: " + formatted_title
+        result = "Document: " + formatted_title
     return result
 
 # test both formatting styles
-print(format_document_title("user guide", True))
-print(format_document_title("user guide", False))
+print(format_document_title("user guide", True) + " / "
+      + format_document_title("user guide", False))
 ```
 
-::: {.incremental .fade style="margin-top: 0.5em; font-size: 0.925em;"}
+::: {.incremental .fade style="margin-top: -0.25em; font-size: 0.8em;"}
 
 - The `if` statement checks the value of the `formal` parameter
 - Different code executes based on whether `formal` is `True` or `False`
-- The `upper()` method makes text ALL CAPITALS for formal style
-- The `title()` method makes text Title Case for informal style
 - **Document connection**: adapting content style for different audiences!
 
 :::
