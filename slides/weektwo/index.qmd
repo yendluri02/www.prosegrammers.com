@@ -320,7 +320,7 @@ print("Keyword count:", len(keywords))
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 8
+#| max-lines: 5
 # working with document content and metadata
 title = "Document Engineering Guide"
 sections = ["Introduction", "Methods", "Examples", "Conclusion"]
@@ -334,7 +334,7 @@ print("Lengths:", len(title), len(sections), len(metadata), len(properties), len
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 8
+#| max-lines: 5
 # slicing collections to extract parts
 title = "Document Engineering Guide"
 sections = ["Introduction", "Methods", "Examples", "Conclusion"]
