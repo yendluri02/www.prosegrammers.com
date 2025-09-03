@@ -96,30 +96,27 @@ print(format_document_title("user guide", True) + " / "
 
 :::
 
-## Iteration: Repeat an operation a specific number of times
+## Iteration: Repeat an operation
 
 ```{python}
 def count_words_in_documents(documents: list) -> dict:
     """Count total words across multiple documents."""
     word_counts = {}
     for doc_name in documents:
-        # simulate getting word count for each document
         word_count = len(doc_name.split())  # simple word count
         word_counts[doc_name] = word_count
     return word_counts
 
 # test with sample document names
-docs = ["User Manual", "Installation Guide", "API Reference"]
+docs = ["Manual", "Installation Guide", "API Reference Document"]
 counts = count_words_in_documents(docs)
 print(counts)
 ```
 
-::: {.incremental .fade style="margin-top: 0.5em; font-size: 0.925em;"}
+::: {.incremental .fade style="margin-top: -0.25em; font-size: 0.8em;"}
 
 - `word_counts` is a dictionary that starts out empty
-- `documents` is a list of document names
 - The `for` loop iterates through each document name in the list
-- The body of the loop counts words and stores result in dictionary
 - **Document connection**: analyzing multiple documents in a collection!
 
 :::
