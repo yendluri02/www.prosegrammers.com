@@ -139,7 +139,7 @@ Let's explore each of these in greater detail!
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 10
+#| max-lines: 5
 # strings store text data - perfect for documents!
 title = "Document Engineering: "
 subtitle = "A Beginner's Guide"
@@ -189,7 +189,7 @@ What does this illustrate about the `list` type in Python?
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 8
+#| max-lines: 4
 # tuples store immutable data - perfect for document metadata!
 doc_info = ("User Manual", "v2.1", "2025-09-01", "PDF", "42 pages")
 print("Tuple type:", type(doc_info))
