@@ -156,3 +156,60 @@ in curricula
 - The principle that users remain responsible for AI-generated content aligns
 with emerging best practices in AI-assisted writing and coding, as outlined by
 organizations like the ACM and IEEE
+
+### Support for Week Two Slides Content
+
+#### Python as Beginner-Friendly Programming Language
+
+- Python's syntax is designed to be readable and intuitive, following the Zen of
+Python principle "Readability counts" (PEP 20)
+- Python consistently ranks as one of the top programming languages for
+beginners according to IEEE Spectrum's annual programming language rankings
+- The language's emphasis on clear, English-like syntax reduces cognitive load
+for new programmers, as documented in educational research on programming
+language design
+
+#### Python Collections for Document Engineering
+
+- Python's built-in collection types (strings, lists, tuples, dictionaries,
+sets) provide comprehensive data structures for organizing document information
+- String objects in Python are immutable sequences, making them safe for
+storing document content that shouldn't be accidentally modified
+- Lists provide mutable sequences ideal for document sections and chapters that
+may change during editing
+- Dictionaries implement hash tables for efficient key-value storage, perfect
+for document metadata and properties
+- Sets ensure unique elements, valuable for maintaining collections of document
+keywords and tags without duplicates
+
+#### Sequence, Selection, and Iteration in Programming
+
+- These three fundamental programming concepts (sequence, selection, iteration)
+form the theoretical foundation of structured programming, as defined by
+computer science pioneers like Edsger Dijkstra
+- Sequential execution ensures predictable program behavior, essential for
+document processing workflows
+- Conditional statements (selection) enable adaptive document formatting and
+content generation based on different criteria
+- Loops (iteration) facilitate processing of document collections and repetitive
+text operations
+
+#### Document Engineering Applications of Python Concepts
+
+- Text processing functions like `word_frequency` and `document_summary`
+demonstrate practical applications of Python for document analysis
+- Containment checking operations (`in` operator) are fundamental for search
+functionality in document management systems
+- Collection slicing enables extraction of document sections and content
+segments for analysis and manipulation
+- String methods like `lower()`, `upper()`, and `title()` provide essential
+text formatting capabilities for document standardization
+
+#### Python Type System for Document Engineering
+
+- Python's type hints (introduced in PEP 484) improve code readability and help
+catch errors in document processing functions
+- Strong typing helps ensure data integrity when working with document metadata
+and content
+- Type annotations serve as inline documentation, making code more maintainable
+for collaborative document engineering projects
