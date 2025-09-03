@@ -250,7 +250,7 @@ print("Page count:", document["pages"])
 
 :::
 
-## Details about dictionary use
+## Details about dictionary use in Python
 
 ::: {.incremental .fade-up style="margin-top: -0.1em; font-size: 0.925em;"}
 
@@ -282,14 +282,26 @@ print("Unique keywords:", keywords)
 print("Keyword count:", len(keywords))
 ```
 
-::: {.incremental .fade-up style="margin-top: -0.1em; font-size: 0.87em;"}
+::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.9em;"}
 
-- Sets do not store duplicate values
-- The data in a set must be hashable
-- The `add` function places more data in a set
-- Repeated calls of `add` with `"python"` do not change the set
-- Be careful, `{}` is an empty dictionary, not a set!
-- **Document connection**: maintaining unique tags and keywords!
+- A set is an un-ordered collection of unique values
+- **How are sets similar to and different from lists?**
+
+:::
+
+## Details about set use in Python
+
+::: {.incremental .fade-up style="margin-top: -0.1em; font-size: 0.95em;"}
+
+- **Let's explore further the source code from the previous slide**:
+    - Sets do not store duplicate values
+    - The data in a set must be hashable
+    - The `add` function places more data in a set
+    - Repeated calls of `add` with `"python"` do not change the set
+    - Be careful, `{}` is an empty dictionary, not a set!
+    - **Document connection**: keep unique tags and keywords!
+- Different collections have different properties and use cases
+- **What operations can you perform on a these collections?**
 
 :::
 
