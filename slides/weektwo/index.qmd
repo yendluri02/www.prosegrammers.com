@@ -21,25 +21,32 @@ format:
 # What are some key features of the Python programming language?
 
 ::: incremental
-- {{< iconify fa6-solid lightbulb >}} **Simple and readable syntax**
-- {{< iconify fa6-solid lightbulb >}} **Defining and evaluating expressions**
-- {{< iconify fa6-solid lightbulb >}} **Declaring and using variables with types**
-- {{< iconify fa6-solid lightbulb >}} **Creating and using collections**
+
+- {{< iconify fa6-solid lightbulb >}} Simple and readable syntax
+- {{< iconify fa6-solid lightbulb >}} Defining and evaluating expressions
+- {{< iconify fa6-solid lightbulb >}} Declaring and using variables with types
+- {{< iconify fa6-solid lightbulb >}} Creating and using collections
+
 :::
 
 # Thinking and writing about Python programs
 
 ::: incremental
+
 - **Sequence**: Run operations one after another in an order
 - **Selection**: Decide which operations will execute
 - **Iteration**: Repeat an operation a specific number of times
+
 :::
 
 ::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-{{< iconify fa6-solid microscope >}} These three concepts form the foundation of all programming logic!
+
+{{< iconify fa6-solid microscope >}} These three concepts form the foundation of
+all programming logic! Let's explore these in greater detail!
+
 :::
 
-## Sequence: Run operations one after another in a specified order
+## Sequence: Run operations one-by-one
 
 ```{python}
 def create_greeting(name: str) -> str:
@@ -53,7 +60,7 @@ result = create_greeting("Alice")
 print(result)
 ```
 
-::: {.incremental .fade style="margin-top: 0.5em; font-size: 0.9em;"}
+::: {.incremental .fade style="margin-top: -0.25em; font-size: 0.8em;"}
 
 - Calling the `create_greeting` function causes each line to run sequentially
 - First: concatenate name with "Hello, " and "!"
