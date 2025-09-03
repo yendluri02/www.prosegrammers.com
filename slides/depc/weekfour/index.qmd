@@ -18,4 +18,4 @@ format:
     footer: "Prosegrammers"
 ---
 
-## DEPC1: Document engineering project critique for `uv`
+## DEPC1: Document engineering project critique for `Hello`
