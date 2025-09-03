@@ -447,14 +447,23 @@ Friday of the semester**!
 
 - Setup `ssh` keys for GitHub to ensure secure communication
 - Run `git clone git@github.com:prosegrammers/www.prosegrammers.com.git`
-- Run `cd www.prosegrammers.com`
-- Run `quarto preview`
+- Run `cd www.prosegrammers.com` to change into this directory
+- Run `quarto preview` to build and serve the website locally
 - Confirm that the course website builds and serves locally
 - **Can you add content to the website and see it rendered?**
 
 :::
 
-# Now that you have cloned the course website to your laptop, let's test `uv`!
+# After cloning the course website to your laptop, let's test `uv`! How fun!
+
+::: {.fragment style="margin-top: -0.15em; font-size: 0.9em;"}
+
+- Stay in the `www.prosegrammers.com` directory
+- Run `cd scripts` to change to the `scripts/` directory
+- Run `uv run welcome.py` to receive your welcome to the course!
+- **What output do you see on the screen? How does this work?**
+
+:::
 
 ## Overall document engineering setup
 
