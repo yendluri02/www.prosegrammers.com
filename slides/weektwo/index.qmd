@@ -1,27 +1,30 @@
 ---
 title: "Exploring the Python Programming Language"
-echo: true
 description: "What are some of the key features of Python?"
 date: "2025-09-01"
 date-format: long
 author: Gregory M. Kapfhammer
+execute:
+  echo: true
 format:
-  revealjs:
+  live-revealjs:
+    completion: true
     theme: default
     css: ../css/styles.css
     history: false
     scrollable: true
     transition: slide
     highlight-style: github
-    footer: "Algorithmology"
+    footer: "Prosegrammers"
 ---
 
 # What are some key features of the Python programming language?
 
 ::: incremental
-- Defining and evaluating expressions
-- Declaring and using variables with types
-- Creating and using collections
+- {{< iconify fa6-solid lightbulb >}} **Simple and readable syntax**
+- {{< iconify fa6-solid lightbulb >}} **Defining and evaluating expressions**
+- {{< iconify fa6-solid lightbulb >}} **Declaring and using variables with types**
+- {{< iconify fa6-solid lightbulb >}} **Creating and using collections**
 :::
 
 # Thinking and writing about Python programs
@@ -32,84 +35,98 @@ format:
 - **Iteration**: Repeat an operation a specific number of times
 :::
 
+::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
+{{< iconify fa6-solid microscope >}} These three concepts form the foundation of all programming logic!
+:::
+
 ## Sequence: Run operations one after another in a specified order
 
-```python
-def detect() -> Dict[str, str]:
-    """Run all of the sub-detects."""
-    run_output: List[Dict[str, str]] = []
-    run_output = execute.execute_by_name_filter(
-        constants.project.Detect_Module, constants.project.Detect_Filter
-    )
-    return util.union_list_of_dicts(run_output)
+```{python}
+def create_greeting(name: str) -> str:
+    """Create a personalized greeting message for documents."""
+    greeting = "Hello, " + name + "!"
+    message = greeting + " Welcome to Document Engineering."
+    return message
+
+# call the function with different names
+result = create_greeting("Alice")
+print(result)
 ```
 
 ::: {.incremental .fade style="margin-top: 0.5em; font-size: 0.9em;"}
 
-- Calling the `detect` function causes each line to run sequentially
-
-- Invoke `execute_by_name_filter` function with two inputs
-
-- Invoke the `union_list_of_dicts` function with one input
-
-- Return output of `union_list_of_dicts` function to caller
+- Calling the `create_greeting` function causes each line to run sequentially
+- First: concatenate name with "Hello, " and "!"
+- Second: add the welcome message to create full greeting
+- Third: return the complete message to caller
+- **Document connection**: generating personalized content for reports!
 
 :::
 
 ## Selection: Decide which operations will execute with conditionals
 
-```python
-if platform.system() == "Windows":
-    total_disk = psutil.disk_usage("C:\\").total
-    used_disk = psutil.disk_usage("C:\\").used
-else:
-    total_disk = psutil.disk_usage("/").total
-    used_disk = psutil.disk_usage("/").used
+```{python}
+def format_document_title(title: str, formal: bool) -> str:
+    """Format a document title based on style preference."""
+    if formal:
+        formatted_title = title.upper()
+        result = "DOCUMENT: " + formatted_title
+    else:
+        formatted_title = title.title()
+        result = "Doc: " + formatted_title
+    return result
+
+# test both formatting styles
+print(format_document_title("user guide", True))
+print(format_document_title("user guide", False))
 ```
 
 ::: {.incremental .fade style="margin-top: 0.5em; font-size: 0.925em;"}
 
-- The `psutil` module provides access to system information
-
-- The `disk_usage` function returns information about disk usage
-
-- But `disk_usage` needs different inputs for the filesystem root!
-
-- Conditional logic determines the input to `disk_usage`
+- The `if` statement checks the value of the `formal` parameter
+- Different code executes based on whether `formal` is `True` or `False`
+- The `upper()` method makes text ALL CAPITALS for formal style
+- The `title()` method makes text Title Case for informal style
+- **Document connection**: adapting content style for different audiences!
 
 :::
 
 ## Iteration: Repeat an operation a specific number of times
 
-```python
-def union_list_of_dicts(container: List[Dict[str, str]]) -> Dict[str, str]:
-    """Union a list of dictionaries into a single dictionary."""
-    output: Dict[str, str] = {}
-    for dictionary in container:
-        output = {**output, **dictionary}
-    return output
+```{python}
+def count_words_in_documents(documents: list) -> dict:
+    """Count total words across multiple documents."""
+    word_counts = {}
+    for doc_name in documents:
+        # simulate getting word count for each document
+        word_count = len(doc_name.split())  # simple word count
+        word_counts[doc_name] = word_count
+    return word_counts
+
+# test with sample document names
+docs = ["User Manual", "Installation Guide", "API Reference"]
+counts = count_words_in_documents(docs)
+print(counts)
 ```
 
 ::: {.incremental .fade style="margin-top: 0.5em; font-size: 0.925em;"}
 
-- `output` is a dictionary that starts out empty
-
-- `container` is a list of dictionaries
-
-- The `for` loop iterates through each dictionary in `container`
-
-- The body of the loop merges the dictionaries into `output`
+- `word_counts` is a dictionary that starts out empty
+- `documents` is a list of document names
+- The `for` loop iterates through each document name in the list
+- The body of the loop counts words and stores result in dictionary
+- **Document connection**: analyzing multiple documents in a collection!
 
 :::
 
 # Collections contain multiple values
 
 ::: {.fragment .fade-right}
-- Strings: `str` in Python
-- Lists: `list` in Python
-- Tuples: `tuple` in Python
-- Dictionaries: `dict` in Python
-- Sets: `set` in Python
+- {{< iconify fa6-solid lightbulb >}} **Strings**: `str` in Python
+- {{< iconify fa6-solid lightbulb >}} **Lists**: `list` in Python
+- {{< iconify fa6-solid lightbulb >}} **Tuples**: `tuple` in Python
+- {{< iconify fa6-solid lightbulb >}} **Dictionaries**: `dict` in Python
+- {{< iconify fa6-solid lightbulb >}} **Sets**: `set` in Python
 :::
 
 ::: {.fragment .fade-up style="margin-top: -0.5em;"}
@@ -118,41 +135,46 @@ Let's explore each of these in greater detail!
 
 ## Creating and using a string
 
-```{python}
-s = "Hello, "
-t = "World."
-u = s + t
-print(type(u))
-print(u)
-print(u[9])
-n = str(9876)
-print(n[2])
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# strings store text data - perfect for documents!
+title = "Document Engineering: "
+subtitle = "A Beginner's Guide"
+full_title = title + subtitle
+print("Title type:", type(full_title))
+print("Full title:", full_title)
+print("Character at position 9:", full_title[9])
+page_number = str(42)
+print("Page as string:", page_number[0])
 ```
 
 ::: {.incremental style="margin-top: -0.25em; font-size: 0.85em;"}
 
 - What is the purpose of the `type` function?
-- What is the purpose of the `u[9]` notation?
+- What is the purpose of the `full_title[9]` notation?
 - What is the purpose of the `str` function?
 - What is the purpose of the `+` operator?
+- **Document connection**: combining text for titles and content!
 
 :::
 
 ## Creating and using a list
 
-```{python}
-numbers = [1,2,3,4,5,6]
-print(type(numbers))
-numbers.append(100)
-print("The first item is", numbers[0])
-print("The second item is", numbers[1])
-print("The last item is", numbers[-1])
-print("The second to last item is", numbers[-2])
-numbers[2] = "skip"
-numbers[3] = "a"
-numbers[4] = "few"
-numbers[-2] = 99
-print(numbers)
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+# lists store multiple items - great for document sections!
+chapters = ["Introduction", "Basics", "Advanced", "Conclusion"]
+print("List type:", type(chapters))
+chapters.append("Appendix")
+print("First chapter:", chapters[0])
+print("Second chapter:", chapters[1])
+print("Last chapter:", chapters[-1])
+print("Second to last:", chapters[-2])
+chapters[2] = "Intermediate"
+chapters[3] = "Expert Topics"
+print("Updated chapters:", chapters)
 ```
 
 ::: {.fragment .fade-up style="margin-top: -0.05em; font-size: 0.9em;"}
@@ -163,56 +185,71 @@ What does this illustrate about the `list` type in Python?
 
 ## Creating and using a tuple
 
-```{python}
-data = (1, 2, "skip a few", 99, 100)
-print(type(data))
-print(data)
-print(data[4])
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# tuples store immutable data - perfect for document metadata!
+doc_info = ("User Manual", "v2.1", "2025-09-01", "PDF", "42 pages")
+print("Tuple type:", type(doc_info))
+print("Document info:", doc_info)
+print("Document format:", doc_info[3])
+print("Page count:", doc_info[4])
 ```
 
 ::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.87em;"}
 
 - What are some invalid operations on a `tuple`?
-  - `data[4] = 100`
-  - `data.append(100)`
-  - `data.remove(100)`
-  - `data.insert(100)`
-  - `data.pop(100)`
+  - `doc_info[3] = "DOCX"`
+  - `doc_info.append("English")`
+  - `doc_info.remove("PDF")`
+  - `doc_info.insert("HTML")`
+  - `doc_info.pop()`
+- **Document connection**: storing fixed document properties!
 
 :::
 
 ## Creating and using a dictionary
 
-```{python}
-d = dict()
-d[5] = "five"
-d[2] = "two"
-d["pi"] = 3.1415926
-print(type(d))
-print(d)
-print(d["pi"])
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# dictionaries store key-value pairs - ideal for document properties!
+document = dict()
+document["title"] = "Python Programming Guide"
+document["author"] = "Jane Smith"
+document["pages"] = 156
+document["language"] = "English"
+print("Dictionary type:", type(document))
+print("Document details:", document)
+print("Document title:", document["title"])
+print("Page count:", document["pages"])
 ```
 
 ::: {.incremental .fade-up style="margin-top: -0.1em; font-size: 0.825em;"}
 
-- The `dict` function creates an empty dictionary called `d`
-- Dictionaries store key-value pairs like `{5: 'five'}` and `{2: 'two'}`
-- The keys can be of any data type that is hashable like `int`
-- The values can be of any data type like `str` and `float`
-- It is possible to lookup a value by its key as in `d["pi"]`
+- The `dict` function creates an empty dictionary called `document`
+- Dictionaries store key-value pairs like `{"title": "Python Programming Guide"}`
+- The keys can be strings, numbers, or other hashable types
+- The values can be of any data type like `str`, `int`, and `float`
+- It is possible to lookup a value by its key as in `document["title"]`
+- **Document connection**: storing structured document information!
 
 :::
 
 ## Creating and using a set
 
-```{python}
-values = {2,1}
-print(type(values))
-values.add(3)
-values.add(2)
-values.add(2)
-values.add(2)
-print(values)
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# sets store unique items - useful for tracking document keywords!
+keywords = {"python", "programming"}
+print("Set type:", type(keywords))
+keywords.add("documentation")
+keywords.add("python")  # duplicate - won't be added again
+keywords.add("python")  # another duplicate
+keywords.add("tutorial")
+print("Unique keywords:", keywords)
+print("Keyword count:", len(keywords))
 ```
 
 ::: {.incremental .fade-up style="margin-top: -0.1em; font-size: 0.87em;"}
@@ -220,87 +257,111 @@ print(values)
 - Sets do not store duplicate values
 - The data in a set must be hashable
 - The `add` function places more data in a set
-- Repeated calls of `add` with `2` do not change the set
-- Be careful, `{}` is an empty dictionary!
+- Repeated calls of `add` with `"python"` do not change the set
+- Be careful, `{}` is an empty dictionary, not a set!
+- **Document connection**: maintaining unique tags and keywords!
 
 :::
 
 # Operations to perform on most collections
 
 ::: {.fragment .fade-right}
-- Determine the *length* of a collection
-- *Add* an element to or *remove* element from a collection
-- *Access* an element in a collection
-- Determine if a collection *contains* an element
-- *Iterate* through all of the elements in a collection
-- *Slice* a collection to get a subset of its elements
+- {{< iconify fa6-solid lightbulb >}} Determine the *length* of a collection
+- {{< iconify fa6-solid lightbulb >}} *Add* an element to or *remove* element from a collection
+- {{< iconify fa6-solid lightbulb >}} *Access* an element in a collection
+- {{< iconify fa6-solid lightbulb >}} Determine if a collection *contains* an element
+- {{< iconify fa6-solid lightbulb >}} *Iterate* through all of the elements in a collection
+- {{< iconify fa6-solid lightbulb >}} *Slice* a collection to get a subset of its elements
 :::
 
 ## Sizing and slicing collections
 
-```{python}
-a = "a string"
-b = ["my", "second", "favorite", "list"]
-c = (1, "tuple")
-d = {"a": "b", "b": 2, "c": False}
-e = {1,2,3,4,4,4,4,2,2,2,1}
-print(len(a), len(b), len(c), len(d), len(e))
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# working with document content and metadata
+title = "Document Engineering Guide"
+sections = ["Introduction", "Methods", "Examples", "Conclusion"]
+metadata = ("Guide", "Engineering")
+properties = {"type": "manual", "version": 2, "active": True}
+tags = {"python", "docs", "engineering", "tutorial", "python", "docs"}
+print("Lengths:", len(title), len(sections), len(metadata), len(properties), len(tags))
 ```
 
 <p class="codespacer">
 
-```{python}
-a = "a string"
-b = ["my", "second", "favorite", "list"]
-c = (1, 2,3,"tuple")
-print(a[3:7])
-print(a[1:-2])
-print(b[1:])
-print(c[:2])
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# slicing collections to extract parts
+title = "Document Engineering Guide"
+sections = ["Introduction", "Methods", "Examples", "Conclusion"]
+metadata = ("Guide", "Engineering", "Tutorial", "2025")
+print("Title slice:", title[9:20])  # "Engineering"
+print("First word:", title[0:8])    # "Document"
+print("Last sections:", sections[2:])  # ["Examples", "Conclusion"]
+print("First two metadata:", metadata[:2])  # ("Guide", "Engineering")
 ```
 
 ## Iterating through lists and tuples
 
-```{python}
-mylist = [1,3,5]
-mytuple = (1, 2, "skip a few", 99, 100)
-print("List:")
-for item in mylist:
-  print("  " + str(item))
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+# processing document sections and metadata
+chapters = ["Intro", "Setup", "Examples"]
+doc_metadata = ("Technical Guide", "v1.0", "2025", "English")
+
+print("Chapters:")
+for chapter in chapters:
+    print("  " + chapter)
+
 print()
-print("Tuple:")
-for item in mytuple:
-  print("  " + str(item))
+print("Metadata:")
+for item in doc_metadata:
+    print("  " + str(item))
 ```
 
 ## Iterating through sets and strings
 
-```{python}
-myset = {"a", "b", "z"}
-mystring = "abz"
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+# working with document keywords and text
+document_tags = {"python", "tutorial", "beginners"}
+filename = "guide.pdf"
 
-print("Set:")
-for element in myset:
-  print("  " + element)
+print("Document Tags:")
+for tag in document_tags:
+    print("  " + tag)
 
 print()
-print("String:")
-for character in mystring:
-  print("  " + character)
+print("Filename Characters:")
+for character in filename:
+    print("  " + character)
 ```
 
 ## Iterating through a dictionary
 
-```{python}
-mydict = {"a": 96, "b": 97, "c": 98}
-for key in mydict:
-  print(key, mydict[key])
+```{pyodide}
+#| autorun: true
+#| max-lines: 14
+# processing document properties
+document_info = {"title": "Python Guide", "pages": 150, "language": "English"}
+
+print("Method 1 - Keys only:")
+for key in document_info:
+    print(key, "->", document_info[key])
+
 print()
-for key, value in mydict.items():
-  print(key, value)
+print("Method 2 - Items (key-value pairs):")
+for key, value in document_info.items():
+    print(key, "->", value)
+
 print()
-for key in mydict.keys():
-  print(key, mydict[key])
+print("Method 3 - Explicit keys:")
+for key in document_info.keys():
+    print(key, "->", document_info[key])
 ```
 
 ## Mutable and Immutable Collections
@@ -308,132 +369,156 @@ for key in mydict.keys():
 ::: {.fragment .fade-right}
 
 - **Mutable Collections**: *can be changed after creation*
-  - Lists (`list`)
-  - Dictionaries (`dict`)
-  - Sets (`set`)
+  - Lists (`list`) - great for document sections that may change
+  - Dictionaries (`dict`) - perfect for document properties
+  - Sets (`set`) - ideal for collections of unique keywords
 
 :::
 
 ::: {.fragment .fade-right style="margin-top: -0.75em;"}
 
 - **Immutable Collections**: *cannot be changed after creation*
-  - Tuples (`tuple`)
-  - Strings (`str`)
+  - Tuples (`tuple`) - excellent for fixed document metadata
+  - Strings (`str`) - text content that won't be modified
 
 :::
 
 ::: {.fragment .fade-right style="margin-top: -0.5em; font-size: 0.9em;"}
 
-- {{< iconify fa6-solid lightbulb >}} Among other factors, how does the
-mutability of the collection influence performance of containment checking
-process?
+- {{< iconify fa6-solid lightbulb >}} Understanding mutability helps prosegrammers choose the right collection type for document data!
 
 :::
 
 ## Containment checking for collections
 
-```{python}
-a = "a string"
-b = ["my", "second", "favorite", "list"]
-c = (1, "tuple")
-d = {"a": "b", "b": 2, "c": False}
-e = {1,2,3,4,4,4,4,2,2,2,1}
-print("str" in a)
-print("string" in a)
-print("my" in b)
-print("tuple" in c)
-print("a" in d)
-print("b" in d)
-print(4 in e)
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+# checking if content exists in document data
+title = "Python Programming"
+chapters = ["Introduction", "Basics", "Advanced", "Conclusion"]
+metadata = ("Guide", "v2.0")
+document_info = {"author": "Jane Smith", "pages": 200, "language": "English"}
+keywords = {"python", "programming", "tutorial", "beginner"}
+
+print("'Programming' in title:", "Programming" in title)
+print("'Tutorial' in title:", "Tutorial" in title)
+print("'Basics' in chapters:", "Basics" in chapters)
+print("'Guide' in metadata:", "Guide" in metadata)
+print("'author' in document_info:", "author" in document_info)
+print("'python' in keywords:", "python" in keywords)
 ```
 
 ## More containment checking
 
-```{python}
-a = "a string"
-b = ["my", "second", "favorite", "list"]
-c = (1, "tuple")
-d = {"a": "b", "b": 2, "c": False}
-e = {1,2,3,4,4,4,4,2,2,2,1}
-print("xyz" in a)
-print("third" in b)
-print("element" in c)
-print("d" in d)
-print("e" in d)
-print(5 in e)
-print("1" in e)
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+# testing for missing content in document data
+title = "Python Programming"
+chapters = ["Introduction", "Basics", "Advanced", "Conclusion"]
+metadata = ("Guide", "v2.0")
+document_info = {"author": "Jane Smith", "pages": 200, "language": "English"}
+keywords = {"python", "programming", "tutorial", "beginner"}
+
+print("'Java' in title:", "Java" in title)
+print("'Appendix' in chapters:", "Appendix" in chapters)
+print("'v3.0' in metadata:", "v3.0" in metadata)
+print("'publisher' in document_info:", "publisher" in document_info)
+print("'advanced' in keywords:", "advanced" in keywords)
+print("'Python' in keywords:", "Python" in keywords)  # case matters!
 ```
 
-## Containment checking with a `List`
+## Working with document content
 
 ```{python}
-from typing import List
-def containment_check_list(thelist: List[int], number: int) -> bool:
-    """Determine if a value is contained in the list."""
-    # assume that the value is not inside of the list
+def find_document_in_library(library: list, document_name: str) -> bool:
+    """Check if a document exists in our document library."""
+    # assume the document is not in the library
     found = False
-    # the value is, in fact, inside of the list
-    if number in thelist:
+    # check if the document name is in the library
+    if document_name in library:
         found = True
-    # return bool to indicate whether or not value is found
+    # return boolean to indicate whether document was found
     return found
+
+# test with sample document library
+my_library = ["Python Guide", "Web Development", "Data Analysis"]
+result = find_document_in_library(my_library, "Python Guide")
+print("Found 'Python Guide':", result)
 ```
 
 ::: {.incremental .fade-right}
 
-- What is the type of the parameter called `thelist`?
-- What is the type of the parameter called `number`?
-- What is the type of `containment_check_list`?
-- How does Python implement `if number in thelist`?
+- What is the type of the parameter called `library`?
+- What is the type of the parameter called `document_name`?
+- What is the return type of `find_document_in_library`?
+- How does Python implement `if document_name in library`?
 
 :::
 
-## Containment checking with a `Tuple`
+## Working with document metadata
 
 ```{python}
-from typing import Tuple
-def containment_check_tuple(thetuple: Tuple[int], number: int) -> bool:
-    """Determine if a value is contained in the list."""
-    # assume that the value is not inside of the tuple
+def check_document_property(metadata: tuple, property_name: str) -> bool:
+    """Check if a specific property exists in document metadata."""
+    # assume the property is not in the metadata
     found = False
-    # the value is, in fact, inside of the tuple
-    if number in thetuple:
+    # check if the property name is in the metadata tuple
+    if property_name in metadata:
         found = True
-    # return the bool to indicate whether or not value is found
+    # return boolean to indicate whether property was found
     return found
+
+# test with sample document metadata
+doc_metadata = ("User Manual", "v2.1", "English", "PDF")
+result = check_document_property(doc_metadata, "PDF")
+print("Contains 'PDF' format:", result)
 ```
 
 ::: {.incremental .fade-right}
 
-- What is the type of the parameter called `thetuple`?
-- What is the type of the parameter called `number`?
-- What is the type of `containment_check_tuple`?
-- How does Python implement `if number in thetuple`?
+- What is the type of the parameter called `metadata`?
+- What is the type of the parameter called `property_name`?
+- What is the return type of `check_document_property`?
+- How does Python implement `if property_name in metadata`?
 
 :::
 
-## What are the performance trade-offs associated with checking to see if a collection contains a value?
+## What makes Python great for document engineering?
 
 ::: {.fragment .fade-right}
 
-- Questions to consider when designing an experiment:
-  - Type of the collection?
-  - Contents of the collection?
-  - Size of the collection?
-  - How often will the collection change?
-  - How can we measure time and space overhead?
+- {{< iconify fa6-solid lightbulb >}} **Simple and readable syntax**
+  - Easy to learn and understand
+  - Code looks similar to written English
+  - Focus on solving problems, not complex syntax
+
+- {{< iconify fa6-solid lightbulb >}} **Excellent text processing capabilities**
+  - Built-in string operations and methods
+  - Rich collection types for organizing data
+  - Powerful libraries for document manipulation
+
+- {{< iconify fa6-solid lightbulb >}} **Perfect for prosegrammers!**
+  - Combines programming power with clear, readable code
+  - Ideal for creating tools that work with documents
 
 :::
 
-## Key features of Python
+## Key features of Python for beginners
 
 ::: fragment
 
 ### Defining and evaluating expressions
 
-```{python}
-expression = 5 + 3 * 2
-print(expression)
+```{pyodide}
+#| autorun: true
+#| max-lines: 6
+# Python makes calculations easy and readable
+pages_per_chapter = 15
+total_chapters = 8
+total_pages = pages_per_chapter * total_chapters
+print("Total pages in document:", total_pages)
 ```
 
 :::
@@ -442,11 +527,14 @@ print(expression)
 
 ### Declaring and using variables with types
 
-```{python}
-integer_variable = 10
-float_variable = 20.5
-string_variable = "Hello, World!"
-print(integer_variable, float_variable, string_variable)
+```{pyodide}
+#| autorun: true
+#| max-lines: 6
+# Variables store different types of document information
+document_title = "Python for Beginners"
+page_count = 156
+is_published = True
+print("Title:", document_title, "| Pages:", page_count, "| Published:", is_published)
 ```
 
 :::
@@ -455,10 +543,34 @@ print(integer_variable, float_variable, string_variable)
 
 ### Creating and using collections
 
-```{python}
-list_collection = [1, 2, 3, 4, 5]
-print(list_collection)
-
+```{pyodide}
+#| autorun: true
+#| max-lines: 6
+# Collections organize multiple pieces of information
+chapter_titles = ["Introduction", "Variables", "Functions", "Collections"]
+print("Chapter list:", chapter_titles)
+print("First chapter:", chapter_titles[0])
 ```
 
 :::
+
+## Building your Python foundation
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- **Master the fundamentals**: sequence, selection, iteration
+- **Understand collections**: strings, lists, tuples, dictionaries, sets
+- **Practice with document examples**: titles, chapters, metadata, keywords
+- **Connect Python to document engineering**: 
+  - Process text and analyze content
+  - Organize document information systematically
+  - Automate repetitive document tasks
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.1em; font-size: 0.85em;"}
+
+{{< iconify fa6-solid rocket >}} You're ready to become a prosegrammer! Python + documents = powerful automation and analysis capabilities!
+
+:::
+
