@@ -518,11 +518,11 @@ print("Contains 'PDF' format:", result)
 
 :::
 
-## Key features of Python for beginners
+## Key features of Python: expressions
 
 ::: fragment
 
-### Defining and evaluating expressions
+##### Defining and evaluating expressions
 
 ```{pyodide}
 #| autorun: true
@@ -536,9 +536,20 @@ print("Total pages in document:", total_pages)
 
 :::
 
+::: {.fragment .fade-right style="margin-top: -0.1em; font-size: 0.95em;"}
+
+- `pages_per_chapter` is a variable
+- `total_pages` is a variable defined by an expression
+- The `*` operator multiplies two numbers
+- `print` outputs text to the console or the slides
+
+:::
+
+## Key features of Python: variables
+
 ::: fragment
 
-### Declaring and using variables with types
+##### Declaring and using variables with types
 
 ```{pyodide}
 #| autorun: true
@@ -551,6 +562,8 @@ print("Title:", document_title, "| Pages:", page_count, "| Published:", is_publi
 ```
 
 :::
+
+## Key features of Python: collections
 
 ::: fragment
 
