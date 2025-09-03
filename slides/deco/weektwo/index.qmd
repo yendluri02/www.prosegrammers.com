@@ -19,3 +19,118 @@ format:
 ---
 
 # DECO1: Document engineering concept overview
+
+# What is Diátaxis?
+
+- Diátaxis is a framework for organizing technical documentation.
+- It was created by Daniele Procida to address the needs of different documentation users.
+- The name comes from the Greek for "arrangement" or "division".
+
+# The Four Types of Documentation
+
+Diátaxis divides documentation into four distinct types:
+
+
+## 1. Tutorials – Learning-oriented
+
+- Step-by-step guides for beginners
+- Help users get started and build confidence
+
+__2. How-To Guides – Task-oriented__
+
+- Recipes for accomplishing specific goals
+- Focused, practical, and concise
+
+---
+
+__3. Reference – Information Oriented__
+
+- Technical descriptions, APIs, commands, options
+- Precise and complete
+
+__4. Explanation – Understanding-oriented__
+
+- Discussions, background, and context
+- Help users understand why things work as they do
+
+# Why Use Diátaxis?
+
+- Helps documentation serve all user needs
+- Prevents mixing of different documentation types
+- Makes docs easier to navigate and maintain
+- Widely adopted by open-source and commercial projects
+
+# Applying Diátaxis
+
+- Identify which type each doc belongs to
+- Structure your docs to separate the four types
+- Write with the user's goal in mind
+- Review and refactor existing docs using the Diátaxis model
+---
+title: "Understanding and Applying Diátaxis"
+description: "Use Diátaxis for technical documentation"
+date: "2025-09-03"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  revealjs:
+    completion: true
+    theme: default
+    css: ../../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# DECO1: Document engineering concept overview
+
+# What is Diátaxis?
+
+- Diátaxis is a framework for organizing technical documentation.
+- It was created by Daniele Procida to address the needs of different documentation users.
+- The name comes from the Greek for "arrangement" or "division".
+
+# The Four Types of Documentation
+
+Diátaxis divides documentation into four distinct types:
+
+
+## 1. Tutorials – Learning-oriented
+
+- Step-by-step guides for beginners
+- Help users get started and build confidence
+
+__2. How-To Guides – Task-oriented__
+
+- Recipes for accomplishing specific goals
+- Focused, practical, and concise
+
+---
+
+__3. Reference – Information Oriented__
+
+- Technical descriptions, APIs, commands, options
+- Precise and complete
+
+__4. Explanation – Understanding-oriented__
+
+- Discussions, background, and context
+- Help users understand why things work as they do
+
+# Why Use Diátaxis?
+
+- Helps documentation serve all user needs
+- Prevents mixing of different documentation types
+- Makes docs easier to navigate and maintain
+- Widely adopted by open-source and commercial projects
+
+# Applying Diátaxis
+
+- Identify which type each doc belongs to
+- Structure your docs to separate the four types
+- Write with the user's goal in mind
+- Review and refactor existing docs using the Diátaxis model
