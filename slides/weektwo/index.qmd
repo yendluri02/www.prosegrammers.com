@@ -2,7 +2,7 @@
 title: "Exploring the Python Programming Language"
 echo: true
 description: "What are some of the key features of Python?"
-date: "2025-01-20"
+date: "2025-09-01"
 date-format: long
 author: Gregory M. Kapfhammer
 format:
