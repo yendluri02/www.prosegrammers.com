@@ -22,10 +22,30 @@ format:
 
 ::: incremental
 
-- {{< iconify fa6-solid lightbulb >}} Simple and readable syntax
-- {{< iconify fa6-solid lightbulb >}} Defining and evaluating expressions
-- {{< iconify fa6-solid lightbulb >}} Declaring and using variables with types
-- {{< iconify fa6-solid lightbulb >}} Creating and using collections
+- Simple and readable syntax
+- Defining and evaluating expressions
+- Declaring and using variables with types
+- Creating and using collections
+
+:::
+
+## Python for document engineering
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+- {{< iconify fa6-solid gear >}} **Simple and readable syntax**
+  - Easy to learn and understand
+  - Code looks similar to written English
+  - Focus on solving problems, not complex syntax
+
+- {{< iconify fa6-solid code >}} **Excellent text processing capabilities**
+  - Built-in string operations and methods
+  - Rich collection types for organizing data
+  - Powerful libraries for document manipulation
+
+- {{< iconify fa6-solid book-open >}} **Perfect suite of tools for prosegrammers**
+  - Combines programming power with clear, readable code
+  - Ideal for creating tools that work with documents
 
 :::
 
@@ -42,7 +62,7 @@ format:
 ::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
 
 {{< iconify fa6-solid microscope >}} These three concepts form the foundation of
-all programming logic! Let's explore these in greater detail!
+all programming logic! **Let's explore these in greater detail!**
 
 :::
 
@@ -487,25 +507,6 @@ print("Contains 'PDF' format:", result)
 
 :::
 
-## What makes Python great for document engineering?
-
-::: {.fragment .fade-right}
-
-- {{< iconify fa6-solid lightbulb >}} **Simple and readable syntax**
-  - Easy to learn and understand
-  - Code looks similar to written English
-  - Focus on solving problems, not complex syntax
-
-- {{< iconify fa6-solid lightbulb >}} **Excellent text processing capabilities**
-  - Built-in string operations and methods
-  - Rich collection types for organizing data
-  - Powerful libraries for document manipulation
-
-- {{< iconify fa6-solid lightbulb >}} **Perfect for prosegrammers!**
-  - Combines programming power with clear, readable code
-  - Ideal for creating tools that work with documents
-
-:::
 
 ## Key features of Python for beginners
 
