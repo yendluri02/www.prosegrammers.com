@@ -1,5 +1,5 @@
 ---
-title: Reviewing Python Programming
+title: Exploring Python Programming
 description: "Understand Python Programming Basics"
 date: "2025-09-01"
 layout: full
