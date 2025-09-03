@@ -441,7 +441,20 @@ Friday of the semester**!
 
 :::
 
-# Can you clone the course website to your laptop and run `quarto preview`? Output?
+## Can you clone the course website to your laptop and run `quarto preview`? What output do you see?
+
+::: {.fragment style="margin-top: -0.15em; font-size: 0.9em;"}
+
+- Setup `ssh` keys for GitHub to ensure secure communication
+- Run `git clone git@github.com:prosegrammers/www.prosegrammers.com.git`
+- Run `cd www.prosegrammers.com`
+- Run `quarto preview`
+- Confirm that the course website builds and serves locally
+- **Can you add content to the website and see it rendered?**
+
+:::
+
+# Now that you have cloned the course website to your laptop, let's test `uv`!
 
 ## Overall document engineering setup
 
