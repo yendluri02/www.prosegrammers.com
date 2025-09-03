@@ -16,8 +16,22 @@ toc-expand: 3
   - Instructor-led document engineering deep-dive on Python programming
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - Overview of the first document engineering tool-building project
-  - Students research for the document engineering tool-building project
+  - First document engineering tool-building project assigned next week
   - Students meet with course instructor and student technical leaders
   - Students demonstrate installation of all required software tools
+  - Students must run all commands described in [Week One: Introduction to
+  Document Engineering](../../slides/weekone/) (e.g., `git clone` and `quarto
+  preview`)
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check one
+  - You must complete skill-check one during the in-person classroom session
+  - Please review [Week One: Introduction to Document
+  Engineering](../../slides/weekone/) for a list of necessary software tools
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weektwo/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Two: Exploring the Python Programming Language](../../slides/weektwo/)
