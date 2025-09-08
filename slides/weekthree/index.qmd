@@ -459,9 +459,9 @@ and behaviors of a document!
 
 :::
 
-## Inheritance: Building on existing classes
+## Inheritance builds on a class
 
-::: {.fragment style="margin-top: -0.15em; font-size: 1.0em;"}
+::: {.fragment style="margin-top: -0.15em; font-size: 0.9em;"}
 
 {{< iconify fa6-solid sitemap >}} **Like a family tree of classes**
 
@@ -472,7 +472,7 @@ and behaviors of a document!
 
 :::
 
-::: {.fragment style="margin-top: 0.5em; font-size: 1.0em;"}
+::: {.fragment style="margin-top: -0.25em; font-size: 0.9em;"}
 
 {{< iconify fa6-solid lightbulb >}} **Why inheritance? Code reuse!**
 
