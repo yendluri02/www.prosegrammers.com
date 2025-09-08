@@ -390,7 +390,7 @@ class MyLimitedList:
 ## Defining a `Document` class
 
 ```{python}
-from typing import Dict, List, Optional
+from typing import Dict
 from datetime import datetime
 
 class Document:
@@ -474,7 +474,7 @@ and behaviors of a document!
 
 ::: {.fragment style="margin-top: -0.25em; font-size: 0.9em;"}
 
-{{< iconify fa6-solid lightbulb >}} **Why inheritance? Code reuse!**
+{{< iconify fa6-solid lightbulb >}} **Why inheritance? One reason: Code reuse!**
 
 - Don't rewrite the same code
 - Build on what's already working
@@ -486,7 +486,7 @@ and behaviors of a document!
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 10
 class Document:
     def __init__(self, title: str, author: str, content: str = ""):
         self.title = title
@@ -505,49 +505,26 @@ class TechnicalDocument(Document):
         # Add new property
         self.level = level
     
-    # Override parent method
+    # override parent method
     def get_summary(self):
-        # Use parent method + add our own info
+        # use parent method + add our own info
         base = super().get_summary()
         return f"{base} - Technical level: {self.level}"
 
-# Create documents
 basic_doc = Document("Simple Guide", "John", "This is a basic guide.")
 tech_doc = TechnicalDocument("Python Advanced", "Jane", "Complex Python concepts.", "advanced")
-
 print("Basic document:", basic_doc.get_summary())
 print("Technical document:", tech_doc.get_summary())
 ```
 
 ::: {.fragment style="margin-top: 0.5em; font-size: 0.9em;"}
 
-{{< iconify fa6-solid lightbulb >}} **Notice**: `TechnicalDocument` gets all `Document` features automatically!
+{{< iconify fa6-solid lightbulb >}} **Insight**: `TechnicalDocument` builds on
+`Document` by adding a new property called `level`! What else could we add to this subclass?
 
 :::
 
-## Composition: Building with parts
-
-::: {.fragment style="margin-top: -0.15em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid puzzle-piece >}} **"Has-a" relationship instead of "is-a"**
-
-- A car "has-a" engine (composition)
-- A sports car "is-a" car (inheritance)
-- Composition is more flexible!
-
-:::
-
-::: {.fragment style="margin-top: 0.5em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid lightbulb >}} **Document generator "has" sections**
-
-- Generator contains multiple sections
-- Sections can be added or removed easily
-- Each part has its own responsibility
-
-:::
-
-## Composition example
+## Composition with `DocumentSection`
 
 ```{pyodide}
 #| autorun: true
@@ -561,7 +538,7 @@ class DocumentSection:
 class DocumentGenerator:
     def __init__(self, title: str):
         self.title = title
-        self.sections = []  # Generator "has" sections
+        self.sections = []
     
     def add_section(self, section):
         self.sections.append(section)
@@ -569,12 +546,12 @@ class DocumentGenerator:
     def get_total_words(self):
         return sum(section.word_count for section in self.sections)
 
-# Create sections
+# create sections
 intro = DocumentSection("Introduction", "Welcome to Python programming!")
 basics = DocumentSection("Basics", "Learn variables, loops, and functions.")
 advanced = DocumentSection("Advanced", "Master classes, inheritance, and more.")
 
-# Create generator and add sections (composition!)
+# create generator and add sections (composition!)
 generator = DocumentGenerator("Python Complete Guide")
 generator.add_section(intro)
 generator.add_section(basics)
@@ -587,7 +564,8 @@ print(f"Total words: {generator.get_total_words()}")
 
 ::: {.fragment style="margin-top: 0.5em; font-size: 0.9em;"}
 
-{{< iconify fa6-solid lightbulb >}} **Key insight**: Generator is made of smaller parts that work together!
+{{< iconify fa6-solid lightbulb >}} **Key insight**: Generator is made of
+smaller parts that work together!
 
 :::
 
