@@ -403,7 +403,17 @@ class MyLimitedList:
         return self._L[index]
 ```
 
-# Prosegramming connect
+::: {.fragment .fade-up style="margin-top: 0.5em; font-size: 0.85em;"}
+
+- The `MyLimitedList` class "has-a" list inside of it called `_L`
+- Composition is a way to build complex objects from simpler ones
+- The `MyLimitedList` class is a "is-a" of `list`
+- {{< iconify fa6-solid lightbulb >}} **Let's fully connect this to document engineering!**
+- {{< iconify fa6-solid question >}} **How can we use objects to represent documents?**
+
+:::
+
+# Document connection
 
 ::: {.fragment style="margin-top: -0.15em; font-size: 0.85em;"}
 
