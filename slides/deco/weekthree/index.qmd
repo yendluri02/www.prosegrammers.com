@@ -1,7 +1,7 @@
 ---
 title: "Understanding README-Driven Documentation"
 description: "Use READMEs for documentation"
-date: "2025-09-10"
+date: "2025-09-15"
 date-format: long
 author: Gregory M. Kapfhammer
 execute:

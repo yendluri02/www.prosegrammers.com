@@ -1,7 +1,7 @@
 ---
 title: "Project Critique for Uv"
 description: "Evaluating a project's documentation"
-date: "2025-09-17"
+date: "2025-09-22"
 date-format: long
 author: Gregory M. Kapfhammer
 execute:
