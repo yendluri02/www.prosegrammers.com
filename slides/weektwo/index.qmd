@@ -620,3 +620,36 @@ capabilities!**
 
 :::
 
+## Overall document engineering setup
+
+::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
+
+- Devote time outside class to installing and configuring tools
+- Confirm that most tools work during the this week's lab session
+- Create and render test documents with the provided examples
+- Complete the first document engineering project on time
+- Contribute to collaborative documentation projects
+- Prepare for first document engineering skill check
+
+- {{< iconify fa6-solid rocket >}} **Get ready for an exciting journey into document engineering!**
+- {{< iconify fa6-solid lightbulb >}} **If you are having trouble, publicly ask for help on Discord!**
+- {{< iconify fa6-solid key >}} **If you would like to use a token, please contact the course instructor!**
+
+:::
+
+## Reminder of course goals
+
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.9em;"}
+
+- **Document Creation**:
+  - Design and implement document generation workflows
+  - Test all aspects of documents to ensure quality and accuracy
+  - Create frameworks for automated document production
+- **Document Analysis**:
+  - Collect and analyze data about document usage and quality
+  - Visualize insights to improve documentation strategies
+- **Communicate** results and best practices for document engineering
+- **Check [syllabus](/syllabus/index.qmd) for details about Document Engineering
+course!**
+
+:::
