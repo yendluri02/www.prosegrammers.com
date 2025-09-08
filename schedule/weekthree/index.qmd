@@ -30,6 +30,7 @@ toc-expand: 3
   - Team-based delivery of [DECO1
   presentation](/slides/deco/weektwo/index.qmd)
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Continue to review introductory content about Python programming
   - Release the first document engineering tool-building project
   - Students meet with the course instructor and student technical leaders
   - At end of lab, students give in-person demonstration to course instructor
@@ -42,4 +43,5 @@ toc-expand: 3
 <iframe class="slide-deck" src="../../slides/weekthree/"></iframe>
 ```
 
-{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Three: Object-Oriented Programming in Python](../../slides/weekthree/)
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Three: Object-Oriented Programming in Python](../../slides/weekthree/)
