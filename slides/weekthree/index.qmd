@@ -346,49 +346,6 @@ class Square(Polygon):
 
 :::
 
-## What is duck typing? How does it work in the Python language?
-
-::: {.incremental style="font-size: 1.025em;"}
-
-- Python is a dynamically typed language
-
-- Python uses duck typing to determine types
-
-- Remember the silly adage of "If it walks like a duck and quacks like a duck,
-  then it must be a duck"
-
-- Inheritance is not only way to create an "is-a"
-  relationship!
-
-- Yet, inheritance makes the "is-a" relationship explicit
-
-- {{< iconify fa6-solid gear >}} **Let's explore an example of duck typing in Python!**
-
-:::
-
-## Connecting `Triangle` and `Square` to the `Polygon` Superclass
-
-```{python}
-class PolygonCollection:
-    def __init__(self):
-        self._triangles = []
-        self._squares = []
-
-    def add(self, polygon):
-        if polygon.sides() == 3:
-            self._triangles.append(polygon)
-        if polygon.sides() == 4:
-            self._squares.append(polygon)
-```
-
-::: {.fragment .fade-up style="margin-top: 0.5em; font-size: 0.85em;"}
-
-- The `polygon` parameter can be any object with a `sides` method
-- This is an example of parametric polymorphism in Python
-- Again, inheritance is not the only way to create an "is-a" relationship!
-
-:::
-
 ## Using composition in Python
 
 ```{python}
