@@ -1,0 +1,418 @@
+---
+title: "Object-Oriented Programming in Python"
+description: "What are the key features of object-oriented programming in Python?"
+date: "2025-09-08"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# What are the main goals of object-oriented programming?
+
+::: incremental
+
+- Write code that reflects thought and the world
+- Enable code reuse and sharing among programmers
+- Encourage the creation of well-designed software
+- Ensure that software is easy to maintain and extend
+
+:::
+
+## What is a class? What is an object?
+
+::: incremental
+
+- A class is a **blueprint** for creating objects
+- An object is an **instantiation** of a class
+- A class defines the **attributes** and **methods** of an object
+    - **Attributes** are the data that an object holds
+    - **Methods** are the behaviors that an object can perform
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid microscope >}} Find an example of a class and an object in a
+Python program that you previously wrote! After identifying the attributes and the
+methods, assess the overall quality of the object-oriented design.
+
+:::
+
+## Type Inference in Python
+
+```{python}
+mylist = []
+print(type(mylist))
+print(isinstance(mylist, list))
+print(isinstance(mylist, str))
+```
+
+::: {.fragment .fade style="margin-top: 0.0em; font-size: 0.9em;"}
+
+- Key insights about this source code:
+    - `mylist = []` creates an empty list
+    - `type(mylist)` returns the type of the list
+    - `isinstance` returns `True` or `False` for provided type
+    - `isinstance(mylist, list)` checks if `mylist` is a list
+    - Same approach works for other data types!
+
+:::
+
+## Existing types available in Python
+
+```{python}
+def example_function():
+  return 0
+print(type(example_function))
+```
+
+<p class="codespacer">
+
+```{python}
+def generator_example(n):
+  for i in range(n):
+    yield i
+print(type(generator_example))
+print(type(generator_example(5)))
+```
+
+::: {.fragment .fade style="margin-top: 0.25em; font-size: 0.9em;"}
+
+- `type` shows that functions and generators have their own types
+- What are the similarities and differences for these two types?
+- How do `return` and `yield` influence a function's behavior?
+
+:::
+
+## Explore use of the `type` function
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# define variables of different types
+integer_var = 10
+float_var = 10.5
+string_var = "Hello, World!"
+list_var = [1, 2, 3, 4, 5]
+dict_var = {"key1": "value1", "key2": "value2"}
+
+# display the type of each variable
+print("Type of integer_var:", type(integer_var))
+print("Type of float_var:", type(float_var))
+print("Type of string_var:", type(string_var))
+print("Type of list_var:", type(list_var))
+print("Type of dict_var:", type(dict_var))
+```
+
+::: {.fragment style="margin-top: 0.15em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid microscope >}} **Key Task**: Add other types, including
+  those that contain different types!
+
+:::
+
+## What if we don't create objects?
+
+```{python}
+u = (3,4)
+v = (3,6)
+def add(a, b):
+  return (a[0] + b[0], a[1] + b[1])
+def subtract(a,b):
+  return (a[0] - b[0], a[1] - b[1])
+def dot(a, b):
+  return (a[0] * b[0] + a[1] * b[1])
+def norm(a):
+  return (a[0] * a[0] + a[1] * a[1]) ** 0.5
+def isvertical(a):
+  return a[0] == 0
+print(norm(u))
+print(add(u,v))
+print(u + v)
+print(isvertical(subtract(v, u)))
+```
+
+## Explore `tuple` for encoding state
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+u = (3,4)
+v = (3,6)
+def add(a, b):
+  return (a[0] + b[0], a[1] + b[1])
+def subtract(a,b):
+  return (a[0] - b[0], a[1] - b[1])
+def dot(a, b):
+  return (a[0] * b[0] + a[1] * b[1])
+def norm(a):
+  return (a[0] * a[0] + a[1] * a[1]) ** 0.5
+def isvertical(a):
+  return a[0] == 0
+print(norm(u))
+print(add(u,v))
+print(u + v)
+print(isvertical(subtract(v, u)))
+```
+
+::: {.fragment style="margin-top: 0.2em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Key Questions**: What are the strengths
+    and weaknesses of this approach to representing vectors? How could this
+    approach lead to program defects?
+
+:::
+
+## An object-oriented alternative
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+```{python}
+class Vector:
+  def __init__(self, x, y):
+    try:
+      self.x = float(x)
+      self.y = float(y)
+    except ValueError:
+      self.x = 0.0
+      self.y = 0.0
+  def norm(self):
+    return (self.x ** 2 + self.y ** 2) ** 0.5
+  def __add__(self, other):
+    newx = self.x + other.x
+    newy = self.y + other.y
+    return Vector(newx, newy)
+  def __str__(self):
+    return "({:.2f}, {:.2f})".format(self.x, self.y)
+u = Vector(3,4)
+v = Vector(3,6)
+print(u + v)
+```
+
+:::
+
+## Explore an object-oriented approach
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+class Vector:
+  def __init__(self, x, y):
+    try:
+      self.x = float(x)
+      self.y = float(y)
+    except ValueError:
+      self.x = 0.0
+      self.y = 0.0
+  def norm(self):
+    return (self.x ** 2 + self.y ** 2) ** 0.5
+  def __add__(self, other):
+    newx = self.x + other.x
+    newy = self.y + other.y
+    return Vector(newx, newy)
+  def __str__(self):
+    return "({:.2f}, {:.2f})".format(self.x, self.y)
+u = Vector(3,4)
+v = Vector(3,6)
+print(u + v)
+```
+
+::: {.fragment style="margin-top: 0.2em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Key Questions**: After trying different
+instances of `Vector`, what is the state and behavior? What are the strengths
+and weaknesses of this approach to representing vectors? How could this approach
+lead to program defects?
+
+:::
+
+# What are the principles of object-oriented programming?
+
+::: incremental
+
+- **Abstraction**: Hide implementation details
+- **Inheritance**: Create new classes from existing classes
+- **Encapsulation**: Group related data and methods together
+- **Polymorphism**: Allow objects to take on multiple forms
+
+:::
+
+## Encapsulation with `Triangle`
+
+```{python}
+class Triangle:
+    def __init__(self, points):
+        self._sides = 3
+        self._points = list(points)
+        if len(self._points) != 3:
+            raise ValueError("Wrong number of points.")
+
+    def sides(self):
+        return 3
+
+    def __str__(self):
+        return "I’m a triangle."
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- What state does a `Triangle` object have?
+- How can we access the state of a `Triangle` object?
+- What are the benefits and limitations of encapsulation?
+
+:::
+
+## Encapsulation with `Square`
+
+```{python}
+class Square:
+    def __init__(self, points):
+        self._sides = 4
+        self._points = list(points)
+        if len(self._points) != 4:
+            raise ValueError("Wrong number of points.")
+
+    def sides(self):
+        return 4
+
+    def __str__(self):
+        return "I’m so square."
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- What state does a `Square` object have?
+- How can we access the state of a `Square` object?
+- Wait, what is the purpose of `__init__` and `__str__`?
+
+:::
+
+## Wait, what is the relationship between a `Square` and a `Triangle`?
+
+```{python}
+class Polygon:
+    def __init__(self, sides, points):
+        self._sides = sides
+        self._points = list(points)
+        if len(self._points) != self._sides:
+            raise ValueError("Wrong number of points.")
+
+    def sides(self):
+        return self._sides
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- The `Polygon` class is a *superclass* of `Triangle` and `Square`
+- The `Triangle` and `Square` classes are *subclasses* of `Polygon`
+- The `Polygon` class is a *generalization* of `Triangle` and `Square`
+
+:::
+
+## Connecting `Triangle` and `Square` to the `Polygon` Superclass
+
+
+```{python}
+class Triangle(Polygon):
+    def __init__(self, points):
+        Polygon.__init__(self, 3, points)
+
+    def __str__(self):
+        return "I’m a triangle."
+
+class Square(Polygon):
+    def __init__(self, points):
+        Polygon.__init__(self, 4, points)
+
+    def __str__(self):
+        return "I’m so square."
+```
+
+::: {.fragment .fade-up style="margin-top: 0.5em; font-size: 0.8em;"}
+
+- Forms an "is-a" relationship between:
+  - `Triangle` and `Polygon` and also `Square` and `Polygon`
+
+:::
+
+## What is duck typing? How does it work in the Python language?
+
+::: {.incremental style="font-size: 1.025em;"}
+
+- Python is a dynamically typed language
+
+- Python uses duck typing to determine types
+
+- Remember the silly adage of "If it walks like a duck and quacks like a duck,
+  then it must be a duck"
+
+- Inheritance is not only way to create an "is-a"
+  relationship!
+
+- Yet, inheritance makes the "is-a" relationship explicit
+
+- {{< iconify fa6-solid gear >}} **Let's explore an example of duck typing in Python!**
+
+:::
+
+## Connecting `Triangle` and `Square` to the `Polygon` Superclass
+
+```{python}
+class PolygonCollection:
+    def __init__(self):
+        self._triangles = []
+        self._squares = []
+
+    def add(self, polygon):
+        if polygon.sides() == 3:
+            self._triangles.append(polygon)
+        if polygon.sides() == 4:
+            self._squares.append(polygon)
+```
+
+::: {.fragment .fade-up style="margin-top: 0.5em; font-size: 0.85em;"}
+
+- The `polygon` parameter can be any object with a `sides` method
+- This is an example of parametric polymorphism in Python
+- Again, inheritance is not the only way to create an "is-a" relationship!
+
+:::
+
+## Using composition in Python
+
+```{python}
+class MyLimitedList:
+    def __init__(self):
+        self._L = []
+
+    def append(self, item):
+        self._L.append(item)
+
+    def __getitem__(self, index):
+        return self._L[index]
+
+limited = MyLimitedList()
+limited.append(1)
+limited.append(10)
+limited.append(100)
+print(limited[2])
+```
+
+::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- Composition means that one object *is part* of another object
+- The `MyLimitedList` class is composed of a list called `_L`
+
+:::
+
