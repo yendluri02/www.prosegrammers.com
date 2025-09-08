@@ -569,41 +569,25 @@ smaller parts that work together!
 
 :::
 
-## OOP principles in document engineering
+## Object-oriented programming in document engineering
 
-::: {.fragment style="margin-top: -0.15em; font-size: 1.0em;"}
+::: {.fragment style="margin-top: -0.15em; font-size: 0.7em;"}
 
-{{< iconify fa6-solid gear >}} **Abstraction**: Hide complexity
+- {{< iconify fa6-solid gear >}} **Abstraction**: Hide complexity
+    - Document classes hide file operations
+    - Users work with simple document objects
 
-- Document classes hide file operations
-- Users work with simple document objects
+- {{< iconify fa6-solid sitemap >}} **Inheritance**: Build on existing code
+    - Child classes inherit parent features
+    - Add only what's new and different
 
-:::
+- {{< iconify fa6-solid shield >}} **Encapsulation**: Protect data
+    - Private data stays safe inside classes
+    - Public methods control access
 
-::: {.fragment style="margin-top: 0.5em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid sitemap >}} **Inheritance**: Build on existing code
-
-- Child classes inherit parent features
-- Add only what's new and different
-
-:::
-
-::: {.fragment style="margin-top: 0.5em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid shield >}} **Encapsulation**: Protect data
-
-- Private data stays safe inside classes
-- Public methods control access
-
-:::
-
-::: {.fragment style="margin-top: 0.5em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid magic-wand-sparkles >}} **Polymorphism**: Same action, different results
-
-- One method name, many behaviors
-- Code stays simple, results vary
+- {{< iconify fa6-solid tada >}} **Polymorphism**: Same action, different results
+    - One method name, many behaviors
+    - Code stays simple, results vary
 
 :::
 
@@ -629,4 +613,3 @@ smaller parts that work together!
 - Combine simple parts into powerful tools
 
 :::
-
