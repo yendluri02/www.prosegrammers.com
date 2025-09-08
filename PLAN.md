@@ -208,8 +208,66 @@ text formatting capabilities for document standardization
 #### Python Type System for Document Engineering
 
 - Python's type hints (introduced in PEP 484) improve code readability and help
-catch errors in document processing functions
+  catch errors in document processing functions
 - Strong typing helps ensure data integrity when working with document metadata
-and content
+  and content
 - Type annotations serve as inline documentation, making code more maintainable
-for collaborative document engineering projects
+  for collaborative document engineering projects
+
+### Support for Week Three Slides Content
+
+#### Object-Oriented Programming for Document Engineering
+
+- Object-oriented programming (OOP) is a fundamental paradigm in software engineering
+  that models real-world entities as objects with properties and behaviors
+- OOP principles (abstraction, inheritance, encapsulation, polymorphism) provide
+  structured approaches to software design, as established in design patterns
+  literature like the Gang of Four book "Design Patterns"
+- Document engineering benefits from OOP by modeling documents, sections, and
+  processing operations as objects with well-defined interfaces
+
+#### Document Classes and Inheritance
+
+- Class-based inheritance allows creation of specialized document types while
+  maintaining shared functionality, following the Liskov Substitution Principle
+- The `Document` base class encapsulates common document properties (title, author,
+  content, metadata) following encapsulation principles
+- Technical documents often require specialized attributes like complexity scoring
+  and code examples, justifying inheritance hierarchies in document systems
+
+#### Polymorphism in Document Processing
+
+- Polymorphic interfaces enable uniform processing of different document types,
+  supporting the Open/Closed Principle of software design
+- Abstract base classes define contracts for document processors, ensuring
+  consistent interfaces across different implementations
+- Duck typing in Python allows flexible object interactions based on behavior
+  rather than inheritance, supporting agile document processing architectures
+
+#### Composition for Document Generation
+
+- Composition over inheritance promotes flexible object assembly, as recommended
+  in software design best practices
+- Document generators composed of sections provide greater flexibility than
+  rigid inheritance hierarchies
+- The Strategy pattern (using composition) enables runtime selection of document
+  generation strategies, supporting diverse output formats
+
+#### OOP Principles Applied to Document Engineering
+
+- Abstraction hides complexity of document operations, allowing users to work
+  with high-level document objects rather than low-level file operations
+- Encapsulation protects document state and ensures data integrity through
+  controlled access methods
+- Inheritance creates type hierarchies for different document categories while
+  maintaining shared behavior
+- Polymorphism enables extensible document processing systems that can handle
+  new document types without modifying existing code
+
+#### Interactive Code Examples
+
+- Pyodide enables browser-based Python execution, providing immediate feedback
+  for educational content
+- Interactive examples reinforce learning through hands-on experimentation
+- Real-time code execution helps students understand OOP concepts through
+  practical application in document engineering scenarios
