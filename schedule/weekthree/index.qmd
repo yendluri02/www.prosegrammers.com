@@ -10,6 +10,7 @@ toc-expand: 3
 ## Activities
 
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Instructor-led review of Python programming basics
   - Instructor-led deep-dive on object-oriented programming
 - {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
   - [DECO1 presentation](/slides/deco/weektwo/index.qmd) completed through the
@@ -34,3 +35,11 @@ toc-expand: 3
   - At end of lab, students give in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check two
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekthree/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Three: Object-Oriented Programming in Python](../../slides/weekthree/)
