@@ -3,7 +3,7 @@ title: "Understanding and Applying Diátaxis"
 description: "Use Diátaxis for technical documentation"
 date: "2025-09-03"
 date-format: long
-author: Tien DeLong-Headley, Hank Grefenstette, Brandon Ladakos
+author: Gregory M. Kapfhammer
 execute:
   echo: true
 format:
@@ -62,7 +62,7 @@ __4. Explanation – Understanding-oriented__
 
 # Applying Diátaxis
 
-- Identify which type each doc belongs to
-- Structure your docs to separate the four types
-- Write with the user's goal in mind
-- Review and refactor existing docs using the Diátaxis model
+- Review and refactor existing documents using the Diátaxis model
+- Identify which type each doc belongs to (learning-oriented, information-oriented, goal-oriented, understanding-oriented)
+- Structure your documents to separate the four types of documents
+- Write with the user's goal in mind, such as completing a specific problem, providing reference information, or solving a problem
