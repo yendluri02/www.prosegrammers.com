@@ -569,7 +569,7 @@ smaller parts that work together!
 
 :::
 
-## Object-oriented programming in document engineering
+## Object-orientation for documents
 
 ::: {.fragment style="margin-top: -0.15em; font-size: 0.7em;"}
 
@@ -585,7 +585,7 @@ smaller parts that work together!
     - Private data stays safe inside classes
     - Public methods control access
 
-- {{< iconify fa6-solid tada >}} **Polymorphism**: Same action, different results
+- {{< iconify fa6-solid shapes >}} **Polymorphism**: Same action, different results
     - One method name, many behaviors
     - Code stays simple, results vary
 
