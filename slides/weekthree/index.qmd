@@ -43,9 +43,9 @@ format:
 
 ::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
 
-{{< iconify fa6-solid microscope >}} Find an example of a class and an object in a
-Python program that you previously wrote! After identifying the attributes and the
-methods, assess the overall quality of the object-oriented design.
+{{< iconify fa6-solid microscope >}} Brainstorm an example of a class and an
+object that might exist in a program you use! After identifying the attributes
+and the methods, reflect on the benefits of object-oriented design.
 
 :::
 
@@ -401,18 +401,523 @@ class MyLimitedList:
 
     def __getitem__(self, index):
         return self._L[index]
-
-limited = MyLimitedList()
-limited.append(1)
-limited.append(10)
-limited.append(100)
-print(limited[2])
 ```
 
-::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.85em;"}
+## Object-oriented programming for prosegrammers
 
-- Composition means that one object *is part* of another object
-- The `MyLimitedList` class is composed of a list called `_L`
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **OOP enables powerful document engineering tools**
+  - Create reusable document processing classes
+  - Build extensible document analysis frameworks
+  - Design flexible document generation systems
+
+- {{< iconify fa6-solid book-open >}} **Document classes represent real-world entities**
+  - `Document` class for text content and metadata
+  - `Report` class for structured business documents
+  - `Manual` class for instructional content
+  - `Analyzer` class for text processing operations
+
+- {{< iconify fa6-solid lightbulb >}} **Inheritance creates document type hierarchies**
+  - Base `Document` class with common functionality
+  - Specialized subclasses for different document types
+  - Shared methods and properties through inheritance
+
+:::
+
+## Creating a document class
+
+```{python}
+from typing import Dict, List, Optional
+from datetime import datetime
+
+class Document:
+    """A base class representing a document in our document engineering system."""
+    
+    def __init__(self, title: str, author: str, content: str = ""):
+        """Initialize a document with basic properties."""
+        self.title = title
+        self.author = author
+        self.content = content
+        self.created_date = datetime.now()
+        self.word_count = len(content.split()) if content else 0
+        self.metadata: Dict[str, str] = {}
+    
+    def add_metadata(self, key: str, value: str) -> None:
+        """Add metadata to the document."""
+        self.metadata[key] = value
+    
+    def get_summary(self) -> str:
+        """Generate a summary of the document."""
+        return f"'{self.title}' by {self.author} ({self.word_count} words)"
+    
+    def __str__(self) -> str:
+        """String representation of the document."""
+        return self.get_summary()
+```
+
+::: {.fragment .fade style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Document class encapsulates document state and behavior**
+- **Methods provide document operations**: metadata management, summaries
+- **Foundation for building document engineering tools**
+
+:::
+
+## Exploring the Document class
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+from typing import Dict
+from datetime import datetime
+
+class Document:
+    def __init__(self, title: str, author: str, content: str = ""):
+        self.title = title
+        self.author = author
+        self.content = content
+        self.created_date = datetime.now()
+        self.word_count = len(content.split()) if content else 0
+        self.metadata: Dict[str, str] = {}
+    
+    def add_metadata(self, key: str, value: str) -> None:
+        self.metadata[key] = value
+    
+    def get_summary(self) -> str:
+        return f"'{self.title}' by {self.author} ({self.word_count} words)"
+    
+    def __str__(self) -> str:
+        return self.get_summary()
+
+# Create a sample document
+doc = Document("Python Guide", "Jane Smith", "This is a guide about Python programming.")
+doc.add_metadata("language", "English")
+doc.add_metadata("version", "1.0")
+print("Document:", doc)
+print("Metadata:", doc.metadata)
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.8em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Key insights**: Objects encapsulate both data and operations
+- **Metadata system**: Flexible key-value storage for document properties
+- **Automatic calculations**: Word count computed from content
+
+:::
+
+## Inheritance: Specialized document types
+
+```{python}
+class TechnicalDocument(Document):
+    """A specialized document for technical content."""
+    
+    def __init__(self, title: str, author: str, content: str = "", 
+                 technical_level: str = "beginner"):
+        """Initialize a technical document with additional properties."""
+        super().__init__(title, author, content)
+        self.technical_level = technical_level
+        self.code_examples: List[str] = []
+    
+    def add_code_example(self, code: str) -> None:
+        """Add a code example to the technical document."""
+        self.code_examples.append(code)
+        self.word_count = len(self.content.split())  # Recalculate word count
+    
+    def get_complexity_score(self) -> float:
+        """Calculate document complexity based on technical level and code."""
+        base_score = {"beginner": 1.0, "intermediate": 2.0, "advanced": 3.0}
+        code_multiplier = 1 + (len(self.code_examples) * 0.1)
+        return base_score.get(self.technical_level, 1.0) * code_multiplier
+    
+    def get_summary(self) -> str:
+        """Enhanced summary for technical documents."""
+        base_summary = super().get_summary()
+        return f"{base_summary} - Level: {self.technical_level} ({len(self.code_examples)} examples)"
+```
+
+::: {.fragment .fade style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Inheritance extends base functionality**: `TechnicalDocument` inherits from `Document`
+- **Specialized behavior**: Code examples, complexity scoring, enhanced summaries
+- **Polymorphism**: `get_summary()` method overridden for technical context
+
+:::
+
+## Using inheritance with document types
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 15
+from typing import Dict, List
+from datetime import datetime
+
+class Document:
+    def __init__(self, title: str, author: str, content: str = ""):
+        self.title = title
+        self.author = author
+        self.content = content
+        self.created_date = datetime.now()
+        self.word_count = len(content.split()) if content else 0
+        self.metadata: Dict[str, str] = {}
+    
+    def add_metadata(self, key: str, value: str) -> None:
+        self.metadata[key] = value
+    
+    def get_summary(self) -> str:
+        return f"'{self.title}' by {self.author} ({self.word_count} words)"
+
+class TechnicalDocument(Document):
+    def __init__(self, title: str, author: str, content: str = "", 
+                 technical_level: str = "beginner"):
+        super().__init__(title, author, content)
+        self.technical_level = technical_level
+        self.code_examples: List[str] = []
+    
+    def add_code_example(self, code: str) -> None:
+        self.code_examples.append(code)
+    
+    def get_complexity_score(self) -> float:
+        base_score = {"beginner": 1.0, "intermediate": 2.0, "advanced": 3.0}
+        code_multiplier = 1 + (len(self.code_examples) * 0.1)
+        return base_score.get(self.technical_level, 1.0) * code_multiplier
+    
+    def get_summary(self) -> str:
+        base_summary = super().get_summary()
+        return f"{base_summary} - Level: {self.technical_level} ({len(self.code_examples)} examples)"
+
+# Create different document types
+basic_doc = Document("Simple Guide", "John Doe", "Basic content here.")
+tech_doc = TechnicalDocument("Advanced Python", "Jane Smith", "Complex Python concepts.", "advanced")
+tech_doc.add_code_example("def fibonacci(n): return n if n <= 1 else fibonacci(n-1) + fibonacci(n-2)")
+tech_doc.add_metadata("language", "Python")
+
+print("Basic document:", basic_doc)
+print("Technical document:", tech_doc)
+print("Complexity score:", tech_doc.get_complexity_score())
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.8em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Inheritance benefits**: Code reuse, specialization, polymorphism
+- **Different document types**: Each with appropriate behavior and properties
+- **Complexity analysis**: Technical documents can be analyzed for difficulty
+
+:::
+
+## Polymorphism: Document processors
+
+```{python}
+from abc import ABC, abstractmethod
+from typing import List
+
+class DocumentProcessor(ABC):
+    """Abstract base class for document processing operations."""
+    
+    @abstractmethod
+    def process(self, document: Document) -> str:
+        """Process a document and return results."""
+        pass
+    
+    @abstractmethod
+    def get_processor_type(self) -> str:
+        """Return the type of processing this processor performs."""
+        pass
+
+class WordCountProcessor(DocumentProcessor):
+    """Processor that counts words in documents."""
+    
+    def process(self, document: Document) -> str:
+        """Count words and return statistics."""
+        words = document.content.split()
+        return f"Word count: {len(words)}"
+    
+    def get_processor_type(self) -> str:
+        return "word_counter"
+
+class KeywordExtractor(DocumentProcessor):
+    """Processor that extracts keywords from documents."""
+    
+    def __init__(self, keywords: List[str]):
+        """Initialize with keywords to search for."""
+        self.keywords = [kw.lower() for kw in keywords]
+    
+    def process(self, document: Document) -> str:
+        """Extract and count keyword occurrences."""
+        content_lower = document.content.lower()
+        found_keywords = []
+        for keyword in self.keywords:
+            if keyword in content_lower:
+                count = content_lower.count(keyword)
+                found_keywords.append(f"{keyword}: {count}")
+        return "Keywords found: " + ", ".join(found_keywords) if found_keywords else "No keywords found"
+    
+    def get_processor_type(self) -> str:
+        return "keyword_extractor"
+```
+
+::: {.fragment .fade style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Abstract base class**: Defines interface for document processors
+- **Polymorphism**: Different processors implement the same interface
+- **Extensibility**: New processors can be added without changing existing code
+
+:::
+
+## Polymorphism in action
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 20
+from abc import ABC, abstractmethod
+from typing import List, Dict
+from datetime import datetime
+
+class Document:
+    def __init__(self, title: str, author: str, content: str = ""):
+        self.title = title
+        self.author = author
+        self.content = content
+        self.created_date = datetime.now()
+        self.word_count = len(content.split()) if content else 0
+        self.metadata: Dict[str, str] = {}
+
+class DocumentProcessor(ABC):
+    @abstractmethod
+    def process(self, document: Document) -> str:
+        pass
+    
+    @abstractmethod
+    def get_processor_type(self) -> str:
+        pass
+
+class WordCountProcessor(DocumentProcessor):
+    def process(self, document: Document) -> str:
+        words = document.content.split()
+        return f"Word count: {len(words)}"
+    
+    def get_processor_type(self) -> str:
+        return "word_counter"
+
+class KeywordExtractor(DocumentProcessor):
+    def __init__(self, keywords: List[str]):
+        self.keywords = [kw.lower() for kw in keywords]
+    
+    def process(self, document: Document) -> str:
+        content_lower = document.content.lower()
+        found_keywords = []
+        for keyword in self.keywords:
+            if keyword in content_lower:
+                count = content_lower.count(keyword)
+                found_keywords.append(f"{keyword}: {count}")
+        return "Keywords found: " + ", ".join(found_keywords) if found_keywords else "No keywords found"
+    
+    def get_processor_type(self) -> str:
+        return "keyword_extractor"
+
+# Create documents and processors
+doc1 = Document("Python Tutorial", "Alice", "Python is a programming language used for data analysis and web development.")
+doc2 = Document("Data Science Guide", "Bob", "Data science involves statistics, machine learning, and programming.")
+
+processors = [WordCountProcessor(), KeywordExtractor(["python", "data", "programming"])]
+
+for doc in [doc1, doc2]:
+    print(f"Processing: {doc.title}")
+    for processor in processors:
+        result = processor.process(doc)
+        print(f"  {processor.get_processor_type()}: {result}")
+    print()
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.8em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Polymorphic processing**: Same interface, different behaviors
+- **Flexible analysis**: Documents can be processed by any compatible processor
+- **Extensible system**: New processors work with existing documents
+
+:::
+
+## Composition: Document generators
+
+```{python}
+from typing import List, Dict, Optional
+
+class DocumentSection:
+    """Represents a section within a document."""
+    
+    def __init__(self, title: str, content: str):
+        """Initialize a document section."""
+        self.title = title
+        self.content = content
+        self.word_count = len(content.split())
+    
+    def __str__(self) -> str:
+        """String representation of the section."""
+        return f"## {self.title}\n\n{self.content}"
+
+class DocumentGenerator:
+    """A document generator that composes documents from sections."""
+    
+    def __init__(self, title: str, author: str):
+        """Initialize the document generator."""
+        self.title = title
+        self.author = author
+        self.sections: List[DocumentSection] = []
+        self.metadata: Dict[str, str] = {}
+    
+    def add_section(self, section: DocumentSection) -> None:
+        """Add a section to the document."""
+        self.sections.append(section)
+    
+    def add_metadata(self, key: str, value: str) -> None:
+        """Add metadata to the document."""
+        self.metadata[key] = value
+    
+    def generate_markdown(self) -> str:
+        """Generate the complete document in Markdown format."""
+        header = f"# {self.title}\n\n**Author:** {self.author}\n\n"
+        if self.metadata:
+            header += "**Metadata:**\n"
+            for key, value in self.metadata.items():
+                header += f"- {key}: {value}\n"
+            header += "\n"
+        
+        body = "\n\n".join(str(section) for section in self.sections)
+        return header + body
+    
+    def get_total_word_count(self) -> int:
+        """Calculate total word count across all sections."""
+        return sum(section.word_count for section in self.sections)
+```
+
+::: {.fragment .fade style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Composition over inheritance**: Document generator *has* sections
+- **Flexible structure**: Sections can be added dynamically
+- **Clean separation**: Each class has a single responsibility
+
+:::
+
+## Building documents with composition
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 20
+from typing import List, Dict
+
+class DocumentSection:
+    def __init__(self, title: str, content: str):
+        self.title = title
+        self.content = content
+        self.word_count = len(content.split())
+    
+    def __str__(self) -> str:
+        return f"## {self.title}\n\n{self.content}"
+
+class DocumentGenerator:
+    def __init__(self, title: str, author: str):
+        self.title = title
+        self.author = author
+        self.sections: List[DocumentSection] = []
+        self.metadata: Dict[str, str] = {}
+    
+    def add_section(self, section: DocumentSection) -> None:
+        self.sections.append(section)
+    
+    def add_metadata(self, key: str, value: str) -> None:
+        self.metadata[key] = value
+    
+    def generate_markdown(self) -> str:
+        header = f"# {self.title}\n\n**Author:** {self.author}\n\n"
+        if self.metadata:
+            header += "**Metadata:**\n"
+            for key, value in self.metadata.items():
+                header += f"- {key}: {value}\n"
+            header += "\n"
+        
+        body = "\n\n".join(str(section) for section in self.sections)
+        return header + body
+    
+    def get_total_word_count(self) -> int:
+        return sum(section.word_count for section in self.sections)
+
+# Create a document generator
+generator = DocumentGenerator("Python Document Engineering", "Prosegrammer Team")
+generator.add_metadata("version", "1.0")
+generator.add_metadata("language", "English")
+
+# Add sections
+intro_section = DocumentSection("Introduction", 
+    "Document engineering combines programming with writing to create powerful tools for content creation and analysis.")
+methods_section = DocumentSection("Methods", 
+    "We use Python classes, inheritance, and composition to build flexible document processing systems.")
+examples_section = DocumentSection("Examples", 
+    "Here are practical examples of OOP patterns applied to document engineering challenges.")
+
+generator.add_section(intro_section)
+generator.add_section(methods_section)
+generator.add_section(examples_section)
+
+print("Total word count:", generator.get_total_word_count())
+print("\nGenerated document preview:")
+print(generator.generate_markdown()[:200] + "...")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.8em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Composition benefits**: Flexible document assembly
+- **Dynamic content**: Sections can be added or reordered easily
+- **Clean architecture**: Each component has a clear purpose
+
+:::
+
+## OOP principles in document engineering
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **Abstraction**: Hide complexity of document processing
+  - Document classes encapsulate file operations and metadata
+  - Users work with high-level document objects, not low-level details
+
+- {{< iconify fa6-solid gear >}} **Inheritance**: Create document type hierarchies
+  - Base `Document` class with common functionality
+  - Specialized subclasses like `TechnicalDocument`, `Report`, `Manual`
+  - Shared behavior through inheritance chains
+
+- {{< iconify fa6-solid gear >}} **Encapsulation**: Protect document state and behavior
+  - Private attributes store sensitive document data
+  - Public methods provide controlled access to document operations
+  - Data integrity maintained through encapsulation
+
+- {{< iconify fa6-solid gear >}} **Polymorphism**: Process different document types uniformly
+  - Document processors work with any document type
+  - Same interface handles different document formats
+  - Extensible system for new document types and processors
+
+:::
+
+## Conclusion: OOP empowers prosegrammers
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- **Object-oriented programming transforms document engineering**:
+  - Classes model real-world document entities and relationships
+  - Inheritance creates flexible document type hierarchies
+  - Polymorphism enables unified processing of diverse content
+  - Encapsulation ensures data integrity and clean interfaces
+
+- **Practical applications for prosegrammers**:
+  - Build automated document generation systems
+  - Create extensible text analysis frameworks
+  - Develop collaborative document management tools
+  - Design scalable content processing pipelines
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.1em; font-size: 0.85em;"}
+
+{{< iconify fa6-solid rocket >}} **OOP + Document Engineering = Powerful Tools for Prosegrammers!**
+*Master these concepts to build the next generation of document processing systems!*
 
 :::
 
