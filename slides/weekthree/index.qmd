@@ -387,7 +387,7 @@ class MyLimitedList:
 
 :::
 
-## Creating a document class
+## Defining a `Document` class
 
 ```{python}
 from typing import Dict, List, Optional
@@ -418,15 +418,7 @@ class Document:
         return self.get_summary()
 ```
 
-::: {.fragment .fade style="margin-top: -0.1em; font-size: 0.85em;"}
-
-- **Document class encapsulates document state and behavior**
-- **Methods provide document operations**: metadata management, summaries
-- **Foundation for building document engineering tools**
-
-:::
-
-## Exploring the Document class
+## Exploring the `Document` class
 
 ```{pyodide}
 #| autorun: true
@@ -452,7 +444,7 @@ class Document:
     def __str__(self) -> str:
         return self.get_summary()
 
-# Create a sample document
+# create a sample document
 doc = Document("Python Guide", "Jane Smith", "This is a guide about Python programming.")
 doc.add_metadata("language", "English")
 doc.add_metadata("version", "1.0")
@@ -460,11 +452,10 @@ print("Document:", doc)
 print("Metadata:", doc.metadata)
 ```
 
-::: {.fragment style="margin-top: -0.1em; font-size: 0.8em;"}
+::: {.fragment style="margin-top: 0.5em; font-size: 0.9em;"}
 
-- {{< iconify fa6-solid lightbulb >}} **Key insights**: Objects encapsulate both data and operations
-- **Metadata system**: Flexible key-value storage for document properties
-- **Automatic calculations**: Word count computed from content
+- {{< iconify fa6-solid lightbulb >}} **Key Insight**: The `Document` class
+offers all the properties and behaviors of a document!
 
 :::
 
@@ -531,76 +522,6 @@ print("Technical document:", tech_doc.get_summary())
 ::: {.fragment style="margin-top: 0.5em; font-size: 0.9em;"}
 
 {{< iconify fa6-solid lightbulb >}} **Notice**: `TechnicalDocument` gets all `Document` features automatically!
-
-:::
-
-## What is polymorphism?
-
-::: {.fragment style="margin-top: -0.15em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid magic-wand-sparkles >}} **"Poly" means "many", "morph" means "forms"**
-
-- One action, many different results
-- Like pressing a button on different devices:
-  - TV remote: changes channel
-  - Phone: answers call
-  - Door: opens door
-
-:::
-
-::: {.fragment style="margin-top: 0.5em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid lightbulb >}} **In programming: same method name, different behavior**
-
-- `process()` method works on any document type
-- Each document type does something different
-- Code stays simple, results vary
-
-:::
-
-## Polymorphism in action
-
-::: {.fragment style="margin-top: -0.15em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid calculator >}} **Simple example: different analyzers**
-
-:::
-
-```{pyodide}
-#| autorun: true
-#| max-lines: 8
-class Document:
-    def __init__(self, title: str, content: str = ""):
-        self.title = title
-        self.content = content
-
-# Different analyzer functions (polymorphism!)
-def count_words(doc):
-    words = doc.content.split()
-    return f"'{doc.title}' has {len(words)} words"
-
-def find_keywords(doc):
-    keywords = ["python", "programming", "data"]
-    found = []
-    for keyword in keywords:
-        if keyword in doc.content.lower():
-            found.append(keyword)
-    return f"'{doc.title}' contains: {', '.join(found)}"
-
-# Create documents
-doc1 = Document("Python Guide", "Python is a programming language for data analysis.")
-doc2 = Document("Web Tutorial", "Learn HTML, CSS, and JavaScript for web development.")
-
-# Same function call, different results (polymorphism!)
-print(count_words(doc1))
-print(find_keywords(doc1))
-print(count_words(doc2))
-print(find_keywords(doc2))
-```
-
-::: {.fragment style="margin-top: 0.5em; font-size: 0.9em;"}
-
-{{< iconify fa6-solid lightbulb >}} **Key insight**: Same function name, different behavior based on the document!
 
 :::
 
