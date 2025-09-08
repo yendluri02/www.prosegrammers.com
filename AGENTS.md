@@ -1,4 +1,4 @@
-# Claude Sonnet 4 Agent Instructions
+# Instructions for a Coding and Writing Agent
 
 This document provides instructions for GPT 4.1, Claude Sonnet 4, or another
 large language model (LLM) when working on the Quarto-based website project for
