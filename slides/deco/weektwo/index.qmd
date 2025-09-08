@@ -55,14 +55,14 @@ __4. Explanation – Understanding-oriented__
 
 # Why Use Diátaxis?
 
-- Helps documentation serve all user needs
+- Organizes content based on user needs
 - Prevents mixing of different documentation types
-- Makes docs easier to navigate and maintain
-- Widely adopted by open-source and commercial projects
+- Utilizes four distinct types: learning-oriented, information-oriented, goal-oriented, and understanding-oriented
+- Widely adopted by open-source and commercial projects, such as the development of Linux
 
 # Applying Diátaxis
 
-- Identify which type each doc belongs to
-- Structure your docs to separate the four types
-- Write with the user's goal in mind
-- Review and refactor existing docs using the Diátaxis model
+- Review and refactor existing documents using the Diátaxis model
+- Identify which type each doc belongs to (learning-oriented, information-oriented, goal-oriented, understanding-oriented)
+- Structure your documents to separate the four types of documents
+- Write with the user's goal in mind, such as completing a specific problem, providing reference information, or solving a problem
