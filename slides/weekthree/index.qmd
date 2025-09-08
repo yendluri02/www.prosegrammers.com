@@ -593,24 +593,18 @@ smaller parts that work together!
 
 ## Objects empower prosegrammers!
 
-::: {.fragment style="margin-top: 0.1em; font-size: 1.0em;"}
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
 
-{{< iconify fa6-solid lightbulb >}} **OOP makes document engineering easier**
+- {{< iconify fa6-solid lightbulb >}} **Objects makes document engineering easier**
+    - Classes organize document tools
+    - Inheritance reuses existing code
+    - Polymorphism handles different document types
+    - Composition builds flexible systems
 
-- Classes organize document tools
-- Inheritance reuses existing code
-- Polymorphism handles different document types
-- Composition builds flexible systems
-
-:::
-
-::: {.fragment style="margin-top: 0.5em; font-size: 1.0em;"}
-
-{{< iconify fa6-solid rocket >}} **Start simple, build complex systems**
-
-- Begin with basic document classes
-- Add features as you need them
-- Combine simple parts into powerful tools
+- {{< iconify fa6-solid rocket >}} **Start simple, build complex systems**
+    - Begin with basic document classes
+    - Add features as you need them
+    - Combine simple parts into powerful tools
 
 :::
 
