@@ -415,23 +415,18 @@ class MyLimitedList:
 
 # Document connection
 
-::: {.fragment style="margin-top: -0.15em; font-size: 0.85em;"}
+::: {.fragment style="margin-top: -0.45em; font-size: 0.8em;"}
 
-{{< iconify fa6-solid lightbulb >}} **OOP helps us organize document tools**
-
-- Like organizing tools in a toolbox
-- Each tool has a specific purpose
-- Easy to find and use what you need
-
-:::
-
-::: {.fragment style="margin-top: -0.25em; font-size: 0.85em;"}
-
-{{< iconify fa6-solid book-open >}} **Documents become smart objects**
-
-- A document can remember its title, author, and content
-- It can count its own words automatically
-- It can generate summaries by itself
+- A `Document` can maintain *state* and exhibit *behavior*:
+    - *State*:
+        - Store its title, author, and content
+        - Maintain metadata like keywords and categories
+    - *Behavior*:
+        - Count its own words automatically
+        - Generate summaries by itself
+- A document engineering "pipeline" can have these features:
+    - Contain a list of documents and process and search them
+    - Generate reports and summaries of the list of documents
 
 :::
 
