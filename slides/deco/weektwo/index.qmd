@@ -1,5 +1,5 @@
 ---
-title: "DECO1: Understanding and Applying Diátaxis"
+title: "Understanding and Applying Diátaxis"
 description: "Use Diátaxis for technical documentation"
 date: "2025-09-03"
 date-format: long
@@ -21,7 +21,7 @@ format:
 # What is Diátaxis?
 
 - Diátaxis is a framework for organizing technical documentation.
-- It was created by Daniele Procida to better adress the needs of documentation users through the designation of multiple documentation styles.
+- It was created by Daniele Procida to better address the needs of documentation users through the designation of multiple documentation styles.
 - The name comes from the Greek for "across" and "arrangement".
 
 # Defining Quality in Documentation
