@@ -18,4 +18,55 @@ format:
     footer: "Prosegrammers"
 ---
 
-# DECO2: Document engineering concept overview
+# Understanding README-Driven Documentation
+
+---
+
+## Introduction
+- Why documentation matters  
+- What a README is  
+
+---
+
+## README-Driven Development
+- Plan through writing first  
+- README guides the project  
+
+---
+
+## What Goes in a README?
+- What the project does  
+- How to set it up  
+- How to use it  
+- Who made it  
+
+---
+
+## Why It’s Helpful
+- Keeps team on the same page  
+- Easier for new people to join  
+- Fewer questions later  
+
+---
+
+## Common Mistakes
+- Too long or too technical  
+- Missing steps  
+- Not kept up to date  
+
+---
+
+## Best Tips
+- Write it early  
+- Keep it short and clear  
+- Update as project changes  
+
+---
+
+## Wrap-Up
+- README is your project’s front door  
+- Clear docs = happy users  
+
+---
+
+## Q&A
