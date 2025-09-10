@@ -18,22 +18,26 @@ format:
     footer: "Prosegrammers"
 ---
 
+<!--chezka-->
 # Understanding README-Driven Documentation
 
 ---
 
+<!--chezka-->
 ## Introduction
 - Why documentation matters  
 - What a README is  
 
 ---
 
+<!--jordi-->
 ## README-Driven Development
 - Plan through writing first  
 - README guides the project  
 
 ---
 
+<!--jordi-->
 ## What Goes in a README?
 - What the project does  
 - How to set it up  
@@ -42,6 +46,7 @@ format:
 
 ---
 
+<!--bj-->
 ## Why It’s Helpful
 - Keeps team on the same page  
 - Easier for new people to join  
@@ -49,6 +54,7 @@ format:
 
 ---
 
+<!--bj-->
 ## Common Mistakes
 - Too long or too technical  
 - Missing steps  
@@ -56,6 +62,7 @@ format:
 
 ---
 
+<!--brandon-->
 ## Best Tips
 - Write it early  
 - Keep it short and clear  
@@ -63,6 +70,7 @@ format:
 
 ---
 
+<!--brandon-->
 ## Wrap-Up
 - README is your project’s front door  
 - Clear docs = happy users  
