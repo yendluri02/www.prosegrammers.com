@@ -57,9 +57,12 @@ format:
 ---
 
 ## Best Tips
-- Write it early  
-- Keep it short and clear  
-- Update as project changes  
+- Keep new users in mind
+  - Make sure your README is structured to be not only accesible but also understandable for new users
+- Clearly outline your project
+  - Make sure that your README explains the project that you're doing and also why you are doing it, as well as the problem it solves and what makes it stand out.
+- Define key features
+  - On top of outlining the project and why you're doing it make sure to include the project's key features
 
 ---
 
