@@ -23,12 +23,25 @@ format:
 
 ---
 
-<!--chezka-->
-## Introduction
-- Why documentation matters  
-- What a README is  
+## Why Documentation Matters
+- Helps others understand and use your code or project
+- Reduces confusion and support questions
+- Improves collaboration within teams
+- Serves as a reference for future work
+- Builds trust and credibility for your project
 
 ---
+
+## What a README Is
+- A file (usually `README.md`) that introduces your project
+- Explains purpose, setup, and usage instructions
+- Often includes:
+  - Installation steps
+  - Examples or demos
+  - Contribution guidelines
+  - License information
+- First impression for anyone visiting your project
+
 
 <!--jordi-->
 ## README-Driven Development
