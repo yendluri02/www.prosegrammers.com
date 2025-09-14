@@ -65,7 +65,7 @@ format:
 <!--brandon-->
 ## Best Tips
 - Keep new users in mind
-  - Make sure your README is structured to be not only accesible but also understandable for new users
+  - Make sure your README is structured to be not only accessible but also understandable for new users
 - Clearly outline your project
   - Make sure that your README explains the project that you're doing and also why you are doing it, as well as the problem it solves and what makes it stand out.
 - Define key features
