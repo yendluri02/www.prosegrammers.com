@@ -1,13 +1,9 @@
 ---
 title: "Understanding README-Driven Documentation"
 description: "Use READMEs for documentation"
-date: "2025-09-15"
+date: "2025-09-17"
 date-format: long
-author: Gregory M. Kapfhammer
-author: DJ Battle
-author: chezka Quinola
-author: Jordi Tort
-author: Brandon Thompson
+author: Chezka Quinola, Brandon Thompson, DJ Battle, Jordi Tort, Gregory M. Kapfhammer
 execute:
   echo: true
 format:
@@ -74,7 +70,7 @@ format:
 <!--DJ-->
 ## Common Mistakes
 - Not keeping to code selection not up to date
--  Not over explainging how to complete each step
+-  Not over explaining how to complete each step
 - Not explaining the role of each person on the teams job
 
 ---
