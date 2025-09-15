@@ -4,6 +4,10 @@ description: "Use READMEs for documentation"
 date: "2025-09-15"
 date-format: long
 author: Gregory M. Kapfhammer
+author: DJ Battle
+author: chezka Quinola
+author: Jordi Tort
+author: Brandon Thompson
 execute:
   echo: true
 format:
