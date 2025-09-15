@@ -61,7 +61,7 @@ format:
 
 <!--DJ-->
 ## Why It’s Helpful
--It forces you to write documation before coding 
+- It forces you to write documation before coding 
 - You can see what evryone is doing without having to explain the code
 - Lays out the guidelines for each member of the team to follow easily
 
