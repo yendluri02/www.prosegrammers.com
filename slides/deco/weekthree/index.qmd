@@ -91,7 +91,11 @@ format:
 <!--brandon-->
 ## Wrap-Up
 - README is your project’s front door  
+  - README introduces your project in a way thats easy to understand
+  - It helps your team stay organized and on task, as well as helping to avoid problems
 - Clear docs = happy users  
+  - README clearly outlines your project reducing confusion for users 
+  - Includes important information such as purpose and functionality of the project
 
 ---
 
