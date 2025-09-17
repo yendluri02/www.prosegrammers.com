@@ -688,7 +688,7 @@ cd exam
 ls -alg
 ```
 
-::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.85em;"}
+::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.825em;"}
 
 - **Important**: All skill-check work happens in the `exam/` directory
 - You should see files and directories like these: `questions/`, `tests/`,
@@ -724,7 +724,7 @@ uvx gatorgrade
 
 ## Step 3: Complete programming tasks
 
-::: {.incremental .fade-right style="margin-top: -0.1em; font-size: 0.9em;"}
+::: {.incremental .fade-right style="margin-top: -0.1em; font-size: 0.85em;"}
 
 - **Open files** in the `questions/` directory (e.g., `question_one.py`)
 - **Find `TODO` markers** that indicate where to add code
