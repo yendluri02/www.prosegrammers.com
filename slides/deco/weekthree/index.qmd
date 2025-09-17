@@ -72,8 +72,8 @@ format:
 <!--DJ-->
 ## Common Mistakes
 - Not keeping to code selection not up to date
--  Not over explaining how to complete each step
-- Not explaining the role of each person on the teams job
+- Not over explaining how to complete each step
+- Not explaining the role of each person on the team's job
 
 ---
 
