@@ -45,17 +45,19 @@ format:
 
 <!--jordi-->
 ## README-Driven Development
-- Plan through writing first  
-- README guides the project  
+- it starts witht the readme 
+  - write the readme before any code to define project structure   
+-  keeps develpers, contributors and all people in the same loop avoiding problems 
+- This will always act as a blueprint for development, testing and documentation throughout the project
 
 ---
 
 <!--jordi-->
-## What Goes in a README?
-- What the project does  
-- How to set it up  
-- How to use it  
-- Who made it  
+## What Goes in a README? 
+- it briefly explains the purpose and the functionality of the project. 
+- it provides installation steps, including dependencies and enviorment setup 
+- it includes usage instructions or exaples so users know how to use or run with the project  
+- it also gives credit to the creator/s or contributors 
 
 ---
 
