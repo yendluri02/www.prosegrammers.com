@@ -637,13 +637,15 @@ capabilities!**
 
 :::
 
-# Document Engineering Skill-Check Guide
+# Document engineering skill-check reminders
 
 ::: {.fragment .fade-right}
+
 - {{< iconify fa6-solid clipboard-check >}} **What is a skill-check?**
 - {{< iconify fa6-solid calendar >}} **When do skill-checks happen?**
 - {{< iconify fa6-solid code >}} **What programming tasks are involved?**
 - {{< iconify fa6-solid rocket >}} **How do I complete a skill-check successfully?**
+
 :::
 
 ::: {.fragment .fade .boxed-content style="font-size: 0.8em;"}
@@ -657,31 +659,32 @@ engineering skills!**
 
 ::: {.incremental .fade-right style="margin-top: -0.1em; font-size: 0.925em;"}
 
-- **Small programming task** completed on certain Fridays during class
-- **Individual assessment** of your Python and document engineering skills
+- **Programming tasks** completed on certain Fridays during class
+- **Individual assessment** of your document engineering skills
 - **GitHub Classroom repository** provided as your starting point
 - **Contains `TODO` markers** and blank functions for you to complete
-- **Automated checking** ensures your solution meets all requirements
-- **Time-limited** completion during the class session
+- **Automated checking** ensures your solution meets requirements
+- **Time-limited** completion of tasks during the class session
 
 :::
 
 ::: {.fragment .fade .boxed-content style="font-size: 0.9em;"}
 
-**Think of it as a focused coding challenge that tests what you've learned!**
+{{< iconify fa6-solid lightbulb >}} **It's a focused coding challenge that
+assesses what you've learned and confirms that you have tools setup correctly!**
 
 :::
 
-## Step 1: Navigate to the exam directory
+## Step 1: Navigate to the `exam/` directory
 
 ```bash
-# After cloning your skill-check repository from GitHub Classroom
-cd your-skillcheck-repository-name
+# navigate to your skill-check repository after cloning
+cd <your-skillcheck-repository-name>
 
-# Navigate to the exam directory where all the work happens
+# navigate to the exam directory where all the work happens
 cd exam
 
-# Verify you're in the right place - you should see these files:
+# verify you're in the right place for the skill-check
 ls -la
 ```
 
