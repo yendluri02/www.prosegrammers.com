@@ -3,7 +3,7 @@ title: "Understanding README-Driven Documentation"
 description: "Use READMEs for documentation"
 date: "2025-09-17"
 date-format: long
-author: Chezka Quinola, Brandon Thompson, DJ Battle, Jordi Tort, Gregory M. Kapfhammer
+author: Chezka Quinola, Brandon Thompson, DJ Battle, Jordi Tort
 execute:
   echo: true
 format:
@@ -63,8 +63,8 @@ format:
 
 <!--DJ-->
 ## Why It’s Helpful
-- It forces you to write documation before coding 
-- You can see what evryone is doing without having to explain the code
+- It forces you to write documentation before coding 
+- You can see what everyone is doing without having to explain the code
 - Lays out the guidelines for each member of the team to follow easily
 
 ---
@@ -79,6 +79,9 @@ format:
 
 <!--brandon-->
 ## Best Tips
+
+::: {.incremental style="font-size: 0.9em;"}
+
 - Keep new users in mind
   - Make sure your `README` is structured to be not only accessible but also understandable for new users
 - Clearly outline your project
@@ -86,12 +89,14 @@ format:
 - Define key features
   - On top of outlining the project and why you're doing it make sure to include the project's key features
 
+:::
+
 ---
 
 <!--brandon-->
 ## Wrap-Up
 - README is your project’s front door  
-  - README introduces your project in a way thats easy to understand
+  - README introduces your project in a way that is easy to understand
   - It helps your team stay organized and on task, as well as helping to avoid problems
 - Clear docs = happy users  
   - README clearly outlines your project reducing confusion for users 
