@@ -702,12 +702,12 @@ ls -alg
 ## Step 2: Run the assessment tool
 
 ```bash
-# Run gatorgrade to see what needs to be completed
+# run gatorgrade to see what needs to be completed
 uvx gatorgrade
 
-# This will show you:
-# ✅ Checks that are already passing
-# ❌ Checks that need work
+# this will show you:
+# ✅ Checks that are currently passing
+# ❌ Checks that need work to pass
 # 📊 Overall completion percentage
 ```
 
