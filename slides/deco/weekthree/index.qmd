@@ -45,19 +45,19 @@ format:
 
 <!--jordi-->
 ## README-Driven Development
-- it starts witht the readme 
-  - write the readme before any code to define project structure   
--  keeps develpers, contributors and all people in the same loop avoiding problems 
-- This will always act as a blueprint for development, testing and documentation throughout the project
+- It starts with the `README`.
+  - Write the `README` before any code to define project structure.
+-  Keeps developers, contributors, and all people in the same loop avoiding problems.
+- This will always act as a blueprint for development, testing and documentation throughout the project.
 
 ---
 
 <!--jordi-->
 ## What Goes in a README? 
-- it briefly explains the purpose and the functionality of the project. 
-- it provides installation steps, including dependencies and enviorment setup 
-- it includes usage instructions or exaples so users know how to use or run with the project  
-- it also gives credit to the creator/s or contributors 
+- It briefly explains the purpose and the functionality of the project. 
+- It provides installation steps, including dependencies and environment setup.
+- It includes usage instructions or examples so users know how to use or run with the project.
+- It also gives credit to the creator(s) or contributor(s). 
 
 ---
 
@@ -80,9 +80,9 @@ format:
 <!--brandon-->
 ## Best Tips
 - Keep new users in mind
-  - Make sure your README is structured to be not only accessible but also understandable for new users
+  - Make sure your `README` is structured to be not only accessible but also understandable for new users
 - Clearly outline your project
-  - Make sure that your README explains the project that you're doing and also why you are doing it, as well as the problem it solves and what makes it stand out.
+  - Make sure that your `README` explains the project that you're doing and also why you are doing it, as well as the problem it solves and what makes it stand out.
 - Define key features
   - On top of outlining the project and why you're doing it make sure to include the project's key features
 
