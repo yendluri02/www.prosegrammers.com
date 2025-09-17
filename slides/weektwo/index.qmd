@@ -641,10 +641,10 @@ capabilities!**
 
 ::: {.fragment .fade-right}
 
-- {{< iconify fa6-solid clipboard-check >}} **What is a skill-check?**
-- {{< iconify fa6-solid calendar >}} **When do skill-checks happen?**
-- {{< iconify fa6-solid code >}} **What programming tasks are involved?**
-- {{< iconify fa6-solid rocket >}} **How do I complete a skill-check successfully?**
+- {{< iconify fa6-solid clipboard-check >}} **What is a document engineering skill-check?**
+- {{< iconify fa6-solid calendar >}} **When do these skill-checks happen?**
+- {{< iconify fa6-solid code >}} **What Python programming tasks are involved?**
+- {{< iconify fa6-solid rocket >}} **How do I successfully complete a skill-check?**
 
 :::
 
