@@ -271,3 +271,55 @@ text formatting capabilities for document standardization
 - Interactive examples reinforce learning through hands-on experimentation
 - Real-time code execution helps students understand OOP concepts through
   practical application in document engineering scenarios
+
+### Support for Week Two Skill-Check Slides Content
+
+#### Document Engineering Skill-Check Assessment
+
+- Skill-checks provide formative assessment opportunities that measure student
+  progress in programming skills, following educational best practices for
+  frequent, low-stakes testing
+- Friday skill-checks create regular learning checkpoints that help students
+  maintain consistent engagement with course material
+- GitHub Classroom provides industry-standard workflow experience, mirroring
+  professional software development practices that students will encounter
+  in their careers
+
+#### Automated Assessment with GatorGrade
+
+- Automated testing and code quality checking reflects industry practices
+  where continuous integration and automated testing are standard procedures
+- The `gatorgrade` tool provides objective, consistent assessment criteria
+  that ensure fairness across all student submissions
+- Real-time feedback enables students to iteratively improve their solutions,
+  supporting mastery-based learning approaches
+- Pytest integration follows Python testing best practices and prepares
+  students for professional development workflows
+
+#### Git Version Control Workflow
+
+- Regular commits and pushes reinforce version control best practices that
+  are essential for collaborative software development
+- Git workflow mirrors professional development environments where frequent
+  commits and proper version control are critical skills
+- GitHub Actions integration provides experience with automated testing
+  pipelines common in modern software development
+
+#### Programming Task Structure
+
+- TODO markers and function stubs provide scaffolding that supports learning
+  progression from novice to expert, following educational research on
+  cognitive load theory
+- Docstring-driven development encourages clear documentation practices
+  essential for maintainable code
+- Type annotations requirement reinforces modern Python best practices and
+  helps prevent runtime errors
+
+#### Honor Code and Academic Integrity
+
+- Explicit honor code requirements establish ethical frameworks for academic
+  work, particularly important when AI tools are available
+- Citation requirements for AI assistance teach responsible use of emerging
+  technologies in educational settings
+- Individual assessment format ensures authentic demonstration of student
+  learning and skill development
