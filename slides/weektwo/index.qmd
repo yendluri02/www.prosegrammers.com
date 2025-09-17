@@ -675,7 +675,7 @@ assesses what you've learned and confirms that you have tools setup correctly!**
 
 :::
 
-## Step 1: Navigate to the `exam/` directory
+## Step 1: Navigate to `exam/` directory
 
 ```bash
 # navigate to your skill-check repository after cloning
@@ -685,14 +685,17 @@ cd <your-skillcheck-repository-name>
 cd exam
 
 # verify you're in the right place for the skill-check
-ls -la
+ls -alg
 ```
 
 ::: {.fragment .fade-up style="margin-top: -0.1em; font-size: 0.85em;"}
 
 - **Important**: All skill-check work happens in the `exam/` directory
-- You should see: `questions/`, `tests/`, `gatorgrade.yml`, `pyproject.toml`
+- You should see files and directories like these: `questions/`, `tests/`,
+`gatorgrade.yml`, `pyproject.toml`, and `uv.lock`
 - The `questions/` directory contains files with `TODO` markers to complete
+- The `tests/` directory contains automated tests to verify your work
+- The `gatorgrade.yml` file configures the `gatorgrade` assessment tool
 
 :::
 
