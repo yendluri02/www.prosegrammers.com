@@ -103,4 +103,5 @@ def main():
 
 
 if __name__ == "__main__":
+    # run the welcome script when executed directly
     main()
