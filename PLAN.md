@@ -68,6 +68,49 @@ coding and writing tools that use large language models (LLMs) like Claude
 Sonnet 4 or GPT-4. Make it clear that the prosegrammer who uses these tools is
 ultimately responsible for wielding them correctly and ethically.
 
+### Create Slides for Week Four in `slides/weekfour/index.qmd`
+
+- [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
+explains the theme of the course on document engineering.
+- [ ] Review the content in the `index.qmd` file in the root of the repository
+that explains the idea of a "Prosegrammer" and the concept of document
+engineering.
+- [ ] Review the content in the `index.qmd` file in the `syllabus` directory of
+the repository that explains rules and regulations for this course on document
+engineering. Note that these are the rules that students follow and not
+specifically the rules and regulations that you follow as a coding agent.
+- [ ] The new slides that I want you to create should be in the file
+`slides/weekfour/index.qmd`. The purpose of these slides is to introduce the
+basics of Markdown and Quarto. Here are some basic features of Markdown and
+Quarto that you should include in these slides:
+  - Structure of a Markdown document
+  - Headings and subheadings
+  - Paragraphs and line breaks
+  - Bold and italic text
+  - Lists (ordered and unordered)
+  - Links and images
+  - Code blocks and inline code
+  - Tables
+  - Blockquotes
+  - Horizontal rules
+  - Mathematical expressions
+- You can look at the other slide decks that I have already prepared:
+  - `slides/weekone/index.qmd`
+  - `slides/weektwo/index.qmd`
+  - `slides/weekthree/index.qmd` and see how I am currently using Markdown and
+  Quarto in my slides! I want students to be able to understand all of these
+  examples and know how to write them on their own for their own documentation.
+- [ ] When you create all of these examples, make sure that they connect to the
+concepts of document engineering and prosegramming, as I have already defined in
+the contents of this GitHub repository. For instance, you can connect the need
+to write Markdown to the Markdown files that they write to document their own
+document engineering projects, where they are building tools that input
+and process and analyze text documents in JSON, YAML, Markdown, and plaintext.
+- [ ] You must show the actual source code of the basic feature (e.g., bold and
+italic text) and then show how that actually renders. This means that the
+student should be able to look at the slide and see both the source code and the
+rendered output.
+
 ## Support for Content
 
 ### Support for Index.qmd Revision Content
