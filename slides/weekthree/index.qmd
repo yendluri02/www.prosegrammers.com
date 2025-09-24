@@ -18,6 +18,62 @@ format:
     footer: "Prosegrammers"
 ---
 
+# Document engineering
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Why is it important?**
+    - Documentation quality affects software success
+        - Poor docs cause user confusion
+        - Clear docs increase adoption
+        - Automated docs reduce maintenance cost
+
+:::
+
+## Becoming a prosegrammer
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **Master Python programming**
+  - Text processing and analysis
+  - Document creation and manipulation
+  - Automation tools for writing
+- {{< iconify fa6-solid gear >}} **Create compelling documentation**
+  - Clear and professional writing
+  - Interactive documents with code
+  - Version control for documents
+- {{< iconify fa6-solid lightbulb >}} **Science and engineering to analyze & improve documents!**
+
+:::
+
+## Using object-oriented programming for document engineering
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Object-oriented programming (OOP)** is a
+programming paradigm that uses "objects" to represent data and behavior
+
+- {{< iconify fa6-solid lightbulb >}} **OOP helps manage complexity** by breaking up
+programs into smaller, reusable pieces like classes and method
+
+- {{< iconify fa6-solid lightbulb >}} **OOP is widely used** in many
+programming languages, and Python has strong support for most OOP features
+
+- {{< iconify fa6-solid lightbulb >}} **OOP is useful for document engineering** 
+because documents can be represented as objects with state and behavior
+
+:::
+
 # What are the main goals of object-oriented programming?
 
 ::: incremental
