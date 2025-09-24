@@ -81,6 +81,27 @@ knowledge checks, and projects!
 
 :::
 
+## Document engineering pipeline
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.7em;"}
+
+- {{< iconify fa6-solid hammer >}} **Three exciting phases** spanning the entire semester
+    - **Module One**: Foundation tools and document processing
+    - **Module Two**: Advanced analysis and automation features
+    - **Module Three**: Complete pipeline integration and optimization
+
+- {{< iconify fa6-solid code >}} **Hands-on Python programming** with real document engineering challenges
+    - Build tools that actually **process** and **analyze** documents
+    - Create your own **classes** and **methods** for document manipulation
+    - Implement algorithms for text **analysis** and content **generation**
+
+- {{< iconify fa6-solid users >}} **Learn like a professional prosegrammer**
+    - Use AI coding assistants (e.g., GitHub Copilot, Gemini CLI) responsibly
+    - Complete weekly demonstrations to track your progress
+    - Submit well-documented, working projects with detailed reports
+
+:::
+
 ## Using object-oriented programming for document engineering
 
 ::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
