@@ -330,7 +330,7 @@ v = Vector(3,6)
 print(u + v)
 ```
 
-::: {.fragment style="margin-top: 0.2em; font-size: 0.80em;"}
+::: {.fragment style="margin-top: 0.1em; font-size: 0.80em;"}
 
 - {{< iconify fa6-solid lightbulb >}} **Key Questions**: After trying different
 instances of `Vector`, what is the state and behavior? What are the strengths
@@ -729,7 +729,7 @@ smaller parts that work together!
 
 ## Reminder of course goals
 
-::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.9em;"}
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.75em;"}
 
 - **Document Creation**:
   - Design and implement document generation workflows
@@ -739,7 +739,12 @@ smaller parts that work together!
   - Collect and analyze data about document usage and quality
   - Visualize insights to improve documentation strategies
 - **Communicate** results and best practices for document engineering
-- **Check [syllabus](/syllabus/index.qmd) for details about Document Engineering
-course!**
+- **Content References**:
+    - {{< iconify fa6-solid book-open >}} Online textbook called [A First
+    Course on Data Structures in
+    Python](https://donsheehy.github.io/datastructures/)
+    - {{< iconify fa6-brands github >}} The `ds2` package in the
+    [donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+    GitHub repository
 
 :::
