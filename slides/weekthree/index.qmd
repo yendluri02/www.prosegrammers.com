@@ -60,13 +60,13 @@ format:
 
 ::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
 
-- {{< iconify fa6-solid lightbulb >}} **Object-oriented programming (OOP)** is a
+- {{< iconify fa6-solid cubes >}} **Object-oriented programming (OOP)** is a
 programming paradigm that uses "objects" to represent data and behavior
 
-- {{< iconify fa6-solid lightbulb >}} **OOP helps manage complexity** by breaking up
+- {{< iconify fa6-solid puzzle-piece >}} **OOP helps manage complexity** by breaking up
 programs into smaller, reusable pieces like classes and method
 
-- {{< iconify fa6-solid lightbulb >}} **OOP is widely used** in many
+- {{< iconify fa6-solid file-lines >}} **OOP is widely used** in many
 programming languages, and Python has strong support for most OOP features
 
 - {{< iconify fa6-solid lightbulb >}} **OOP is useful for document engineering** 
