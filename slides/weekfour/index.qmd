@@ -18,6 +18,16 @@ format:
     footer: "Prosegrammers"
 ---
 
+# Hey, the course website uses both Markdown and Quarto! Neato!
+
+::: fragment
+
+- Markdown and Quarto create professional documentation
+- Learn the basics of Markdown's syntax and Quarto's features
+- Support the creation of your own documentation projects
+
+:::
+
 ## What is Markdown? How can document engineers use it? How does Quarto leverage Markdown?
 
 ::: {.incremental}
