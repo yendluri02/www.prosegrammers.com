@@ -156,6 +156,8 @@ Lists help **organize complex information** in digestible chunks
 - Code blocks and inline code
 - Executable code blocks with Quarto
 - Live output from code execution
+- Tables for structured data
+- Blockquotes for emphasis
 
 :::
 
