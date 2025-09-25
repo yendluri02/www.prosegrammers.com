@@ -180,9 +180,9 @@ class DayOfTheWeek:
         return self.name_map.get(self.abbreviation)
 ```
 
-::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+::: {.fragment .fade-right style="margin-top: 0.15em; font-size: 0.7em;"}
 
-- Support the lookup of a day of the week through an abbreviation
+- Support the lookup of a day of the week through an abbreviation like `Sa`
 - Simple example helps us learn testing before complex document processing
 
 :::
