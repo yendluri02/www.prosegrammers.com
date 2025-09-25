@@ -33,7 +33,7 @@ format:
 ::: {.incremental}
 
 - Master fundamental **Markdown syntax** for documents
-- Apply **Quarto features** to enhance technical documentation
+- Adopt **Quarto features** to enhance technical documentation
 - Connect markup skills to **document engineering workflows**
 - Create professional documentation as a **prosegrammer**
 - Build on existing tools like **VS Code**, **Git**, and **Python**
@@ -148,7 +148,7 @@ Use `inline code` for technical terms.
 Lists help **organize complex information** in digestible chunks
 :::
 
-# Extended Markdown Features
+# Extended Features
 
 ::: fragment
 
