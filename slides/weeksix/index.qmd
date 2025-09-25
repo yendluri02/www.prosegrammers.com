@@ -18,6 +18,16 @@ format:
     footer: "Prosegrammers"
 ---
 
+# Software testing for document engineering
+
+::: fragment
+
+- {{< iconify fa6-solid heading >}} Review the basics of document engineering
+- {{< iconify fa6-solid gears >}} Explore software testing techniques
+- {{< iconify fa6-solid robot >}} Learn how to test document engineering tools
+
+:::
+
 ## Document engineering tools and workflows must run correctly
 
 ::: {.incremental style="margin-top: -0.1em; font-size: 0.9em;"}
