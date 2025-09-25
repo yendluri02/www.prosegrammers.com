@@ -346,7 +346,7 @@ refactoring!**
 
 ## Testing aids document tool design
 
-::: {.incremental style="margin-top: -0.25em; font-size: 0.9em;"}
+::: {.incremental style="margin-top: -0.25em; font-size: 0.915em;"}
 
 - Software testing helps refine document engineering tool design
 
@@ -359,7 +359,8 @@ refactoring!**
     - **Refactor** code to **improve** document processing design
     - Repeatedly **run** test suite to confirm correctness
 
--{{< iconify fa6-solid rocket >}} **Systems with good designs are easier to test and maintain**!
+- {{< iconify fa6-solid rocket >}} **Systems with good designs are easier to
+test and maintain**!
 
 :::
 
@@ -371,8 +372,8 @@ refactoring!**
 for sample documents
 - **Benchmarking**: Measure timing and performance of document processing 
 operations
-- Running experiments on incorrect document tools may compromise results!
-Run a small trial first!
+- Running experiments on incorrect document tools may compromise results.
+**Always run a small trial first**!
 
 :::
 
