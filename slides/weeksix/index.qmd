@@ -37,16 +37,17 @@ that document tools work correctly! Let's learn more about software testing!
 
 :::
 
-## Testing document engineering tools establishes confidence in their correctness
+## Testing document engineering tools gives confidence in correctness
 
 ::: {.fragment .fade-right}
 
-- Steps during document tool testing:
+- {{< iconify fa6-solid gears >}} **Steps for testing document engineering tools**:
     - Create sample document input
     - Setup the tool's environment
     - Process the input through the tool
     - Collect the output from the tool
     - Compare output to expected results
+    - Report any discrepancies as defects
 
 :::
 
