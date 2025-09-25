@@ -106,10 +106,17 @@ the contents of this GitHub repository. For instance, you can connect the need
 to write Markdown to the Markdown files that they write to document their own
 document engineering projects, where they are building tools that input
 and process and analyze text documents in JSON, YAML, Markdown, and plaintext.
+You can add slides that make suggestions on how they could use the features of
+Markdown inside of the `README.md` file for the tool. You can also add slides
+that explain how they could create a website for their tool using Quarto.
 - [ ] You must show the actual source code of the basic feature (e.g., bold and
 italic text) and then show how that actually renders. This means that the
 student should be able to look at the slide and see both the source code and the
 rendered output.
+- [ ] Make sure that all the content is accessible to beginners who do not have
+extensive experience with programming or the documentation of a software tool.
+- [ ] Make sure that all the content has concrete examples that make points
+clear to beginners.
 
 ## Support for Content
 
