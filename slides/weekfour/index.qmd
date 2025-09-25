@@ -38,7 +38,7 @@ format:
 - Create professional documentation as a **prosegrammer**
 - Build on existing tools like **VS Code**, **Git**, and **Python**
 - {{< iconify fa6-solid lightbulb >}} **Let's explore the essentials of
-Markdown and Quarto together!**
+Markdown and Quarto!**
 
 :::
 
