@@ -44,30 +44,36 @@ Markdown and Quarto!**
 
 ## What is Markdown?
 
-::: {.incremental}
+::: {.incremental style="margin-top: -0.1em; font-size: 0.8em;"}
 
 - **Lightweight markup language** for formatting plain text
 - Converts to HTML, PDF, and other formats seamlessly
 - **Standard for technical documentation** across platforms
-- Essential skill for **prosegrammers** in modern workflows
 - Challenges associated with using Markdown:
     - Requires use of document engineering tools
     - Limited styling options compared to full HTML/CSS
     - Variations in Markdown flavors (e.g., GitHub, CommonMark)
     - Requires learning syntax for different elements
     - Managing large documents can be challenging
+- Using Markdown is essential for **prosegrammers** in modern workflows
 
 :::
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
+# Basic Markdown Syntax
 
-Markdown bridges the gap between **readable source** and **beautiful output**
+::: fragment
+
+- Headers
+- Paragraphs and line breaks
+- Bold and italic text
+- Ordered and unordered lists
 
 :::
 
-## {{< iconify fa6-solid heading >}} Headers: Structure Your Content
+##  Headers: Structure Your Content
 
-**Source Code:**
+{{< iconify fa6-solid heading >}} **Source code examples for headers**
+
 ```markdown
 # Main Title (H1)
 ## Section Header (H2) 
@@ -75,14 +81,15 @@ Markdown bridges the gap between **readable source** and **beautiful output**
 #### Detail Header (H4)
 ```
 
-**Rendered Output:**
-# Main Title (H1)
-## Section Header (H2)
-### Subsection Header (H3) 
-#### Detail Header (H4)
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-Headers create **logical document hierarchy** essential for navigation
+::: {.fragment .fade style="font-size: 1.0em;"}
+
+- Headers create logical document hierarchy for navigation
+- Use `H1` for main title, `H2` for sections, `H3` for subsections
+- Use the `#` symbol to indicate a header's nesting levels
+- Normally, define two or three levels of headers for clarity
+- Consider building a table of contents for longer documents
+
 :::
 
 ## {{< iconify fa6-solid paragraph >}} Paragraphs and Text Formatting
@@ -139,6 +146,17 @@ Use `inline code` for technical terms.
 
 ::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
 Lists help **organize complex information** in digestible chunks
+:::
+
+# Extended Markdown Features
+
+::: fragment
+
+- Links and images
+- Code blocks and inline code
+- Executable code blocks with Quarto
+- Live output from code execution
+
 :::
 
 ## {{< iconify fa6-solid link >}} Links: Connect Your Content
