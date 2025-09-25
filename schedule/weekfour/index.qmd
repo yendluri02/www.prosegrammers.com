@@ -37,3 +37,12 @@ toc-expand: 3
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Randomly selected first-half of class completes document engineering
   knowledge-check one as an in-person assessment
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekfour/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Four: Quarto for Documentation](../../slides/weekfour/)

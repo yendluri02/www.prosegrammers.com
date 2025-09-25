@@ -38,3 +38,12 @@ toc-expand: 3
   - Students give final in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Submit completed first document engineering tool-building project 
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weeksix/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Six: Software Testing](../../slides/weeksix/)
