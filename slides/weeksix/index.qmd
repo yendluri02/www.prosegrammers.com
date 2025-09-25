@@ -1,7 +1,7 @@
 ---
 title: "Software Testing"
 description: "Build correct document engineering tools"
-date: "2025-09-29"
+date: "2025-09-28"
 date-format: long
 author: Gregory M. Kapfhammer
 execute:
@@ -18,39 +18,39 @@ format:
     footer: "Prosegrammers"
 ---
 
-# Software programs must work correctly
+# Document engineering tools must work correctly
 
 ::: incremental
 
-- **Data structures**: does each structure store data correctly?
-- **Algorithm**: does each algorithm produce the correct output?
-- **Benchmarks**: is software under study invoked correctly?
-- **Data Storage**: do the benchmarks store data correctly?
-- **Data Analysis**: does the software analyze data correctly?
+- **Text processing**: does each function parse content correctly?
+- **Document analysis**: do algorithms extract the right information?
+- **File operations**: are documents read and written correctly?
+- **Content validation**: do parsers handle malformed input properly?
+- **Output generation**: does the tool create documents as expected?
 
 :::
 
-## By running a program and checking its output software testing establishes a confidence in its correctness
+## Testing document engineering tools establishes confidence in their correctness
 
 ::: {.fragment .fade-right}
 
-- Steps during software testing:
-    - Create an input for the program
-    - Setup the program's environment
-    - Pass the input to the program
-    - Collect the output from the program
-    - Compare the output to the expected output
+- Steps during document tool testing:
+    - Create sample document input
+    - Setup the tool's environment
+    - Process the input through the tool
+    - Collect the output from the tool
+    - Compare output to expected results
 
 :::
 
-# What is the difference between testing and benchmarking?
+# Testing vs benchmarking for document tools
 
 ::: {.fragment .boxed-content .fade-right}
 
-- **Testing**: Use test cases to run the program to confirm that it produces the
-correct output for a given input
-- **Benchmarking**: Use timing instrumentation to collect and analyze data about
-a program's performance
+- **Testing**: Use test cases to confirm document tools produce correct output 
+for sample documents
+- **Benchmarking**: Measure timing and performance of document processing 
+operations
 
 :::
 
@@ -107,18 +107,18 @@ What situations warrant a `print` statement and which ones require an `assert`?
 
 :::
 
-## Best practices for software testing
+## Test document processing tools
 
 ::: {.fragment .fade-right}
 
-- Answer the following questions when testing:
-    - Does the program meet its specification?
-    - After changing the program, does it still work correctly?
+- Answer key questions when testing document tools:
+    - Does the tool correctly parse document formats?
+    - After changing code, does processing still work?
 - Using assertion statements:
     - `print` statements require manual checking of output
-    - `assert` statements automatically checks correctness
+    - `assert` statements automatically verify correctness
 - Use a testing framework like `pytest` or `unittest`
-- Assess the adequacy of the test suite with `coverage.py`
+- Assess test coverage with `coverage.py`
 
 :::
 
@@ -141,7 +141,7 @@ unittest.main(argv=['ignored'], verbosity=2, exit=False)
 ::: {.fragment .fade-left style="margin-top: 0.25em; font-size: 1.0em;"}
 
 - Call `unittest.main` differently for tests outside Quarto
-- Run `test_dayoftheweek.py` in `slides/weekfour/`
+- Run `test_dayoftheweek.py` in `slides/weeksix/`  
 - The `OK` output confirms that the assertions passed
 
 :::
@@ -171,6 +171,7 @@ class DayOfTheWeek:
 ::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
 
 - Support the lookup of a day of the week through an abbreviation
+- Simple example helps us learn testing before complex document processing
 
 :::
 
@@ -286,58 +287,58 @@ correct?
 
 :::
 
-## Refactoring in algorithm engineering
+## Refactoring in document engineering
 
 ::: {.incremental .fade-right style="margin-top: font-size: 0.775em;"}
 
 - *What is refactoring?*
     - **Defined**: Better code structure without changing features
-    - **Goal**: Enhance characteristics of the software system
+    - **Goal**: Enhance characteristics of document processing tools
 
-- *Why refactor a software system?*
-    - **Readability**: Easier for others to understand
+- *Why refactor document engineering systems?*
+    - **Readability**: Easier for others to understand text processing logic
     - **Maintainability**: Simplifies modifications and debugging
-    - **Reusability**: Promotes code reuse through design
-    - **Performance**: Can sometimes improve efficiency
+    - **Reusability**: Promotes code reuse across document tools
+    - **Performance**: Can sometimes improve text processing efficiency
 
 :::
 
-## What should we test?
+## What should we test in document tools?
 
 ::: {.incremental style="margin-top: -0.25em; font-size: 0.875em;"}
 
-- For each function, ask yourselves the following questions:
-    - What should **happen** when I run this function?
-    - How do I want to **use** this function?
-    - What **are** the inputs and outputs of this function?
-    - What **should be** the function's inputs and outputs?
-    - What are the **edge cases** for this function?
+- For each document processing function, ask these questions:
+    - What should **happen** when processing different document types?
+    - How do I want to **use** this document analysis function?
+    - What **are** the inputs and outputs of text processing?
+    - What **should be** the function's document inputs and outputs?
+    - What are the **edge cases** for document processing?
 
 :::
 
 ::: {.fragment .fade-right style="margin-top: -0.575em; font-size: 0.9em;"}
 
 - Test the system's **expected behavior**, not its **implementation**
-- Test the **public interface** of the program under test
+- Test the **public interface** of document processing tools
 - Transform detected **defects** into repeatable **test cases**
-- Assess the adequacy of the test suite with `coverage.py`
+- Assess adequacy of test suite with `coverage.py`
 
 :::
 
-## Testing often positively influences a program's object-oriented design
+## Testing influences document tool design
 
 ::: {.incremental style="margin-top: -0.25em; font-size: 0.95em;"}
 
-- Software testing helps to refine an object-oriented design
+- Software testing helps refine document engineering tool design
 
-- Interplay between **testing** and **object-oriented design**:
+- Interplay between **testing** and **document tool design**:
 
-    - Identify **nouns** (classes) and **verbs** (methods)
-    - Specify what **should** happen when you call a method
-    - Write a unit **test case** to encode this expected behavior
-    - Confirm that all of the test cases **pass** correctly
-    - **Refactor** the code to **improve** its object-oriented design
-    - Repeatedly **run** the test suite to confirm correctness
+    - Identify **data** (documents) and **operations** (processing functions)
+    - Specify what **should** happen when processing documents
+    - Write a unit **test case** to encode expected behavior
+    - Confirm that all test cases **pass** correctly
+    - **Refactor** code to **improve** document processing design
+    - Repeatedly **run** test suite to confirm correctness
 
 :::
 
@@ -345,12 +346,69 @@ correct?
 
 ::: {.fragment .boxed-content .fade-right}
 
-- **Testing**: Use test cases to run the program to confirm that it produces the
-correct output for a given input
-- **Benchmarking**: Use timing instrumentation to collect and analyze data about
-a program's performance
-- Running experiments on an incorrect system may comprise experimental results!
+- **Testing**: Use test cases to confirm document tools produce correct output 
+for sample documents
+- **Benchmarking**: Measure timing and performance of document processing 
+operations
+- Running experiments on incorrect document tools may compromise results!
 Run a small trial first!
+
+:::
+
+## Test a document analysis function
+
+```{python}
+import re
+from typing import Dict, Any
+
+def document_summary(text: str) -> Dict[str, Any]:
+    """Generate a comprehensive summary of document statistics."""
+    words = [word for word in text.split() if any(char.isalnum() for char in word)]
+    word_count = len(words)
+    sentences = re.split(r'[.!?]+', text)
+    sentence_count = len([s for s in sentences if s.strip()])
+    paragraphs = [p for p in text.split('\n\n') if p.strip()]
+    paragraph_count = len(paragraphs)
+    avg_words_per_sentence = word_count / sentence_count if sentence_count > 0 else 0
+    return {
+        'word_count': word_count, 'sentence_count': sentence_count,
+        'paragraph_count': paragraph_count,
+        'avg_words_per_sentence': round(avg_words_per_sentence, 1)
+    }
+
+sample_text = "Hello world. This is a test."
+result = document_summary(sample_text)
+print(f"Words: {result['word_count']}, Sentences: {result['sentence_count']}")
+assert result['word_count'] == 6
+assert result['sentence_count'] == 2
+```
+
+## Explore document analysis testing
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 15
+import re
+from typing import Dict, Any
+
+def document_summary(text: str) -> Dict[str, Any]:
+    """Generate a comprehensive summary of document statistics."""
+    words = [word for word in text.split() if any(char.isalnum() for char in word)]
+    word_count = len(words)
+    sentences = re.split(r'[.!?]+', text)
+    sentence_count = len([s for s in sentences if s.strip()])
+    return {'word_count': word_count, 'sentence_count': sentence_count}
+
+sample_text = "Prosegrammers write code. They also write documents!"
+result = document_summary(sample_text)
+print(f"Analysis: {result['word_count']} words, {result['sentence_count']} sentences")
+assert result['word_count'] == 8
+assert result['sentence_count'] == 2
+```
+
+::: {.fragment style="margin-top: 0.15em; font-size: 0.90em;"}
+
+- {{< iconify fa6-solid microscope >}} **Key Tasks**: Try different text inputs to test edge cases like empty strings, single words, or text without punctuation. What happens when you test documents with different structures?
 
 :::
 
@@ -380,12 +438,12 @@ include:
 
 :::
 
-# Advanced Software Testing Techniques
+# Advanced testing for document tools
 
 ::: incremental
 
 - Parameterized test cases with `pytest`
-- Property-based testing with `hypothesis`
+- Property-based testing with `hypothesis` 
 - Test coverage with `coverage.py`
 - Mutation testing with `mutmut`
 - Using artificial intelligence to generate tests
@@ -444,6 +502,7 @@ def test_day_name(abbreviation, expected):
 ::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 1.0em;"}
 
 - Express the inputs and the expected outputs in a table!
+- Same approach works for testing document processing functions
 
 :::
 
@@ -532,18 +591,18 @@ TOTAL                             6      0      0      0   100%
 
 :::
 
-## Can you reproduce the software testing examples from these slides?
+## Can you reproduce testing examples from these slides?
 
 ::: {.fragment .fade-right style="margin-top: 0.25em; font-size: 0.95em;"}
 
-- Use `www.algorithmology.org/slides/weekfour/`
-- Software testing commands you can try:
+- Use `www.prosegrammers.com/slides/weeksix/`
+- Document testing commands you can try:
     - `poetry install`
     - `poetry run pytest`
     - `poetry run pytest --cov --cov-branch`
     - `poetry run mutmut run`
     - `poetry run mutmut show 16`
-- What does output tell you about program and/or test quality?
+- What does output tell you about document tool and/or test quality?
 
 :::
 
@@ -557,17 +616,17 @@ TOTAL                             6      0      0      0   100%
 
 :::
 
-## What are the performance trade-offs associated with software testing?
+## What are the performance trade-offs for document tool testing?
 
 ::: {.fragment .fade-right style="margin-top: 0.25em; font-size: 0.95em;"}
 
-- Questions to consider when performing software testing:
+- Questions when performing document tool testing:
     - When should you run the test suite?
-    - How frequently should you run the test suite?
+    - How frequently should you run the test suite?  
     - How can you reduce the cost of:
         - ... test execution?
         - ... coverage monitoring?
         - ... mutation testing?
-- How do you balance the costs and benefits of software testing?
+- How do you balance costs and benefits of document tool testing?
 
 :::
