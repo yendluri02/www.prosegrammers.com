@@ -311,21 +311,21 @@ correct?
 
 ## Refactoring in document engineering
 
-::: {.incremental .fade-right style="margin-top: font-size: 0.775em;"}
+::: {.incremental .fade-right style="margin-top: 0.3em; font-size: 0.925em;"}
 
-- *What is refactoring?*
+- {{< iconify fa6-solid lightbulb >}} **What is refactoring?**
     - **Defined**: Better code structure without changing features
-    - **Goal**: Enhance characteristics of document processing tools
+    - **Goal**: Enhance aspects of document processing tools
 
-- *Why refactor document engineering systems?*
-    - **Readability**: Easier for others to understand text processing logic
+- {{< iconify fa6-solid lightbulb >}} **Why refactor document engineering systems?**
+    - **Readability**: Helps others to understand text processing logic
     - **Maintainability**: Simplifies modifications and debugging
     - **Reusability**: Promotes code reuse across document tools
-    - **Performance**: Can sometimes improve text processing efficiency
+    - **Performance**: Aim to improve text processing efficiency
 
 :::
 
-## What should we test in document tools?
+## What to test in document tools?
 
 ::: {.incremental style="margin-top: -0.25em; font-size: 0.875em;"}
 
