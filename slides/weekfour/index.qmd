@@ -18,26 +18,41 @@ format:
     footer: "Prosegrammers"
 ---
 
-## {{< iconify fa6-solid lightbulb >}} Learning Objectives
+## What is Markdown? How can document engineers use it? How does Quarto leverage Markdown?
 
 ::: {.incremental}
-- Master fundamental **Markdown syntax** for document creation
+
+- Master fundamental **Markdown syntax** for documents
 - Apply **Quarto features** to enhance technical documentation
 - Connect markup skills to **document engineering workflows**
 - Create professional documentation as a **prosegrammer**
+- Build on existing tools like **VS Code**, **Git**, and **Python**
+- {{< iconify fa6-solid lightbulb >}} **Let's explore the essentials of
+Markdown and Quarto together!**
+
 :::
 
-## {{< iconify fa6-solid file-lines >}} What is Markdown?
+## What is Markdown?
 
 ::: {.incremental}
+
 - **Lightweight markup language** for formatting plain text
 - Converts to HTML, PDF, and other formats seamlessly
 - **Standard for technical documentation** across platforms
 - Essential skill for **prosegrammers** in modern workflows
+- Challenges associated with using Markdown:
+    - Requires use of document engineering tools
+    - Limited styling options compared to full HTML/CSS
+    - Variations in Markdown flavors (e.g., GitHub, CommonMark)
+    - Requires learning syntax for different elements
+    - Managing large documents can be challenging
+
 :::
 
 ::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
+
 Markdown bridges the gap between **readable source** and **beautiful output**
+
 :::
 
 ## {{< iconify fa6-solid heading >}} Headers: Structure Your Content
