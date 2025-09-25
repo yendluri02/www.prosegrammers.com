@@ -369,9 +369,9 @@ test and maintain**!
 ::: {.fragment .boxed-content .fade-right}
 
 - **Testing**: Use test cases to confirm document tools produce correct output 
-for sample documents
+for sample documents and operations
 - **Benchmarking**: Measure timing and performance of document processing 
-operations
+operations like parsing
 - Running experiments on incorrect document tools may compromise results.
 **Always run a small trial first**!
 
@@ -405,58 +405,18 @@ assert result['word_count'] == 6
 assert result['sentence_count'] == 2
 ```
 
-## Explore document analysis testing
+## Test the `document_summary` function
 
-```{pyodide}
-#| autorun: true
-#| max-lines: 15
-import re
-from typing import Dict, Any
+::: incremental
 
-def document_summary(text: str) -> Dict[str, Any]:
-    """Generate a comprehensive summary of document statistics."""
-    words = [word for word in text.split() if any(char.isalnum() for char in word)]
-    word_count = len(words)
-    sentences = re.split(r'[.!?]+', text)
-    sentence_count = len([s for s in sentences if s.strip()])
-    return {'word_count': word_count, 'sentence_count': sentence_count}
-
-sample_text = "Prosegrammers write code. They also write documents!"
-result = document_summary(sample_text)
-print(f"Analysis: {result['word_count']} words, {result['sentence_count']} sentences")
-assert result['word_count'] == 8
-assert result['sentence_count'] == 2
-```
-
-::: {.fragment style="margin-top: 0.15em; font-size: 0.90em;"}
-
-- {{< iconify fa6-solid microscope >}} **Key Tasks**: Try different text inputs to test edge cases like empty strings, single words, or text without punctuation. What happens when you test documents with different structures?
-
-:::
-
-## Improve the performance of testing
-
-::: fragment
-
-- **Test Prioritization**: Focus on the most important tests first
-- **Test Reduction**: Eliminate the redundant test cases
-- **Test Parallelization**: Run the tests concurrently
-- **Combinatorial Testing**: Explore test platform combinations
-
-:::
-
-::: fragment
-
-```yaml
-matrix:
-os: [ubuntu-latest]
-python-version: ["3.12", "3.10"]
-include:
-    - os: macos-latest
-    python-version: "3.9"
-    - os: windows-latest
-    python-version: "3.11"
-```
+- Implement a Python function like `document_summary`
+- Create an input document as a string like `sample_text`
+- Call the function and collect the output in `result`
+- Use `assert` statements to confirm correctness of output
+- Manually inspect printed output for additional confidence
+- {{< iconify fa6-solid lightbulb >}} **Yet, can we adopt a more automated
+approach to testing? Let's explore the basics of automated testing with
+`pytest`! Frameworks make testing easy and repeatable.**
 
 :::
 
@@ -464,11 +424,10 @@ include:
 
 ::: incremental
 
-- Parameterized test cases with `pytest`
-- Property-based testing with `hypothesis` 
-- Test coverage with `coverage.py`
-- Mutation testing with `mutmut`
-- Using artificial intelligence to generate tests
+- Automated testing frameworks like `pytest` and `unittest`:
+    - Enable structured definition and running of tests
+    - Perform parameterized test cases with `pytest`
+    - Support property-based testing with `hypothesis` 
 
 :::
 
@@ -491,11 +450,11 @@ def test_init():
     assert d.name() == "Monday"
 ```
 
-::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.8em;"}
 
-- Run `poetry run pytest` in the `daydetector` directory
-
-- `pytest` will automatically discover and run the tests!
+- Standard format for test names and files
+- Automated discovery and running of the tests
+- Extension through the use of plugins
 
 :::
 
@@ -556,13 +515,15 @@ parameter, thereby increasing the input diversity
 
 :::
 
-## *Oh, one more thing*! Did you know that some of the test cases you see in `test_dayoftheweek.py` were written by a large language model?
+## *Oh, one more thing*! You could use a large language model to write tests in `test_dayoftheweek.py`! Wow!
 
-::: {.fragment .boxed-content .fade-right style="margin-top: 0.25em; font-size: 1.25em;"}
+::: {.fragment .boxed-content .fade-up style="margin-top: 0.25em; font-size: 1.25em;"}
 
 - What are the **benefits** and **downsides** of using artificial intelligence (AI) to generate tests?
 
 - What are situations in which you **should** and **should not** use AI to generate tests?
+
+- Tests establish a confidence in correctness!
 
 :::
 
