@@ -557,78 +557,6 @@ parameter, thereby increasing the input diversity
 
 :::
 
-## Test coverage with `coverage.py`
-
-
-```text
-tests/test_dayoftheweek.py ..........                                                                              [100%]
-
----------- coverage: platform linux, python 3.11.6-final-0 -----------
-Name                          Stmts   Miss Branch BrPart  Cover
----------------------------------------------------------------
-daydetector/__init__.py           0      0      0      0   100%
-daydetector/dayoftheweek.py       6      0      0      0   100%
----------------------------------------------------------------
-TOTAL                             6      0      0      0   100%
-
-
-10 passed in 0.21s
-```
-
-::: {.fragment .fade-left style="margin-top: 0.5em; font-size: 0.9em;"}
-
-- The test suite covers `100%` of the program's source code
-
-- Covering statements increases the likelihood of detecting defects
-
-- Do high coverage tests mean that the program is defect-free?
-
-:::
-
-## Mutation testing with `mutmut`
-
-```text
---- daydetector/dayoftheweek.py
-+++ daydetector/dayoftheweek.py
-@@ -7,15 +7,7 @@
-     def __init__(self, abbreviation):
-         """Create a new DayOfTheWeek object."""
-         self.abbreviation = abbreviation
--        self.name_map = {
--            "M": "Monday",
--            "T": "Tuesday",
--            "W": "Wednesday",
--            "Th": "Thursday",
--            "F": "Friday",
--            "Sa": "Saturday",
--            "Su": "Sunday",
--        }
-+        self.name_map = None
-```
-
-::: {.fragment .fade-left style="margin-top: 0.2em; font-size: 0.8em;"}
-
-- `mutmut` changes the program to see if tests find possible defect
-
-- Mutation operators systematically modify the program's code
-
-:::
-
-## Can you reproduce testing examples from these slides?
-
-::: {.fragment .fade-right style="margin-top: 0.25em; font-size: 0.95em;"}
-
-- Use `www.prosegrammers.com/slides/weeksix/`
-- Document testing commands you can try:
-    - `poetry install`
-    - `poetry run pytest`
-    - `poetry run pytest --cov --cov-branch`
-    - `poetry run mutmut run`
-    - `poetry run mutmut show 16`
-- What does output tell you about document tool and/or test quality?
-
-:::
-
 ## *Oh, one more thing*! Did you know that some of the test cases you see in `test_dayoftheweek.py` were written by a large language model?
 
 ::: {.fragment .boxed-content .fade-right style="margin-top: 0.25em; font-size: 1.25em;"}
@@ -639,17 +567,24 @@ TOTAL                             6      0      0      0   100%
 
 :::
 
-## What are the performance trade-offs for document tool testing?
+## Reminder of course goals
 
-::: {.fragment .fade-right style="margin-top: 0.25em; font-size: 0.95em;"}
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.75em;"}
 
-- Questions when performing document tool testing:
-    - When should you run the test suite?
-    - How frequently should you run the test suite?  
-    - How can you reduce the cost of:
-        - ... test execution?
-        - ... coverage monitoring?
-        - ... mutation testing?
-- How do you balance costs and benefits of document tool testing?
+- **Document Creation**:
+  - Design and implement document generation workflows
+  - Test all aspects of documents to ensure quality and accuracy
+  - Create frameworks for automated document production
+- **Document Analysis**:
+  - Collect and analyze data about document usage and quality
+  - Visualize insights to improve documentation strategies
+- **Communicate** results and best practices for document engineering
+- **Content References**:
+    - {{< iconify fa6-solid book-open >}} Online textbook called [A First
+    Course on Data Structures in
+    Python](https://donsheehy.github.io/datastructures/)
+    - {{< iconify fa6-brands github >}} The `ds2` package in the
+    [donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+    GitHub repository
 
 :::
