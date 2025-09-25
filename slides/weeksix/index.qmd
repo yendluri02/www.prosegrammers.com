@@ -25,6 +25,7 @@ format:
 - {{< iconify fa6-solid heading >}} Review the basics of document engineering
 - {{< iconify fa6-solid gears >}} Explore software testing techniques
 - {{< iconify fa6-solid robot >}} Learn how to test document engineering tools
+-  {{< iconify fa6-solid lightbulb >}} **Let's start by learning the importance of correctness!**
 
 :::
 
