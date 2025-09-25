@@ -1,0 +1,573 @@
+---
+title: "Software Testing"
+description: "Build correct document engineering tools"
+date: "2025-09-15"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Software programs must work correctly
+
+::: incremental
+
+- **Data structures**: does each structure store data correctly?
+- **Algorithm**: does each algorithm produce the correct output?
+- **Benchmarks**: is software under study invoked correctly?
+- **Data Storage**: do the benchmarks store data correctly?
+- **Data Analysis**: does the software analyze data correctly?
+
+:::
+
+## By running a program and checking its output software testing establishes a confidence in its correctness
+
+::: {.fragment .fade-right}
+
+- Steps during software testing:
+    - Create an input for the program
+    - Setup the program's environment
+    - Pass the input to the program
+    - Collect the output from the program
+    - Compare the output to the expected output
+
+:::
+
+# What is the difference between testing and benchmarking?
+
+::: {.fragment .boxed-content .fade-right}
+
+- **Testing**: Use test cases to run the program to confirm that it produces the
+correct output for a given input
+- **Benchmarking**: Use timing instrumentation to collect and analyze data about
+a program's performance
+
+:::
+
+## How would you test the `Doubler`?
+
+```{python}
+class Doubler:
+    def __init__(self, n):
+        self._n = 2 * n
+
+    def n(self):
+        return self._n
+
+x = Doubler(5)
+print(x.n() == 10)
+assert(x.n() == 10)
+y = Doubler(-4)
+print(y.n() == -8)
+assert(y.n() == -8)
+```
+
+::: {.fragment .fade-left style="margin-top: -0.25em; font-size: 0.9em;"}
+
+- Establishes a confidence in the correctness of the `Doubler` class
+- When testing is it better to use `print` or `assert` statements?
+
+:::
+
+## Explore use of the `print` and `assert`
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+class Doubler:
+    def __init__(self, n):
+        self._n = 2 * n
+
+    def n(self):
+        return self._n
+
+x = Doubler(5)
+print(x.n() == 10)
+assert(x.n() == 10)
+y = Doubler(-4)
+print(y.n() == -8)
+assert(y.n() == -8)
+```
+
+::: {.fragment style="margin-top: 0.15em; font-size: 0.90em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Key Tasks**: After creating `assert`
+statements that will pass and fail as expected, decide which you prefer and why!
+What situations warrant a `print` statement and which ones require an `assert`?
+
+:::
+
+## Best practices for software testing
+
+::: {.fragment .fade-right}
+
+- Answer the following questions when testing:
+    - Does the program meet its specification?
+    - After changing the program, does it still work correctly?
+- Using assertion statements:
+    - `print` statements require manual checking of output
+    - `assert` statements automatically checks correctness
+- Use a testing framework like `pytest` or `unittest`
+- Assess the adequacy of the test suite with `coverage.py`
+
+:::
+
+## `unittest` for `DayOfTheWeek`
+
+```{python}
+import unittest
+from dayoftheweek import DayOfTheWeek
+
+class TestDayOfTheWeek(unittest.TestCase):
+    def test_init(self):
+        d = DayOfTheWeek('F')
+        self.assertEqual(d.name(), 'Friday')
+        d = DayOfTheWeek('Th')
+        self.assertEqual(d.name(), 'Thursday')
+
+unittest.main(argv=['ignored'], verbosity=2, exit=False)
+```
+
+::: {.fragment .fade-left style="margin-top: 0.25em; font-size: 1.0em;"}
+
+- Call `unittest.main` differently for tests outside Quarto
+- Run `test_dayoftheweek.py` in `slides/weekfour/`
+- The `OK` output confirms that the assertions passed
+
+:::
+
+## Explore `DayOfTheWeek`
+
+```python
+class DayOfTheWeek:
+    """A class to represent a day of the week."""
+    def __init__(self, abbreviation):
+        """Create a new DayOfTheWeek object."""
+        self.abbreviation = abbreviation
+        self.name_map = {
+            "M": "Monday",
+            "T": "Tuesday",
+            "W": "Wednesday",
+            "Th": "Thursday",
+            "F": "Friday",
+            "Sa": "Saturday",
+            "Su": "Sunday",
+        }
+
+    def name(self):
+        return self.name_map.get(self.abbreviation)
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- Support the lookup of a day of the week through an abbreviation
+
+:::
+
+# Exploring test-driven development in Python
+
+::: {.panel-tabset}
+
+## Questions
+
+- Test-driven development asks you to write tests before code:
+    - How will you use a function?
+    - What are its inputs and outputs?
+    - Can you write code to make tests pass?
+
+## Practices
+
+- The TDD mantra is **Red-Green-Refactor**:
+    - **Red**: The tests fail. You haven’t written the code yet!
+    - **Green**: You get the tests to pass by changing the code.
+    - **Refactor**: You clean up the code, removing duplication.
+
+:::
+
+## How can you refactor Python code?
+
+::: {.panel-tabset style="margin-top: -0.1em;"}
+
+## Start
+
+```{python}
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+avg1 = sum(L1)/len(L1)
+avg2 = sum(L2)/len(L2)
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+- This code will not work for empty lists!
+- *And*, the code is repetitive and hard to read
+- Can we refactor the program to avoid the defect?
+
+## Intermediate
+
+```{python}
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+if len(L1) == 0:
+    avg1 = 0
+else:
+    avg1 = sum(L1) / len(L1)
+if len(L2) == 0:
+    avg2 = 0
+else:
+    avg2 = sum(L2) / len(L2)
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+::: {.fragment .fade-right style="margin-top: -0.25em; font-size: 0.9em;"}
+
+- This avoids the defect but is repetitive and hard to read!
+
+:::
+
+## Finished
+
+```{python}
+def avg(L):
+    if len(L) == 0:
+        return 0
+    else:
+        return sum(L) / len(L)
+
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+avg1 = avg(L1)
+avg2 = avg(L2)
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+::: {.fragment .fade-right style="margin-top: -0.25em; font-size: 0.9em;"}
+
+- The `avg` function avoids the defect and is easier to read!
+
+:::
+
+:::
+
+## Bug hunt for average computation
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# initialize the lists
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+# compute the averages
+avg1 = sum(L1)/len(L1)
+avg2 = sum(L2)/len(L2)
+# display the results
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+::: {.fragment style="margin-top: 0.3em; font-size: 0.91em;"}
+
+- {{< iconify fa6-solid gears >}} **Key Tasks**: After confirming that the
+program works for the initial lists in `L1` and `L2`, try to find the defect.
+Can you make a solution that works for empty lists? How do you know it is
+correct?
+
+:::
+
+## Refactoring in algorithm engineering
+
+::: {.incremental .fade-right style="margin-top: font-size: 0.775em;"}
+
+- *What is refactoring?*
+    - **Defined**: Better code structure without changing features
+    - **Goal**: Enhance characteristics of the software system
+
+- *Why refactor a software system?*
+    - **Readability**: Easier for others to understand
+    - **Maintainability**: Simplifies modifications and debugging
+    - **Reusability**: Promotes code reuse through design
+    - **Performance**: Can sometimes improve efficiency
+
+:::
+
+## What should we test?
+
+::: {.incremental style="margin-top: -0.25em; font-size: 0.875em;"}
+
+- For each function, ask yourselves the following questions:
+    - What should **happen** when I run this function?
+    - How do I want to **use** this function?
+    - What **are** the inputs and outputs of this function?
+    - What **should be** the function's inputs and outputs?
+    - What are the **edge cases** for this function?
+
+:::
+
+::: {.fragment .fade-right style="margin-top: -0.575em; font-size: 0.9em;"}
+
+- Test the system's **expected behavior**, not its **implementation**
+- Test the **public interface** of the program under test
+- Transform detected **defects** into repeatable **test cases**
+- Assess the adequacy of the test suite with `coverage.py`
+
+:::
+
+## Testing often positively influences a program's object-oriented design
+
+::: {.incremental style="margin-top: -0.25em; font-size: 0.95em;"}
+
+- Software testing helps to refine an object-oriented design
+
+- Interplay between **testing** and **object-oriented design**:
+
+    - Identify **nouns** (classes) and **verbs** (methods)
+    - Specify what **should** happen when you call a method
+    - Write a unit **test case** to encode this expected behavior
+    - Confirm that all of the test cases **pass** correctly
+    - **Refactor** the code to **improve** its object-oriented design
+    - Repeatedly **run** the test suite to confirm correctness
+
+:::
+
+# Don't benchmark until you are done testing!
+
+::: {.fragment .boxed-content .fade-right}
+
+- **Testing**: Use test cases to run the program to confirm that it produces the
+correct output for a given input
+- **Benchmarking**: Use timing instrumentation to collect and analyze data about
+a program's performance
+- Running experiments on an incorrect system may comprise experimental results!
+Run a small trial first!
+
+:::
+
+## Improve the performance of testing
+
+::: fragment
+
+- **Test Prioritization**: Focus on the most important tests first
+- **Test Reduction**: Eliminate the redundant test cases
+- **Test Parallelization**: Run the tests concurrently
+- **Combinatorial Testing**: Explore test platform combinations
+
+:::
+
+::: fragment
+
+```yaml
+matrix:
+os: [ubuntu-latest]
+python-version: ["3.12", "3.10"]
+include:
+    - os: macos-latest
+    python-version: "3.9"
+    - os: windows-latest
+    python-version: "3.11"
+```
+
+:::
+
+# Advanced Software Testing Techniques
+
+::: incremental
+
+- Parameterized test cases with `pytest`
+- Property-based testing with `hypothesis`
+- Test coverage with `coverage.py`
+- Mutation testing with `mutmut`
+- Using artificial intelligence to generate tests
+
+:::
+
+## Testing `DayOfTheWeek` with Pytest
+
+```python
+from daydetector.dayoftheweek import DayOfTheWeek
+
+def test_init():
+    """Test the DayOfTheWeek class."""
+    d = DayOfTheWeek("F")
+    assert d.name() == "Friday"
+    d = DayOfTheWeek("Th")
+    assert d.name() == "Thursday"
+    d = DayOfTheWeek("W")
+    assert d.name() == "Wednesday"
+    d = DayOfTheWeek("T")
+    assert d.name() == "Tuesday"
+    d = DayOfTheWeek("M")
+    assert d.name() == "Monday"
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- Run `poetry run pytest` in the `daydetector` directory
+
+- `pytest` will automatically discover and run the tests!
+
+:::
+
+## Parameterized Tests with `pytest`
+
+```python
+@pytest.mark.parametrize(
+    "abbreviation, expected",
+    [
+        ("M", "Monday"),
+        ("T", "Tuesday"),
+        ("W", "Wednesday"),
+        ("Th", "Thursday"),
+        ("F", "Friday"),
+        ("Sa", "Saturday"),
+        ("Su", "Sunday"),
+        ("X", None),
+    ],
+)
+def test_day_name(abbreviation, expected):
+    """Use parameterized testing to confirm that lookup works correctly."""
+    day = DayOfTheWeek(abbreviation)
+    assert day.name() == expected
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 1.0em;"}
+
+- Express the inputs and the expected outputs in a table!
+
+:::
+
+## Property-based test case
+
+```python
+import hypothesis.strategies as st
+from hypothesis import given
+import pytest
+
+@pytest.mark.parametrize(
+    "valid_days",
+    [["Monday", "Tuesday", "Wednesday", "Thursday",
+      "Friday", "Saturday", "Sunday"]],
+)
+@given(
+    st.text(alphabet=st.characters(), min_size=1, max_size=2)
+)
+def test_abbreviation_maps_to_name(valid_days, abbreviation):
+    """Use property-based testing with Hypothesis to confirm mapping."""
+    day = DayOfTheWeek(abbreviation)
+    assert day.name() in valid_days or day.name() is None
+```
+
+::: {.fragment .fade-right style="margin-top: 0.0em; font-size: 0.875em;"}
+
+- `Hypothesis` strategies generate random character inputs for the `abbreviation`
+parameter, thereby increasing the input diversity
+
+:::
+
+## Test coverage with `coverage.py`
+
+
+```text
+tests/test_dayoftheweek.py ..........                                                                              [100%]
+
+---------- coverage: platform linux, python 3.11.6-final-0 -----------
+Name                          Stmts   Miss Branch BrPart  Cover
+---------------------------------------------------------------
+daydetector/__init__.py           0      0      0      0   100%
+daydetector/dayoftheweek.py       6      0      0      0   100%
+---------------------------------------------------------------
+TOTAL                             6      0      0      0   100%
+
+
+10 passed in 0.21s
+```
+
+::: {.fragment .fade-left style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- The test suite covers `100%` of the program's source code
+
+- Covering statements increases the likelihood of detecting defects
+
+- Do high coverage tests mean that the program is defect-free?
+
+:::
+
+## Mutation testing with `mutmut`
+
+```text
+--- daydetector/dayoftheweek.py
++++ daydetector/dayoftheweek.py
+@@ -7,15 +7,7 @@
+     def __init__(self, abbreviation):
+         """Create a new DayOfTheWeek object."""
+         self.abbreviation = abbreviation
+-        self.name_map = {
+-            "M": "Monday",
+-            "T": "Tuesday",
+-            "W": "Wednesday",
+-            "Th": "Thursday",
+-            "F": "Friday",
+-            "Sa": "Saturday",
+-            "Su": "Sunday",
+-        }
++        self.name_map = None
+```
+
+::: {.fragment .fade-left style="margin-top: 0.2em; font-size: 0.8em;"}
+
+- `mutmut` changes the program to see if tests find possible defect
+
+- Mutation operators systematically modify the program's code
+
+:::
+
+## Can you reproduce the software testing examples from these slides?
+
+::: {.fragment .fade-right style="margin-top: 0.25em; font-size: 0.95em;"}
+
+- Use `www.algorithmology.org/slides/weekfour/`
+- Software testing commands you can try:
+    - `poetry install`
+    - `poetry run pytest`
+    - `poetry run pytest --cov --cov-branch`
+    - `poetry run mutmut run`
+    - `poetry run mutmut show 16`
+- What does output tell you about program and/or test quality?
+
+:::
+
+## *Oh, one more thing*! Did you know that some of the test cases you see in `test_dayoftheweek.py` were written by a large language model?
+
+::: {.fragment .boxed-content .fade-right style="margin-top: 0.25em; font-size: 1.25em;"}
+
+- What are the **benefits** and **downsides** of using artificial intelligence (AI) to generate tests?
+
+- What are situations in which you **should** and **should not** use AI to generate tests?
+
+:::
+
+## What are the performance trade-offs associated with software testing?
+
+::: {.fragment .fade-right style="margin-top: 0.25em; font-size: 0.95em;"}
+
+- Questions to consider when performing software testing:
+    - When should you run the test suite?
+    - How frequently should you run the test suite?
+    - How can you reduce the cost of:
+        - ... test execution?
+        - ... coverage monitoring?
+        - ... mutation testing?
+- How do you balance the costs and benefits of software testing?
+
+:::
