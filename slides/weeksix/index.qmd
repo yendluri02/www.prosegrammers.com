@@ -317,12 +317,13 @@ correct?
 - {{< iconify fa6-solid lightbulb >}} **What is refactoring?**
     - **Defined**: Better code structure without changing features
     - **Goal**: Enhance aspects of document processing tools
-
-- {{< iconify fa6-solid lightbulb >}} **Why refactor document engineering systems?**
+- {{< iconify fa6-solid gears >}} **Why refactor document engineering systems?**
     - **Readability**: Helps others to understand text processing logic
     - **Maintainability**: Simplifies modifications and debugging
     - **Reusability**: Promotes code reuse across document tools
     - **Performance**: Aim to improve text processing efficiency
+- {{< iconify fa6-solid robot >}} **Use test cases to confirm correctness of
+refactoring!**
 
 :::
 
