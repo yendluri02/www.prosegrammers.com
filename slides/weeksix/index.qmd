@@ -329,7 +329,7 @@ refactoring!**
 
 ## What to test in document tools?
 
-::: {.incremental style="margin-top: -0.25em; font-size: 0.875em;"}
+::: {.incremental style="margin-top: -0.25em; font-size: 0.85em;"}
 
 - For each document processing function, ask these questions:
     - What should **happen** when processing different document types?
@@ -337,11 +337,6 @@ refactoring!**
     - What **are** the inputs and outputs of text processing?
     - What **should be** the function's document inputs and outputs?
     - What are the **edge cases** for document processing?
-
-:::
-
-::: {.fragment .fade-right style="margin-top: -0.575em; font-size: 0.9em;"}
-
 - Test the system's **expected behavior**, not its **implementation**
 - Test the **public interface** of document processing tools
 - Transform detected **defects** into repeatable **test cases**
@@ -349,20 +344,22 @@ refactoring!**
 
 :::
 
-## Testing influences document tool design
+## Testing aids document tool design
 
-::: {.incremental style="margin-top: -0.25em; font-size: 0.95em;"}
+::: {.incremental style="margin-top: -0.25em; font-size: 0.9em;"}
 
 - Software testing helps refine document engineering tool design
 
 - Interplay between **testing** and **document tool design**:
 
-    - Identify **data** (documents) and **operations** (processing functions)
+    - See **data** (documents) and **operations** (processing functions)
     - Specify what **should** happen when processing documents
     - Write a unit **test case** to encode expected behavior
     - Confirm that all test cases **pass** correctly
     - **Refactor** code to **improve** document processing design
     - Repeatedly **run** test suite to confirm correctness
+
+-{{< iconify fa6-solid rocket >}} **Systems with good designs are easier to test and maintain**!
 
 :::
 
