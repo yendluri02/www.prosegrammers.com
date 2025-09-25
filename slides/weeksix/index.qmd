@@ -203,14 +203,14 @@ class DayOfTheWeek:
 
 ## Questions
 
-- Test-driven development asks you to write tests before code:
+- **Test-driven development (TDD) invites writing tests before code**
     - How will you use a function?
-    - What are its inputs and outputs?
-    - Can you write code to make tests pass?
+    - What are the function's inputs and outputs?
+    - Can you write code to make the tests pass?
 
 ## Practices
 
-- The TDD mantra is **Red-Green-Refactor**:
+- The "TDD mantra" is **Red-Green-Refactor**:
     - **Red**: The tests fail. You haven’t written the code yet!
     - **Green**: You get the tests to pass by changing the code.
     - **Refactor**: You clean up the code, removing duplication.
