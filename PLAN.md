@@ -118,6 +118,44 @@ extensive experience with programming or the documentation of a software tool.
 - [ ] Make sure that all the content has concrete examples that make points
 clear to beginners.
 
+### Create Slides for Week Six in `slides/weeksix/index.qmd`
+
+- [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
+explains the theme of the course on document engineering.
+- [ ] Review the content in the `index.qmd` file in the root of the repository
+that explains the idea of a "Prosegrammer" and the concept of document
+engineering.
+- [ ] Review the content in the `index.qmd` file in the `syllabus` directory of
+the repository that explains rules and regulations for this course on document
+engineering. Note that these are the rules that students follow and not
+specifically the rules and regulations that you follow as a coding agent.
+- [ ] The new slides that I want you to create should be in the file
+`slides/weeksix/index.qmd`. The purpose of these slides is to introduce the
+basics of software testing. I previously created these slides for a course
+on Algorithm Analysis. However, I would like you to customize all of this
+content for document engineering.
+- You can look at the other slide decks that I have already prepared:
+  - `slides/weekone/index.qmd`
+  - `slides/weektwo/index.qmd`
+  - `slides/weekthree/index.qmd`
+  and see how I am currently using Markdown and Quarto in my slides!
+- Please note that I am currently working on the slides in
+`slides/weekfour/index.qmd` that introduce Markdown and Quarto. So, please
+don't use those as an example because they are not yet complete.
+- I want students to understand the basics of software testing so that when
+they are building their document engineering tools they can also test them.
+- Please customize all the examples in the slides so that they connect to
+document engineering and are accessible to beginners. However, you should
+keep the simple `DaysOfTheWeek` source code because that one is easy to
+understand and accessible to beginners.
+- If you check the `index.qmd` file in this GitHub repository, you can see a
+simple example of word frequency analysis. You should illustrate how to write
+test cases for a function like this one.
+- [ ] Make sure that all the content is accessible to beginners who do not have
+extensive experience with programming or the documentation of a software tool.
+- [ ] Make sure that all the content has concrete examples that make points
+clear to beginners.
+
 ## Support for Content
 
 ### Support for Index.qmd Revision Content
