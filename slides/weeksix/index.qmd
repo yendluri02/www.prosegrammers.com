@@ -18,15 +18,22 @@ format:
     footer: "Prosegrammers"
 ---
 
-# Document engineering tools must work correctly
+## Document engineering tools and workflows must run correctly
 
-::: incremental
+::: {.incremental style="margin-top: -0.1em; font-size: 0.9em;"}
 
 - **Text processing**: does each function parse content correctly?
 - **Document analysis**: do algorithms extract the right information?
 - **File operations**: are documents read and written correctly?
 - **Content validation**: do parsers handle malformed input properly?
 - **Output generation**: does the tool create documents as expected?
+
+:::
+
+::: {.fragment .boxed-content .fade-up style="margin-top: -0.05em; font-size: 1em;"}
+
+{{< iconify fa6-solid rocket >}} Software testing techniques help to ensure
+that document tools work correctly! Let's learn more about software testing!
 
 :::
 
