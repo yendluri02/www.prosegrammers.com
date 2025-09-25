@@ -86,7 +86,7 @@ assert(y.n() == -8)
 
 ::: {.fragment .fade-left style="margin-top: -0.25em; font-size: 0.9em;"}
 
-- Establishes a confidence in the correctness of the `Doubler` class
+- Establish a confidence in the correctness of the `Doubler` class
 - When testing is it better to use `print` or `assert` statements?
 
 :::
@@ -111,7 +111,7 @@ print(y.n() == -8)
 assert(y.n() == -8)
 ```
 
-::: {.fragment style="margin-top: 0.15em; font-size: 0.90em;"}
+::: {.fragment style="margin-top: 0.05em; font-size: 0.90em;"}
 
 - {{< iconify fa6-solid lightbulb >}} **Key Tasks**: After creating `assert`
 statements that will pass and fail as expected, decide which you prefer and why!
