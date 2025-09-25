@@ -1,7 +1,7 @@
 ---
 title: "Advanced Quarto for Documentation"
 description: "Explore advanced features of Quarto"
-date: "2025-09-15"
+date: "2025-09-22"
 date-format: long
 author: Gregory M. Kapfhammer
 execute:
