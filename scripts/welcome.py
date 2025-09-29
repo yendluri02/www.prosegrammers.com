@@ -25,7 +25,7 @@ def main():
     console.print()
 
     # Create flashy title
-    title = Text("🎉 WELCOME TO DOCUMENT ENGINEERING! 🎉", style="bold magenta")
+    title = Text("🎉 WELCOME TO DOCUMENT ENGINEERING KRISH! 🎉", style="bold magenta")
     title_panel = Panel(
         Align.center(title), box=box.DOUBLE, style="bright_cyan", padding=(1, 2)
     )
