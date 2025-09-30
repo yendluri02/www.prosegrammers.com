@@ -19,3 +19,4 @@ format:
 ---
 
 ## DEPC2: Document engineering project critique for Quarto
+# By: Krish Yendluri, V Rieger, Logan Butler
