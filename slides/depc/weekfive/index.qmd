@@ -35,3 +35,12 @@ format:
 
 
 :::
+
+# Cons of Quarto Documentation
+
+:::
+
+ -Installation instructions are not clearly explained and require reading through the documentation.
+ -While the examples are helpful, some sections rely too heavily on them, offering little accompanying description or explanation.
+
+:::
