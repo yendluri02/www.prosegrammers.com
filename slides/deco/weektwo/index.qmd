@@ -1,9 +1,9 @@
 ---
 title: "Understanding and Applying Diátaxis"
 description: "Use Diátaxis for technical documentation"
-date: "2025-09-03"
+date: "2025-09-08"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Tien DeLong-Headley, Hank Grefenstette, Brandon Ladakos
 execute:
   echo: true
 format:
@@ -18,4 +18,112 @@ format:
     footer: "Prosegrammers"
 ---
 
-# DECO1: Document engineering concept overview
+# What is Diátaxis?
+
+- Diátaxis is a framework for organizing technical documentation.
+- It was created by Daniele Procida to better address the needs of documentation users through the designation of multiple documentation styles.
+- The name comes from the Greek for "across" and "arrangement".
+
+# Defining Quality in Documentation
+
+Diátaxis seeks to more strictly define the loose grasp of "quality" on software documentation to create an ethical standard for use of applications and products. They use two measurements of quality:
+
+- Functional quality
+- Deep quality
+
+## Functional Quality
+
+Functional quality asks that documentation be a number of things--accurate, complete, useful, consistent, etc. These are all independent standards that docs are held to under Diátaxis.
+
+## Deep Quality
+
+Deep quality, though, is the more ambitious mark of excellence under Diátaxis standards. It requires things like:
+
+- Good flow.
+- Anticipation of the user.
+- An overall good feeling during the use of a resource.
+
+# The Four Types of Documentation
+
+The Diátaxis approach designates four type of documentation, each geared towards a different style of skill development.
+
+---
+
+## 1. Tutorials – Learning-oriented
+
+Tutorials are practical, teacher/tutor driven lesson with the goal of the user learning and acquiring skills.
+
+- Diátaxis defines lessons as *learning experiences* in which the student's engagement is fundamental.
+- Good lessons give a student confidence in their skills.
+
+---
+
+## 1a. Weaknesses of Tutorial Documentation
+
+However, tutorials are difficult to integrate for a lot of reasons.
+
+- There is a lack of interactability in traditional doc mediums.
+- Products evolve rapidly, meaning tutorials can become outdated fast.
+- Tutorials must contain the "distinction between *what is to be learned* and *what is to be done.*"
+
+## 2. How-To Guides – Goal-oriented
+
+How-to guides are step-by-step recipes for accomplishing a very specific goal as opposed to developing an overarching skill.
+
+- Diátaxis states that guides are concerned with achieving a goal, completing a task, or solving a problem.
+- How-To Guides best serve a user that is already competent in the relevant field.
+- They should "omit the unnecessary" to avoid confusing instructions.
+
+## 2a. Weaknesses of How-To Guide Documentation
+
+There are some fundamental issues with perception of how-to guides that weaken their effectiveness.
+
+- How-to guides are not effective at teaching broader concepts like, "how to build a web application."
+- Using how-to guides without context or prior understanding of the topic does not build knowledge, nor does it often work to achieve the goal at hand.
+
+## 3. References – Information-oriented
+
+References are materials built to contain information for a user to look into during their own work.
+
+- The main goal of a reference is to "describe, as succinctly as possible, and in an orderly way."
+- They provide a platform of knowledge to build skills from.
+- It should be built to be *consulted*, not read.
+
+## 3a. Weaknesses of Reference Documentation
+
+References are very good for their specific purpose, but they lack flexibility.
+
+- References do not demonstrate, they describe with neutrality and without situational context.
+- Bad references lack consistency and stray from an austere tone, resulting in low readability and applicability. This is an easy mistake to make.
+
+## 4. Explanation – Understanding-oriented
+
+Explanations are materials built to deepen the user's understanding and inspire reflection on the knowledge they already have.
+
+- It is important that explanations provide context in regards to their subject--explain *why* things are the way they are.
+- Unlike other forms of documentation, explanations can often be imbued with opinion, or more accurate, well-informed perspective.
+
+## 4a. Weaknesses of Explanation Documentation
+
+Explanations are very effective forms of documentation for certain situations, but they aren't applicable in every situation. 
+
+- Explanations cover broad concepts and may lack the nuance of more specific situations that things like how-to-guides address. 
+- The introduction of a perspective into documentation can create the problem of irrelevance to certain users--not all perspectives apply to every situation.
+
+---
+
+## Why Use Diátaxis?
+
+- Organizes content based on user needs
+- Prevents mixing of different documentation types
+- Utilizes four distinct types: learning-oriented, information-oriented, goal-oriented, and understanding-oriented
+- Widely adopted by open-source and commercial projects, such as the development of Linux
+
+## Applying Diátaxis
+
+- Review and refactor existing documents using the Diátaxis model
+- Identify which type each doc belongs to (learning-oriented, information-oriented, goal-oriented, understanding-oriented)
+- Structure your documents to separate the four types of documents
+- Write with the user's goal in mind, such as completing a specific problem, providing reference information, or solving a problem
+
+# Questions?

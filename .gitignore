@@ -142,3 +142,5 @@ _optimize
 ### Python Tools ###
 .mutmut-cache
 /.mutmut-cache/
+
+**/*.quarto_ipynb
