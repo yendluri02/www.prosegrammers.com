@@ -20,3 +20,18 @@ format:
 
 ## DEPC2: Document engineering project critique for Quarto
 # By: Krish Yendluri, V Rieger, Logan Butler
+
+# Pros of Quarto Documentation
+
+:::
+
+ -Clearly explains what Quarto is and how it works.
+ -Demonstrates the rendering process effectively, including a helpful visual example.
+ -Provides a clear example of how to render and preview a Quarto document.
+ -Covers various quality-of-life features and appearance-related syntax options.
+ -Offers clean, well-organized documentation with well-presented examples.
+ -Divides content into multiple focused sections, such as a “Hello World” tutorial, computation, and authoring.
+ -Includes links and references to additional resources for learning more about Quarto.
+
+
+:::
