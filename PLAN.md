@@ -208,8 +208,118 @@ text formatting capabilities for document standardization
 #### Python Type System for Document Engineering
 
 - Python's type hints (introduced in PEP 484) improve code readability and help
-catch errors in document processing functions
+  catch errors in document processing functions
 - Strong typing helps ensure data integrity when working with document metadata
-and content
+  and content
 - Type annotations serve as inline documentation, making code more maintainable
-for collaborative document engineering projects
+  for collaborative document engineering projects
+
+### Support for Week Three Slides Content
+
+#### Object-Oriented Programming for Document Engineering
+
+- Object-oriented programming (OOP) is a fundamental paradigm in software engineering
+  that models real-world entities as objects with properties and behaviors
+- OOP principles (abstraction, inheritance, encapsulation, polymorphism) provide
+  structured approaches to software design, as established in design patterns
+  literature like the Gang of Four book "Design Patterns"
+- Document engineering benefits from OOP by modeling documents, sections, and
+  processing operations as objects with well-defined interfaces
+
+#### Document Classes and Inheritance
+
+- Class-based inheritance allows creation of specialized document types while
+  maintaining shared functionality, following the Liskov Substitution Principle
+- The `Document` base class encapsulates common document properties (title, author,
+  content, metadata) following encapsulation principles
+- Technical documents often require specialized attributes like complexity scoring
+  and code examples, justifying inheritance hierarchies in document systems
+
+#### Polymorphism in Document Processing
+
+- Polymorphic interfaces enable uniform processing of different document types,
+  supporting the Open/Closed Principle of software design
+- Abstract base classes define contracts for document processors, ensuring
+  consistent interfaces across different implementations
+- Duck typing in Python allows flexible object interactions based on behavior
+  rather than inheritance, supporting agile document processing architectures
+
+#### Composition for Document Generation
+
+- Composition over inheritance promotes flexible object assembly, as recommended
+  in software design best practices
+- Document generators composed of sections provide greater flexibility than
+  rigid inheritance hierarchies
+- The Strategy pattern (using composition) enables runtime selection of document
+  generation strategies, supporting diverse output formats
+
+#### OOP Principles Applied to Document Engineering
+
+- Abstraction hides complexity of document operations, allowing users to work
+  with high-level document objects rather than low-level file operations
+- Encapsulation protects document state and ensures data integrity through
+  controlled access methods
+- Inheritance creates type hierarchies for different document categories while
+  maintaining shared behavior
+- Polymorphism enables extensible document processing systems that can handle
+  new document types without modifying existing code
+
+#### Interactive Code Examples
+
+- Pyodide enables browser-based Python execution, providing immediate feedback
+  for educational content
+- Interactive examples reinforce learning through hands-on experimentation
+- Real-time code execution helps students understand OOP concepts through
+  practical application in document engineering scenarios
+
+### Support for Week Two Skill-Check Slides Content
+
+#### Document Engineering Skill-Check Assessment
+
+- Skill-checks provide formative assessment opportunities that measure student
+  progress in programming skills, following educational best practices for
+  frequent, low-stakes testing
+- Friday skill-checks create regular learning checkpoints that help students
+  maintain consistent engagement with course material
+- GitHub Classroom provides industry-standard workflow experience, mirroring
+  professional software development practices that students will encounter
+  in their careers
+
+#### Automated Assessment with GatorGrade
+
+- Automated testing and code quality checking reflects industry practices
+  where continuous integration and automated testing are standard procedures
+- The `gatorgrade` tool provides objective, consistent assessment criteria
+  that ensure fairness across all student submissions
+- Real-time feedback enables students to iteratively improve their solutions,
+  supporting mastery-based learning approaches
+- Pytest integration follows Python testing best practices and prepares
+  students for professional development workflows
+
+#### Git Version Control Workflow
+
+- Regular commits and pushes reinforce version control best practices that
+  are essential for collaborative software development
+- Git workflow mirrors professional development environments where frequent
+  commits and proper version control are critical skills
+- GitHub Actions integration provides experience with automated testing
+  pipelines common in modern software development
+
+#### Programming Task Structure
+
+- TODO markers and function stubs provide scaffolding that supports learning
+  progression from novice to expert, following educational research on
+  cognitive load theory
+- Docstring-driven development encourages clear documentation practices
+  essential for maintainable code
+- Type annotations requirement reinforces modern Python best practices and
+  helps prevent runtime errors
+
+#### Honor Code and Academic Integrity
+
+- Explicit honor code requirements establish ethical frameworks for academic
+  work, particularly important when AI tools are available
+- Citation requirements for AI assistance teach responsible use of emerging
+  technologies in educational settings
+- Individual assessment format ensures authentic demonstration of student
+  learning and skill development

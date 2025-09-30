@@ -11,6 +11,7 @@ toc-expand: 3
 
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
   - Instructor-led deep-dive on software testing for Python programs
+  - As needed, instructor review of previous technical topics
 - {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
   - [DEPC2 presentation](/slides/depc/weekfive/index.qmd) completed through the
   use of [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),

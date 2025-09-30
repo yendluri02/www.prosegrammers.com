@@ -1,0 +1,750 @@
+---
+title: "Object-Oriented Programming in Python"
+description: "What are the key features of object-oriented programming in Python?"
+date: "2025-09-08"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Document engineering
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Why is it important?**
+    - Documentation quality affects software success
+        - Poor docs cause user confusion
+        - Clear docs increase adoption
+        - Automated docs reduce maintenance cost
+
+:::
+
+## Becoming a prosegrammer
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **Master Python programming**
+  - Text processing and analysis
+  - Document creation and manipulation
+  - Automation tools for writing
+- {{< iconify fa6-solid gear >}} **Create compelling documentation**
+  - Clear and professional writing
+  - Interactive documents with code
+  - Version control for documents
+- {{< iconify fa6-solid lightbulb >}} **Science and engineering to analyze & improve documents!**
+
+:::
+
+## Course learning objectives
+
+::: {.fragment .callout-note icon=true title="Learning Objectives for Document Engineering"}
+
+- **CS-104-1**: Explain processes such as software installation or
+design for a variety of technical and non-technical audiences ranging from
+inexperienced to expert.
+- **CS-104-2**: Use professional-grade integrated development environments (IDEs),
+command-line tools, and version control systems to compose, edit, and deploy
+well-structured, web-ready documents and industry-standard documentation tools.
+- **CS-104-3**: Build automated publishing pipelines to format, check, and ensure both the
+uniformity and quality of digital documents.
+- **CS-104-4**: Identify and apply appropriate conventions of a variety of technical
+communities, tools, and computer languages to produce industry-consistent
+diagrams, summaries, and descriptions of technical topics or processes.
+
+:::
+
+::: {.fragment style="margin-top: -0.05em; font-size: 0.775em;"}
+
+- {{< iconify fa6-solid bullhorn >}} Achieved through course content, skill and
+knowledge checks, and projects!
+
+:::
+
+## Document engineering pipeline
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.7em;"}
+
+- {{< iconify fa6-solid hammer >}} **Three exciting phases** spanning the entire semester
+    - **Module One**: Foundation tools and document processing
+    - **Module Two**: Advanced analysis and automation features
+    - **Module Three**: Complete pipeline integration and optimization
+
+- {{< iconify fa6-solid code >}} **Hands-on Python programming** with real document engineering challenges
+    - Build tools that actually **process** and **analyze** documents
+    - Create your own **classes** and **methods** for document manipulation
+    - Implement algorithms for text **analysis** and content **generation**
+
+- {{< iconify fa6-solid users >}} **Learn like a professional prosegrammer**
+    - Use AI coding assistants (e.g., GitHub Copilot, Gemini CLI) responsibly
+    - Complete weekly demonstrations to track your progress
+    - Submit well-documented, working projects with detailed reports
+
+:::
+
+## Using object-oriented programming for document engineering
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid cubes >}} **Object-oriented programming (OOP)** is a
+programming paradigm that uses "objects" to represent data and behavior
+
+- {{< iconify fa6-solid puzzle-piece >}} **OOP helps manage complexity** by breaking up
+programs into smaller, reusable pieces like classes and method
+
+- {{< iconify fa6-solid file-lines >}} **OOP is widely used** in many
+programming languages, and Python has strong support for most OOP features
+
+- {{< iconify fa6-solid lightbulb >}} **OOP is useful for document engineering** 
+because documents can be represented as objects with state and behavior
+
+:::
+
+# What are the main goals of object-oriented programming?
+
+::: incremental
+
+- Write code that reflects thought and the world
+- Enable code reuse and sharing among programmers
+- Encourage the creation of well-designed software
+- Ensure that software is easy to maintain and extend
+
+:::
+
+## What is a class? What is an object?
+
+::: incremental
+
+- A class is a **blueprint** for creating objects
+- An object is an **instantiation** of a class
+- A class defines the **attributes** and **methods** of an object
+    - **Attributes** are the data that an object holds
+    - **Methods** are the behaviors that an object can perform
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.25em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid microscope >}} Brainstorm an example of a class and an
+object that might exist in a program you use! After identifying the attributes
+and the methods, reflect on the benefits of object-oriented design.
+
+:::
+
+## Type Inference in Python
+
+```{python}
+mylist = []
+print(type(mylist))
+print(isinstance(mylist, list))
+print(isinstance(mylist, str))
+```
+
+::: {.fragment .fade style="margin-top: 0.0em; font-size: 0.9em;"}
+
+- Key insights about this source code:
+    - `mylist = []` creates an empty list
+    - `type(mylist)` returns the type of the list
+    - `isinstance` returns `True` or `False` for provided type
+    - `isinstance(mylist, list)` checks if `mylist` is a list
+    - Same approach works for other data types!
+
+:::
+
+## Existing types available in Python
+
+```{python}
+def example_function():
+  return 0
+print(type(example_function))
+```
+
+<p class="codespacer">
+
+```{python}
+def generator_example(n):
+  for i in range(n):
+    yield i
+print(type(generator_example))
+print(type(generator_example(5)))
+```
+
+::: {.fragment .fade style="margin-top: 0.25em; font-size: 0.9em;"}
+
+- `type` shows that functions and generators have their own types
+- What are the similarities and differences for these two types?
+- How do `return` and `yield` influence a function's behavior?
+
+:::
+
+## Explore use of the `type` function
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# define variables of different types
+integer_var = 10
+float_var = 10.5
+string_var = "Hello, World!"
+list_var = [1, 2, 3, 4, 5]
+dict_var = {"key1": "value1", "key2": "value2"}
+
+# display the type of each variable
+print("Type of integer_var:", type(integer_var))
+print("Type of float_var:", type(float_var))
+print("Type of string_var:", type(string_var))
+print("Type of list_var:", type(list_var))
+print("Type of dict_var:", type(dict_var))
+```
+
+::: {.fragment style="margin-top: 0.15em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid microscope >}} **Key Task**: Add other types, including
+  those that contain different types!
+
+:::
+
+## What if we don't create objects?
+
+```{python}
+u = (3,4)
+v = (3,6)
+def add(a, b):
+  return (a[0] + b[0], a[1] + b[1])
+def subtract(a,b):
+  return (a[0] - b[0], a[1] - b[1])
+def dot(a, b):
+  return (a[0] * b[0] + a[1] * b[1])
+def norm(a):
+  return (a[0] * a[0] + a[1] * a[1]) ** 0.5
+def isvertical(a):
+  return a[0] == 0
+print(norm(u))
+print(add(u,v))
+print(u + v)
+print(isvertical(subtract(v, u)))
+```
+
+## Explore `tuple` for encoding state
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+u = (3,4)
+v = (3,6)
+def add(a, b):
+  return (a[0] + b[0], a[1] + b[1])
+def subtract(a,b):
+  return (a[0] - b[0], a[1] - b[1])
+def dot(a, b):
+  return (a[0] * b[0] + a[1] * b[1])
+def norm(a):
+  return (a[0] * a[0] + a[1] * a[1]) ** 0.5
+def isvertical(a):
+  return a[0] == 0
+print(norm(u))
+print(add(u,v))
+print(u + v)
+print(isvertical(subtract(v, u)))
+```
+
+::: {.fragment style="margin-top: 0.2em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Key Questions**: What are the strengths
+    and weaknesses of this approach to representing vectors? How could this
+    approach lead to program defects?
+
+:::
+
+## An object-oriented alternative
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+```{python}
+class Vector:
+  def __init__(self, x, y):
+    try:
+      self.x = float(x)
+      self.y = float(y)
+    except ValueError:
+      self.x = 0.0
+      self.y = 0.0
+  def norm(self):
+    return (self.x ** 2 + self.y ** 2) ** 0.5
+  def __add__(self, other):
+    newx = self.x + other.x
+    newy = self.y + other.y
+    return Vector(newx, newy)
+  def __str__(self):
+    return "({:.2f}, {:.2f})".format(self.x, self.y)
+u = Vector(3,4)
+v = Vector(3,6)
+print(u + v)
+```
+
+:::
+
+## Explore an object-oriented approach
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+class Vector:
+  def __init__(self, x, y):
+    try:
+      self.x = float(x)
+      self.y = float(y)
+    except ValueError:
+      self.x = 0.0
+      self.y = 0.0
+  def norm(self):
+    return (self.x ** 2 + self.y ** 2) ** 0.5
+  def __add__(self, other):
+    newx = self.x + other.x
+    newy = self.y + other.y
+    return Vector(newx, newy)
+  def __str__(self):
+    return "({:.2f}, {:.2f})".format(self.x, self.y)
+u = Vector(3,4)
+v = Vector(3,6)
+print(u + v)
+```
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Key Questions**: After trying different
+instances of `Vector`, what is the state and behavior? What are the strengths
+and weaknesses of this approach to representing vectors? How could this approach
+lead to program defects?
+
+:::
+
+# What are the principles of object-oriented programming?
+
+::: incremental
+
+- **Abstraction**: Hide implementation details
+- **Inheritance**: Create new classes from existing classes
+- **Encapsulation**: Group related data and methods together
+- **Polymorphism**: Allow objects to take on multiple forms
+
+:::
+
+## Encapsulation with `Triangle`
+
+```{python}
+class Triangle:
+    def __init__(self, points):
+        self._sides = 3
+        self._points = list(points)
+        if len(self._points) != 3:
+            raise ValueError("Wrong number of points.")
+
+    def sides(self):
+        return 3
+
+    def __str__(self):
+        return "I’m a triangle."
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- What state does a `Triangle` object have?
+- How can we access the state of a `Triangle` object?
+- What are the benefits and limitations of encapsulation?
+
+:::
+
+## Encapsulation with `Square`
+
+```{python}
+class Square:
+    def __init__(self, points):
+        self._sides = 4
+        self._points = list(points)
+        if len(self._points) != 4:
+            raise ValueError("Wrong number of points.")
+
+    def sides(self):
+        return 4
+
+    def __str__(self):
+        return "I’m so square."
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- What state does a `Square` object have?
+- How can we access the state of a `Square` object?
+- Wait, what is the purpose of `__init__` and `__str__`?
+
+:::
+
+## Wait, what is the relationship between a `Square` and a `Triangle`?
+
+```{python}
+class Polygon:
+    def __init__(self, sides, points):
+        self._sides = sides
+        self._points = list(points)
+        if len(self._points) != self._sides:
+            raise ValueError("Wrong number of points.")
+
+    def sides(self):
+        return self._sides
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.9em;"}
+
+- The `Polygon` class is a *superclass* of `Triangle` and `Square`
+- The `Triangle` and `Square` classes are *subclasses* of `Polygon`
+- The `Polygon` class is a *generalization* of `Triangle` and `Square`
+
+:::
+
+## Connecting `Triangle` and `Square` to the `Polygon` Superclass
+
+
+```{python}
+class Triangle(Polygon):
+    def __init__(self, points):
+        Polygon.__init__(self, 3, points)
+
+    def __str__(self):
+        return "I’m a triangle."
+
+class Square(Polygon):
+    def __init__(self, points):
+        Polygon.__init__(self, 4, points)
+
+    def __str__(self):
+        return "I’m so square."
+```
+
+::: {.fragment .fade-up style="margin-top: 0.5em; font-size: 0.8em;"}
+
+- Forms an "is-a" relationship between:
+  - `Triangle` and `Polygon` and also `Square` and `Polygon`
+
+:::
+
+## Using composition in Python
+
+```{python}
+class MyLimitedList:
+    def __init__(self):
+        self._L = []
+
+    def append(self, item):
+        self._L.append(item)
+
+    def __getitem__(self, index):
+        return self._L[index]
+```
+
+::: {.fragment .fade-up style="margin-top: 0.5em; font-size: 0.85em;"}
+
+- The `MyLimitedList` class "has-a" list inside of it called `_L`
+- Composition is a way to build complex objects from simpler ones
+- The `MyLimitedList` class is a "is-a" of `list`
+- {{< iconify fa6-solid lightbulb >}} **Let's fully connect this to document engineering!**
+- {{< iconify fa6-solid question >}} **How can we use objects to represent documents?**
+
+:::
+
+# Document connection
+
+::: {.fragment style="margin-top: -0.45em; font-size: 0.8em;"}
+
+- A `Document` can maintain *state* and exhibit *behavior*:
+    - *State*:
+        - Store its title, author, and content
+        - Maintain metadata like keywords and categories
+    - *Behavior*:
+        - Count its own words automatically
+        - Generate summaries by itself
+- A document engineering "pipeline" can have these features:
+    - Contain a list of documents and process and search them
+    - Generate reports and summaries of the list of documents
+
+:::
+
+## Defining a `Document` class
+
+```{python}
+from typing import Dict
+from datetime import datetime
+
+class Document:
+    """A base class representing a document in our document engineering system."""
+    
+    def __init__(self, title: str, author: str, content: str = ""):
+        """Initialize a document with basic properties."""
+        self.title = title
+        self.author = author
+        self.content = content
+        self.created_date = datetime.now()
+        self.word_count = len(content.split()) if content else 0
+        self.metadata: Dict[str, str] = {}
+    
+    def add_metadata(self, key: str, value: str) -> None:
+        """Add metadata to the document."""
+        self.metadata[key] = value
+    
+    def get_summary(self) -> str:
+        """Generate a summary of the document."""
+        return f"'{self.title}' by {self.author} ({self.word_count} words)"
+    
+    def __str__(self) -> str:
+        """String representation of the document."""
+        return self.get_summary()
+```
+
+## Exploring the `Document` class
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+from typing import Dict
+from datetime import datetime
+
+class Document:
+    def __init__(self, title: str, author: str, content: str = ""):
+        self.title = title
+        self.author = author
+        self.content = content
+        self.created_date = datetime.now()
+        self.word_count = len(content.split()) if content else 0
+        self.metadata: Dict[str, str] = {}
+    
+    def add_metadata(self, key: str, value: str) -> None:
+        self.metadata[key] = value
+    
+    def get_summary(self) -> str:
+        return f"'{self.title}' by {self.author} ({self.word_count} words)"
+    
+    def __str__(self) -> str:
+        return self.get_summary()
+
+# create a sample document
+doc = Document("Python Guide", "Jane Smith", "This is a guide about Python programming.")
+doc.add_metadata("language", "English")
+doc.add_metadata("version", "1.0")
+print("Document:", doc)
+print("Metadata:", doc.metadata)
+```
+
+::: {.fragment style="margin-top: 0.25em; font-size: 0.9em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Insight**: `Document` offers the state
+and behaviors of a document!
+
+:::
+
+## Inheritance builds on a class
+
+::: {.fragment style="margin-top: -0.15em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid sitemap >}} **Like a family tree of classes**
+
+- Parent class: basic `Document`
+- Child class: specialized `TechnicalDocument`
+- Child inherits everything from parent
+- Child can add its own special features
+
+:::
+
+::: {.fragment style="margin-top: -0.25em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid lightbulb >}} **Why inheritance? One reason: Code reuse!**
+
+- Don't rewrite the same code
+- Build on what's already working
+- Add only what's new and different
+
+:::
+
+## Inheritance example
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+class Document:
+    def __init__(self, title: str, author: str, content: str = ""):
+        self.title = title
+        self.author = author
+        self.content = content
+        self.word_count = len(content.split())
+    
+    def get_summary(self):
+        return f"'{self.title}' by {self.author} ({self.word_count} words)"
+
+# TechnicalDocument inherits from Document
+class TechnicalDocument(Document):
+    def __init__(self, title: str, author: str, content: str = "", level: str = "beginner"):
+        # Call parent constructor
+        super().__init__(title, author, content)
+        # Add new property
+        self.level = level
+    
+    # override parent method
+    def get_summary(self):
+        # use parent method + add our own info
+        base = super().get_summary()
+        return f"{base} - Technical level: {self.level}"
+
+basic_doc = Document("Simple Guide", "John", "This is a basic guide.")
+tech_doc = TechnicalDocument("Python Advanced", "Jane", "Complex Python concepts.", "advanced")
+print("Basic document:", basic_doc.get_summary())
+print("Technical document:", tech_doc.get_summary())
+```
+
+::: {.fragment style="margin-top: 0.5em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid lightbulb >}} **Insight**: `TechnicalDocument` builds on
+`Document` by adding a new property called `level`! What else could we add to this subclass?
+
+:::
+
+## Composition with `DocumentSection`
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+class DocumentSection:
+    def __init__(self, title: str, content: str):
+        self.title = title
+        self.content = content
+        self.word_count = len(content.split())
+
+class DocumentGenerator:
+    def __init__(self, title: str):
+        self.title = title
+        self.sections = []
+    
+    def add_section(self, section):
+        self.sections.append(section)
+    
+    def get_total_words(self):
+        return sum(section.word_count for section in self.sections)
+
+# create sections
+intro = DocumentSection("Introduction", "Welcome to Python programming!")
+basics = DocumentSection("Basics", "Learn variables, loops, and functions.")
+advanced = DocumentSection("Advanced", "Master classes, inheritance, and more.")
+
+# create generator and add sections (composition!)
+generator = DocumentGenerator("Python Complete Guide")
+generator.add_section(intro)
+generator.add_section(basics)
+generator.add_section(advanced)
+
+print(f"Document: {generator.title}")
+print(f"Total sections: {len(generator.sections)}")
+print(f"Total words: {generator.get_total_words()}")
+```
+
+::: {.fragment style="margin-top: 0.5em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid lightbulb >}} **Key insight**: Generator is made of
+smaller parts that work together!
+
+:::
+
+## Object-orientation for documents
+
+::: {.fragment style="margin-top: -0.15em; font-size: 0.7em;"}
+
+- {{< iconify fa6-solid gear >}} **Abstraction**: Hide complexity
+    - Document classes hide file operations
+    - Users work with simple document objects
+
+- {{< iconify fa6-solid sitemap >}} **Inheritance**: Build on existing code
+    - Child classes inherit parent features
+    - Add only what's new and different
+
+- {{< iconify fa6-solid shield >}} **Encapsulation**: Protect object's state
+    - Private data stays safe inside classes
+    - Public methods control access
+
+- {{< iconify fa6-solid shapes >}} **Polymorphism**: Same action, different results
+    - One method name, many behaviors
+    - Code stays simple, results vary
+
+:::
+
+## Objects empower prosegrammers!
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.9em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Objects makes document engineering easier**
+    - Classes organize document tools
+    - Inheritance reuses existing code
+    - Polymorphism handles different document types
+    - Composition builds flexible systems
+
+- {{< iconify fa6-solid rocket >}} **Start simple, build complex systems**
+    - Begin with basic document classes
+    - Add features as you need them
+    - Combine simple parts into powerful tools
+
+:::
+
+## Overall document engineering setup
+
+::: {.fragment .callout-note icon=true title="Tips for effective document engineering setup"}
+
+- Devote time outside class to installing and configuring tools
+- Confirm that most tools work during the this week's lab session
+- Create and render test documents with the provided examples
+- Complete the first document engineering project on time
+- Contribute to collaborative documentation projects
+- Prepare for first document engineering skill check
+
+- {{< iconify fa6-solid rocket >}} **Get ready for an exciting journey into document engineering!**
+- {{< iconify fa6-solid lightbulb >}} **If you are having trouble, publicly ask for help on Discord!**
+- {{< iconify fa6-solid key >}} **If you would like to use a token, please contact the course instructor!**
+
+:::
+
+## Reminder of course goals
+
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.75em;"}
+
+- **Document Creation**:
+  - Design and implement document generation workflows
+  - Test all aspects of documents to ensure quality and accuracy
+  - Create frameworks for automated document production
+- **Document Analysis**:
+  - Collect and analyze data about document usage and quality
+  - Visualize insights to improve documentation strategies
+- **Communicate** results and best practices for document engineering
+- **Content References**:
+    - {{< iconify fa6-solid book-open >}} Online textbook called [A First
+    Course on Data Structures in
+    Python](https://donsheehy.github.io/datastructures/)
+    - {{< iconify fa6-brands github >}} The `ds2` package in the
+    [donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+    GitHub repository
+
+:::
