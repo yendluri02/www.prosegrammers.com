@@ -23,7 +23,8 @@ format:
 
 # Pros of Quarto Documentation
 
-:::
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
 
  -Clearly explains what Quarto is and how it works.
  -Demonstrates the rendering process effectively, including a helpful visual example.
@@ -38,9 +39,19 @@ format:
 
 # Cons of Quarto Documentation
 
-:::
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
 
  -Installation instructions are not clearly explained and require reading through the documentation.
  -While the examples are helpful, some sections rely too heavily on them, offering little accompanying description or explanation.
 
+:::
+
+# Possible fixes/suggestions for personal documentation
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+ -Clearly explain all code examples and provide sufficient context.
+ -Include examples thoughtfully without overwhelming the content.
+ -Consolidate all installation steps in one place for easier access and understanding.
+ -Maintain a clean, organized, and well-structured presentation of the documentation.
 :::
