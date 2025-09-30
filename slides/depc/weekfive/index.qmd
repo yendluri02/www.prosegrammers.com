@@ -56,3 +56,14 @@ format:
  -Maintain a clean, organized, and well-structured presentation of the documentation.
  
 :::
+
+# Quarto in relation to Diátaxis
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+ -Quarto utilizes Tutorials/Learning-oriented documentation
+ -Quarto documentation achieves Functional Quality under Diataxis standards(accurate,       complete, useful, consistent)
+ -Quarto documentation achieves Deep Quality under Diataxis Standards(Good flow , anticipation of the user , good feeling during the use of Quarto)
+ -Quarto separates documentation types.
+ -Quarto documentation writes with user goal in mind (installing and using Quarto)
+ 
+:::
