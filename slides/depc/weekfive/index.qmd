@@ -34,7 +34,7 @@ The first of many guides offered in the Quarto documentation, this shows the syn
 
  - Quarto utilizes Tutorials/Learning-oriented documentation
  - Quarto documentation achieves Functional Quality under Diataxis standards(accurate, complete, useful, consistent)
- - Quarto documentation achieves Deep Quality under Diataxis Standards(Good flow , anticipation of the user , good feeling during the use of Quarto)
+ - Quarto documentation achieves Deep Quality under Diataxis Standards(good flow , anticipation of the user , good feeling during the use of Quarto)
  - Quarto separates documentation types.
  - Quarto documentation writes with user goal in mind (installing and using Quarto)
 
