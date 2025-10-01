@@ -1,7 +1,7 @@
 ---
 title: "Project Critique for `uv`"
 description: "Evaluating a project's documentation"
-date: "2025-09-22"
+date: "2025-10-01"
 date-format: long
 author: Anshu Pathak
 execute:
