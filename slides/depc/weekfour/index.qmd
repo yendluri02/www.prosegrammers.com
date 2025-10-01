@@ -18,7 +18,7 @@ format:
     footer: "Prosegrammers"
 ---
 
-## DEPC2: Document engineering project critique for `uv`
+## DEPC1: Document engineering project critique for `uv`
 
 # `uv` overview
 `uv` is a fast Python package and project manager that provides dependency resolution, installation, and environment management. Its documentation includes installation instructions, a quickstart, reference commands, and conceptual guides.
