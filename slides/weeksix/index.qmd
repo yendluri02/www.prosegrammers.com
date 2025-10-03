@@ -239,7 +239,7 @@ stats = document_stats(sample_text)
 print(f"Document statistics: {stats}")
 ```
 
-::: {.fragment .fade style="margin-top: 0.2em; font-size: 0.95em;"}
+::: {.fragment .fade style="margin-top: 0.4em; font-size: 0.95em;"}
 
 {{< iconify fa6-solid play >}} Running live code makes documentation
 **interactive** and **testable**! Code block format details? Try out `pyodide`! 
