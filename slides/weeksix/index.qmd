@@ -138,7 +138,7 @@ print(greet_prosegrammer("Alice"))
 
 :::
 
-## {{< iconify fa6-solid table >}} Tables: Rendered Output
+## {{< iconify fa6-solid table >}} Tables show structured data
 
 
 | Tool | Purpose | Prosegrammer Use |
@@ -157,9 +157,10 @@ print(greet_prosegrammer("Alice"))
 
 :::
 
-## {{< iconify fa6-solid quote-left >}} Blockquotes: Emphasize Key Ideas
+##  Blockquotes emphasize key ideas
 
-**Source Code:**
+{{< iconify fa6-solid quote-left >}} **Source code for creating a blockquote**
+
 ```markdown
 > Document engineering is the art of creating clear, 
 > maintainable, and professional documentation that 
@@ -169,15 +170,17 @@ print(greet_prosegrammer("Alice"))
 ```
 
 **Rendered Output:**
+
 > Document engineering is the art of creating clear, 
 > maintainable, and professional documentation that 
 > serves both human readers and automated systems.
 >
 > — A thoughtful prosegrammer
 
-## {{< iconify fa6-solid square-root-alt >}} Mathematical Expressions
+##  Mathematical Expressions
 
-**Source Code:**
+{{< iconify fa6-solid square-root-alt >}} **Source code for mathematical expressions**
+
 ```markdown
 **Inline Math:**
 The complexity is $O(n^2)$ for this algorithm.
@@ -188,15 +191,18 @@ $$
 $$
 ```
 
+::: {.fragment .fade style="margin-top: 0.2em; font-size: 0.85em;"}
+
 **Rendered Output:**
 
-**Inline Math:**
-The complexity is $O(n^2)$ for this algorithm.
+**Inline Math:** The complexity is $O(n^2)$ for this algorithm.
 
-**Display Math:**
+**Display Math with a silly equation:**
 $$
 \text{Document Quality} = \frac{\text{Clarity} \times \text{Accuracy}}{\text{Complexity}}
 $$
+
+:::
 
 # {{< iconify fa6-solid magic >}} Quarto offers ways to enhanced markdown
 
@@ -207,11 +213,14 @@ $$
 - **Multiple output formats** from single source
 :::
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-Quarto transforms Markdown into a **powerful publishing platform**
+::: {.fragment .fade  style="font-size: 1.0em;"}
+
+{{< iconify fa6-solid rocket >}} Quarto makes Markdown a **powerful
+publishing platform**!
+
 :::
 
-## {{< iconify fa6-solid play >}} Executable Python Code
+##  Executable Python Code
 
 ```{pyodide}
 #| autorun: true
@@ -230,7 +239,9 @@ stats = document_stats(sample_text)
 print(f"Document statistics: {stats}")
 ```
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-Live code execution makes documentation **interactive** and **testable**
-:::
+::: {.fragment .fade style="margin-top: 0.2em; font-size: 0.95em;"}
 
+{{< iconify fa6-solid play >}} Running live code makes documentation
+**interactive** and **testable**! Code block format details? Try out `pyodide`! 
+
+:::
