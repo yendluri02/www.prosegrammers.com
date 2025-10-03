@@ -340,7 +340,7 @@ refactoring!**
 - Test the system's **expected behavior**, not its **implementation**
 - Test the **public interface** of document processing tools
 - Transform detected **defects** into repeatable **test cases**
-- Assess adequacy of test suite with `coverage.py`
+- Later, as schedule permits, assess adequacy of tests with `coverage.py`
 
 :::
 
@@ -417,7 +417,7 @@ assert result['sentence_count'] == 2
 - {{< iconify fa6-solid lightbulb >}} **Yet, can we adopt a more automated
 approach to testing? Let's explore the basics of automated testing with
 `pytest`! Frameworks make testing easy and repeatable.**
-- {{< iconify fa6-solid robot >}} **Use `uv` to add `pytest` as a project
+- {{< iconify fa6-solid robot >}} **You can use `uv` to add `pytest` as a project
 dependency!**
 
 :::
