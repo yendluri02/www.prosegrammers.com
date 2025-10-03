@@ -151,33 +151,6 @@ Tables organize **structured data** in documentation and reports
 >
 > — A thoughtful prosegrammer
 
-## {{< iconify fa6-solid minus >}} Horizontal Rules: Visual Separation
-
-**Source Code:**
-```markdown
-First section content here.
-
----
-
-Second section content here.
-
-***
-
-Third section content here.
-```
-
-**Rendered Output:**
-
-First section content here.
-
----
-
-Second section content here.
-
-***
-
-Third section content here.
-
 ## {{< iconify fa6-solid square-root-alt >}} Mathematical Expressions
 
 **Source Code:**
@@ -201,7 +174,7 @@ $$
 \text{Document Quality} = \frac{\text{Clarity} \times \text{Accuracy}}{\text{Complexity}}
 $$
 
-## {{< iconify fa6-solid magic >}} Quarto: Enhanced Markdown
+# {{< iconify fa6-solid magic >}} Quarto offers ways to enhanced markdown
 
 ::: {.incremental}
 - **Executable code blocks** with live output
