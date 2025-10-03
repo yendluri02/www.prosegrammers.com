@@ -140,14 +140,12 @@ print(greet_prosegrammer("Alice"))
 
 ## {{< iconify fa6-solid table >}} Tables show structured data
 
-
 | Tool | Purpose | Prosegrammer Use |
 |------|---------|------------------|
 | Git | Version control | Track document changes |
 | Python | Programming | Automate documentation |
 | Quarto | Publishing | Create professional docs |
 | Markdown | Markup | Write readable content |
-
 
 ::: fragment
 
@@ -243,5 +241,18 @@ print(f"Document statistics: {stats}")
 
 {{< iconify fa6-solid play >}} Running live code makes documentation
 **interactive** and **testable**! Code block format details? Try out `pyodide`! 
+
+:::
+
+#  Quick reminders for prosegrammers!
+
+::: {.fragment .fade style="font-size: 1.0em;"}
+
+- {{< iconify fa6-solid gears >}} Document engineering means blending code and
+prose to build resources for both humans and machines
+- {{< iconify fa6-solid flag-checkered >}} Quarto and Markdown empower you to
+easily create documents that are clear, interactive, and professional
+- {{< iconify fa6-solid code >}} Prosegrammers use these tools to
+automate, analyze, and publish documentation that stands out
 
 :::
