@@ -154,41 +154,63 @@ Use `inline code` for technical terms.
 4. Review and revise
 ```
 
-## {{< iconify fa6-solid folder-tree >}} Document Engineering Workflow
+# {{< iconify fa6-solid gears >}} We will learn more about advanced Markdown features next week! Make sure to check the course slides!
+
+##  Document Engineering Workflow
 
 ::: {.incremental}
-1. **Plan** document structure with headers
-2. **Write** content using Markdown syntax
-3. **Enhance** with Quarto features as needed
-4. **Test** any embedded code examples
-5. **Render** to desired output format
-6. **Review** and iterate for clarity
+
+- {{< iconify fa6-solid folder-tree >}} Keep your documents nicely organized:
+    1. **Plan** document structure with headers
+    2. **Write** content using Markdown syntax
+    3. **Enhance** with Quarto features as needed
+    4. **Test** any embedded code examples
+    5. **Render** to desired output format
+    6. **Review** and iterate for clarity
+
 :::
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-**Prosegrammers** follow systematic approaches to documentation
+::: {.fragment .fade .boxed-content style="font-size: 0.8em;"}
+
+{{< iconify fa6-solid lightbulb >}} **Prosegrammers** always follow systematic
+approaches to documentation!
+
 :::
 
-## {{< iconify fa6-solid lightbulb >}} Best Practices for Prosegrammers
+## Best Practices for Prosegrammers
 
 ::: {.incremental}
-- **Keep source readable** - others will read your Markdown
-- **Use consistent formatting** - establish style guidelines  
-- **Write descriptive alt text** - improve accessibility
-- **Test code examples** - ensure they actually work
-- **Link strategically** - connect related concepts
-- **Version control everything** - track documentation changes
+
+- **Keep source readable** since others will read your Markdown
+- **Use consistent formatting** with established style guidelines  
+- **Write descriptive "alt text"** to improve accessibility
+- **Test code examples** to ensure that they actually work
+- **Link strategically** to connect related concepts
+- **Version control everything** to track documentation changes
+
+:::
+
+::: {.fragment .fade .boxed-content style="font-size: 0.85em;"}
+
+{{< iconify fa6-solid lightbulb >}} Reflect on what steps you are doing well
+and how you can improve. **Then, schedule office hours to discuss any of
+these best practices**!
+
 :::
 
 ## {{< iconify fa6-solid rocket >}} Ready to Practice!
 
 ::: {.incremental}
+
 - Start with **simple README files** for your projects
 - Practice **different Markdown features** daily
 - Experiment with **Quarto capabilities** for reports
 - Build your **prosegrammer toolkit** systematically
+
 :::
 
 ::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-**Master these basics** and you'll excel at document engineering!
+
+**Grasp these basics** and you'll excel at document engineering!
+
 :::
