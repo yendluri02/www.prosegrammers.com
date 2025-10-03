@@ -541,7 +541,7 @@ parameter, thereby increasing the input diversity
   - Collect and analyze data about document usage and quality
   - Visualize insights to improve documentation strategies
 - **Communicate** results and best practices for document engineering
-- **Content References**:
+- **References for this week's content**:
     - {{< iconify fa6-solid book-open >}} Online textbook called [A First
     Course on Data Structures in
     Python](https://donsheehy.github.io/datastructures/)
