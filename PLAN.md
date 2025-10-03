@@ -19,24 +19,24 @@ the `_quarto.yml` file.
 
 ### Create Slides for Week One in `slides/weekone/index.qmd`
 
-- [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
+- [X] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
 explains the theme of the course on document engineering.
-- [ ] Review the content in the `index.qmd` file in the root of the repository
+- [X] Review the content in the `index.qmd` file in the root of the repository
 that explains the idea of a "Prosegrammer" and the concept of document
 engineering.
-- [ ] Following the guidelines for creating slides, translate the content in the
+- [X] Following the guidelines for creating slides, translate the content in the
 `index.qmd` in the root of the repository to slides that introduce the course in
 the `slides/weekone/index.qmd` file.
-- [ ] Note that the existing content was from slides that Gregory M. Kapfhammer
+- [X] Note that the existing content was from slides that Gregory M. Kapfhammer
 previously created to introduce a course in the field of algorithm analysis. You
 should revise all the technical content in these slides to fit into a course
 about document engineering. However, you should also use this content in these
 slides as good examples for what your generated slides should look like. Make
 sure to use similar formatting, layout, and content as the provided slides.
-- [ ] The slides that introduce the course should contain Python source code
+- [X] The slides that introduce the course should contain Python source code
 like that which you found in the `index.qmd` file in the root of the repository.
 Make sure that students can run this source code and see the output.
-- [ ] After finishing the slides that introduce the course, create more slides
+- [X] After finishing the slides that introduce the course, create more slides
 that introduce the following technologies and explain how to install them:
     - Terminal window
     - Git, GitHub, and GitHub CLI (i.e., `gh`)
@@ -54,19 +54,108 @@ that introduce the following technologies and explain how to install them:
     - Npm and Node.js and all affiliated tools like `npx`
     - Google Gemini CLI (run through the use of `npx`)
     - OpenCode (run through the use of `npx`)
-- [ ] Ensure that the instructions in the slides from the previous step will
+- [X] Ensure that the instructions in the slides from the previous step will
 work correctly regardless of the operating system (Windows, MacOS, Linux).
-- [ ] Ensure that the instructions for installing each of the aforementioned
+- [X] Ensure that the instructions for installing each of the aforementioned
 tools clearly explain what the tool does, why it is important, and how it can
 help a prosegrammer to create, maintain, and analyze documents.
-- [ ] Ensure that the instructions for installing each of the aforementioned
+- [X] Ensure that the instructions for installing each of the aforementioned
 tools stress the importance of testing the setup to make sure that they are
 working. There should be links to online documentation that a learner can read
 if they have trouble installing or testing any of the tools.
-- [ ] Add content about the responsible use of artificial intelligence (AI)
+- [X] Add content about the responsible use of artificial intelligence (AI)
 coding and writing tools that use large language models (LLMs) like Claude
 Sonnet 4 or GPT-4. Make it clear that the prosegrammer who uses these tools is
 ultimately responsible for wielding them correctly and ethically.
+````
+
+### Create Slides for Week Four in `slides/weekfour/index.qmd`
+
+- [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
+explains the theme of the course on document engineering.
+- [ ] Review the content in the `index.qmd` file in the root of the repository
+that explains the idea of a "Prosegrammer" and the concept of document
+engineering.
+- [ ] Review the content in the `index.qmd` file in the `syllabus` directory of
+the repository that explains rules and regulations for this course on document
+engineering. Note that these are the rules that students follow and not
+specifically the rules and regulations that you follow as a coding agent.
+- [ ] The new slides that I want you to create should be in the file
+`slides/weekfour/index.qmd`. The purpose of these slides is to introduce the
+basics of Markdown and Quarto. Here are some basic features of Markdown and
+Quarto that you should include in these slides:
+  - Structure of a Markdown document
+  - Headings and subheadings
+  - Paragraphs and line breaks
+  - Bold and italic text
+  - Lists (ordered and unordered)
+  - Links and images
+  - Code blocks and inline code
+  - Tables
+  - Blockquotes
+  - Horizontal rules
+  - Mathematical expressions
+- You can look at the other slide decks that I have already prepared:
+  - `slides/weekone/index.qmd`
+  - `slides/weektwo/index.qmd`
+  - `slides/weekthree/index.qmd` and see how I am currently using Markdown and
+  Quarto in my slides! I want students to be able to understand all of these
+  examples and know how to write them on their own for their own documentation.
+- [ ] When you create all of these examples, make sure that they connect to the
+concepts of document engineering and prosegramming, as I have already defined in
+the contents of this GitHub repository. For instance, you can connect the need
+to write Markdown to the Markdown files that they write to document their own
+document engineering projects, where they are building tools that input
+and process and analyze text documents in JSON, YAML, Markdown, and plaintext.
+You can add slides that make suggestions on how they could use the features of
+Markdown inside of the `README.md` file for the tool. You can also add slides
+that explain how they could create a website for their tool using Quarto.
+- [ ] You must show the actual source code of the basic feature (e.g., bold and
+italic text) and then show how that actually renders. This means that the
+student should be able to look at the slide and see both the source code and the
+rendered output.
+- [ ] Make sure that all the content is accessible to beginners who do not have
+extensive experience with programming or the documentation of a software tool.
+- [ ] Make sure that all the content has concrete examples that make points
+clear to beginners.
+
+### Create Slides for Week Six in `slides/weeksix/index.qmd`
+
+- [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
+explains the theme of the course on document engineering.
+- [ ] Review the content in the `index.qmd` file in the root of the repository
+that explains the idea of a "Prosegrammer" and the concept of document
+engineering.
+- [ ] Review the content in the `index.qmd` file in the `syllabus` directory of
+the repository that explains rules and regulations for this course on document
+engineering. Note that these are the rules that students follow and not
+specifically the rules and regulations that you follow as a coding agent.
+- [ ] The new slides that I want you to create should be in the file
+`slides/weeksix/index.qmd`. The purpose of these slides is to introduce the
+basics of software testing. I previously created these slides for a course
+on Algorithm Analysis. However, I would like you to customize all of this
+content for document engineering.
+- You can look at the other slide decks that I have already prepared:
+  - `slides/weekone/index.qmd`
+  - `slides/weektwo/index.qmd`
+  - `slides/weekthree/index.qmd`
+  and see how I am currently using Markdown and Quarto in my slides!
+- Please note that I am currently working on the slides in
+`slides/weekfour/index.qmd` that introduce Markdown and Quarto. So, please
+don't use those as an example because they are not yet complete.
+- I want students to understand the basics of software testing so that when
+they are building their document engineering tools they can also test them.
+- Please customize all the examples in the slides so that they connect to
+document engineering and are accessible to beginners. However, you should
+keep the simple `DaysOfTheWeek` source code because that one is easy to
+understand and accessible to beginners.
+- If you check the `index.qmd` file in this GitHub repository, you can see a
+simple example of word frequency analysis. You should illustrate how to write
+test cases for a function like this one.
+- [ ] Make sure that all the content is accessible to beginners who do not have
+extensive experience with programming or the documentation of a software tool.
+- [ ] Make sure that all the content has concrete examples that make points
+clear to beginners.
 
 ## Support for Content
 
@@ -323,3 +412,119 @@ text formatting capabilities for document standardization
   technologies in educational settings
 - Individual assessment format ensures authentic demonstration of student
   learning and skill development
+
+### Support for Week Four Slides Content
+
+#### Markdown as Lightweight Markup Language
+
+- Markdown was created by John Gruber in 2004 as a lightweight markup language
+  designed to be easy to read and write in plain text form
+- The CommonMark specification (2019) standardizes Markdown syntax to ensure
+  consistency across different implementations and platforms
+- GitHub Flavored Markdown (GFM) extends standard Markdown with features like
+  tables, task lists, and syntax highlighting, making it the de facto standard
+  for technical documentation
+
+#### Markdown for Technical Documentation
+
+- Stack Overflow Developer Survey consistently shows Markdown as one of the most
+  loved markup languages among developers for its simplicity and readability
+- Major platforms like GitHub, GitLab, Reddit, and Discord use Markdown for
+  content creation, demonstrating its widespread adoption in technical communities
+- README files in Markdown format are industry standard for project documentation,
+  with GitHub automatically rendering README.md files as project homepages
+
+#### Quarto as Publishing Platform
+
+- Quarto is developed by Posit (formerly RStudio) and represents the evolution
+  of scientific publishing tools, combining the best features of R Markdown,
+  Jupyter notebooks, and modern web technologies
+- The ability to execute code blocks in multiple languages (Python, R, Julia)
+  makes Quarto suitable for reproducible research and technical documentation
+- Quarto's support for multiple output formats (HTML, PDF, Word, presentations)
+  follows the principle of single-source publishing used in professional
+  technical writing
+
+#### Document Engineering Workflow Applications
+
+- Version control of documentation with Git follows software engineering best
+  practices, enabling collaborative editing and change tracking for technical
+  documents
+- Automated documentation generation from code comments and Markdown source
+  files is standard practice in software development, using tools like Sphinx,
+  mkdocs, and Quarto
+- The concept of "docs-as-code" treats documentation with the same rigor as
+  source code, applying version control, review processes, and automated testing
+
+#### Accessibility and SEO Benefits
+
+- Alt text for images is required by Web Content Accessibility Guidelines (WCAG)
+  2.1 Level AA, making content accessible to users with visual impairments
+- Semantic HTML structure generated from Markdown headings improves search
+  engine optimization (SEO) and document navigation
+- Proper heading hierarchy (H1, H2, H3, H4) creates logical document structure
+  essential for screen readers and automated content analysis
+
+#### Mathematical Expression Support
+
+- MathJax and KaTeX provide browser-based rendering of LaTeX mathematical
+  notation, enabling complex mathematical expressions in web documents
+- Mathematical markup in documentation is essential for technical fields like
+  data science, engineering, and computer science algorithm documentation
+- The example document quality formula demonstrates how mathematical concepts
+  can be applied to evaluate documentation effectiveness
+
+#### Interactive Code Execution
+
+- Pyodide enables client-side Python execution in web browsers, providing
+  immediate feedback for educational content without requiring server resources
+- Interactive code examples improve learning outcomes by allowing students to
+  experiment with code modifications and see immediate results
+- Live code execution in documentation serves as both tutorial and testing
+  mechanism, ensuring code examples remain functional and up-to-date
+
+### Support for Week Six Slides Content
+
+#### Quarto and Markdown for Document Engineering and Prosegramming
+- Quarto is developed by Posit and is widely used for technical publishing, supporting reproducible research and professional documentation (see Quarto documentation).
+- Markdown is the de facto standard for readable, plain-text documentation in software projects, with widespread adoption on platforms like GitHub, Stack Overflow, and Discord.
+- Combining Quarto and Markdown enables prosegrammers to automate, analyze, and publish documentation that is clear, interactive, and professional (see Quarto and Markdown official docs).
+- The "docs-as-code" approach treats documentation with the same rigor as source code, applying version control, review, and automated testing (see Sphinx, mkdocs, Quarto docs-as-code philosophy).
+- Document engineering blends code and prose to create resources for both humans and machines, as supported by academic research in technical communication and computational linguistics.
+- Mastery of Quarto and Markdown transforms coders into document engineers—prosegrammers who craft content that informs, inspires, and endures (see ACM/IEEE guidelines on technical documentation).
+
+#### Software Testing for Document Engineering Tools
+
+- Software testing principles apply directly to document processing systems,
+  ensuring reliability and correctness in text analysis, parsing, and generation
+- The IEEE Standard for Software Unit Testing (IEEE 829) provides established
+  methodologies that adapt well to document processing validation
+- Test-driven development practices help create robust document analysis
+  functions by defining expected behavior before implementation
+
+#### Document Analysis Testing Best Practices
+
+- Testing document processing functions requires validation of text parsing,
+  content extraction, and format conversion accuracy
+- Edge cases in document processing include empty documents, malformed markup,
+  encoding issues, and extremely large text files
+- Automated testing frameworks like pytest enable systematic validation of
+  document engineering tools across diverse input scenarios
+
+#### Python Testing Ecosystem for Document Tools
+
+- `pytest` provides parameterized testing capabilities ideal for testing
+  document processing functions with varied input formats and content types
+- `coverage.py` helps ensure comprehensive testing of document analysis code
+  paths, critical for tools that process diverse document structures
+- Property-based testing with `hypothesis` generates diverse text inputs to
+  discover edge cases in document processing algorithms
+
+#### Testing Integration with Document Workflows
+
+- Continuous integration testing ensures document processing tools remain
+  reliable as codebases evolve and new document formats are supported
+- Mutation testing with tools like `mutmut` validates test suite quality by
+  introducing controlled defects to verify test detection capabilities
+- Performance testing of document processing tools helps identify bottlenecks
+  in text analysis and generation pipelines
