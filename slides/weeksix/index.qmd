@@ -78,23 +78,16 @@ Visit [GitHub](https://github.com) for version control.
 **Internal Link:**  
 See the [syllabus](../../syllabus/index.qmd) for details.
 
-## {{< iconify fa6-solid image >}} Images: Visual Enhancement
+## Images offer visual enhancement
 
-**Source Code:**
+{{< iconify fa6-solid image >}} **Source Code example for images**
+
 ```markdown
 **Basic Image:**
 ![Prosegrammers Logo](../../images/Prosegrammers-Logo.svg)
-
-**Image with Alt Text:**
-![Document engineering workflow diagram](workflow.png)
-
-**Image with Link:**
-[![GitHub](github-logo.png)](https://github.com)
 ```
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-Alt text makes images **accessible** and improves **SEO** for documentation
-:::
+![Prosegrammers Logo](../../images/Prosegrammers-Logo.svg)
 
 ## {{< iconify fa6-solid code >}} Code Blocks: Show Technical Content
 
