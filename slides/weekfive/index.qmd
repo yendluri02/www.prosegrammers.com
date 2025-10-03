@@ -92,7 +92,7 @@ and Quarto!**
 
 :::
 
-##  Headers: Structure Your Content
+##  Headers structure your content
 
 {{< iconify fa6-solid heading >}} **Source code examples for headers**
 
@@ -198,19 +198,22 @@ these best practices**!
 
 :::
 
-## {{< iconify fa6-solid rocket >}} Ready to Practice!
+## Are You Ready to Practice?
 
 ::: {.incremental}
 
-- Start with **simple README files** for your projects
-- Practice **different Markdown features** daily
-- Experiment with **Quarto capabilities** for reports
-- Build your **prosegrammer toolkit** systematically
+- {{< iconify fa6-solid rocket >}} **Getting good at document engineering requires practice** 
+    - Make sure that your **development environment** is set up
+    - Start with **simple README files** for your projects
+    - Practice **different Markdown features** daily
+    - Experiment with **Quarto capabilities** for reports
+    - Build your **prosegrammer toolkit** systematically
 
 :::
 
 ::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
 
-**Grasp these basics** and you'll excel at document engineering!
+{{< iconify fa6-solid lightbulb >}} **Grasp these basics** and you'll excel at
+document engineering!
 
 :::
