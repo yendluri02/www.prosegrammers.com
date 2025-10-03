@@ -134,10 +134,10 @@ What situations warrant a `print` statement and which ones require an `assert`?
 
 ::: {.fragment .fade-right}
 
-- **Answer key questions when testing document tools**:
+- {{< iconify fa6-solid lightbulb >}} **Answer key questions when testing document tools**:
     - Does the tool correctly parse document formats?
     - After changing code, does processing still work?
-- **Using assertion statements during testing**:
+- {{< iconify fa6-solid robot >}} **Using assertion statements during testing**:
     - `print` statements require manual checking of output
     - `assert` statements automatically verify correctness
 - Use a testing framework like `pytest` or `unittest`
@@ -331,7 +331,7 @@ refactoring!**
 
 ::: {.incremental style="margin-top: -0.25em; font-size: 0.85em;"}
 
-- For each document processing function, ask these questions:
+- {{< iconify fa6-solid lightbulb >}} **For each document processing function, ask these questions**:
     - What should **happen** when processing different document types?
     - How do I want to **use** this document analysis function?
     - What **are** the inputs and outputs of text processing?
@@ -407,7 +407,7 @@ assert result['sentence_count'] == 2
 
 ## Test the `document_summary` function
 
-::: incremental
+::: {.incremental .fade-right style="margin-top: -0.1em; font-size: 0.95em;"}
 
 - Implement a Python function like `document_summary`
 - Create an input document as a string like `sample_text`
@@ -417,10 +417,12 @@ assert result['sentence_count'] == 2
 - {{< iconify fa6-solid lightbulb >}} **Yet, can we adopt a more automated
 approach to testing? Let's explore the basics of automated testing with
 `pytest`! Frameworks make testing easy and repeatable.**
+- {{< iconify fa6-solid robot >}} **Use `uv` to add `pytest` as a project
+dependency!**
 
 :::
 
-# Advanced testing for document tools
+# Advanced testing for document analysis tools
 
 ::: incremental
 
@@ -517,13 +519,13 @@ parameter, thereby increasing the input diversity
 
 ## *Oh, one more thing*! You could use a large language model to write tests in `test_dayoftheweek.py`! Wow!
 
-::: {.fragment .boxed-content .fade-up style="margin-top: 0.25em; font-size: 1.25em;"}
+::: {.fragment .boxed-content .fade-up style="margin-top: 0.25em; font-size: 1.15em;"}
 
 - What are the **benefits** and **downsides** of using artificial intelligence (AI) to generate tests?
 
 - What are situations in which you **should** and **should not** use AI to generate tests?
 
-- Tests establish a confidence in correctness!
+- Tests **establish a confidence in correctness**!
 
 :::
 
