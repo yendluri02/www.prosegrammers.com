@@ -18,6 +18,8 @@ format:
     footer: "Prosegrammers"
 ---
 
+# How do you know if your document engineering tool is correct? You test it!
+
 # Software testing for document engineering
 
 ::: fragment
