@@ -44,7 +44,7 @@ Markdown and Quarto!**
 
 ## Understanding static site generators
 
-::: {.fragment .fade style="font-size: 1.0em;"}
+::: {.fragment .fade style="margin-top: -0.5em; font-size: 0.9em;"}
 
 - Static site generators convert input files into static websites:
     - **Examples**: Jekyll, Hugo, Quarto, and many more!
@@ -53,6 +53,9 @@ Markdown and Quarto!**
     - **Deployment**: Hosted on GitHub Pages or Netlify
     - Use templates and themes for consistent styling
     - Ideal for blogs, documentation, and portfolios
+- {{< iconify fa6-solid lightbulb >}} **Prosegrammers** leverage static site
+generators for efficient documentation workflows! You could use Quarto to
+publish a website for your own document engineering tool! Impressive!
 
 :::
 
