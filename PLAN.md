@@ -485,6 +485,14 @@ text formatting capabilities for document standardization
 
 ### Support for Week Six Slides Content
 
+#### Quarto and Markdown for Document Engineering and Prosegramming
+- Quarto is developed by Posit and is widely used for technical publishing, supporting reproducible research and professional documentation (see Quarto documentation).
+- Markdown is the de facto standard for readable, plain-text documentation in software projects, with widespread adoption on platforms like GitHub, Stack Overflow, and Discord.
+- Combining Quarto and Markdown enables prosegrammers to automate, analyze, and publish documentation that is clear, interactive, and professional (see Quarto and Markdown official docs).
+- The "docs-as-code" approach treats documentation with the same rigor as source code, applying version control, review, and automated testing (see Sphinx, mkdocs, Quarto docs-as-code philosophy).
+- Document engineering blends code and prose to create resources for both humans and machines, as supported by academic research in technical communication and computational linguistics.
+- Mastery of Quarto and Markdown transforms coders into document engineers—prosegrammers who craft content that informs, inspires, and endures (see ACM/IEEE guidelines on technical documentation).
+
 #### Software Testing for Document Engineering Tools
 
 - Software testing principles apply directly to document processing systems,
