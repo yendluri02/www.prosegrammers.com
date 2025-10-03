@@ -220,7 +220,7 @@ publishing platform**!
 
 :::
 
-##  Executable Python Code
+## Executable Python Code
 
 ```{pyodide}
 #| autorun: true
