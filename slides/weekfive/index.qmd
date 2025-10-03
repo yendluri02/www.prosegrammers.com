@@ -42,6 +42,20 @@ Markdown and Quarto!**
 
 :::
 
+## Understanding static site generators
+
+::: {.fragment .fade style="font-size: 1.0em;"}
+
+- Static site generators convert input files into static websites:
+    - **Examples**: Jekyll, Hugo, Quarto, and many more!
+    - **Input**: Markdown, HTML, CSS, and other files
+    - **Output**: Static HTML files for deployment
+    - **Deployment**: Hosted on GitHub Pages or Netlify
+    - Use templates and themes for consistent styling
+    - Ideal for blogs, documentation, and portfolios
+
+:::
+
 ## What is Markdown?
 
 ::: {.incremental style="margin-top: -0.1em; font-size: 0.8em;"}
