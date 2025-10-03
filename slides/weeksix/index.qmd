@@ -40,7 +40,7 @@ format:
 
 :::
 
-# Extended Features
+# Extended features of Markdown and Quarto
 
 ::: fragment
 
@@ -53,9 +53,10 @@ format:
 
 :::
 
-## {{< iconify fa6-solid link >}} Links: Connect Your Content
+## Links can connect your content
 
-**Source Code:**
+{{< iconify fa6-solid link >}} **Source Code for creating links**
+
 ```markdown
 **External Link:**
 Visit [GitHub](https://github.com) for version control.
