@@ -89,7 +89,7 @@ See the [syllabus](../../syllabus/index.qmd) for details.
 
 ![Prosegrammers Logo](../../images/Prosegrammers-Logo.svg)
 
-## Code Blocks show technical content
+## Code blocks show technical content
 
 {{< iconify fa6-solid code >}} **Source Code for a fenced code block**
 
@@ -107,6 +107,13 @@ print(greet_prosegrammer("Alice"))
 ```
 ````
 
+::: incremental
+
+- Inline code blocks highlight technical terms
+- Fenced code blocks preserve formatting
+- Supported languages include Python, R, Julia, and more
+
+:::
 
 ## {{< iconify fa6-solid table >}} Tables: Structure Data
 
