@@ -148,8 +148,13 @@ print(greet_prosegrammer("Alice"))
 | Quarto | Publishing | Create professional docs |
 | Markdown | Markup | Write readable content |
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
-Tables organize **structured data** in documentation and reports
+
+::: fragment
+
+- Tables organize **structured data** in our documentation
+- This table summarizes key tools for **prosegrammers**
+- Can you inspect the source code to see how it was styled?
+
 :::
 
 ## {{< iconify fa6-solid quote-left >}} Blockquotes: Emphasize Key Ideas
