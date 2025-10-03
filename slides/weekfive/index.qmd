@@ -61,7 +61,7 @@ publish a website for your own document engineering tool! Impressive!
 
 ## What is Markdown?
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.8em;"}
+::: {.incremental style="margin-top: -0.1em; font-size: 0.775em;"}
 
 - **Lightweight markup language** for formatting plain text
 - Converts to HTML, PDF, and other formats seamlessly
@@ -69,10 +69,12 @@ publish a website for your own document engineering tool! Impressive!
 - Challenges associated with using Markdown:
     - Requires use of document engineering tools
     - Limited styling options compared to full HTML/CSS
-    - Variations in Markdown flavors (e.g., GitHub, CommonMark)
+    - Variations in Markdown flavors (e.g., GitHub or CommonMark)
     - Requires learning syntax for different elements
     - Managing large documents can be challenging
-- Using Markdown is essential for **prosegrammers** in modern workflows
+- {{< iconify fa6-solid gears >}} **Using Markdown is essential for modern
+document engineering workflows!** Prosegrammers build tools to analyze it and
+for documentation.
 
 :::
 
@@ -84,6 +86,9 @@ publish a website for your own document engineering tool! Impressive!
 - Paragraphs and line breaks
 - Bold and italic text
 - Ordered and unordered lists
+
+{{< iconify fa6-solid gears >}} **Let's explore the essentials of Markdown
+and Quarto!**
 
 :::
 
@@ -109,9 +114,10 @@ publish a website for your own document engineering tool! Impressive!
 
 :::
 
-## {{< iconify fa6-solid paragraph >}} Paragraphs and Text Formatting
+##  Paragraphs and Text Formatting
 
-**Source Code:**
+{{< iconify fa6-solid paragraph >}} **Source code for text formatting**
+
 ```markdown
 This is a regular paragraph with normal text.
 
