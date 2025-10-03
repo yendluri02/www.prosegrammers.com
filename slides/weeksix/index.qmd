@@ -91,7 +91,7 @@ See the [syllabus](../../syllabus/index.qmd) for details.
 
 ## Code blocks show technical content
 
-{{< iconify fa6-solid code >}} **Source Code for a fenced code block**
+{{< iconify fa6-solid code >}} **Source Code for inline and fenced code block**
 
 ````markdown
 **Inline Code:**
@@ -111,13 +111,14 @@ print(greet_prosegrammer("Alice"))
 
 - Inline code blocks highlight technical terms
 - Fenced code blocks preserve formatting
-- Supported languages include Python, R, Julia, and more
+- Supported languages include Python, R, Julia, ... and more!
 
 :::
 
-## {{< iconify fa6-solid table >}} Tables: Structure Data
+## Tables help to present structured data
 
-**Source Code:**
+{{< iconify fa6-solid table >}} **Source Code for table in Markdown**
+
 ```markdown
 | Tool | Purpose | Prosegrammer Use |
 |------|---------|------------------|
@@ -127,7 +128,18 @@ print(greet_prosegrammer("Alice"))
 | Markdown | Markup | Write readable content |
 ```
 
+::: incremental
+
+- Tables are useful for structured data
+- Use pipes `|` and dashes `-` to create tables
+- Organize the data in rows and columns
+- Define a header row to label the columns
+- Table rendering is customizable with CSS
+
+:::
+
 ## {{< iconify fa6-solid table >}} Tables: Rendered Output
+
 
 | Tool | Purpose | Prosegrammer Use |
 |------|---------|------------------|
