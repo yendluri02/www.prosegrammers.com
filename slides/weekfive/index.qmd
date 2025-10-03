@@ -78,7 +78,7 @@ for documentation.
 
 :::
 
-# Basic Markdown Syntax
+# Basic Markdown syntax
 
 ::: fragment
 
@@ -92,7 +92,7 @@ and Quarto!**
 
 :::
 
-##  Headers structure your content
+## Headers structure your content
 
 {{< iconify fa6-solid heading >}} **Source code examples for headers**
 
@@ -114,7 +114,7 @@ and Quarto!**
 
 :::
 
-##  Paragraphs and Text Formatting
+## Paragraphs and text formatting
 
 {{< iconify fa6-solid paragraph >}} **Source code for text formatting**
 
@@ -136,7 +136,7 @@ You can combine them: ***bold and italic***.
 
 Use `inline code` for technical terms.
 
-##  Lists: Organize Information
+## Lists help to organize information
 
 {{< iconify fa6-solid list >}} **Source Code for using lists**
 
@@ -156,7 +156,7 @@ Use `inline code` for technical terms.
 
 # {{< iconify fa6-solid gears >}} We will learn more about advanced Markdown features next week! Make sure to check the course slides!
 
-##  Document Engineering Workflow
+## Document engineering workflow
 
 ::: {.incremental}
 
@@ -177,7 +177,7 @@ approaches to documentation!
 
 :::
 
-## Best Practices for Prosegrammers
+## Best practices for prosegrammers
 
 ::: {.incremental}
 
@@ -198,7 +198,7 @@ these best practices**!
 
 :::
 
-## Are You Ready to Practice?
+## Are you ready to practice?
 
 ::: {.incremental}
 
@@ -211,9 +211,9 @@ these best practices**!
 
 :::
 
-::: {.fragment .fade .boxed-content style="font-size: 1.0em;"}
+::: {.fragment .fade style="font-size: 1.0em;"}
 
-{{< iconify fa6-solid lightbulb >}} **Grasp these basics** and you'll excel at
-document engineering!
+- {{< iconify fa6-solid lightbulb >}} **Grasp these basics** and you'll excel at
+both **writing documentation** and **building tools to analyze documents**!
 
 :::
