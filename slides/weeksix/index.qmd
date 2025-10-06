@@ -255,6 +255,6 @@ prose to build resources for both humans and machines
 - {{< iconify fa6-solid flag-checkered >}} Quarto and Markdown empower you to
 easily create documents that are clear, interactive, and professional
 - {{< iconify fa6-solid code >}} Prosegrammers use these tools to
-automate, analyze, and publish documentation that stands out
+automate, analyze, and publish documentation that is useful and clear
 
 :::
