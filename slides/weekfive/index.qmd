@@ -154,6 +154,14 @@ Use `inline code` for technical terms.
 4. Review and revise
 ```
 
+::: {.fragment .fade style="margin-top: -0.1em; font-size: 0.9em;"}
+
+- Lists help to add structure and clarity to technical content
+- Unordered lists use `-`, `*`, or `+` for bullet points
+- Ordered lists use numbers followed by a period (e.g., `1.`, `2.`)
+
+:::
+
 # {{< iconify fa6-solid gears >}} We will learn more about advanced Markdown features next week! Make sure to check the course slides!
 
 ## Document engineering workflow
