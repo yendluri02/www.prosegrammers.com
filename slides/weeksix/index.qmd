@@ -179,13 +179,13 @@ print(greet_prosegrammer("Alice"))
 
 ##  Mathematical Expressions
 
-{{< iconify fa6-solid square-root-alt >}} **Source code for mathematical expressions**
+{{< iconify fa6-solid calculator >}} **Source code for mathematical expressions**
 
 ```markdown
-**Inline Math:**
+**Inline math:**
 The complexity is $O(n^2)$ for this algorithm.
 
-**Display Math:**
+**Display math:**
 $$
 \text{Document Quality} = \frac{\text{Clarity} \times \text{Accuracy}}{\text{Complexity}}
 $$
@@ -195,9 +195,9 @@ $$
 
 **Rendered Output:**
 
-**Inline Math:** The complexity is $O(n^2)$ for this algorithm.
+**Inline math:** The complexity is $O(n^2)$ for this algorithm.
 
-**Display Math with a silly equation:**
+**Display math with a silly equation:**
 $$
 \text{Document Quality} = \frac{\text{Clarity} \times \text{Accuracy}}{\text{Complexity}}
 $$
