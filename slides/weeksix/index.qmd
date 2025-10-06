@@ -140,12 +140,14 @@ print(greet_prosegrammer("Alice"))
 
 ## {{< iconify fa6-solid table >}} Tables show structured data
 
+
 | Tool | Purpose | Prosegrammer Use |
 |------|---------|------------------|
 | Git | Version control | Track document changes |
 | Python | Programming | Automate documentation |
 | Quarto | Publishing | Create professional docs |
 | Markdown | Markup | Write readable content |
+
 
 ::: fragment
 
