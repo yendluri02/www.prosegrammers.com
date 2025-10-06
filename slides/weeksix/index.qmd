@@ -32,11 +32,11 @@ format:
 
 ::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
 
-- {{< iconify fa6-solid lightbulb >}} **Why is it important?**
-    - Documentation quality affects software success
-        - Poor docs cause user confusion
-        - Clear docs increase adoption
-        - Automated docs reduce maintenance cost
+- {{< iconify fa6-solid book-open >}} **What are this week's highlights?**
+    - Explore advanced Markdown and Quarto features
+        - Links, images, tables, and blockquotes for rich documents
+        - Code blocks and live code for interactive learning
+        - Mathematical expressions for technical clarity
 
 :::
 
