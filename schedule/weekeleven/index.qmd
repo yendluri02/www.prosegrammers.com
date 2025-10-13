@@ -29,6 +29,10 @@ toc-expand: 3
   for their team's slides
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Team-based delivery of DEPC3 and DEPC4 presentations
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Continue working on second document engineering tool-building project
+  - Students meet with the student technical leaders
+  - Students give in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Randomly selected ordering of class completes document engineering
   knowledge-check two as an in-person assessment

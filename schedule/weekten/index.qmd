@@ -30,6 +30,10 @@ toc-expand: 3
   for their team's slides
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Team-based delivery of DECO3 and DECO4 presentations
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Continue working on second document engineering tool-building project
+  - Students meet with the student technical leaders
+  - Students give final in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check four
   - Complete skill-check four during the in-person classroom session

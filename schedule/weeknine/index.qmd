@@ -20,9 +20,9 @@ toc-expand: 3
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Instructor-led deep-dive on dictionaries
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
-  - Release second first document engineering tool-building project
-  - Students complete setup tasks for the second phase of the project
-  - Students meet with the student technical leaders to receive assistance
+  - Continue working on second document engineering tool-building project
+  - Students meet with the student technical leaders
+  - Students give in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check three
   - Complete skill-check three during the in-person classroom session
