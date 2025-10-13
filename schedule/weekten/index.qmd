@@ -1,6 +1,6 @@
 ---
 title: "Document Processing"
-description: "Grasp document processing and analysis"
+description: "Explore more document processing and analysis"
 date: 2025-10-27
 layout: full
 toc: true
