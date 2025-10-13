@@ -15,7 +15,7 @@ toc-expand: 3
     - Tables
     - Sets
     - Tuples
-  - Focus on the use of different contains in the Python language
+  - Focus on the use of different containers in the Python language
   - Brief introduction to the implementation of containers in Python
   - As needed, instructor review of previous technical topics
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
