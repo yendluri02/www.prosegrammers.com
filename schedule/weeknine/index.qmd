@@ -1,0 +1,30 @@
+---
+title: "Dictionaries for Documents"
+description: "Understand details about dictionaries"
+date: 2025-10-20
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Activities
+
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Instructor-led deep-dive on dictionaries, including these topics:
+    - Storage of key-value pairs
+    - Benefits of using dictionaries
+    - Adding and removing pairs
+    - Accessing values with keys
+    - Iterating over dictionaries
+  - As needed, instructor review of previous technical topics
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Instructor-led deep-dive on dictionaries
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Release second first document engineering tool-building project
+  - Students complete setup tasks for the second phase of the project
+  - Students meet with the student technical leaders to receive assistance
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Use installed software tools for document engineering skill-check three
+  - Complete skill-check three during the in-person classroom session
+  - Please review [Week One: Introduction to Document
+  Engineering](../../slides/weekone/) for a list of necessary software tools
