@@ -16,6 +16,7 @@ toc-expand: 3
   - Instructor review of previous technical topics
   - Question and answer session about prior technical topics
   - Submit completed version of first document engineering tool-building project
+  - Review completed first project in preparation for second project phrase
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - No laboratory session due to Fall Break
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
