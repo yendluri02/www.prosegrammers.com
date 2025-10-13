@@ -314,14 +314,14 @@ project assessments.
   - **Topic**: Document Engineering Building Blocks
   - **Weeks**: Seven through eleven
   - **Subjects for Critique**: [ruff](https://astral.sh/ruff) and
-  [Quarto](https://quarto.org/)
+  [Django](https://www.djangoproject.com/)
   - **Technical Topics**: 
     - **Documentation**: [Literate programming](https://guides.nyu.edu/datascience/literate-prog), [Localization](https://developer.mozilla.org/en-US/docs/Glossary/Localization)
     - **Engineering**: Intermediate Python programming, AI coding agents, Quarto
 - **Module Three**:
   - **Topic**: Advanced Document Engineering
   - **Subjects for Critique**: [ty](https://astral.sh/ruff) or
-  [Pyrefly](https://pyrefly.org/) and [Quarto](https://quarto.org/)
+  [Pyrefly](https://pyrefly.org/) and [FastAPI](https://fastapi.tiangolo.com/)
   - **Weeks**: Twelve through sixteen
   - **Topics**: 
     - **Documentation**: [Zettelkasten](https://zettelkasten.de/), [Digital gardens](https://github.com/MaggieAppleton/digital-gardeners)
