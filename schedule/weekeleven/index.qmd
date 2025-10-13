@@ -32,4 +32,4 @@ toc-expand: 3
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Randomly selected ordering of class completes document engineering
   knowledge-check two as an in-person assessment
-  - Continue working on first document engineering tool-building project
+  - Continue working on second document engineering tool-building project
