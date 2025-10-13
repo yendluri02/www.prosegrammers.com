@@ -1,0 +1,37 @@
+---
+title: "Document Processing"
+description: "Grasp document processing and analysis"
+date: 2025-10-27
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Activities
+
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Instructor-led deep-dive on containers
+  - As needed, instructor review of previous technical topics
+
+- {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
+  - [DECO3 presentation](/slides/deco/weeknine/index.qmd) and [DECO4
+  presentation](/slides/deco/weekten/index.qmd) completed through the use of
+  [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),
+  [Markdown](https://www.markdownguide.org/), [Git](https://git-scm.com/),
+  [GitHub](https://github.com/), and the [GitHub Flow
+  model](https://docs.github.com/en/get-started/quickstart/github-flow)
+  - Presentation available, in final form, as a pull request in the [GitHub
+  repository for the course web
+  site](https://github.com/prosegrammers/www.prosegrammers.com), no later than
+  11:59 PM
+  - Each DECO3 and DECO4 team member must use Git and their own GitHub account to commit
+  their work to the [pull
+  request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+  for their team's slides
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Team-based delivery of DECO3 and DECO4 presentations
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Use installed software tools for document engineering skill-check four
+  - Complete skill-check four during the in-person classroom session
+  - Please review [Week One: Introduction to Document
+  Engineering](../../slides/weekone/) for a list of necessary software tools
