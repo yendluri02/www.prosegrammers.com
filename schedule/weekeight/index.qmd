@@ -1,0 +1,31 @@
+---
+title: "Explore Linear Containers"
+description: "Understand details about lists and tables"
+date: 2025-10-13
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Activities
+
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Instructor-led deep-dive on containers that include:
+    - Lists
+    - Tables
+    - Sets
+    - Tuples
+  - Focus on the use of different contains in the Python language
+  - Brief introduction to the implementation of containers in Python
+  - As needed, instructor review of previous technical topics
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Instructor-led deep-dive on containers
+  - See the list of technical topics in the entry for Monday
+  - As needed, instructor review of previous technical topics
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Release second document engineering tool-building project
+  - Students complete setup tasks for the second phase of the project
+  - Students meet with the student technical leaders to receive assistance
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Instructor-led deep-dive on containers
+  - See the list of technical topics in the entry for Monday
