@@ -1,0 +1,21 @@
+---
+title: "Document Engineering Review"
+description: "Review key topics about document engineering"
+date: 2025-10-06
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Activities
+
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - Instructor review of previous technical topics
+  - Question and answer session about prior technical topics
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Instructor review of previous technical topics
+  - Question and answer session about prior technical topics
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - No laboratory session due to Fall Break
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - No class session due to Fall Break
