@@ -1,0 +1,21 @@
+---
+title: "Understanding Literate Programming"
+description: "Use literate programming for technical documentation"
+date: "2025-10-27"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  revealjs:
+    completion: true
+    theme: default
+    css: ../../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# What is Literate Programming?
