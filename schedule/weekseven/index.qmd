@@ -15,6 +15,7 @@ toc-expand: 3
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Instructor review of previous technical topics
   - Question and answer session about prior technical topics
+  - Submit completed version of first document engineering tool-building project
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - No laboratory session due to Fall Break
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
