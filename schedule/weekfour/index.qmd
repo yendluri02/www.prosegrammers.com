@@ -33,11 +33,11 @@ toc-expand: 3
      - Document Engineering Concept Overviews (DECO)
      - Document Engineering Project Critiques (DEPC)
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
-  - Finish working on first document engineering tool-building project
+  - Continue working on first document engineering tool-building project
   - Students meet with the student technical leaders
   - Students give final in-person demonstration to course instructor
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
-  - Submit completed first document engineering tool-building project 
+  - Continue working on first document engineering tool-building project 
 
 ## Slides
 
