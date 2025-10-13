@@ -37,6 +37,7 @@ toc-expand: 3
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Randomly selected first-half of class completes document engineering
   knowledge-check one as an in-person assessment
+  - Continue working on first document engineering tool-building project
 
 ## Slides
 
