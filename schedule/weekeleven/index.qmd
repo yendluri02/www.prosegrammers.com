@@ -13,8 +13,8 @@ toc-expand: 3
   - Instructor-led deep-dive on searching and sorting
   - As needed, instructor review of previous technical topics
 - {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
-  - [DEPC3 presentation](/slides/deco/weeknine/index.qmd) and [DECO4
-  presentation](/slides/deco/weekeleven/index.qmd) completed through the use of
+  - [DEPC3 presentation](/slides/deco/weekten/index.qmd) and [DEPC4
+  presentation](/slides/dePC/weekeleven/index.qmd) completed through the use of
   [Quarto](https://quarto.org/), [RevealJS](https://revealjs.com/),
   [Markdown](https://www.markdownguide.org/), [Git](https://git-scm.com/),
   [GitHub](https://github.com/), and the [GitHub Flow
