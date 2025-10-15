@@ -40,16 +40,16 @@ format:
 
 :::
 
-# Quick reminders for prosegrammers!
+# Key insights for prosegrammers!
 
-::: {.fragment .fade style="font-size: 1.0em;"}
+::: {.fragment .boxed-content .fade style="font-size: 1.0em;"}
 
 - {{< iconify fa6-solid gears >}} Document engineering means blending code and
 prose to build resources for both humans and machines
 - {{< iconify fa6-solid database >}} Python containers organize document data
 efficiently: lists for sequences, tuples for records, sets for uniqueness
-- {{< iconify fa6-solid code >}} Prosegrammers use these tools to structure,
-analyze, and manipulate document information effectively
+- {{< iconify fa6-solid code >}} Data containers can store multiple documents,
+in different formats, with different data and metadata
 
 :::
 
