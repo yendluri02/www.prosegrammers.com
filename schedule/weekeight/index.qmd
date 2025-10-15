@@ -29,3 +29,12 @@ toc-expand: 3
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Instructor-led deep-dive on containers
   - See the list of technical topics in the entry for Monday
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekeight/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Eight: Using Data Containers for Document Engineering](../../slides/weekeight/)
