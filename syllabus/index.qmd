@@ -353,6 +353,7 @@ project assessments.
   - **Knowledge-Check Two**:
     - *First Half of Class*: Week Nine
     - *Second Half of Class*: Week Ten
+    - Rescheduled for entire class to have check on Week Eleven
   - **Knowledge-Check Three**:
     - *First Half of Class*: Week Fourteen
     - *Second Half of Class*: Week Fifteen
