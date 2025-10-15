@@ -72,23 +72,19 @@ in different formats, with different data and metadata
 
 :::
 
-# Lists for document organization
+# Using lists in Python
 
-## What we'll cover about lists
-
-## What we'll cover about lists
-
-::: {.incremental style="margin-top: 0.1em; font-size: 0.90em;"}
+::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
 
 - {{< iconify fa6-solid list >}} **Creating document collections**
   - Store related files in ordered sequences
   - Build documentation hierarchies
 
-- {{< iconify fa6-solid edit >}} **Modifying document structures**
+- {{< iconify fa6-solid arrows-rotate >}} **Modifying document structures**
   - Add, remove, and reorganize content
   - Update documentation dynamically
 
-- {{< iconify fa6-solid search >}} **Accessing document elements**
+- {{< iconify fa6-solid gears >}} **Accessing document elements**
   - Find specific documents by position
   - Process collections systematically
 
@@ -111,6 +107,12 @@ print("Project documentation files:")
 for i, doc in enumerate(documents, 1):
     print(f"{i}. {doc}")
 ```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Create document list, iterate with `for` loop, and then display details
+
+:::
 
 ## Two-dimensional document structures
 
@@ -147,7 +149,7 @@ for i, section in enumerate(sections, 1):
     print(f"{i}. {section}")
 ```
 
-## Summary: lists for document engineering
+## Lists for document engineering
 
 ::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
 
@@ -155,6 +157,18 @@ for i, section in enumerate(sections, 1):
 - {{< iconify fa6-solid check >}} **Dynamic modification**: add, insert, and remove content
 - {{< iconify fa6-solid check >}} **Flexible organization**: restructure documents as needed
 - {{< iconify fa6-solid check >}} **Index-based access**: retrieve specific sections efficiently
+
+:::
+
+# Advanced uses of lists
+
+::: fragment
+
+- Input files from the file system
+- Parse each file to a data structure instance
+- Store all data structures in a list
+- Iterate through the list to process all data structures
+- Output the results of the analysis to the console
 
 :::
 
