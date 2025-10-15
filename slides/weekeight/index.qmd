@@ -55,7 +55,7 @@ in different formats, with different data and metadata
 
 ## Python collections overview
 
-::: {.incremental style="margin-top: -0.15em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: -0.15em; font-size: 0.72em;"}
 
 - {{< iconify fa6-solid list >}} **Lists**: mutable sequences for document sections
   - Store chapters, paragraphs, or document versions
