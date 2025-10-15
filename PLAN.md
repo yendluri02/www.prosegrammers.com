@@ -67,7 +67,6 @@ if they have trouble installing or testing any of the tools.
 coding and writing tools that use large language models (LLMs) like Claude
 Sonnet 4 or GPT-4. Make it clear that the prosegrammer who uses these tools is
 ultimately responsible for wielding them correctly and ethically.
-````
 
 ### Create Slides for Week Four in `slides/weekfour/index.qmd`
 
@@ -177,14 +176,16 @@ basics of software testing. I previously created these slides for a course on
 Algorithm Analysis. However, I would like you to customize all of this content
 for document engineering.
 - You can look at the other slide decks that I have already prepared:
-- `slides/weekone/index.qmd`
-- `slides/weektwo/index.qmd`
-- `slides/weekthree/index.qmd`
-- `slides/weekfour/index.qmd`
-- `slides/weekfive/index.qmd`
-- `slides/weeksix/index.qmd` and see how I am currently using Markdown and
-Quarto in my slides!
-- [ ] Please note that I am currently working on the slides in
+  - `slides/weekone/index.qmd`
+  - `slides/weektwo/index.qmd`
+  - `slides/weekthree/index.qmd`
+  - `slides/weekfour/index.qmd`
+  - `slides/weekfive/index.qmd`
+  - `slides/weeksix/index.qmd`
+  and see how I am currently using Markdown and Quarto in my slides!
+- Please do not use Markdown or Quarto formats that I am not currently
+using in my slides to make sure that the content has a consistent format.
+- [ ] Please remember that I am currently working on the slides in
 `slides/weekeight/index.qmd` that introduce how to use data containers in
 Python. I want the slides to cover these topics:
   - Lists (single-dimensional and two-dimensional)
@@ -199,12 +200,12 @@ Python. I want the slides to cover these topics:
     - Accessing elements in lists, tuples, and sets
     - Adding and removing elements from lists, tuples, and sets
 - [ ] If you check the `index.qmd` file in this GitHub repository, you can see a
-simple example of word frequency analysis. You should illustrate how to write
-test cases for a function like this one.
+simple example of word frequency analysis. Please use simple examples like this
+one to illustrate how to use containers like lists, tuples, and sets in Python.
 - [ ] Make sure that all the content is accessible to beginners who do not have
 extensive experience with programming or the documentation of a software tool.
 - [ ] Make sure that all the content has concrete examples that make points
-clear to beginners.
+clear to beginners. Provide simple summaries of the concrete code examples.
 
 ## Support for Content
 
