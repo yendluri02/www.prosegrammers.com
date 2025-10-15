@@ -342,8 +342,8 @@ project assessments.
 - **Document Engineering Skill-Checks**:
   - **Skill-Check One**: Week Two
   - **Skill-Check Two**: Week Three
-  - **Skill-Check Three**: Week Seven
-  - **Skill-Check Four**: Week Eight
+  - **Skill-Check Three**: Week Seven (rescheduled to Week Nine)
+  - **Skill-Check Four**: Week Eight (rescheduled to Week Ten)
   - **Skill-Check Five**: Week Twelve
   - **Skill-Check Six**: Week Thirteen
 - **Document Engineering Knowledge-Checks**:
