@@ -132,6 +132,12 @@ for doc in document_versions:
     print(f"{filename} ({format_type}) - {date}")
 ```
 
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Create a list of lists, iterate with `for` loop, and then display details
+
+:::
+
 ## Modifying lists dynamically
 
 ```{pyodide}
