@@ -10,7 +10,11 @@ toc-expand: 3
 ## Activities
 
 - {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
-  - Instructor-led deep-dive on containers
+  - Instructor-led deep-dive on document processing:
+    - Input a file from the file system
+    - Parse the file to a data structure
+    - Analyze the data structure
+    - Output the results of the analysis to the console
   - As needed, instructor review of previous technical topics
 
 - {{< iconify fa6-solid people-line size=18px >}} **Tuesday**:
