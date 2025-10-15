@@ -114,7 +114,7 @@ for i, doc in enumerate(documents, 1):
 
 :::
 
-## Two-dimensional document structures
+## Two-dimensional lists
 
 ```{pyodide}
 #| autorun: true
@@ -160,15 +160,16 @@ for i, section in enumerate(sections, 1):
 
 :::
 
-# Advanced uses of lists
+# Using lists in Python for document engineering
 
 ::: fragment
 
-- Input files from the file system
-- Parse each file to a data structure instance
-- Store all data structures in a list
+- Input one or more documents from the file system
+- Parse each document to a data structure instance
+- Store all data structures for each file in a list
 - Iterate through the list to process all data structures
 - Output the results of the analysis to the console
+- {{< iconify fa6-solid microscope >}} **How to extend your tool to handle multiple files?**
 
 :::
 
