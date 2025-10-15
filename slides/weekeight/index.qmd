@@ -32,11 +32,11 @@ format:
 
 ::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
 
-- {{< iconify fa6-solid book-open >}} **What are this week's highlights?**
-    - Explore advanced Markdown and Quarto features
-        - Links, images, tables, and blockquotes for rich documents
-        - Code blocks and live code for interactive learning
-        - Mathematical expressions for technical clarity
+- {{< iconify fa6-solid database >}} **What are this week's highlights?**
+    - Explore Python data containers for document engineering
+        - Lists for organizing document collections and sections
+        - Tuples for storing document metadata immutably
+        - Sets for managing unique keywords and tags
 
 :::
 
@@ -46,9 +46,470 @@ format:
 
 - {{< iconify fa6-solid gears >}} Document engineering means blending code and
 prose to build resources for both humans and machines
-- {{< iconify fa6-solid flag-checkered >}} Quarto and Markdown empower you to
-easily create documents that are clear, interactive, and professional
-- {{< iconify fa6-solid code >}} Prosegrammers use these tools to
-automate, analyze, and publish documentation that achieves its goals
+- {{< iconify fa6-solid database >}} Python containers organize document data
+efficiently: lists for sequences, tuples for records, sets for uniqueness
+- {{< iconify fa6-solid code >}} Prosegrammers use these tools to structure,
+analyze, and manipulate document information effectively
+
+:::
+
+## Python collections for document engineering
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid list >}} **Lists**: mutable sequences for document sections
+  - Store chapters, paragraphs, or document versions
+  - Perfect for ordered content that may change
+  - Support appending, removing, and modifying elements
+- {{< iconify fa6-solid tag >}} **Tuples**: immutable records for document metadata
+  - Store title, author, date information safely
+  - Guaranteed not to change accidentally
+  - Efficient for fixed document properties
+- {{< iconify fa6-solid hashtag >}} **Sets**: unique collections for document keywords
+  - Eliminate duplicate tags automatically
+  - Fast membership testing and set operations
+  - Perfect for managing document categories
+
+:::
+
+## Lists: organizing documents and content
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+# create a list of documents for a prosegrammer's project
+documents = [
+    "README.md",
+    "installation_guide.md", 
+    "user_manual.md",
+    "api_reference.md",
+    "troubleshooting.md"
+]
+
+print("Project documentation files:")
+for i, doc in enumerate(documents, 1):
+    print(f"{i}. {doc}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Document collections**: lists store related files in order
+- **Indexing**: access specific documents by position
+- **Iteration**: process all documents systematically
+
+:::
+
+## Two-dimensional lists for document structures
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 15
+# represent a document with multiple versions and formats
+document_versions = [
+    ["user_guide_v1.md", "markdown", "2024-01-15", 1250],
+    ["user_guide_v2.md", "markdown", "2024-02-10", 1580], 
+    ["user_guide_v2.pdf", "pdf", "2024-02-10", 1580],
+    ["user_guide_v3.md", "markdown", "2024-03-05", 1750]
+]
+
+print("Document version history:")
+print("File\t\t\tFormat\t\tDate\t\tWords")
+print("-" * 55)
+for doc in document_versions:
+    filename, format_type, date, word_count = doc
+    print(f"{filename:<20}\t{format_type:<10}\t{date}\t{word_count}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Nested structure**: each document has multiple attributes
+- **Version tracking**: chronological record of changes
+- **Multi-format support**: same content in different formats
+
+:::
+
+## Accessing and modifying list elements
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 18
+# manage document sections for a technical manual
+sections = ["Introduction", "Installation", "Configuration", "Usage", "FAQ"]
+
+print("Original sections:")
+print(sections)
+
+# access specific sections
+print(f"\nFirst section: {sections[0]}")
+print(f"Last section: {sections[-1]}")
+
+# add a new section
+sections.append("Troubleshooting")
+print(f"\nAfter adding section: {sections}")
+
+# insert a section at specific position
+sections.insert(2, "Requirements")
+print(f"\nAfter inserting section: {sections}")
+
+# remove a section
+sections.remove("FAQ")
+print(f"\nAfter removing FAQ: {sections}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Dynamic modification**: add, insert, and remove content
+- **Flexible organization**: restructure documents as needed
+- **Index-based access**: retrieve specific sections efficiently
+
+:::
+
+## Tuples: immutable document metadata
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 15
+# create document metadata tuples for a prosegrammer's work
+doc1_meta = ("Document Engineering Guide", "Dr. Kapfhammer", "2024-10-15")
+doc2_meta = ("Python Containers Tutorial", "Dr. Kapfhammer", "2024-10-20")
+doc3_meta = ("Quarto Publishing Manual", "Dr. Kapfhammer", "2024-10-25")
+
+# store all document metadata in a list
+all_documents = [doc1_meta, doc2_meta, doc3_meta]
+
+print("Document Library Metadata:")
+print("=" * 50)
+for doc in all_documents:
+    title, author, date = doc
+    print(f"Title: {title}")
+    print(f"Author: {author}")
+    print(f"Date: {date}")
+    print("-" * 30)
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Immutable records**: metadata cannot be accidentally changed
+- **Structured data**: consistent format for document properties
+- **Tuple unpacking**: easy extraction of individual values
+
+:::
+
+## Tuple operations for document analysis
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 16
+# analyze document metrics using tuples
+doc_metrics = [
+    ("README.md", 450, 25, "markdown"),
+    ("install.md", 280, 18, "markdown"),
+    ("api_docs.md", 1200, 85, "markdown"),
+    ("tutorial.md", 850, 52, "markdown")
+]
+
+print("Document Analysis Summary:")
+print("=" * 40)
+
+total_words = sum(metric[1] for metric in doc_metrics)
+total_sections = sum(metric[2] for metric in doc_metrics)
+avg_words = total_words / len(doc_metrics)
+
+print(f"Total documents: {len(doc_metrics)}")
+print(f"Total words: {total_words}")
+print(f"Total sections: {total_sections}")
+print(f"Average words per document: {avg_words:.1f}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Statistical analysis**: compute metrics across documents
+- **Tuple consistency**: guaranteed data structure integrity
+- **Aggregation operations**: summarize document collections
+
+:::
+
+## Sets: managing unique document keywords
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 18
+# manage keywords for different documents
+python_guide_tags = {"python", "programming", "tutorial", "beginner"}
+quarto_guide_tags = {"quarto", "documentation", "publishing", "markdown"}
+git_guide_tags = {"git", "version-control", "collaboration", "programming"}
+
+print("Individual document tags:")
+print(f"Python Guide: {python_guide_tags}")
+print(f"Quarto Guide: {quarto_guide_tags}")
+print(f"Git Guide: {git_guide_tags}")
+
+# find all unique tags across documents
+all_tags = python_guide_tags | quarto_guide_tags | git_guide_tags
+print(f"\nAll unique tags: {sorted(all_tags)}")
+
+# find common tags between documents
+common_tags = python_guide_tags & git_guide_tags
+print(f"\nCommon tags (Python & Git): {common_tags}")
+
+# find tags unique to Python guide
+python_only = python_guide_tags - quarto_guide_tags - git_guide_tags
+print(f"Python-only tags: {python_only}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Automatic uniqueness**: no duplicate tags allowed
+- **Set operations**: union, intersection, difference for analysis
+- **Tag management**: organize and categorize document content
+
+:::
+
+## Set operations for document categorization
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 20
+# categorize documents by their characteristics
+technical_docs = {"api_reference", "installation_guide", "config_manual"}
+beginner_docs = {"getting_started", "tutorial", "faq", "installation_guide"}
+advanced_docs = {"api_reference", "architecture_guide", "performance_tuning"}
+
+print("Document Categories:")
+print(f"Technical: {technical_docs}")
+print(f"Beginner: {beginner_docs}")
+print(f"Advanced: {advanced_docs}")
+
+# find documents suitable for all skill levels
+universal_docs = technical_docs & beginner_docs & advanced_docs
+print(f"\nUniversal documents: {universal_docs}")
+
+# find documents only for beginners
+beginner_only = beginner_docs - technical_docs - advanced_docs
+print(f"Beginner-only documents: {beginner_only}")
+
+# find all documentation types
+all_doc_types = technical_docs | beginner_docs | advanced_docs
+print(f"\nAll document types: {sorted(all_doc_types)}")
+
+# check if specific document exists
+print(f"\nHas tutorial? {'tutorial' in beginner_docs}")
+print(f"Has API guide? {'api_reference' in technical_docs}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Content categorization**: organize documents by complexity
+- **Membership testing**: quickly check document existence
+- **Set mathematics**: analyze relationships between categories
+
+:::
+
+## Creating and initializing containers
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 20
+# different ways to create document containers
+
+# lists: mutable sequences
+empty_docs = []
+doc_list = ["intro.md", "chapter1.md", "chapter2.md"]
+numbered_chapters = [f"chapter_{i}.md" for i in range(1, 6)]
+
+print("Lists for document sequences:")
+print(f"Empty: {empty_docs}")
+print(f"Manual: {doc_list}")
+print(f"Generated: {numbered_chapters}")
+
+# tuples: immutable records
+doc_info = ("User Manual", "v2.1", "2024-10-15")
+empty_tuple = ()
+single_item = ("README.md",)  # note the comma for single-item tuple
+
+print(f"\nTuples for document metadata:")
+print(f"Document info: {doc_info}")
+print(f"Empty: {empty_tuple}")
+print(f"Single item: {single_item}")
+
+# sets: unique collections
+keywords = {"python", "documentation", "tutorial"}
+empty_set = set()  # note: {} creates empty dict, not set
+tag_set = set(["python", "guide", "python", "beginner"])  # duplicates removed
+
+print(f"\nSets for unique keywords:")
+print(f"Keywords: {keywords}")
+print(f"Empty: {empty_set}")
+print(f"From list (duplicates removed): {tag_set}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Initialization patterns**: various ways to create containers
+- **Data types matter**: choose the right container for your needs
+- **Automatic processing**: comprehensions and constructors simplify creation
+
+:::
+
+## Document processing with word frequency
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 22
+from typing import Dict, List, Set
+
+def analyze_document_collection(documents: List[str]) -> Dict[str, any]:
+    """Analyze a collection of documents using various containers."""
+    # use set to track unique words across all documents
+    all_unique_words: Set[str] = set()
+    
+    # use list to store word counts for each document
+    document_stats: List[tuple] = []
+    
+    for doc in documents:
+        words = doc.lower().split()
+        word_count = len(words)
+        unique_words = set(words)
+        
+        # add to overall unique word collection
+        all_unique_words.update(unique_words)
+        
+        # store document statistics as tuple
+        doc_stats = (doc[:20] + "..." if len(doc) > 20 else doc, 
+                    word_count, len(unique_words))
+        document_stats.append(doc_stats)
+    
+    return {
+        "total_documents": len(documents),
+        "total_unique_words": len(all_unique_words),
+        "document_details": document_stats,
+        "sample_words": sorted(list(all_unique_words))[:10]
+    }
+
+# example documents for analysis
+sample_docs = [
+    "Python is a powerful programming language for document engineering",
+    "Document engineering combines programming with writing and analysis",
+    "Prosegrammers use Python tools to create and analyze documents"
+]
+
+results = analyze_document_collection(sample_docs)
+print("Document Collection Analysis:")
+print(f"Documents analyzed: {results['total_documents']}")
+print(f"Total unique words: {results['total_unique_words']}")
+print(f"Sample words: {', '.join(results['sample_words'])}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Container integration**: lists, tuples, and sets work together
+- **Real-world application**: document analysis using multiple data types
+- **Efficient processing**: each container serves its specific purpose
+
+:::
+
+## Container comparison for prosegrammers
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.75em;"}
+
+| Container | Mutable | Ordered | Duplicates | Best For |
+|-----------|---------|---------|------------|----------|
+| **List** | ✅ Yes | ✅ Yes | ✅ Allowed | Document sections, chapters, file collections |
+| **Tuple** | ❌ No | ✅ Yes | ✅ Allowed | Document metadata, fixed records, coordinates |
+| **Set** | ✅ Yes | ❌ No | ❌ Not Allowed | Keywords, tags, unique identifiers |
+
+:::
+
+::: {.fragment style="margin-top: 0.3em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid list >}} **Lists**: when you need to modify and maintain order
+- {{< iconify fa6-solid tag >}} **Tuples**: when data should never change
+- {{< iconify fa6-solid hashtag >}} **Sets**: when uniqueness matters most
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.2em; font-size: 0.85em;"}
+
+{{< iconify fa6-solid lightbulb >}} **Pro tip**: Choose containers based on your
+document engineering needs: lists for changeable sequences, tuples for fixed
+records, sets for unique collections!
+
+:::
+
+## Container operations summary
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 25
+# comprehensive example showing all container operations for documents
+
+# list operations: managing document sections
+sections = ["intro", "methods", "results"]
+sections.append("conclusion")        # add new section
+sections.insert(1, "background")     # insert at position
+sections.remove("methods")           # remove specific section
+print(f"Document sections: {sections}")
+print(f"Section count: {len(sections)}")
+print(f"First section: {sections[0]}")
+
+# tuple operations: document metadata
+metadata = ("Research Paper", "Dr. Smith", "2024", 2500)
+title, author, year, words = metadata  # unpacking
+print(f"\nDocument: {title} by {author} ({year}) - {words} words")
+print(f"Metadata length: {len(metadata)}")
+print(f"Year in metadata: {year in metadata}")
+
+# set operations: managing keywords
+keywords = {"research", "analysis", "python"}
+keywords.add("documentation")        # add keyword
+keywords.discard("analysis")         # remove if exists
+keywords_copy = keywords.copy()      # create copy
+print(f"\nKeywords: {sorted(keywords)}")
+print(f"Keyword count: {len(keywords)}")
+print(f"Has 'python': {'python' in keywords}")
+
+# combining containers for document management
+all_info = {
+    "sections": sections,
+    "metadata": metadata, 
+    "keywords": keywords
+}
+print(f"\nComplete document info keys: {list(all_info.keys())}")
+```
+
+::: {.fragment style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- **Comprehensive toolkit**: each container type has specific operations
+- **Integrated workflow**: combine containers for complete document management
+- **Practical application**: real document engineering scenarios
+
+:::
+
+## Key takeaways for document engineering
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid database >}} **Choose the right container**
+  - Lists for document sequences and mutable collections
+  - Tuples for immutable metadata and structured records
+  - Sets for unique keywords, tags, and categories
+
+- {{< iconify fa6-solid gear >}} **Master container operations** 
+  - Create, access, modify, and analyze document data
+  - Use indexing, slicing, and iteration effectively
+  - Apply set operations for document categorization
+
+- {{< iconify fa6-solid lightbulb >}} **Think like a prosegrammer**
+  - Combine containers to solve complex document problems
+  - Use type hints to make code clear and maintainable
+  - Apply containers to real document engineering challenges
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: 0.2em; font-size: 0.9em;"}
+
+{{< iconify fa6-solid rocket >}} **Next week**: We'll explore how to use these
+containers with functions and modules to build comprehensive document analysis
+tools!
 
 :::
