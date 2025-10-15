@@ -157,7 +157,7 @@ for i, section in enumerate(sections, 1):
 
 ## Lists for document engineering
 
-::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: 0.1em; font-size: 0.825em;"}
 
 - {{< iconify fa6-solid check >}} **Document collections**: store related files in order
 - {{< iconify fa6-solid check >}} **Dynamic modification**: add, insert, and remove content
@@ -166,16 +166,27 @@ for i, section in enumerate(sections, 1):
 
 :::
 
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use lists**:
+  - Find a location in your document engineering tool where you used lists
+    - Is it working correctly?
+    - How did you test and debug it?
+    - How can you refactor the code?
+  - If you did not find a list being used, how could you add one to your project?
+
+:::
+
 # Using lists in Python for document engineering
 
-::: fragment
+::: {.fragment .boxed-content style="margin-top: -0.2em; font-size: 0.9em;"}
 
 - Input one or more documents from the file system
 - Parse each document to a data structure instance
-- Store all data structures for each file in a list
+- Store all data structures for each document in a list
 - Iterate through the list to process all data structures
 - Output the results of the analysis to the console
-- {{< iconify fa6-solid microscope >}} **How to extend your tool to handle multiple files?**
+- {{< iconify fa6-solid lightbulb >}} **How to extend your tool to handle multiple files?**
 
 :::
 
