@@ -226,6 +226,13 @@ for doc in all_documents:
     print(f"{title} by {author} ({date})")
 ```
 
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Create metadata tuple, iterate with `for` loop, and then display details
+- How is a tuple different from a list? How do we use it differently?
+
+:::
+
 ## Document analysis with tuples
 
 ```{pyodide}
