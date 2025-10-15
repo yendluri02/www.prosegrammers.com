@@ -251,7 +251,14 @@ print(f"Total words: {total_words}")
 print(f"Average words: {total_words / len(doc_metrics):.1f}")
 ```
 
-## Summary: tuples for document engineering
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Create list of tuples, iterate with `for` loop, and then display details
+- Many combinations of data structures (e.g., lists and tuple) are possible!
+
+:::
+
+## Tuples for document engineering
 
 ::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
 
@@ -262,11 +269,20 @@ print(f"Average words: {total_words / len(doc_metrics):.1f}")
 
 :::
 
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use lists**:
+  - Find a location in your document engineering tool where you used tuples
+    - Is it working correctly?
+    - How did you test and debug it?
+    - How can you refactor the code?
+  - If you did not find a tuple being used, how could you add one to your project?
+
+:::
+
 # Sets for document keywords
 
-## What we'll cover about sets
-
-::: {.incremental style="margin-top: 0.1em; font-size: 0.90em;"}
+::: {.incremental style="margin-top: 0.1em; font-size: 0.70em;"}
 
 - {{< iconify fa6-solid hashtag >}} **Managing unique keywords**
   - Eliminate duplicate tags automatically
