@@ -190,11 +190,9 @@ for i, section in enumerate(sections, 1):
 
 :::
 
-# Tuples for document metadata
+# Tuples for storing immutable metadata
 
-## What we'll cover about tuples
-
-::: {.incremental style="margin-top: 0.1em; font-size: 0.90em;"}
+::: {.incremental style="margin-top: -0.4em; font-size: 0.72em;"}
 
 - {{< iconify fa6-solid tag >}} **Creating immutable records**
   - Store document properties safely
