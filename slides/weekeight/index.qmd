@@ -271,7 +271,7 @@ print(f"Average words: {total_words / len(doc_metrics):.1f}")
 
 ::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
 
-- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use lists**:
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use tuples**:
   - Find a location in your document engineering tool where you used tuples
     - Is it working correctly?
     - How did you test and debug it?
@@ -280,9 +280,9 @@ print(f"Average words: {total_words / len(doc_metrics):.1f}")
 
 :::
 
-# Sets for document keywords
+# Sets for storing document keywords
 
-::: {.incremental style="margin-top: 0.1em; font-size: 0.70em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.70em;"}
 
 - {{< iconify fa6-solid hashtag >}} **Managing unique keywords**
   - Eliminate duplicate tags automatically
@@ -298,7 +298,7 @@ print(f"Average words: {total_words / len(doc_metrics):.1f}")
 
 :::
 
-## Basic set operations
+## Basic set operations for documents
 
 ```{pyodide}
 #| autorun: true
@@ -317,25 +317,14 @@ common = python_tags & git_tags
 print(f"Common tags: {common}")
 ```
 
-## Document categorization with sets
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
 
-```{pyodide}
-#| autorun: true
-#| max-lines: 10
-# categorize documents by their characteristics
-technical_docs = {"api_reference", "installation_guide", "config_manual"}
-beginner_docs = {"getting_started", "tutorial", "faq"}
-advanced_docs = {"api_reference", "architecture_guide", "performance"}
+- Create list of tags for multiple documents under analysis
+- Find those tags that are unique and those that are common
 
-# find documents for all skill levels
-universal = technical_docs & beginner_docs & advanced_docs
-print(f"Universal documents: {universal}")
+:::
 
-# check document existence
-print(f"Has tutorial? {'tutorial' in beginner_docs}")
-```
-
-## Summary: sets for document engineering
+## Sets for document engineering
 
 ::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
 
@@ -346,11 +335,18 @@ print(f"Has tutorial? {'tutorial' in beginner_docs}")
 
 :::
 
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use sets**:
+  - Find a location in your document engineering tool where you used sets 
+    - Is it working correctly?
+    - How did you test and debug it?
+    - How can you refactor the code?
+  - If you did not find a set being used, how could you add one to your project?
+
+:::
+
 # Container integration
-
-## Container comparison for prosegrammers
-
-## Container comparison for prosegrammers
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.75em;"}
 
@@ -362,11 +358,25 @@ print(f"Has tutorial? {'tutorial' in beginner_docs}")
 
 :::
 
+## Summary of data container choices
+
 ::: {.fragment style="margin-top: 0.3em; font-size: 0.85em;"}
 
 - {{< iconify fa6-solid list >}} **Lists**: when you need to modify and maintain order
 - {{< iconify fa6-solid tag >}} **Tuples**: when data should never change
 - {{< iconify fa6-solid hashtag >}} **Sets**: when uniqueness matters most
+- **Customize your own data containers to meet your tool's needs!**
+
+:::
+
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use containers**:
+  - Think of a feature for your document engineering tool needing a container:
+    - How would your tool's feature use a container?
+    - If you could use a container, what would be the benefit? 
+    - What type of container would you pick for this feature?
+    - How would you test to confirm that the container works correctly?
 
 :::
 
@@ -400,9 +410,16 @@ for doc, count in result['docs']:
     print(f"{doc}: {count} words")
 ```
 
-## Key takeaways for document engineering
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
 
-::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
+- Create list of sample documents that contain simple text
+- Determine the number of unique words across all of the documents
+
+:::
+
+## Key takeaways for prosegrammers
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.705em;"}
 
 - {{< iconify fa6-solid database >}} **Choose the right container**
   - Lists for document sequences and mutable collections
@@ -414,17 +431,9 @@ for doc, count in result['docs']:
   - Use indexing, slicing, and iteration effectively
   - Apply set operations for document categorization
 
-- {{< iconify fa6-solid lightbulb >}} **Think like a prosegrammer**
-  - Combine containers to solve complex document problems
-  - Use type hints to make code clear and maintainable
-  - Apply containers to real document engineering challenges
-
-:::
-
-::: {.fragment .fade .boxed-content style="margin-top: 0.2em; font-size: 0.9em;"}
-
-{{< iconify fa6-solid rocket >}} **Next week**: We'll explore how to use these
-containers with functions and modules to build comprehensive document analysis
-tools!
+- {{< iconify fa6-solid lightbulb >}} **Think and act like a prosegrammer**
+  - Combine containers to solve complex document analysis challenges
+  - Use type hints to make your Python code clear and maintainable
+  - Apply containers to handle real-world document engineering challenges
 
 :::
