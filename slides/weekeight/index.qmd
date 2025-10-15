@@ -40,7 +40,7 @@ format:
 
 :::
 
-# Key insights for prosegrammers!
+# Key insights for prosegrammers
 
 ::: {.fragment .boxed-content .fade style="font-size: 1.0em;"}
 
