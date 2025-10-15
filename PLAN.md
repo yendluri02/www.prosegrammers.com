@@ -156,6 +156,9 @@ test cases for a function like this one.
 extensive experience with programming or the documentation of a software tool.
 - [ ] Make sure that all the content has concrete examples that make points
 clear to beginners.
+- [ ] I added some template content to start off the slides. You should keep
+the first and last slides, but make sure to customize them for a course on
+document engineering and the module that is about data containers.
 
 ### Create Slides for Week Six in `slides/weeksix/index.qmd`
 
