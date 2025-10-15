@@ -160,7 +160,7 @@ clear to beginners.
 the first and last slides, but make sure to customize them for a course on
 document engineering and the module that is about data containers.
 
-### Create Slides for Week Six in `slides/weeksix/index.qmd`
+### Create Slides for Week Eight in `slides/weekeight/index.qmd`
 
 - [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
 explains the theme of the course on document engineering.
