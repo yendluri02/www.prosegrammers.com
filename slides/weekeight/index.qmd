@@ -258,6 +258,34 @@ print(f"Average words: {total_words / len(doc_metrics):.1f}")
 
 :::
 
+## Immutability versus mutable contents
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# tuple contains a mutable list as its second element
+meta = ("Report", ["draft", "review"])
+print("Original meta:", meta)
+
+# attempt to reassign an element of the tuple raises a TypeError
+try:
+    meta[0] = "Final Report"
+except TypeError as e:
+    print("Error when trying to reassign tuple element:", type(e).__name__, "-", e)
+
+# however, we can mutate the list contained inside the tuple
+meta[1].append("final")
+print("Modified meta:", meta)
+```
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.75em;"}
+
+- The `TypeError` shows that tuple elements cannot be reassigned
+- Yet, and `append` call modifies the list in place, changing `meta`'s contents
+- This shows that tuples are immutable, but their contents may be mutable
+
+:::
+
 ## Tuples for document engineering
 
 ::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
@@ -385,7 +413,7 @@ print(f"Common Python and Quarto tags: {sorted(common_python_quarto)}\nCommon Ac
 
 :::
 
-## Integrated document analysis
+## Enhanced document analysis
 
 ```{pyodide}
 #| autorun: true
@@ -410,7 +438,7 @@ sample_docs = [
 ]
 
 result = analyze_docs(sample_docs)
-print(f"Unique words: {result['total_words']}")
+print(f"Count of Unique words: {result['total_words']}")
 for doc, count in result['docs']:
     print(f"{doc}: {count} words")
 ```
