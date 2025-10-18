@@ -302,22 +302,27 @@ print(f"Average words: {total_words / len(doc_metrics):.1f}")
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 10
+#| max-lines: 8
 # manage keywords for different documents
 python_tags = {"python", "programming", "tutorial", "beginner"}
-quarto_tags = {"quarto", "documentation", "publishing", "markdown"}
+quarto_tags = {"quarto", "documentation", "markdown", "python", "programming"}
 git_tags = {"git", "version-control", "collaboration", "programming"}
 
 # find all unique tags across documents
 all_tags = python_tags | quarto_tags | git_tags
 print(f"All unique tags: {sorted(all_tags)}")
 
-# find common tags
-common = python_tags & git_tags
-print(f"Common tags: {common}")
+# find the common tags among python and quarto using sets
+common_python_quarto = python_tags & quarto_tags
+
+# find the common tags across python, quarto, and git using sets
+common_all = python_tags & quarto_tags & git_tags
+
+# output the two sets of common tags
+print(f"Common Python and Quarto tags: {sorted(common_python_quarto)}\nCommon Across All: {sorted(common_all)}" )
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
+::: {.incremental style="margin-top: -0.1em; font-size: 0.755em;"}
 
 - Create list of tags for multiple documents under analysis
 - Find those tags that are unique and those that are common
