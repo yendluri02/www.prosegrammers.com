@@ -383,11 +383,13 @@ print(f"Common Python and Quarto tags: {sorted(common_python_quarto)}\nCommon Ac
 
 ::: {.fragment style="margin-top: 0.1em; font-size: 0.75em;"}
 
+
 | Container | Mutable | Ordered | Duplicates | Best For |
 |-----------|---------|---------|------------|----------|
 | **List** | ✅ Yes | ✅ Yes | ✅ Allowed | Document sections, chapters, file collections |
 | **Tuple** | ❌ No | ✅ Yes | ✅ Allowed | Document metadata, fixed records, coordinates |
 | **Set** | ✅ Yes | ❌ No | ❌ Not Allowed | Keywords, tags, unique identifiers |
+
 
 :::
 
