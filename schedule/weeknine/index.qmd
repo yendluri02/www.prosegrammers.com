@@ -19,6 +19,7 @@ toc-expand: 3
   - As needed, instructor review of previous technical topics
 - {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
   - Instructor-led deep-dive on dictionaries
+  - See the list of technical topics in the entry for Monday
 - {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
   - Continue working on second document engineering tool-building project
   - Students meet with the student technical leaders
@@ -28,3 +29,12 @@ toc-expand: 3
   - Complete skill-check three during the in-person classroom session
   - Please review [Week One: Introduction to Document
   Engineering](../../slides/weekone/) for a list of necessary software tools
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weeknine/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Nine: Using Dictionaries for Document Engineering](../../slides/weeknine/)
