@@ -609,7 +609,7 @@ print(json_output)
 
 # Practical document engineering examples
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
+::: {.incremental style="margin-top: -0.1em; font-size: 0.725em;"}
 
 - {{< iconify fa6-solid chart-bar >}} **Word frequency analysis**
   - Count word occurrences in documents
@@ -664,7 +664,7 @@ for word, count in sorted(freq.items(), key=lambda x: x[1], reverse=True
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 8
+#| max-lines: 10
 from typing import Dict, Set
 
 def build_index(documents: Dict[str, str]) -> Dict[str, Set[str]]:
@@ -693,6 +693,7 @@ print("Documents containing 'programming':", index["programming"])
 
 - Build inverted index mapping keywords to document IDs
 - Use sets to store unique document references
+- Makes it easy to find documents by specific keyword
 
 :::
 
