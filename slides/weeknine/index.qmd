@@ -71,9 +71,9 @@ documents?**
 
 :::
 
-# Creating and using dictionaries
+# Creating and using dictionaries in Python
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: -0.25em; font-size: 0.75em;"}
 
 - {{< iconify fa6-solid plus >}} **Creating dictionaries**
   - Initialize empty or with key-value pairs
@@ -93,7 +93,7 @@ documents?**
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 8
 # create a dictionary to store document metadata
 document = {
     "doc_id": "D001",
@@ -108,7 +108,7 @@ for key, value in document.items():
     print(f"  {key}: {value}")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
 
 - Create dictionary with string keys and mixed value types
 - Use `items()` method to iterate over key-value pairs
@@ -117,7 +117,7 @@ for key, value in document.items():
 
 ## Accessing dictionary values
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 12
 # access document information by key
@@ -142,11 +142,11 @@ print(f"Word count: {word_count}")
 
 :::
 
-## Adding and modifying dictionary entries
+## Adding and modifying entries
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 8
 # start with basic document metadata
 document = {
     "doc_id": "D002",
@@ -163,7 +163,7 @@ for key, value in document.items():
     print(f"  {key}: {value}")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
 
 - Add new entries with bracket notation `dict[key] = value`
 - Update existing entries using same syntax
@@ -189,7 +189,7 @@ ordered and unique data
 
 ## Dictionary with string and integer values
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 10
 # track document statistics
@@ -214,7 +214,7 @@ for stat, value in doc_stats.items():
 
 ## Dictionary mapping to lists
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 11
 # map document sections to their contents
@@ -240,7 +240,7 @@ for section, subsections in document_sections.items():
 
 ## Dictionary mapping to another dictionary
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 13
 # store multiple documents with nested metadata
@@ -271,7 +271,7 @@ for doc_id, metadata in documents.items():
 
 ## Dictionary mapping to tuples and sets
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 12
 # use tuples for immutable metadata and sets for tags
@@ -315,7 +315,7 @@ print(f"Available versions: {', '.join(sorted(document_info['versions']
 
 ## Creating a document catalog
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 14
 # build a catalog of documentation files
@@ -343,7 +343,7 @@ for doc_id, content in doc_catalog.items():
 
 ## Processing documents from catalog
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 15
 from typing import Dict
@@ -394,7 +394,7 @@ for doc, count in results.items():
 
 ## Checking keys and removing entries
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 14
 # manage document catalog with key operations
@@ -424,7 +424,7 @@ print("After removal:", list(docs.keys()))
 
 ## Updating and merging dictionaries
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 14
 # merge multiple document collections
@@ -457,7 +457,7 @@ for doc_id, title in all_docs.items():
 
 ## Iterating through dictionary keys and values
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 15
 # different ways to iterate through dictionaries
@@ -506,7 +506,7 @@ for key, value in document.items():
 
 ## Parsing JSON strings to dictionaries
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 14
 import json
@@ -540,7 +540,7 @@ print(f"  Word count: {doc_data['word_count']}")
 
 ## Working with JSON document collections
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 16
 import json
@@ -574,7 +574,7 @@ print(f"\nTotal words across all documents: {total_words}")
 
 ## Creating JSON from dictionaries
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 15
 import json
@@ -624,7 +624,7 @@ print(json_output)
 
 ## Word frequency analysis with dictionaries
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 17
 from typing import Dict
@@ -659,7 +659,7 @@ for word, count in sorted(freq.items(), key=lambda x: x[1], reverse=True
 
 ## Building a document index
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 18
 from typing import Dict, Set
@@ -695,7 +695,7 @@ print("Documents containing 'programming':", index["programming"])
 
 ## Managing document metadata collections
 
-```{pyodide}
+```{python}
 #| autorun: true
 #| max-lines: 20
 from typing import Dict, List
