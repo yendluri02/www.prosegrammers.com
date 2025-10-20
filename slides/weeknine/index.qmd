@@ -1,7 +1,7 @@
 ---
 title: "Using Dictionaries for Document Engineering"
-description: "Master dictionaries in Python programs"
-date: "2025-10-13"
+description: "Explore dictionaries in Python programs"
+date: "2025-10-20"
 date-format: long
 author: Gregory M. Kapfhammer
 execute:
@@ -20,17 +20,16 @@ format:
 
 # Dictionaries for document engineering
 
-::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+::: {.fragment style="margin-top: -0.5em; font-size: 0.70em;"} 
 
 - {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
     - Creating documents using code
     - Manipulating and analyzing text data
     - Building documentation systems
-    - "Prosegrammers" combine *prose* and *programming*
 
 :::
 
-::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+::: {.fragment style="margin-top: -0.5em; font-size: 0.70em;"}
 
 - {{< iconify fa6-solid book >}} **What are this week's highlights?**
     - Explore Python dictionaries for document engineering
