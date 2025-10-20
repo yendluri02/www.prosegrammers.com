@@ -577,7 +577,7 @@ print(f"\nTotal words across all documents: {total_words}")
 
 ## Creating JSON from dictionaries
 
-```{python}
+```{pyodide}
 #| autorun: true
 #| max-lines: 8
 import json
@@ -599,13 +599,6 @@ json_output = json.dumps(document, indent=2)
 print("JSON representation:")
 print(json_output)
 ```
-
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
-
-- Use `json.dumps()` to convert dictionary to JSON string
-- `indent` parameter creates readable formatted output
-
-:::
 
 # Practical document engineering examples
 
