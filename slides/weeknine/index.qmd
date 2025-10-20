@@ -1,0 +1,55 @@
+---
+title: "Using Data Containers for Document Engineering"
+description: "Use containers in Python programs"
+date: "2025-10-13"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Data containers
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid database >}} **What are this week's highlights?**
+    - Explore Python data containers for document engineering
+        - Lists for organizing document collections and sections
+        - Tuples for storing document metadata immutably
+        - Sets for managing unique keywords and tags
+
+:::
+
+# Key insights for prosegrammers
+
+::: {.fragment .boxed-content .fade style="font-size: 1.0em;"}
+
+- {{< iconify fa6-solid gears >}} Document engineering means blending code and
+prose to build resources for both humans and machines
+- {{< iconify fa6-solid database >}} Python containers organize document data
+efficiently: lists for sequences, tuples for records, sets for uniqueness
+- {{< iconify fa6-solid code >}} Data containers can store multiple documents,
+in different formats, with different data and metadata
+
+:::
+
