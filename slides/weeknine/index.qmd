@@ -568,7 +568,7 @@ total_words = sum(doc["words"] for doc in data["documents"])
 print(f"\nTotal words across all documents: {total_words}")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
 
 - Parse nested JSON structures with lists and dictionaries
 - Process document collections systematically
@@ -609,7 +609,7 @@ print(json_output)
 
 # Practical document engineering examples
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.725em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
 
 - {{< iconify fa6-solid chart-bar >}} **Word frequency analysis**
   - Count word occurrences in documents
@@ -697,7 +697,7 @@ print("Documents containing 'programming':", index["programming"])
 
 :::
 
-## Managing document metadata collections
+## Managing document metadata
 
 ```{pyodide}
 #| autorun: true
