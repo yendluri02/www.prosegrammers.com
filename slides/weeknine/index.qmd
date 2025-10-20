@@ -46,15 +46,15 @@ format:
 - {{< iconify fa6-solid gears >}} Document engineering means blending
 code and prose to build resources for humans and machines
 - {{< iconify fa6-solid book >}} Dictionaries store key-value pairs that
-map document IDs to content, metadata to properties
+map document identifiers to content, metadata to properties
 - {{< iconify fa6-solid code >}} JSON files naturally translate to
-dictionaries, making data exchange seamless
+dictionaries, supporting seamless data exchange between programs
 
 :::
 
-## What are dictionaries and why do they matter?
+## What are dictionaries? Why do they matter for prosegramming?
 
-::: {.incremental style="margin-top: -0.15em; font-size: 0.75em;"}
+::: {.incremental style="margin-top: -0.15em; font-size: 0.8em;"}
 
 - {{< iconify fa6-solid book >}} **Dictionaries** store data as
 key-value pairs
