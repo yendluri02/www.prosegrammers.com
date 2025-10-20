@@ -377,9 +377,9 @@ for doc, count in results.items():
 
 :::
 
-# Dictionary operations for document engineering
+# Dictionary operations for prosegramming
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.7em;"}
 
 - {{< iconify fa6-solid key >}} **Checking for keys**
   - Verify if document exists in catalog
@@ -397,9 +397,9 @@ for doc, count in results.items():
 
 ## Checking keys and removing entries
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 14
+#| max-lines: 10
 # manage document catalog with key operations
 docs = {
     "D001": "Python Basics Guide",
@@ -420,16 +420,16 @@ print("After removal:", list(docs.keys()))
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
 
-- Use `in` operator to check key existence
-- Use `del` statement to remove key-value pairs
+- Use `in` operator to check key existence in the dictionary
+- Use `del` statement to remove key-value pairs from the dictionary
 
 :::
 
 ## Updating and merging dictionaries
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 14
+#| max-lines: 8
 # merge multiple document collections
 python_docs = {
     "P001": "Python Tutorial",
