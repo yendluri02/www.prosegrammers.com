@@ -368,10 +368,12 @@ for doc, count in results.items():
     print(f"  {doc}: {count} words")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
 
 - Process all documents in catalog with iteration
 - Return analysis results as new dictionary
+- This example illustrates the key points
+- More advanced examples would use real Markdown documents
 
 :::
 
