@@ -288,7 +288,7 @@ need to provide evidence that this point is correct. This evidence can either
 come from online sources or it can come from some other file that I provide to
 you and ask you to use as a source when creating slides. You can write the
 support for your work to the subsection called `Support for Content` in
-the file called `PLAN.md` that is in the root of this repository. If you are 
+the file called `COMPLETED.md` that is in the root of this repository. If you are 
 creating new content for `slides/weekone/index.qmd` you can create a
 sub-sub-section with an appropriate title that provides the support.
 
@@ -363,8 +363,8 @@ These are the high-level rules about modifying the files in this repository:
 
 - **Line width:** All text files, including Markdown and source code, should
 have a line width of 80 characters.
-- **Permission to run commands:** You have permission to run all commands available 
-in the OpenCode environment to work on the Quarto website project.
+- **Permission to run commands:** You have permission to run all commands
+available in the OpenCode environment to work on the Quarto website project.
 - **Incremental changes:** Make small, incremental changes. This makes it easier
 to review your work and catch errors early.
 - **Communicate clearly:** When you propose changes, explain what you've done
@@ -382,8 +382,8 @@ points that you wrote. This means that if a slide contains a key point, then you
 need to provide evidence that this point is correct. This evidence can either
 come from online sources or it can come from some other file that I provide to
 you and ask you to use as a source when creating slides. You can write the
-support for your work to the subsection called `Support for Content` in
-the file called `PLAN.md` that is in the root of this repository. If you are 
+support for your work to the subsection called `Support for Content` in the file
+called `COMPLETED.md` that is in the root of this repository. If you are
 creating new content for `slides/weekone/index.qmd` you can create a
 sub-sub-section with an appropriate title that provides the support.
 
