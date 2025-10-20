@@ -73,7 +73,7 @@ documents?**
 
 # Creating and using dictionaries in Python
 
-::: {.incremental style="margin-top: -0.25em; font-size: 0.75em;"}
+::: {.incremental style="margin-top: -0.25em; font-size: 0.725em;"}
 
 - {{< iconify fa6-solid plus >}} **Creating dictionaries**
   - Initialize empty or with key-value pairs
@@ -188,11 +188,11 @@ ordered and unique data
 
 :::
 
-## Dictionary with string and integer values
+## Dictionary with string and integer
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 10
+#| max-lines: 8
 # track document statistics
 doc_stats = {
     "filename": "user_guide.md",
@@ -206,18 +206,19 @@ for stat, value in doc_stats.items():
     print(f"  {stat}: {value}")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
 
-- Mix string and integer values in same dictionary
-- Keys describe the type of information stored
+- It is possible to mix string and integer values in same dictionary
+- While the keys describe the type of information stored, type errors are
+possible
 
 :::
 
 ## Dictionary mapping to lists
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 11
+#| max-lines: 8
 # map document sections to their contents
 document_sections = {
     "introduction": ["overview", "goals", "prerequisites"],
@@ -232,18 +233,11 @@ for section, subsections in document_sections.items():
         print(f"  - {sub}")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+## Dictionary mapping to dictionary
 
-- Dictionary values can be lists of related items
-- Useful for organizing hierarchical document structures
-
-:::
-
-## Dictionary mapping to another dictionary
-
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 13
+#| max-lines: 8
 # store multiple documents with nested metadata
 documents = {
     "D001": {
@@ -766,3 +760,4 @@ your tool more powerful?**
   - Apply dictionaries to real-world document engineering challenges
 
 :::
+test
