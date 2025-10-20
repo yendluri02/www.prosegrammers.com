@@ -646,7 +646,7 @@ for word, count in sorted(freq.items(), key=lambda x: x[1], reverse=True
     print(f"  {word}: {count}")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
 
 - Use `get()` method with default value to count occurrences
 - Dictionary stores word as key and count as value
