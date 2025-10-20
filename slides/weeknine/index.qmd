@@ -453,16 +453,16 @@ for doc_id, title in all_docs.items():
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
 
-- Use `update()` method to merge dictionaries
+- Use `update()` method to merge dictionaries together
 - Later updates overwrite earlier values for same keys
 
 :::
 
-## Iterating through dictionary keys and values
+## Iterating through keys and values
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 15
+#| max-lines: 8
 # different ways to iterate through dictionaries
 document = {
     "title": "Document Engineering Guide",
@@ -491,9 +491,9 @@ for key, value in document.items():
 
 :::
 
-# Reading and parsing JSON files
+# Using Python to read and parse JSON files
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
 
 - {{< iconify fa6-solid file-code >}} **JSON format**
   - JavaScript Object Notation for data exchange
@@ -509,9 +509,9 @@ for key, value in document.items():
 
 ## Parsing JSON strings to dictionaries
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 14
+#| max-lines: 8
 import json
 
 # JSON string representing document metadata
@@ -541,11 +541,11 @@ print(f"  Word count: {doc_data['word_count']}")
 
 :::
 
-## Working with JSON document collections
+## Working with JSON documents
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 16
+#| max-lines: 8
 import json
 
 # JSON string with multiple documents
@@ -579,7 +579,7 @@ print(f"\nTotal words across all documents: {total_words}")
 
 ```{python}
 #| autorun: true
-#| max-lines: 15
+#| max-lines: 8
 import json
 
 # create document metadata dictionary
@@ -609,7 +609,7 @@ print(json_output)
 
 # Practical document engineering examples
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
 
 - {{< iconify fa6-solid chart-bar >}} **Word frequency analysis**
   - Count word occurrences in documents
@@ -625,11 +625,11 @@ print(json_output)
 
 :::
 
-## Word frequency analysis with dictionaries
+## Word frequency analysis
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 17
+#| max-lines: 8
 from typing import Dict
 
 def word_frequency(text: str) -> Dict[str, int]:
@@ -662,9 +662,9 @@ for word, count in sorted(freq.items(), key=lambda x: x[1], reverse=True
 
 ## Building a document index
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 18
+#| max-lines: 8
 from typing import Dict, Set
 
 def build_index(documents: Dict[str, str]) -> Dict[str, Set[str]]:
@@ -698,9 +698,9 @@ print("Documents containing 'programming':", index["programming"])
 
 ## Managing document metadata collections
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 20
+#| max-lines: 8
 from typing import Dict, List
 
 def filter_by_author(
@@ -735,7 +735,7 @@ for doc_id in kapfhammer_docs:
 
 # Dictionaries for prosegrammers
 
-::: {.fragment .boxed-content style="margin-top: -0.2em; font-size: 0.9em;"}
+::: {.fragment .boxed-content style="margin-top: -0.2em; font-size: 0.725em;"}
 
 - {{< iconify fa6-solid gears >}} **Next steps for using dictionaries**:
   - Find locations in your tool where dictionaries could improve design
@@ -750,7 +750,7 @@ your tool more powerful?**
 
 ## Key takeaways for prosegrammers
 
-::: {.incremental style="margin-top: 0.1em; font-size: 0.725em;"}
+::: {.incremental style="margin-top: 0.1em; font-size: 0.7em;"}
 
 - {{< iconify fa6-solid book >}} **Master dictionary fundamentals**
   - Create dictionaries with various value types
