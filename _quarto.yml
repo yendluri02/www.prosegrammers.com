@@ -15,6 +15,7 @@ project:
     - "*.qmd"
     - "!scripts"
     - "!AGENTS.qmd"
+    - "!COMPLETED.qmd"
     - "!GEMINI.qmd"
     - "!PLAN.qmd"
 
