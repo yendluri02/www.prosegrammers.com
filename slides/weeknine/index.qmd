@@ -184,6 +184,7 @@ items
 data structures
 - {{< iconify fa6-solid layer-group >}} **Tuple and set values**: store
 ordered and unique data
+- **Let's explore how to create and use dictionaries with different data!**
 
 :::
 
