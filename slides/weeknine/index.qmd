@@ -218,7 +218,7 @@ possible
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 8
+#| max-lines: 6
 # map document sections to their contents
 document_sections = {
     "introduction": ["overview", "goals", "prerequisites"],
@@ -237,7 +237,7 @@ for section, subsections in document_sections.items():
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 8
+#| max-lines: 10
 # store multiple documents with nested metadata
 documents = {
     "D001": {
@@ -266,9 +266,9 @@ for doc_id, metadata in documents.items():
 
 ## Dictionary mapping to tuples and sets
 
-```{python}
+```{pyodide}
 #| autorun: true
-#| max-lines: 12
+#| max-lines: 8
 # use tuples for immutable metadata and sets for tags
 document_info = {
     "metadata": ("Python Guide", "Dr. Kapfhammer", "2024-10-15"),
@@ -287,6 +287,7 @@ print(f"Available versions: {', '.join(sorted(document_info['versions']
 
 - Tuples store fixed metadata that should not change
 - Sets store unique tags and prevent duplicates
+- Both tuples and sets can be the values of a dictionary
 
 :::
 
