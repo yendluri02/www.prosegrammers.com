@@ -342,13 +342,6 @@ for doc_id, content in doc_catalog.items():
     print(f"  Total lines: {len(lines)}")
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
-
-- Store complete document text as dictionary values
-- Access any document instantly by its ID
-
-:::
-
 ## Processing documents from catalog
 
 ```{pyodide}
