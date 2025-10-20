@@ -291,9 +291,21 @@ print(f"Available versions: {', '.join(sorted(document_info['versions']
 
 :::
 
+# Looking up a value in a dictionary using a key is efficient! How helpful?
+
+::: {.fragment style="margin-top: -0.2em; font-size: 0.9em;"}
+
+- Dictionaries are very efficient for looking up values by key
+- Average time complexity for lookups is constant time or $O(1)$
+- Dictionaries ideal for mapping document identifiers to content
+- You can learn more about this in the Algorithm Analysis class
+- **Let's explore more about dictionaries for document engineering!**
+
+:::
+
 # Mapping document identifiers to content
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.725em;"}
+::: {.incremental style="margin-top: -0.3em; font-size: 0.725em;"}
 
 - {{< iconify fa6-solid database >}} **Document collections**
   - Store multiple documents in single dictionary
