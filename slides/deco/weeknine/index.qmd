@@ -22,29 +22,29 @@ format:
 
 Literate programming is a prosegramming method invented by Donald Knuth, where code is written as a "human-readable narrative".
 
-- The code explains why and how a program works, not just what it does
-- This is done by prioritizing human legibility
+* The code explains why and how a program works, not just what it does
+* This is done by prioritizing human legibility
 
 ## Human-first design
 
-- Prioritizes clarity over conciseness
-- Encourages writing as if teaching another person
-- The order of explanation follows whatever is more easily readable instead of whatever is easier to compile
+* Prioritizes clarity over conciseness
+* Encourages writing as if teaching another person
+* The order of explanation follows whatever is more easily readable instead of whatever is easier to compile
 
 
 ## Integrated documentation
 
-- Documentation and code live in the same file
-- The narrative drives the code structure, not the other way around
-- Avoids the common problem of out-of-date comments
+* Documentation and code live in the same file
+* The narrative drives the code structure, not the other way around
+* Avoids the common problem of out-of-date comments
 
 
 ## Code Extraction (Tangle) and Formatting (Weave)
 
 A literate programming system typically supports two main processes that transform a single source file into two different outputs:
 
-- Tangle: Extracts the source code from the document, prioritizing compilation or execution.
-- Weave: Formats the document into a readable format like HTML or text, prioritizing legibility.
+* **Tangle:** Extracts the source code from the document, prioritizing compilation or execution.
+* **Weave:** Formats the document into a readable format like HTML or text, prioritizing legibility.
 
 
 ## Modern Uses of Literate Programming
