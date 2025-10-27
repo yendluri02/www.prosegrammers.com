@@ -622,7 +622,7 @@ print(summary_file.read_text())
 
 ::: {.incremental style="margin-top: 0.1em; font-size: 0.7em;"}
 
-- {{< iconify fa6-solid file-code >}} **Master file operations**
+- {{< iconify fa6-solid file-code >}} **Understand file operations**
   - Read and write files using `open()` with context managers
   - Use `pathlib.Path` for platform-independent file handling
   - Handle file paths and directories programmatically
@@ -632,7 +632,7 @@ print(summary_file.read_text())
   - Analyze document collections with statistical methods
   - Write summary data back to JSON for sharing
 
-- {{< iconify fa6-solid lightbulb >}} **Think like a prosegrammer**
+- {{< iconify fa6-solid lightbulb >}} **Build like a prosegrammer**
   - Build complete pipelines: read, analyze, summarize, write
   - Process multiple documents systematically
   - Apply file I/O to real-world document engineering challenges
