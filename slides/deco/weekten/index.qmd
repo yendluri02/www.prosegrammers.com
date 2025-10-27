@@ -3,7 +3,7 @@ title: "Understanding Localization"
 description: "Use localization to adapt documentation"
 date: "2025-10-27"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Brandon Thompson, DJ Battle, Tien DeLong-Headley
 execute:
   echo: true
 format:
