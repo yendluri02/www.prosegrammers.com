@@ -417,9 +417,9 @@ print(f"  Unique tags: {sorted(all_tags)}")
 
 :::
 
-# Analyzing JSON data with statistics
+# Analyzing JSON data
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
+::: {.incremental style="margin-top: -0.4em; font-size: 0.65em;"}
 
 - {{< iconify fa6-solid chart-bar >}} **Count operations**: analyze
 collection size
