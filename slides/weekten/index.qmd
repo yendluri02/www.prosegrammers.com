@@ -260,34 +260,31 @@ errors
 
 :::
 
-## Working with Path objects
+## Working with `Path` objects
 
 ```{pyodide}
-#| max-lines: 10
+#| autorun: true
+#| max-lines: 8
 from pathlib import Path
 
 # create Path object for document
 doc_path = Path("documentation") / "user_guide.md"
 print(f"Document path: {doc_path}")
-
 # check if file exists (it doesn't yet)
 print(f"File exists: {doc_path.exists()}")
-
 # create parent directory if needed
 doc_path.parent.mkdir(parents=True, exist_ok=True)
-
 # write content using Path method
 doc_path.write_text("# User Guide\n\nWelcome to our tool!")
-
 # read content back
 content = doc_path.read_text()
-print(f"\nDocument contents:\n{content}")
-print(f"\nFile size: {doc_path.stat().st_size} bytes")
+print(f"File exists: {doc_path.exists()}")
+print(f"File size: {doc_path.stat().st_size} bytes")
 ```
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
 
-- Use `/` operator to join path components naturally
+- Use the `/` operator to join path components naturally
 - `write_text()` and `read_text()` methods simplify file operations
 
 :::
