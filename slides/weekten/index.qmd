@@ -345,7 +345,8 @@ data
 ## Reading JSON files
 
 ```{pyodide}
-#| max-lines: 14
+#| autorun: true
+#| max-lines: 11
 from pathlib import Path
 import json
 
@@ -377,7 +378,7 @@ print(f"Total documents: {len(data['documents'])}")
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
 
 - Use `json.load()` to read JSON from file object
-- JSON objects become dictionaries, arrays become lists
+- JSON objects become dictionaries and JSON arrays become lists
 
 :::
 
