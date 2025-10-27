@@ -289,9 +289,10 @@ print(f"File size: {doc_path.stat().st_size} bytes")
 
 :::
 
-## Listing files in directories
+## Listing files in directories with `glob`
 
 ```{pyodide}
+#| autorun: true
 #| max-lines: 10
 from pathlib import Path
 
@@ -319,7 +320,7 @@ for md_file in sorted(docs_dir.glob("*.md")):
 
 # Working with JSON files
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
+::: {.incremental style="margin-top: -0.6em; font-size: 0.675em;"}
 
 - {{< iconify fa6-solid file-code >}} **JSON format**: structured data
 storage
