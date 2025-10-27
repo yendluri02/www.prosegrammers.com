@@ -385,7 +385,8 @@ print(f"Total documents: {len(data['documents'])}")
 ## Analyzing JSON document data
 
 ```{pyodide}
-#| max-lines: 12
+#| autorun: true
+#| max-lines: 8
 from pathlib import Path
 import json
 
@@ -398,12 +399,10 @@ with open(json_file, 'r') as file:
 docs = data['documents']
 total_words = sum(doc['words'] for doc in docs)
 avg_words = total_words / len(docs)
-
 print("Document Collection Analysis:")
 print(f"  Total documents: {len(docs)}")
 print(f"  Total words: {total_words}")
 print(f"  Average words per document: {avg_words:.1f}")
-
 # find all unique tags
 all_tags = set()
 for doc in docs:
@@ -413,8 +412,8 @@ print(f"  Unique tags: {sorted(all_tags)}")
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
 
-- Parse JSON data into dictionaries and lists
-- Process structured data with standard Python operations
+- Use `json.load()` to parse JSON data into dictionaries and lists
+- Analyze structured data with standard Python operations
 
 :::
 
