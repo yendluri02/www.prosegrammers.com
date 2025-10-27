@@ -444,7 +444,8 @@ understand data distribution
 ## Counting and analyzing JSON data
 
 ```{pyodide}
-#| max-lines: 14
+#| autorun: true
+#| max-lines: 12
 from pathlib import Path
 import json
 from typing import Dict, List
@@ -457,15 +458,12 @@ doc_data = {
     "D004": {"category": "guide", "difficulty": "beginner"},
     "D005": {"category": "tutorial", "difficulty": "intermediate"}
 }
-
 # write to JSON file
 data_file = Path("doc_metadata.json")
 data_file.write_text(json.dumps(doc_data, indent=2))
-
 # read and analyze
 with open(data_file, 'r') as file:
     data = json.load(file)
-
 print(f"Total documents: {len(data)}")
 print(f"Total key-value pairs: {sum(len(v) for v in data.values())}")
 ```
