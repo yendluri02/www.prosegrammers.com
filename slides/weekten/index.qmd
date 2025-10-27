@@ -475,10 +475,11 @@ print(f"Total key-value pairs: {sum(len(v) for v in data.values())}")
 
 :::
 
-## Computing statistics for unique values
+## Detecting unique values
 
 ```{pyodide}
-#| max-lines: 14
+#| autorun: true
+#| max-lines: 8
 from pathlib import Path
 import json
 from typing import Dict, Set
@@ -508,10 +509,39 @@ for prop, values in unique_vals.items():
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
 
-- Extract and count unique values for each property
-- Use sets to automatically eliminate duplicates
+- Look at the `doc_metadata.json` file inside of the repository
+- Extract and count the unique values for each property
+- This function uses sets to automatically eliminate duplicates
 
 :::
+
+## JSON file called `doc_metadata.json`
+
+```json
+{
+  "D001": {
+    "category": "tutorial",
+    "difficulty": "beginner"
+  },
+  "D002": {
+    "category": "tutorial",
+    "difficulty": "advanced"
+  },
+  "D003": {
+    "category": "reference",
+    "difficulty": "intermediate"
+  },
+  "D004": {
+    "category": "guide",
+    "difficulty": "beginner"
+  },
+  "D005": {
+    "category": "tutorial",
+    "difficulty": "intermediate"
+  }
+}
+
+```
 
 ## Calculating min, max, and average counts
 
