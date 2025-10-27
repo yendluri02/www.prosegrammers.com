@@ -1,0 +1,5 @@
+Document Analysis Report
+=========================
+Total words: 1250
+Unique words: 387
+Average word length: 5.2

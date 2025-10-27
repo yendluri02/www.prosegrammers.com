@@ -1,0 +1,32 @@
+{
+  "documents": [
+    {
+      "id": "D001",
+      "title": "Python Basics",
+      "words": 1200,
+      "tags": [
+        "python",
+        "tutorial"
+      ]
+    },
+    {
+      "id": "D002",
+      "title": "Advanced Topics",
+      "words": 1800,
+      "tags": [
+        "python",
+        "advanced"
+      ]
+    },
+    {
+      "id": "D003",
+      "title": "Best Practices",
+      "words": 1500,
+      "tags": [
+        "python",
+        "style"
+      ]
+    }
+  ],
+  "collection": "Programming Guides"
+}

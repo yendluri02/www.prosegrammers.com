@@ -1,0 +1,4 @@
+Processing started
+Document loaded successfully
+Analysis completed
+Results saved
