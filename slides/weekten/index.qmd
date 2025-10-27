@@ -210,7 +210,7 @@ print(output_file.read_text())
 
 :::
 
-## Appending to existing files with `a` mode
+## Appending to file with `a` mode
 
 ```{pyodide}
 #| autorun: true
