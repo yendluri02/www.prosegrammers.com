@@ -45,12 +45,12 @@ highlights?**
 
 ::: {.fragment .boxed-content .fade style="font-size: 1.0em;"}
 
-- {{< iconify fa6-solid gears >}} Document engineering means blending
-code and prose to build resources for both humans and machines
-- {{< iconify fa6-solid file-code >}} File I/O enables prosegrammers to
-read, write, and transform documents stored on disk
-- {{< iconify fa6-solid code >}} JSON files provide structured data
-storage that naturally maps to Python dictionaries
+- {{< iconify fa6-solid gears >}} Document engineering means blending code and
+prose to build resources for both humans and machines
+- {{< iconify fa6-solid file-code >}} File input/output (I/O) enables
+prosegrammers to read, write, and transform documents stored on disk
+- {{< iconify fa6-solid code >}} JSON files provide structured data storage that
+naturally maps to Python dictionaries
 
 :::
 
@@ -78,9 +78,9 @@ file paths safely
 
 :::
 
-# Reading files with the open() function
+# Using the `open` function
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.65em;"}
 
 - {{< iconify fa6-solid file-import >}} **Opening files for reading**
   - Use `open()` function with filename
@@ -101,7 +101,7 @@ file paths safely
 
 ## Basic file reading
 
-```{python}
+```{pyodide}
 #| max-lines: 12
 from pathlib import Path
 
@@ -129,7 +129,7 @@ print(f"\nTotal characters: {len(content)}")
 
 ## Reading files line by line
 
-```{python}
+```{pyodide}
 #| max-lines: 12
 from pathlib import Path
 
@@ -180,7 +180,7 @@ for i, line in enumerate(lines, 1):
 
 ## Basic file writing
 
-```{python}
+```{pyodide}
 #| max-lines: 10
 from pathlib import Path
 
@@ -212,7 +212,7 @@ print(output_file.read_text())
 
 ## Appending to existing files
 
-```{python}
+```{pyodide}
 #| max-lines: 10
 from pathlib import Path
 
@@ -263,7 +263,7 @@ errors
 
 ## Working with Path objects
 
-```{python}
+```{pyodide}
 #| max-lines: 10
 from pathlib import Path
 
@@ -295,7 +295,7 @@ print(f"\nFile size: {doc_path.stat().st_size} bytes")
 
 ## Listing files in directories
 
-```{python}
+```{pyodide}
 #| max-lines: 10
 from pathlib import Path
 
@@ -347,7 +347,7 @@ data
 
 ## Reading JSON files
 
-```{python}
+```{pyodide}
 #| max-lines: 14
 from pathlib import Path
 import json
@@ -386,7 +386,7 @@ print(f"Total documents: {len(data['documents'])}")
 
 ## Analyzing JSON document data
 
-```{python}
+```{pyodide}
 #| max-lines: 12
 from pathlib import Path
 import json
@@ -446,7 +446,7 @@ understand data distribution
 
 ## Counting and analyzing JSON data
 
-```{python}
+```{pyodide}
 #| max-lines: 14
 from pathlib import Path
 import json
@@ -482,7 +482,7 @@ print(f"Total key-value pairs: {sum(len(v) for v in data.values())}")
 
 ## Computing statistics for unique values
 
-```{python}
+```{pyodide}
 #| max-lines: 14
 from pathlib import Path
 import json
@@ -520,7 +520,7 @@ for prop, values in unique_vals.items():
 
 ## Calculating min, max, and average counts
 
-```{python}
+```{pyodide}
 #| max-lines: 12
 from pathlib import Path
 import json
@@ -576,7 +576,7 @@ analyze, write
 
 ## Creating and writing summary data
 
-```{python}
+```{pyodide}
 #| max-lines: 14
 from pathlib import Path
 import json
@@ -616,7 +616,7 @@ print(summary_file.read_text())
 
 ## Complete document analysis pipeline
 
-```{python}
+```{pyodide}
 #| max-lines: 14
 from pathlib import Path
 import json
