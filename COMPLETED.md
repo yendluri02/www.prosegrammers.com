@@ -782,3 +782,154 @@ feedback for dictionary operations
 to practical prosegrammer applications
 - Clear slide titles, appropriate icon usage, and incremental content display
 support effective learning and presentation quality
+
+### Support for Week Ten Slides Content
+
+#### File Input/Output for Document Engineering
+
+- File I/O operations are fundamental to document engineering, enabling
+prosegrammers to read source documents, write processed output, and persist
+analysis results
+- Python's built-in `open()` function provides basic file access with modes
+('r' for reading, 'w' for writing, 'a' for appending) as documented in
+Python's official documentation
+- Context managers using the `with` statement ensure proper file closure and
+resource management, following Python best practices outlined in PEP 343
+- File operations enable the entire document processing pipeline: ingestion,
+transformation, analysis, and output generation
+
+#### pathlib.Path for Cross-Platform File Management
+
+- The `pathlib` module (introduced in Python 3.4, PEP 428) provides
+object-oriented filesystem path handling that works consistently across
+Windows, macOS, and Linux
+- `Path` objects offer methods like `read_text()`, `write_text()`,
+`exists()`, and `iterdir()` that abstract platform-specific filesystem
+differences
+- Using `pathlib.Path` instead of string-based paths prevents common errors
+from backslash/forward slash differences between operating systems
+- Modern Python projects prefer `pathlib` over older `os.path` module for
+filesystem operations, as recommended in Python documentation
+
+#### JSON as Structured Document Format
+
+- JSON (JavaScript Object Notation) is defined by RFC 8259 as a lightweight,
+human-readable data interchange format widely used for configuration files,
+APIs, and structured document storage
+- Python's standard library `json` module provides `json.loads()` for parsing
+JSON strings into dictionaries and `json.dumps()` for serializing dictionaries
+to JSON format
+- JSON's nested object structure naturally maps to Python dictionaries,
+enabling seamless integration between document storage and processing
+- Document metadata, bibliographic records, and structured content benefit
+from JSON's combination of readability and machine-parseability
+
+#### Document Analysis Through Counting Operations
+
+- Counting operations are fundamental text analysis techniques used in
+search engines, content recommendation systems, and bibliometric research
+- Frequency analysis identifies important terms, common patterns, and
+statistical properties of document collections
+- Dictionary-based counting (using `dict.get()` with default values)
+provides efficient accumulation of frequency statistics
+- Count-based metrics enable document classification, similarity detection,
+and quality assessment
+
+#### Statistical Aggregations for Document Collections
+
+- Computing minimum, maximum, and average values provides statistical
+summaries essential for understanding document collection characteristics
+- Python's built-in `min()`, `max()`, and `sum()` functions work with
+dictionary values to compute aggregate statistics
+- Statistical analysis of document properties (word counts, author counts,
+keyword frequencies) supports collection management and quality control
+- Unique value counting and frequency distributions reveal collection
+diversity and content patterns
+
+#### Complete Analysis Pipelines
+
+- End-to-end document processing workflows combine reading, parsing,
+analyzing, and summarizing into integrated pipelines
+- Modular function design (separate functions for reading, parsing,
+analyzing) follows software engineering best practices and enables code reuse
+- Pipeline architecture mirrors professional document processing systems used
+in content management, digital libraries, and publishing workflows
+- Writing analysis results back to JSON files closes the processing loop,
+enabling iterative refinement and long-term storage of insights
+
+#### Document Engineering with Standard Library Only
+
+- Using only Python's standard library (`open()`, `pathlib`, `json`)
+ensures maximum portability and minimal dependency management
+- Standard library tools provide sufficient functionality for most document
+processing tasks without requiring external packages
+- Learning standard library approaches builds foundational understanding
+before introducing specialized libraries like `pandas` or `nltk`
+- Dependency-free code simplifies deployment, reduces maintenance burden,
+and works across different Python environments
+
+### Create Slides for Week Ten in `slides/weekten/index.qmd`
+
+- [X] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
+explains the theme of the course on document engineering.
+- [X] Review the content in the `index.qmd` file in the root of the repository
+that explains the idea of a "Prosegrammer" and the concept of document
+engineering. All the slides that you create have to specifically connect
+to the theme of prosegramming and document engineering.
+- [X] Review the content in the `index.qmd` file in the `syllabus` directory of
+the repository that explains rules and regulations for this course on document
+engineering. Note that these are the rules that students follow and not
+specifically the rules and regulations that you follow as a coding agent.
+- [X] The new slides that I want you to create should be in the file
+`slides/weekten/index.qmd`. The purpose of these slides is to introduce how to
+read and write files from the filesystem in Python. The files that will be
+input and output are JSON files. I would like you to create all of this
+content so that it is about using JSON files for document engineering.
+- [X] Please remember that I am currently working on the slides in
+`slides/weekten/index.qmd` that introduce how to use file input and output in
+Python. I want the slides to cover these topics:
+  - File input and output using the `open()` function
+  - Reading and writing files using the `read()` and `write()` methods
+  - File input and output using the `Pathlib` module and the `Path` class
+  - Using the `json` module to parse and analyze JSON files
+  - Reading in a JSON file and parsing it into a dictionary
+  - Analyzing the contents of a JSON file that has been parsed into a
+  dictionary according to the following analyses:
+    - Counting the number of key, value pairs in the dictionary
+    - Counting the min, max, and average count of unique values for all the
+    values in the dictionary
+  - Creating a dictionary to store the summary data of the counts of the unique
+  values stored in the dictionary
+  - Writing the summary data dictionary back out to a new JSON file
+  - Make sure that you have an initial JSON file that can be input by these
+  code examples in the slides. You should create a JSON file that contains
+  sample data that can be used for document engineering analysis.
+  - Make sure that all work with JSON files and their input and output only
+  uses packages that are part of the standard Python library.
+  - Do not use any external libraries when in the code that you implement.
+- [X] You can look at the other slide decks that I have already prepared:
+  - `slides/weekone/index.qmd`
+  - `slides/weektwo/index.qmd`
+  - `slides/weekthree/index.qmd`
+  - `slides/weekfour/index.qmd`
+  - `slides/weekfive/index.qmd`
+  - `slides/weeksix/index.qmd`
+  - `slides/weekeight/index.qmd`
+  - `slides/weeknine/index.qmd` ... and see how I am currently using Markdown
+  and Quarto in my slides!
+- [X] Please do not use Markdown or Quarto formats that I am not currently
+using in my slides to make sure that the content has a consistent format.
+- [X] If you check the `index.qmd` file in this GitHub repository, you can see
+a simple example of word frequency analysis. Please use simple examples like
+this one to illustrate how to use containers like lists, tuples, and sets in
+Python.
+- [X] Make sure that all the content is accessible to beginners who do not have
+extensive experience with programming or the documentation of a software tool.
+- [X] Make sure that all the content has concrete examples that make points
+clear to beginners. Provide simple summaries of the concrete code examples.
+- [X] Always include "signposting" slides that clearly state what you are going
+to explain in the next block of slides about a specific topic. These signposting
+slides are at the `#` level in the Markdown file.
+- [X] Keep the total number of slides to a count less than the prior slide
+decks that I have created. For instance, this topic is less complicated than the
+material that I produced for weeknine and thus the slide count should be less.
