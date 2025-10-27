@@ -214,7 +214,7 @@ print(output_file.read_text())
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 7
+#| max-lines: 8
 from pathlib import Path
 
 # create initial log file
@@ -229,16 +229,16 @@ print("Complete log:")
 print(log_file.read_text())
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.6em; font-size: 0.825em;"}
 
 - Use append mode `'a'` to add content without overwriting
 - New content added to end of existing file
 
 :::
 
-# Using pathlib for file operations
+# Try out `pathlib`!
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.65em;"}
 
 - {{< iconify fa6-solid folder-tree >}} **Path objects**: modern file
 path handling
