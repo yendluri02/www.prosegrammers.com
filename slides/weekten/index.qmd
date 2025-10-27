@@ -511,7 +511,7 @@ for prop, values in unique_vals.items():
 
 - Look at the `doc_metadata.json` file inside of the repository
 - Extract and count the unique values for each property
-- This function uses sets to automatically eliminate duplicates
+- This function uses `set`s to automatically eliminate duplicates
 
 :::
 
@@ -540,59 +540,20 @@ for prop, values in unique_vals.items():
     "difficulty": "intermediate"
   }
 }
-
-```
-
-## Calculating min, max, and average counts
-
-```{pyodide}
-#| max-lines: 12
-from pathlib import Path
-import json
-
-# read document metadata
-data_file = Path("doc_metadata.json")
-with open(data_file, 'r') as file:
-    data = json.load(file)
-
-# count unique values per property
-def count_unique_values(data: Dict) -> Dict[str, int]:
-    """Count unique values for each property."""
-    counts = {}
-    for doc_id, metadata in data.items():
-        for key, value in metadata.items():
-            if key not in counts:
-                counts[key] = set()
-            counts[key].add(value)
-    return {k: len(v) for k, v in counts.items()}
-
-counts = count_unique_values(data)
-count_values = list(counts.values())
-
-print("Unique value count statistics:")
-print(f"  Minimum count: {min(count_values)}")
-print(f"  Maximum count: {max(count_values)}")
-print(f"  Average count: {sum(count_values) / len(count_values):.1f}")
 ```
 
 # Creating summary data and writing to JSON
 
 ::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
 
-- {{< iconify fa6-solid clipboard-list >}} **Building summaries**:
-aggregate analysis results
-  - Collect statistics from document analysis
-  - Organize summary data in dictionaries
-  - Include metadata about the analysis
-
 - {{< iconify fa6-solid file-export >}} **Writing JSON files**: save
-structured results
+structured results to files
   - Use `json.dump()` to write to file objects
   - Use `json.dumps()` to create JSON strings
   - Format output with indentation for readability
 
 - {{< iconify fa6-solid recycle >}} **Round-trip processing**: read,
-analyze, write
+analyze, write JSON files
   - Load existing document data
   - Perform analysis and generate summaries
   - Save results for later use or sharing
@@ -639,70 +600,21 @@ print("Summary created:")
 print(summary_file.read_text())
 ```
 
-## Complete document analysis pipeline
-
-```{pyodide}
-#| max-lines: 14
-from pathlib import Path
-import json
-from typing import Dict
-
-def analyze_document_collection(input_file: Path) -> Dict:
-    """Load, analyze, and summarize document collection."""
-    with open(input_file, 'r') as file:
-        data = json.load(file)
-    unique_vals = {}
-    for doc_id, metadata in data.items():
-        for key, value in metadata.items():
-            if key not in unique_vals:
-                unique_vals[key] = set()
-            unique_vals[key].add(value)
-    counts = [len(v) for v in unique_vals.values()]
-    return {
-        "total_documents": len(data),
-        "total_properties": len(unique_vals),
-        "unique_value_counts": {k: len(v) for k, v in
-                                unique_vals.items()},
-        "statistics": {
-            "min_unique": min(counts),
-            "max_unique": max(counts),
-            "avg_unique": sum(counts) / len(counts)
-        }
-    }
-
-# run complete pipeline
-input_path = Path("doc_metadata.json")
-results = analyze_document_collection(input_path)
-
-# save results
-output_path = Path("analysis_results.json")
-output_path.write_text(json.dumps(results, indent=2))
-
-print("Analysis complete:")
-print(json.dumps(results, indent=2))
-```
-
-::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
-
-- Complete pipeline: read JSON, analyze, create summary, write results
-- Encapsulate analysis logic in reusable functions
-
-:::
-
-# File I/O for prosegrammers
+# File input and output for prosegrammers
 
 ::: {.fragment .boxed-content style="margin-top: -0.2em; font-size:
 0.725em;"}
 
-- {{< iconify fa6-solid gears >}} **Next steps for using file I/O**:
+- {{< iconify fa6-solid gears >}} **Next steps for using file input/output
+(I/O)**:
   - Find locations in your tool where file operations could improve
-functionality
+  functionality
     - Could you load configuration from JSON files?
     - Should your tool read multiple input documents?
-    - Would exporting results to JSON make analysis easier?
+    - Would exporting results to JSON make follow-on analyses easier?
   - If you already use file I/O, how can you make it more robust?
-  - {{< iconify fa6-solid lightbulb >}} **How would better file
-handling make your tool more useful?**
+  - {{< iconify fa6-solid lightbulb >}} **How would better file handling make
+  your tool more useful?**
 
 :::
 
