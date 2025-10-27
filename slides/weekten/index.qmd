@@ -264,7 +264,7 @@ errors
 
 ```{pyodide}
 #| autorun: true
-#| max-lines: 8
+#| max-lines: 10
 from pathlib import Path
 
 # create Path object for document
