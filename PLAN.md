@@ -2,7 +2,7 @@
 
 ## Plan for Content
 
-### Create Slides for Week Nine in `slides/nine/index.qmd`
+### Create Slides for Week Nine in `slides/weekten/index.qmd`
 
 - [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
 explains the theme of the course on document engineering.
@@ -15,11 +15,33 @@ the repository that explains rules and regulations for this course on document
 engineering. Note that these are the rules that students follow and not
 specifically the rules and regulations that you follow as a coding agent.
 - [ ] The new slides that I want you to create should be in the file
-`slides/weeknine/index.qmd`. The purpose of these example slides is to introduce
-the basics of Python data containers for document engineering. However, I would
-like you to customize all of this content so that it is about using dictionaries
-for document engineering. I have only provided you these slides so that you can
-see what some introductory slides for my slide decks looks like.
+`slides/weekten/index.qmd`. The purpose of these slides is to introduce how to
+read and write files from the filesystem in Python. The files that will be
+input and output are JSON files. I would like you to create all of this
+content so that it is about using JSON files for document engineering.
+
+- [ ] Please remember that I am currently working on the slides in
+`slides/weekten/index.qmd` that introduce how to use file input and output in
+Python. I want the slides to cover these topics:
+  - File input and output using the `open()` function
+  - Reading and writing files using the `read()` and `write()` methods
+  - File input and output using the `Pathlib` module and the `Path` class
+  - Using the `json` module to parse and analyze JSON files
+  - Reading in a JSON file and parsing it into a dictionary
+  - Analyzing the contents of a JSON file that has been parsed into a dictionary
+    - Counting the number of keys in the dictionary
+    - Accessing values in the dictionary using keys
+    - Iterating over the keys and values in the dictionary
+    - Counting the min, max, and average count of unique values for
+    all the keys and values in the dictionary
+  - Creating a dictionary to store the summary data of the counts
+  - Writing the summary data dictionary back out to a new JSON file
+  - Make sure that you have an initial JSON file that can be input by
+  these code examples in the slides. You should create a JSON file that
+  contains sample data that can be used for document engineering analysis.
+  - Make sure that all work with JSON files uses only packages that are part of
+  the standard Python library.
+  - Do not use any external libraries when in the code that you implement.
 - [ ] You can look at the other slide decks that I have already prepared:
   - `slides/weekone/index.qmd`
   - `slides/weektwo/index.qmd`
@@ -27,32 +49,13 @@ see what some introductory slides for my slide decks looks like.
   - `slides/weekfour/index.qmd`
   - `slides/weekfive/index.qmd`
   - `slides/weeksix/index.qmd`
-  - `slides/weekeight/index.qmd` and see how I am currently using Markdown and
-  Quarto in my slides!
+  - `slides/weekeight/index.qmd`
+  - `slides/weeknine/index.qmd`
+  ... and see how I am currently using Markdown and Quarto in my slides!
 - [ ] Please do not use Markdown or Quarto formats that I am not currently using in
 my slides to make sure that the content has a consistent format.
-- [ ] Please remember that I am currently working on the slides in
-`slides/weeknine/index.qmd` that introduce how to use data containers in Python.
-I want the slides to cover these topics:
-  - Dictionaries for storing data in document engineering
-    - A dictionary that maps document IDs to document content
-    - Dictionaries that have key-value pairs of different types
-      - Dictionary that uses a string to map to a string
-      - Dictionary that uses a string to map to an integer
-      - Dictionary that uses a string to map to a list
-      - Dictionary that uses a string to map to another dictionary
-      - Dictionary that uses a string to map to a tuple
-      - Dictionary that uses a string to map to a set
-  - Reading in a JSON file and parsing it into a dictionary
-  - Make sure that all work with JSON files uses only packages that are part of
-  the standard Python library.
-  - Do not use any external libraries when in the code that you implement.
-  - Any other basic content about dictionaries, including:
-    - Creating and initializing a dictionary
-    - Accessing a key or a value in a dictionary
-    - Iterating through the keys or the values in a dictionary
-    - Adding and removing elements from a dictionary
-- [ ] Make sure 
+
+
 - [ ] If you check the `index.qmd` file in this GitHub repository, you can see a
 simple example of word frequency analysis. Please use simple examples like this
 one to illustrate how to use containers like lists, tuples, and sets in Python.
