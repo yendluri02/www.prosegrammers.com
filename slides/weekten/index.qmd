@@ -1,0 +1,23 @@
+---
+title: "Document Processing"
+description: "Explore how Python programs use the filesystem"
+date: "2025-10-20"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Document Processing
+
+
