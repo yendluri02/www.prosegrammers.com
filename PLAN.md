@@ -2,7 +2,7 @@
 
 ## Plan for Content
 
-### Create Slides for Week Nine in `slides/weekten/index.qmd`
+### Create Slides for Week Ten in `slides/weekten/index.qmd`
 
 - [ ] Review the content in the `GEMINI.md` file (or the `AGENTS.md` file) that
 explains the theme of the course on document engineering.
@@ -19,7 +19,6 @@ specifically the rules and regulations that you follow as a coding agent.
 read and write files from the filesystem in Python. The files that will be
 input and output are JSON files. I would like you to create all of this
 content so that it is about using JSON files for document engineering.
-
 - [ ] Please remember that I am currently working on the slides in
 `slides/weekten/index.qmd` that introduce how to use file input and output in
 Python. I want the slides to cover these topics:
@@ -28,19 +27,19 @@ Python. I want the slides to cover these topics:
   - File input and output using the `Pathlib` module and the `Path` class
   - Using the `json` module to parse and analyze JSON files
   - Reading in a JSON file and parsing it into a dictionary
-  - Analyzing the contents of a JSON file that has been parsed into a dictionary
-    - Counting the number of keys in the dictionary
-    - Accessing values in the dictionary using keys
-    - Iterating over the keys and values in the dictionary
-    - Counting the min, max, and average count of unique values for
-    all the keys and values in the dictionary
-  - Creating a dictionary to store the summary data of the counts
+  - Analyzing the contents of a JSON file that has been parsed into a
+  dictionary according to the following analyses:
+    - Counting the number of key, value pairs in the dictionary
+    - Counting the min, max, and average count of unique values for all the
+    values in the dictionary
+  - Creating a dictionary to store the summary data of the counts of the unique
+  values stored in the dictionary
   - Writing the summary data dictionary back out to a new JSON file
-  - Make sure that you have an initial JSON file that can be input by
-  these code examples in the slides. You should create a JSON file that
-  contains sample data that can be used for document engineering analysis.
-  - Make sure that all work with JSON files uses only packages that are part of
-  the standard Python library.
+  - Make sure that you have an initial JSON file that can be input by these
+  code examples in the slides. You should create a JSON file that contains
+  sample data that can be used for document engineering analysis.
+  - Make sure that all work with JSON files and their input and output only
+  uses packages that are part of the standard Python library.
   - Do not use any external libraries when in the code that you implement.
 - [ ] You can look at the other slide decks that I have already prepared:
   - `slides/weekone/index.qmd`
@@ -50,16 +49,21 @@ Python. I want the slides to cover these topics:
   - `slides/weekfive/index.qmd`
   - `slides/weeksix/index.qmd`
   - `slides/weekeight/index.qmd`
-  - `slides/weeknine/index.qmd`
-  ... and see how I am currently using Markdown and Quarto in my slides!
-- [ ] Please do not use Markdown or Quarto formats that I am not currently using in
-my slides to make sure that the content has a consistent format.
-
-
-- [ ] If you check the `index.qmd` file in this GitHub repository, you can see a
-simple example of word frequency analysis. Please use simple examples like this
-one to illustrate how to use containers like lists, tuples, and sets in Python.
+  - `slides/weeknine/index.qmd` ... and see how I am currently using Markdown
+  and Quarto in my slides!
+- [ ] Please do not use Markdown or Quarto formats that I am not currently
+using in my slides to make sure that the content has a consistent format.
+- [ ] If you check the `index.qmd` file in this GitHub repository, you can see
+a simple example of word frequency analysis. Please use simple examples like
+this one to illustrate how to use containers like lists, tuples, and sets in
+Python.
 - [ ] Make sure that all the content is accessible to beginners who do not have
 extensive experience with programming or the documentation of a software tool.
 - [ ] Make sure that all the content has concrete examples that make points
 clear to beginners. Provide simple summaries of the concrete code examples.
+- [ ] Always include "signposting" slides that clearly state what you are going
+to explain in the next block of slides about a specific topic. These signposting
+slides are at the `#` level in the Markdown file.
+- [ ] Keep the total number of slides to a count less than the prior slide
+decks that I have created. For instance, this topic is less complicated than the
+material that I produced for weeknine and thus the slide count should be less.
