@@ -43,3 +43,12 @@ toc-expand: 3
   - Complete skill-check four during the in-person classroom session
   - Please review [Week One: Introduction to Document
   Engineering](../../slides/weekone/) for a list of necessary software tools
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekten/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Ten: File Input and Output for Document Engineering](../../slides/weekten/)
