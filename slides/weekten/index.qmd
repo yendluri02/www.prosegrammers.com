@@ -115,7 +115,6 @@ sample_file.write_text("Document Engineering with Python\n"
 # read the entire file contents
 with open(sample_file, 'r') as file:
     content = file.read()
-
 print("File contents:")
 print(content)
 print(f"\nTotal characters: {len(content)}")
@@ -123,7 +122,7 @@ print(f"\nTotal characters: {len(content)}")
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
 
-- Use `with` statement for automatic file closing
+- Use `with` context manager statement for automatic file closing
 - Read entire file as single string with `read()` method
 
 :::
@@ -131,7 +130,8 @@ print(f"\nTotal characters: {len(content)}")
 ## Reading files line by line
 
 ```{pyodide}
-#| max-lines: 12
+#| autorun: true
+#| max-lines: 7
 from pathlib import Path
 
 # create a multi-line document
@@ -145,7 +145,6 @@ doc_file.write_text("# Document Engineering\n"
 # read and process each line
 with open(doc_file, 'r') as file:
     lines = file.readlines()
-
 print("Document lines:")
 for i, line in enumerate(lines, 1):
     print(f"{i}: {line.strip()}")
@@ -153,14 +152,14 @@ for i, line in enumerate(lines, 1):
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
 
-- Use `readlines()` to get list of lines
+- Use `readlines()` to get list of lines inside of the file
 - Each line includes newline character, use `strip()` to remove
 
 :::
 
-# Writing files with the open() function
+# Use the `open` function
 
-::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+::: {.incremental style="margin-top: -0.2em; font-size: 0.7em;"}
 
 - {{< iconify fa6-solid file-export >}} **Opening files for writing**
   - Use `open()` function with write mode `'w'`
