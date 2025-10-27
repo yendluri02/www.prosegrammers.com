@@ -18,4 +18,22 @@ format:
     footer: "Prosegrammers"
 ---
 
-# What is Localization?
+# What is Localization? - DJ
+
+## Why it matters for documentation
+
+## Localization vs Internationalization
+
+# Why practice localization? - Brandon
+
+## Advantages
+
+## Core technical challenges
+
+# What are the common practices of localization? - Dylan
+
+## Localization Workflows and Processes
+
+## Tools, Standards, and Best Practices
+
+# Questions?
