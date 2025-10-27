@@ -1,7 +1,7 @@
 ---
-title: "Document Processing"
+title: "File Input and Output for Document Engineering"
 description: "Explore how Python programs use the filesystem"
-date: "2025-10-20"
+date: "2025-10-27"
 date-format: long
 author: Gregory M. Kapfhammer
 execute:
@@ -18,6 +18,686 @@ format:
     footer: "Prosegrammers"
 ---
 
-# Document Processing
+# File input and output
 
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
 
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid file-code >}} **What are this week's
+highlights?**
+    - Explore file input and output for document engineering
+        - Read and write files using Python's standard library
+        - Work with JSON files for structured document data
+        - Analyze and summarize document content programmatically
+
+:::
+
+# Key insights for prosegrammers
+
+::: {.fragment .boxed-content .fade style="font-size: 1.0em;"}
+
+- {{< iconify fa6-solid gears >}} Document engineering means blending
+code and prose to build resources for both humans and machines
+- {{< iconify fa6-solid file-code >}} File I/O enables prosegrammers to
+read, write, and transform documents stored on disk
+- {{< iconify fa6-solid code >}} JSON files provide structured data
+storage that naturally maps to Python dictionaries
+
+:::
+
+## File operations overview
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.72em;"}
+
+- {{< iconify fa6-solid book-open >}} **Reading files**: load document
+content from disk
+  - Open files in read mode
+  - Read entire contents or line-by-line
+  - Process text data for analysis
+
+- {{< iconify fa6-solid pen-to-square >}} **Writing files**: save
+generated documents to disk
+  - Open files in write mode
+  - Create new files or overwrite existing ones
+  - Output analysis results and reports
+
+- {{< iconify fa6-solid folder-open >}} **Path management**: work with
+file paths safely
+  - Use `pathlib.Path` for cross-platform compatibility
+  - Navigate directory structures programmatically
+  - Build robust file handling systems
+
+:::
+
+# Reading files with the open() function
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid file-import >}} **Opening files for reading**
+  - Use `open()` function with filename
+  - Specify read mode with `'r'` parameter
+  - Always close files after use
+
+- {{< iconify fa6-solid text-height >}} **Reading file contents**
+  - Read entire file with `read()` method
+  - Read line-by-line with `readlines()` method
+  - Process content as strings
+
+- {{< iconify fa6-solid shield-halved >}} **Safe file handling**
+  - Use context managers with `with` statement
+  - Automatic file closing prevents resource leaks
+  - Handle potential errors gracefully
+
+:::
+
+## Basic file reading
+
+```{python}
+#| max-lines: 12
+from pathlib import Path
+
+# create a sample document file
+sample_file = Path("sample_doc.txt")
+sample_file.write_text("Document Engineering with Python\n"
+                       "Prosegrammers unite code and prose\n"
+                       "Building tools for text analysis")
+
+# read the entire file contents
+with open(sample_file, 'r') as file:
+    content = file.read()
+
+print("File contents:")
+print(content)
+print(f"\nTotal characters: {len(content)}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use `with` statement for automatic file closing
+- Read entire file as single string with `read()` method
+
+:::
+
+## Reading files line by line
+
+```{python}
+#| max-lines: 12
+from pathlib import Path
+
+# create a multi-line document
+doc_file = Path("lines_doc.txt")
+doc_file.write_text("# Document Engineering\n"
+                    "## Introduction\n"
+                    "Python enables powerful text processing\n"
+                    "## Tools\n"
+                    "Prosegrammers use files for data storage")
+
+# read and process each line
+with open(doc_file, 'r') as file:
+    lines = file.readlines()
+
+print("Document lines:")
+for i, line in enumerate(lines, 1):
+    print(f"{i}: {line.strip()}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use `readlines()` to get list of lines
+- Each line includes newline character, use `strip()` to remove
+
+:::
+
+# Writing files with the open() function
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid file-export >}} **Opening files for writing**
+  - Use `open()` function with write mode `'w'`
+  - Creates new file or overwrites existing file
+  - Use append mode `'a'` to add to existing files
+
+- {{< iconify fa6-solid pen >}} **Writing content to files**
+  - Write strings with `write()` method
+  - Write multiple lines with `writelines()` method
+  - Control formatting with newline characters
+
+- {{< iconify fa6-solid floppy-disk >}} **Saving analysis results**
+  - Generate reports programmatically
+  - Export processed document data
+  - Create documentation automatically
+
+:::
+
+## Basic file writing
+
+```{python}
+#| max-lines: 10
+from pathlib import Path
+
+# create analysis results
+analysis_results = [
+    "Document Analysis Report",
+    "=" * 25,
+    "Total words: 1250",
+    "Unique words: 387",
+    "Average word length: 5.2"
+]
+
+# write results to file
+output_file = Path("analysis_report.txt")
+with open(output_file, 'w') as file:
+    for line in analysis_results:
+        file.write(line + '\n')
+
+print("Report written to file:")
+print(output_file.read_text())
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use write mode `'w'` to create or overwrite files
+- Add newline characters explicitly with `\n`
+
+:::
+
+## Appending to existing files
+
+```{python}
+#| max-lines: 10
+from pathlib import Path
+
+# create initial log file
+log_file = Path("processing_log.txt")
+log_file.write_text("Processing started\n")
+
+# append additional entries
+with open(log_file, 'a') as file:
+    file.write("Document loaded successfully\n")
+    file.write("Analysis completed\n")
+    file.write("Results saved\n")
+
+print("Complete log:")
+print(log_file.read_text())
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use append mode `'a'` to add content without overwriting
+- New content added to end of existing file
+
+:::
+
+# Using pathlib for file operations
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
+
+- {{< iconify fa6-solid folder-tree >}} **Path objects**: modern file
+path handling
+  - Create platform-independent file paths
+  - Navigate directory structures easily
+  - Check file existence and properties
+
+- {{< iconify fa6-solid file-code >}} **Convenient methods**: simple
+file I/O
+  - Read entire files with `read_text()` method
+  - Write content with `write_text()` method
+  - Handle paths as objects, not strings
+
+- {{< iconify fa6-solid shield >}} **Safer operations**: avoid common
+errors
+  - Type-safe path manipulation
+  - Automatic path separator handling
+  - Clear, readable code
+
+:::
+
+## Working with Path objects
+
+```{python}
+#| max-lines: 10
+from pathlib import Path
+
+# create Path object for document
+doc_path = Path("documentation") / "user_guide.md"
+print(f"Document path: {doc_path}")
+
+# check if file exists (it doesn't yet)
+print(f"File exists: {doc_path.exists()}")
+
+# create parent directory if needed
+doc_path.parent.mkdir(parents=True, exist_ok=True)
+
+# write content using Path method
+doc_path.write_text("# User Guide\n\nWelcome to our tool!")
+
+# read content back
+content = doc_path.read_text()
+print(f"\nDocument contents:\n{content}")
+print(f"\nFile size: {doc_path.stat().st_size} bytes")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
+
+- Use `/` operator to join path components naturally
+- `write_text()` and `read_text()` methods simplify file operations
+
+:::
+
+## Listing files in directories
+
+```{python}
+#| max-lines: 10
+from pathlib import Path
+
+# create some sample documentation files
+docs_dir = Path("docs")
+docs_dir.mkdir(exist_ok=True)
+
+(docs_dir / "readme.md").write_text("# README")
+(docs_dir / "install.md").write_text("# Installation")
+(docs_dir / "api.md").write_text("# API Reference")
+
+# list all markdown files
+print("Documentation files:")
+for md_file in sorted(docs_dir.glob("*.md")):
+    size = md_file.stat().st_size
+    print(f"  {md_file.name}: {size} bytes")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use `glob()` method to find files matching patterns
+- Access file properties through `stat()` method
+
+:::
+
+# Working with JSON files
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
+
+- {{< iconify fa6-solid file-code >}} **JSON format**: structured data
+storage
+  - JavaScript Object Notation for data exchange
+  - Maps naturally to Python dictionaries and lists
+  - Human-readable and machine-parseable
+
+- {{< iconify fa6-solid download >}} **Reading JSON**: parse structured
+data
+  - Use `json` module from standard library
+  - Load JSON files into Python data structures
+  - Access nested data easily
+
+- {{< iconify fa6-solid upload >}} **Writing JSON**: save structured
+data
+  - Convert Python objects to JSON format
+  - Control formatting with indentation
+  - Preserve data types and structure
+
+:::
+
+## Reading JSON files
+
+```{python}
+#| max-lines: 14
+from pathlib import Path
+import json
+
+# create sample JSON document metadata
+metadata = {
+    "documents": [
+        {"id": "D001", "title": "Python Basics", "words": 1200,
+         "tags": ["python", "tutorial"]},
+        {"id": "D002", "title": "Advanced Topics", "words": 1800,
+         "tags": ["python", "advanced"]},
+        {"id": "D003", "title": "Best Practices", "words": 1500,
+         "tags": ["python", "style"]}
+    ],
+    "collection": "Programming Guides"
+}
+
+# write JSON to file
+json_file = Path("documents.json")
+json_file.write_text(json.dumps(metadata, indent=2))
+
+# read JSON from file
+with open(json_file, 'r') as file:
+    data = json.load(file)
+
+print(f"Collection: {data['collection']}")
+print(f"Total documents: {len(data['documents'])}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Use `json.load()` to read JSON from file object
+- JSON objects become dictionaries, arrays become lists
+
+:::
+
+## Analyzing JSON document data
+
+```{python}
+#| max-lines: 12
+from pathlib import Path
+import json
+
+# read the document collection
+json_file = Path("documents.json")
+with open(json_file, 'r') as file:
+    data = json.load(file)
+
+# analyze document statistics
+docs = data['documents']
+total_words = sum(doc['words'] for doc in docs)
+avg_words = total_words / len(docs)
+
+print("Document Collection Analysis:")
+print(f"  Total documents: {len(docs)}")
+print(f"  Total words: {total_words}")
+print(f"  Average words per document: {avg_words:.1f}")
+
+# find all unique tags
+all_tags = set()
+for doc in docs:
+    all_tags.update(doc['tags'])
+print(f"  Unique tags: {sorted(all_tags)}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Parse JSON data into dictionaries and lists
+- Process structured data with standard Python operations
+
+:::
+
+# Analyzing JSON data with statistics
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
+
+- {{< iconify fa6-solid chart-bar >}} **Count operations**: analyze
+collection size
+  - Count key-value pairs in dictionaries
+  - Determine number of items in lists
+  - Track unique values across documents
+
+- {{< iconify fa6-solid calculator >}} **Statistical analysis**:
+compute metrics
+  - Calculate minimum, maximum, and average values
+  - Identify patterns in document properties
+  - Generate summary statistics
+
+- {{< iconify fa6-solid database >}} **Value frequency analysis**:
+understand data distribution
+  - Count unique values for each key
+  - Find most and least common values
+  - Build frequency dictionaries
+
+:::
+
+## Counting and analyzing JSON data
+
+```{python}
+#| max-lines: 14
+from pathlib import Path
+import json
+from typing import Dict, List
+
+# create sample document data with categories
+doc_data = {
+    "D001": {"category": "tutorial", "difficulty": "beginner"},
+    "D002": {"category": "tutorial", "difficulty": "advanced"},
+    "D003": {"category": "reference", "difficulty": "intermediate"},
+    "D004": {"category": "guide", "difficulty": "beginner"},
+    "D005": {"category": "tutorial", "difficulty": "intermediate"}
+}
+
+# write to JSON file
+data_file = Path("doc_metadata.json")
+data_file.write_text(json.dumps(doc_data, indent=2))
+
+# read and analyze
+with open(data_file, 'r') as file:
+    data = json.load(file)
+
+print(f"Total documents: {len(data)}")
+print(f"Total key-value pairs: {sum(len(v) for v in data.values())}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Count total items and nested key-value pairs
+- Use dictionary and list comprehension for analysis
+
+:::
+
+## Computing statistics for unique values
+
+```{python}
+#| max-lines: 14
+from pathlib import Path
+import json
+from typing import Dict, Set
+
+# read document metadata
+data_file = Path("doc_metadata.json")
+with open(data_file, 'r') as file:
+    data = json.load(file)
+
+# analyze unique values for each property
+def analyze_unique_values(data: Dict) -> Dict[str, Set]:
+    """Extract unique values for each property."""
+    properties = {}
+    for doc_id, metadata in data.items():
+        for key, value in metadata.items():
+            if key not in properties:
+                properties[key] = set()
+            properties[key].add(value)
+    return properties
+
+unique_vals = analyze_unique_values(data)
+
+print("Unique values per property:")
+for prop, values in unique_vals.items():
+    print(f"  {prop}: {sorted(values)} (count: {len(values)})")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Extract and count unique values for each property
+- Use sets to automatically eliminate duplicates
+
+:::
+
+## Calculating min, max, and average counts
+
+```{python}
+#| max-lines: 12
+from pathlib import Path
+import json
+
+# read document metadata
+data_file = Path("doc_metadata.json")
+with open(data_file, 'r') as file:
+    data = json.load(file)
+
+# count unique values per property
+def count_unique_values(data: Dict) -> Dict[str, int]:
+    """Count unique values for each property."""
+    counts = {}
+    for doc_id, metadata in data.items():
+        for key, value in metadata.items():
+            if key not in counts:
+                counts[key] = set()
+            counts[key].add(value)
+    return {k: len(v) for k, v in counts.items()}
+
+counts = count_unique_values(data)
+count_values = list(counts.values())
+
+print("Unique value count statistics:")
+print(f"  Minimum count: {min(count_values)}")
+print(f"  Maximum count: {max(count_values)}")
+print(f"  Average count: {sum(count_values) / len(count_values):.1f}")
+```
+
+# Creating summary data and writing to JSON
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
+
+- {{< iconify fa6-solid clipboard-list >}} **Building summaries**:
+aggregate analysis results
+  - Collect statistics from document analysis
+  - Organize summary data in dictionaries
+  - Include metadata about the analysis
+
+- {{< iconify fa6-solid file-export >}} **Writing JSON files**: save
+structured results
+  - Use `json.dump()` to write to file objects
+  - Use `json.dumps()` to create JSON strings
+  - Format output with indentation for readability
+
+- {{< iconify fa6-solid recycle >}} **Round-trip processing**: read,
+analyze, write
+  - Load existing document data
+  - Perform analysis and generate summaries
+  - Save results for later use or sharing
+
+:::
+
+## Creating and writing summary data
+
+```{python}
+#| max-lines: 14
+from pathlib import Path
+import json
+
+# read original document data
+data_file = Path("doc_metadata.json")
+with open(data_file, 'r') as file:
+    data = json.load(file)
+
+# create comprehensive summary
+summary = {
+    "analysis_date": "2025-10-27",
+    "total_documents": len(data),
+    "properties_analyzed": list(next(iter(data.values())).keys()),
+    "unique_counts": {},
+    "property_statistics": {}
+}
+
+# analyze each property
+for key in summary["properties_analyzed"]:
+    values = [doc[key] for doc in data.values()]
+    unique_values = set(values)
+    summary["unique_counts"][key] = len(unique_values)
+    summary["property_statistics"][key] = {
+        "unique_values": sorted(list(unique_values)),
+        "total_count": len(values)
+    }
+
+# write summary to new JSON file
+summary_file = Path("doc_summary.json")
+with open(summary_file, 'w') as file:
+    json.dump(summary, file, indent=2)
+
+print("Summary created:")
+print(summary_file.read_text())
+```
+
+## Complete document analysis pipeline
+
+```{python}
+#| max-lines: 14
+from pathlib import Path
+import json
+from typing import Dict
+
+def analyze_document_collection(input_file: Path) -> Dict:
+    """Load, analyze, and summarize document collection."""
+    with open(input_file, 'r') as file:
+        data = json.load(file)
+    unique_vals = {}
+    for doc_id, metadata in data.items():
+        for key, value in metadata.items():
+            if key not in unique_vals:
+                unique_vals[key] = set()
+            unique_vals[key].add(value)
+    counts = [len(v) for v in unique_vals.values()]
+    return {
+        "total_documents": len(data),
+        "total_properties": len(unique_vals),
+        "unique_value_counts": {k: len(v) for k, v in
+                                unique_vals.items()},
+        "statistics": {
+            "min_unique": min(counts),
+            "max_unique": max(counts),
+            "avg_unique": sum(counts) / len(counts)
+        }
+    }
+
+# run complete pipeline
+input_path = Path("doc_metadata.json")
+results = analyze_document_collection(input_path)
+
+# save results
+output_path = Path("analysis_results.json")
+output_path.write_text(json.dumps(results, indent=2))
+
+print("Analysis complete:")
+print(json.dumps(results, indent=2))
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Complete pipeline: read JSON, analyze, create summary, write results
+- Encapsulate analysis logic in reusable functions
+
+:::
+
+# File I/O for prosegrammers
+
+::: {.fragment .boxed-content style="margin-top: -0.2em; font-size:
+0.725em;"}
+
+- {{< iconify fa6-solid gears >}} **Next steps for using file I/O**:
+  - Find locations in your tool where file operations could improve
+functionality
+    - Could you load configuration from JSON files?
+    - Should your tool read multiple input documents?
+    - Would exporting results to JSON make analysis easier?
+  - If you already use file I/O, how can you make it more robust?
+  - {{< iconify fa6-solid lightbulb >}} **How would better file
+handling make your tool more useful?**
+
+:::
+
+## Key takeaways for prosegrammers
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.7em;"}
+
+- {{< iconify fa6-solid file-code >}} **Master file operations**
+  - Read and write files using `open()` with context managers
+  - Use `pathlib.Path` for platform-independent file handling
+  - Handle file paths and directories programmatically
+
+- {{< iconify fa6-solid code >}} **Leverage JSON for structured data**
+  - Parse JSON files into Python dictionaries and lists
+  - Analyze document collections with statistical methods
+  - Write summary data back to JSON for sharing
+
+- {{< iconify fa6-solid lightbulb >}} **Think like a prosegrammer**
+  - Build complete pipelines: read, analyze, summarize, write
+  - Process multiple documents systematically
+  - Apply file I/O to real-world document engineering challenges
+
+:::
