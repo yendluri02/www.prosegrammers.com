@@ -78,7 +78,7 @@ file paths safely
 
 :::
 
-# Using the `open` function
+# Using `open` and `read`
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.65em;"}
 
@@ -127,7 +127,7 @@ print(f"\nTotal characters: {len(content)}")
 
 :::
 
-## Reading files line by line
+## Line by line with `readlines`
 
 ```{pyodide}
 #| autorun: true
@@ -157,9 +157,9 @@ for i, line in enumerate(lines, 1):
 
 :::
 
-# Use the `open` function
+# Using `open` and `write`
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.7em;"}
+::: {.incremental style="margin-top: -0.50em; font-size: 0.685em;"}
 
 - {{< iconify fa6-solid file-export >}} **Opening files for writing**
   - Use `open()` function with write mode `'w'`
@@ -178,10 +178,11 @@ for i, line in enumerate(lines, 1):
 
 :::
 
-## Basic file writing
+## Basic file writing with `w` mode
 
 ```{pyodide}
-#| max-lines: 10
+#| autorun: true
+#| max-lines: 7
 from pathlib import Path
 
 # create analysis results
@@ -198,34 +199,32 @@ output_file = Path("analysis_report.txt")
 with open(output_file, 'w') as file:
     for line in analysis_results:
         file.write(line + '\n')
-
-print("Report written to file:")
+print("Report written to file! Here are the contents:")
 print(output_file.read_text())
 ```
 
-::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+::: {.incremental style="margin-top: -0.8em; font-size: 0.825em;"}
 
 - Use write mode `'w'` to create or overwrite files
 - Add newline characters explicitly with `\n`
 
 :::
 
-## Appending to existing files
+## Appending to existing files with `a` mode
 
 ```{pyodide}
-#| max-lines: 10
+#| autorun: true
+#| max-lines: 7
 from pathlib import Path
 
 # create initial log file
 log_file = Path("processing_log.txt")
 log_file.write_text("Processing started\n")
-
 # append additional entries
 with open(log_file, 'a') as file:
     file.write("Document loaded successfully\n")
     file.write("Analysis completed\n")
     file.write("Results saved\n")
-
 print("Complete log:")
 print(log_file.read_text())
 ```
