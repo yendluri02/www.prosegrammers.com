@@ -20,6 +20,26 @@ format:
 
 # What is Localization? - DJ
 
+## What is localization?
+  - Definition: 
+    - The process of adapting content, software, or documentation to the
+      linguistic, cultural, and technical expectations of a specific locale
+      (language + region). This goes beyond translation to include formats,
+      examples, legal requirements, and UI/UX adjustments so the material
+      appears native to local users.
+  - Scope: 
+    - translating text and metadata, formatting dates/numbers/currency,
+      adapting images and examples, handling plural forms and text direction,
+      and ensuring legal and accessibility compliance for the target locale.
+  - Goal:
+    - Make documentation accurate, usable, and culturally appropriate so
+      readers can understand and trust the content without needing to mentally
+      translate or adapt it themselves.
+  - Examples:
+    - translating a user guide to Spanish, switching date formats to
+      DD/MM/YYYY, providing RTL layout for Arabic, and localizing screenshots
+      and examples with region-specific data.
+
 ## Why it matters for documentation
 
 ## Localization vs Internationalization
