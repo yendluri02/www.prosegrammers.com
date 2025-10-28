@@ -27,8 +27,19 @@ format:
 # Why practice localization? - Brandon
 
 ## Advantages
+  - Wide Market Reach: 
+    - Makes software accesible to a variety of users of different languages and cultures increasing potential revenue.
+  - Better User Experience:
+    - Users can use their prefered language and formats (dates, currency, etc.).
+  - Competitive advantage: 
+    - Localization can not only give a stronger brand image but can also provide a competitive advantage against other tools that may not have it.
+
 
 ## Core technical challenges
+  - Hard-coded strings require signifigant reworking to extract and translate.
+  - dates, times, and currencies require specific formatting for different regions.
+  - layout and design is a big concern because of some translated text being shorter/longer, Right to left languages can also require fundamental changes.
+  - Can be very costly to update and maintain, might need proper translators to make sure translation is as accurate as possible.
 
 # What are the common practices of localization? - Dylan
 
