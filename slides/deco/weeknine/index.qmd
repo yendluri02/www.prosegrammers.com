@@ -3,7 +3,7 @@ title: "Understanding Literate Programming"
 description: "Use literate programming for technical documentation"
 date: "2025-10-27"
 date-format: long
-author: Chezka Quinola,Hank Grefenstette, Gregory M. Kapfhammer
+author: "Chezka Quinola,Hank Grefenstette"
 execute:
   echo: true
 format:
@@ -20,7 +20,8 @@ format:
 
 ## What is Literate Programming?
 
-Literate programming is a prosegramming method invented by Donald Knuth, where code is written as a "human-readable narrative".
+Literate programming is a prosegramming method invented by Donald Knuth, where
+code is written as a "human-readable narrative".
 
 * The code explains why and how a program works, not just what it does
 * This is done by prioritizing human legibility
@@ -29,8 +30,8 @@ Literate programming is a prosegramming method invented by Donald Knuth, where c
 
 * Prioritizes clarity over conciseness
 * Encourages writing as if teaching another person
-* The order of explanation follows whatever is more easily readable instead of whatever is easier to compile
-
+* The order of explanation follows whatever is more easily readable instead of
+whatever is easier to compile
 
 ## Integrated documentation
 
@@ -38,29 +39,32 @@ Literate programming is a prosegramming method invented by Donald Knuth, where c
 * The narrative drives the code structure, not the other way around
 * Avoids the common problem of out-of-date comments
 
-
 ## Code Extraction (Tangle) and Formatting (Weave)
 
-A literate programming system typically supports two main processes that transform a single source file into two different outputs:
+A literate programming system typically supports two main processes that
+transform a single source file into two different outputs:
 
-* **Tangle:** Extracts the source code from the document, prioritizing compilation or execution.
-* **Weave:** Formats the document into a readable format like HTML or text, prioritizing legibility.
-
+* **Tangle:** Extracts the source code from the document, prioritizing
+compilation or execution.
+* **Weave:** Formats the document into a readable format like HTML or text,
+prioritizing legibility.
 
 ## Modern Uses of Literate Programming
 
-Jupyter Notebooks – Python code with Markdown explanations and visualizations
-R Markdown – Combines R code, analysis, and formatted reports
-Emacs Org-mode – “Literate Emacs configurations”
-Pweave / noweb – General-purpose literate programming frameworks
-
+- **Jupyter Notebooks** – Python code with Markdown explanations and visualizations
+- **R Markdown** – Combines R code, analysis, and formatted reports
+- **Emacs Org-mode** – "Literate Emacs configurations"
+- **Pweave / noweb** – General-purpose literate programming frameworks
 
 ## Benefits of Literate Programming
 
-* **Improved readability:** Easier for others (and your future self) to understand your code
+* **Improved readability:** Easier for others (and your future self) to
+understand your code
 * **Better debugging and maintenance:** Explaining logic helps spot errors early
-* **Enhanced learning:** Writing a narrative reinforces understanding of algorithms and data structures
-* **Seamless reporting:** Code outputs and explanations can be presented together
+* **Enhanced learning:** Writing a narrative reinforces understanding of
+algorithms and data structures
+* **Seamless reporting:** Code outputs and explanations can be presented
+together
 
 ## Best Practices
 
@@ -76,29 +80,27 @@ Pweave / noweb – General-purpose literate programming frameworks
 * Not all programming environments support literate programming natively
 * Collaboration may be harder if team members are unfamiliar with the method
 
-
 ## Mini Demo: Literate Python Example
 
 ```{python}
-#| autorun: true
-#| max-lines: 12
-## Calculate the average of a list
+# Calculate the average of a list
 
 numbers = [10, 20, 30, 40, 50]
 
-## Sum the numbers
+# Sum the numbers
 total = sum(numbers)
 
-## Count the numbers
+# Count the numbers
 count = len(numbers)
 
-## Compute average
+# Compute average
 average = total / count
 
 print(f"The average is {average}")
 ```
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
   - The `#` lines act like narrative sections in a literate program
   - You can include explanations, reasoning, or formulas in plain text
   - When run, only the actual Python code executes, but the narrative guides the reader
@@ -107,7 +109,12 @@ print(f"The average is {average}")
 
 ## Takeaways
 
+::: fragment
+
 * Literate programming turns code into a story
 * Prioritizes human understanding without sacrificing machine execution
-* Modern tools like Jupyter and R Markdown make it accessible for everyday data science and software projects
+* Modern tools like Jupyter and R Markdown make it accessible for everyday data
+science and software projects
 * Useful for teaching, research, and highly technical documentation
+
+:::
