@@ -3,7 +3,7 @@ title: "Understanding Localization"
 description: "Use localization to adapt documentation"
 date: "2025-10-27"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Brandon Thompson, DJ Battle, Tien DeLong-Headley
 execute:
   echo: true
 format:
@@ -19,3 +19,74 @@ format:
 ---
 
 # What is Localization?
+
+## Definition
+- The process of adapting content, software, or documentation to the
+linguistic, cultural, and technical expectations of a specific locale
+(language + region). 
+- This goes beyond translation to include formats,
+examples, legal requirements, and UI/UX adjustments so the material
+appears native to local users.
+
+## Scope 
+- Translating text and metadata
+- Formatting dates/numbers/currency
+- Adapting images and examples
+- Handling plural forms and text direction,
+- Ensuring legal and accessibility compliance for the target locale.
+
+## Why it matters for documentation
+Localization makes documentation accurate, usable, and culturally appropriate so readers can understand and trust the content without needing to mentally translate or adapt it themselves.
+
+Examples:
+- Translating a user guide to Spanish
+- Switching date formats to DD/MM/YYYY
+- Providing RTL layout for Arabic
+- Localizing screenshots and examples with region-specific data.
+
+# Why practice localization?
+
+## Advantages
+- Wide Market Reach: 
+  - Makes software accesible to a variety of users of different languages and cultures increasing potential revenue.
+- Better User Experience:
+  - Users can use their prefered language and formats (dates, currency, etc.).
+- Competitive advantage: 
+  - Localization can not only give a stronger brand image but can also provide a competitive advantage against other tools that may not have it.
+
+## Core technical challenges
+- Hard-coded strings require signifigant reworking to extract and translate.
+- Dates, times, and currencies require specific formatting for different regions.
+- Layout and design is a big concern because of some translated text being shorter/longer, Right to left languages can also require fundamental changes.
+- Can be very costly to update and maintain, might need proper translators to make sure translation is as accurate as possible.
+
+# What are the common practices of localization?
+
+## Internationalization
+Internationalization is the process of ensuring that code is designed for flexibility. This means:
+- No hard-coded text/strings or cultural references
+- Adhere to Unicode (UTF-8) standards for global character support
+
+- Example:
+  - Rather than `print("Welcome!")` use `print(welcome_message)`
+
+## Cultural Translation & Format Consistency
+- Translate images, idioms, and examples so they feel natural and relevant
+- Adjust text direction for right-to-left languages (Arabic, Hebrew)
+- Maintain tone and formality appropriate for the culture
+- Verify legal, accessibility, and measurement system compliance (imperial vs. metric)
+
+## Best Tools & Practices
+- Translation Management Systems (TMS):
+  - Crowdin — Dveloper collaboration, automatic Git sync, supports software and docs localization
+  - Lokalise — Clean UI & API integration, automation features
+  - Smartling — Advanced workflow management and analytics
+
+---
+
+- File formats for storing strings and translations:
+  - .po (Portable Object) — Open-source projects, pairs with gettext
+  - .xliff (XML Localization Interchange File Format) — Industry-standard format for exchanging translations between tools
+  - .json (JavaScript Object Notation) — Lightweight & developer-friendly, ideal for web apps
+
+# Questions?
