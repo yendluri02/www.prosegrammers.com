@@ -625,6 +625,13 @@ print("Summary created:")
 print(summary_file.read_text())
 ```
 
+::: {.fragment style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Create the `summary` variable as a `dict` in Python
+- Save this variable to a JSON file called `doc_summary.json`
+
+:::
+
 # File input and output for prosegrammers
 
 ::: {.fragment .boxed-content style="margin-top: -0.2em; font-size:
@@ -635,7 +642,7 @@ print(summary_file.read_text())
   - Find locations in your tool where file operations could improve
   functionality
     - Could you load configuration from JSON files?
-    - Should your tool read multiple input documents?
+    - Can your tool read multiple input JSON documents?
     - Would exporting results to JSON make follow-on analyses easier?
   - If you already use file I/O, how can you make it more robust?
   - {{< iconify fa6-solid lightbulb >}} **How would better file handling make
