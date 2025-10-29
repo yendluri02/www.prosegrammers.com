@@ -101,9 +101,9 @@ print(f"The average is {average}")
 
 ::: {.incremental style="margin-top: -0.2em; font-size: 0.775em;"}
 
-  - The `#` lines act like narrative sections in a literate program
-  - You can include explanations, reasoning, or formulas in plain text
-  - When run, only the actual Python code executes, but the narrative guides the reader
+- The `#` lines act like narrative sections in a literate program
+- You can include explanations, reasoning, or formulas in plain text
+- When run, only the actual Python code executes, but the narrative guides the reader
 
 :::
 
