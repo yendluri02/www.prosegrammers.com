@@ -39,13 +39,8 @@ format:
   - Order search results by relevance
   - Alphabetize glossaries and indexes
   - Rank documents by date or popularity
-
-:::
-
-::: {.fragment .fade .boxed-content style="font-size: 0.85em;"}
-
-{{< iconify fa6-solid lightbulb >}} Prosegrammers use searching and sorting to
-make documents more accessible and useful!
+- {{< iconify fa6-solid lightbulb >}} Both methods help to make documents more
+accessible and useful!
 
 :::
 
