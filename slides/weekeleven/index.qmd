@@ -93,6 +93,8 @@ diagrams, summaries, and descriptions of technical topics or processes.
 
 ::: {.fragment style="margin-top: -0.25em; font-size: 0.95em;"}
 
+- In document engineering, focus first on **correctness**, then on efficiency!
+Recall, an efficient but incorrect program is useless!
 - **Program efficiency**: how quickly a program runs as input grows
 - **Big-O notation**: describes how runtime grows with input size
 - **Complexity classes**: constant, linear, logarithmic, or quadratic
