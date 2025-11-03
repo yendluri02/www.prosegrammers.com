@@ -1,5 +1,5 @@
 ---
-title: "DEPC2: Document Engineering Project Critique for Quarto"
+title: "Project Critique for Quarto"
 description: "Evaluating a project's documentation"
 date: "2025-010-01"
 date-format: long
@@ -75,4 +75,3 @@ The first of many guides offered in the Quarto documentation, this shows the syn
  - Maintain a clean, organized, and well-structured presentation of the documentation.
 
 :::
-

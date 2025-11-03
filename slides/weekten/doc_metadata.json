@@ -1,0 +1,22 @@
+{
+  "D001": {
+    "category": "tutorial",
+    "difficulty": "beginner"
+  },
+  "D002": {
+    "category": "tutorial",
+    "difficulty": "advanced"
+  },
+  "D003": {
+    "category": "reference",
+    "difficulty": "intermediate"
+  },
+  "D004": {
+    "category": "guide",
+    "difficulty": "beginner"
+  },
+  "D005": {
+    "category": "tutorial",
+    "difficulty": "intermediate"
+  }
+}

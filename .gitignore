@@ -144,3 +144,8 @@ _optimize
 /.mutmut-cache/
 
 **/*.quarto_ipynb
+
+# Prevent committing intermediate HTML files in source directories
+slides/**/index.html
+schedule/**/index.html
+!_site/**/*.html

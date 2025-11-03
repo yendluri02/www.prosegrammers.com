@@ -1,0 +1,474 @@
+---
+title: "Using Data Containers for Document Engineering"
+description: "Use containers in Python programs"
+date: "2025-10-13"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Data containers
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid database >}} **What are this week's highlights?**
+    - Explore Python data containers for document engineering
+        - Lists for organizing document collections and sections
+        - Tuples for storing document metadata immutably
+        - Sets for managing unique keywords and tags
+
+:::
+
+# Key insights for prosegrammers
+
+::: {.fragment .boxed-content .fade style="font-size: 1.0em;"}
+
+- {{< iconify fa6-solid gears >}} Document engineering means blending code and
+prose to build resources for both humans and machines
+- {{< iconify fa6-solid database >}} Python containers organize document data
+efficiently: lists for sequences, tuples for records, sets for uniqueness
+- {{< iconify fa6-solid code >}} Data containers can store multiple documents,
+in different formats, with different data and metadata
+
+:::
+
+## Python collections overview
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.72em;"}
+
+- {{< iconify fa6-solid list >}} **Lists**: mutable sequences for document sections
+  - Store chapters, paragraphs, or document versions
+  - Perfect for ordered content that may change
+  - Support appending, removing, and modifying elements
+- {{< iconify fa6-solid tag >}} **Tuples**: immutable records for document metadata
+  - Store title, author, date information safely
+  - Guaranteed not to change accidentally
+  - Efficient for fixed document properties
+- {{< iconify fa6-solid hashtag >}} **Sets**: unique collections for document keywords
+  - Eliminate duplicate tags automatically
+  - Fast membership testing and set operations
+  - Perfect for managing document categories
+
+:::
+
+# Using lists in Python
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid list >}} **Creating document collections**
+  - Store related files in ordered sequences
+  - Build documentation hierarchies
+
+- {{< iconify fa6-solid arrows-rotate >}} **Modifying document structures**
+  - Add, remove, and reorganize content
+  - Update documentation dynamically
+
+- {{< iconify fa6-solid gears >}} **Accessing document elements**
+  - Find specific documents by position
+  - Process collections systematically
+
+:::
+
+## Basic list operations
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# create a list of documents for a prosegrammer's project
+documents = [
+    "README.md",
+    "installation_guide.md", 
+    "user_manual.md",
+    "api_reference.md"
+]
+
+print("Project documentation files:")
+for i, doc in enumerate(documents, 1):
+    print(f"{i}. {doc}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Create document list, iterate with `for` loop, and then display details
+
+:::
+
+## Two-dimensional lists
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# represent documents with multiple attributes
+document_versions = [
+    ["user_guide_v1.md", "markdown", "2024-01-15"],
+    ["user_guide_v2.md", "markdown", "2024-02-10"], 
+    ["user_guide_v2.pdf", "pdf", "2024-02-10"]
+]
+
+print("Document version history:")
+for doc in document_versions:
+    filename, format_type, date = doc
+    print(f"{filename} ({format_type}) - {date}")
+```
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.825em;"}
+
+- Create a list of lists, iterate with `for` loop, and then display details
+
+:::
+
+## Modifying lists dynamically
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# manage document sections for a technical manual
+sections = ["Introduction", "Installation", "Usage", "Testing"]
+
+# add and insert sections
+sections.append("Troubleshooting")
+sections.insert(2, "Configuration")
+
+print("Updated sections:")
+for i, section in enumerate(sections, 1):
+    print(f"{i}. {section}")
+```
+
+## Lists for document engineering
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.825em;"}
+
+- {{< iconify fa6-solid check >}} **Document collections**: store related files in order
+- {{< iconify fa6-solid check >}} **Dynamic modification**: add, insert, and remove content
+- {{< iconify fa6-solid check >}} **Flexible organization**: restructure documents as needed
+- {{< iconify fa6-solid check >}} **Index-based access**: retrieve specific sections efficiently
+
+:::
+
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use lists**:
+  - Find a location in your document engineering tool where you used lists
+    - Is it working correctly?
+    - How did you test and debug it?
+    - How can you refactor the code?
+  - If you did not find a list being used, how could you add one to your project?
+
+:::
+
+# Using lists in Python for document engineering
+
+::: {.fragment .boxed-content style="margin-top: -0.2em; font-size: 0.9em;"}
+
+- Input one or more documents from the file system
+- Parse each document to a data structure instance
+- Store all data structures for each document in a list
+- Iterate through the list to process all data structures
+- Output the results of the analysis to the console
+- {{< iconify fa6-solid lightbulb >}} **How to extend your tool to handle multiple files?**
+
+:::
+
+# Tuples for storing immutable metadata
+
+::: {.incremental style="margin-top: -0.4em; font-size: 0.72em;"}
+
+- {{< iconify fa6-solid tag >}} **Creating immutable records**
+  - Store document properties safely
+  - Prevent accidental data changes
+
+- {{< iconify fa6-solid database >}} **Organizing metadata collections**
+  - Build consistent document catalogs
+  - Maintain data integrity
+
+- {{< iconify fa6-solid chart-bar >}} **Analyzing document metrics**
+  - Extract statistics from records
+  - Process structured data efficiently
+
+:::
+
+## Basic tuple operations
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# create document metadata tuples
+doc1_meta = ("Document Engineering Guide", "Dr. Kapfhammer", "2024-10-15")
+doc2_meta = ("Python Containers Tutorial", "Dr. Kapfhammer", "2024-10-20")
+
+# store all document metadata
+all_documents = [doc1_meta, doc2_meta]
+
+print("Document Library:")
+for doc in all_documents:
+    title, author, date = doc
+    print(f"{title} by {author} ({date})")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Create metadata tuple, iterate with `for` loop, and then display details
+- How is a tuple different from a list? How do we use it differently?
+
+:::
+
+## Document analysis with tuples
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# analyze document metrics using tuples
+doc_metrics = [
+    ("README.md", 450, 25),
+    ("install.md", 280, 18),
+    ("api_docs.md", 1200, 85)
+]
+
+total_words = sum(metric[1] for metric in doc_metrics)
+print(f"Documents analyzed: {len(doc_metrics)}")
+print(f"Total words: {total_words}")
+print(f"Average words: {total_words / len(doc_metrics):.1f}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Create list of tuples, iterate with `for` loop, and then display details
+- Many combinations of data structures (e.g., lists and tuple) are possible!
+
+:::
+
+## Immutability versus mutable contents
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# tuple contains a mutable list as its second element
+meta = ("Report", ["draft", "review"])
+print("Original meta:", meta)
+
+# attempt to reassign an element of the tuple raises a TypeError
+try:
+    meta[0] = "Final Report"
+except TypeError as e:
+    print("Error when trying to reassign tuple element:", type(e).__name__, "-", e)
+
+# however, we can mutate the list contained inside the tuple
+meta[1].append("final")
+print("Modified meta:", meta)
+```
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.75em;"}
+
+- The `TypeError` shows that tuple elements cannot be reassigned
+- Yet, and `append` call modifies the list in place, changing `meta`'s contents
+- This shows that tuples are immutable, but their contents may be mutable
+
+:::
+
+## Tuples for document engineering
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid check >}} **Immutable records**: metadata cannot be accidentally changed
+- {{< iconify fa6-solid check >}} **Structured data**: consistent format for document properties
+- {{< iconify fa6-solid check >}} **Tuple unpacking**: easy extraction of individual values
+- {{< iconify fa6-solid check >}} **Statistical analysis**: compute metrics across documents
+
+:::
+
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use tuples**:
+  - Find a location in your document engineering tool where you used tuples
+    - Is it working correctly?
+    - How did you test and debug it?
+    - How can you refactor the code?
+  - If you did not find a tuple being used, how could you add one to your project?
+
+:::
+
+# Sets for storing document keywords
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.70em;"}
+
+- {{< iconify fa6-solid hashtag >}} **Managing unique keywords**
+  - Eliminate duplicate tags automatically
+  - Build clean tag collections
+
+- {{< iconify fa6-solid intersect >}} **Performing set operations**
+  - Find common and unique tags
+  - Analyze document relationships
+
+- {{< iconify fa6-solid layer-group >}} **Categorizing documents**
+  - Organize content by complexity
+  - Create document taxonomies
+
+:::
+
+## Basic set operations for documents
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# manage keywords for different documents
+python_tags = {"python", "programming", "tutorial", "beginner"}
+quarto_tags = {"quarto", "documentation", "markdown", "python", "programming"}
+git_tags = {"git", "version-control", "collaboration", "programming"}
+
+# find all unique tags across documents
+all_tags = python_tags | quarto_tags | git_tags
+print(f"All unique tags: {sorted(all_tags)}")
+
+# find the common tags among python and quarto using sets
+common_python_quarto = python_tags & quarto_tags
+
+# find the common tags across python, quarto, and git using sets
+common_all = python_tags & quarto_tags & git_tags
+
+# output the two sets of common tags
+print(f"Common Python and Quarto tags: {sorted(common_python_quarto)}\nCommon Across All: {sorted(common_all)}" )
+```
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.755em;"}
+
+- Create list of tags for multiple documents under analysis
+- Find those tags that are unique and those that are common
+
+:::
+
+## Sets for document engineering
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid check >}} **Automatic uniqueness**: no duplicate tags allowed
+- {{< iconify fa6-solid check >}} **Set operations**: union, intersection, difference for analysis
+- {{< iconify fa6-solid check >}} **Tag management**: organize and categorize document content
+- {{< iconify fa6-solid check >}} **Membership testing**: quickly check document existence
+
+:::
+
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use sets**:
+  - Find a location in your document engineering tool where you used sets 
+    - Is it working correctly?
+    - How did you test and debug it?
+    - How can you refactor the code?
+  - If you did not find a set being used, how could you add one to your project?
+
+:::
+
+# Container review
+
+::: {.fragment style="margin-top: 0.1em; font-size: 0.75em;"}
+
+
+| Container | Mutable | Ordered | Duplicates | Best For |
+|-----------|---------|---------|------------|----------|
+| **List** | {{< iconify fa6-solid check >}} Yes | {{< iconify fa6-solid check >}} Yes | {{< iconify fa6-solid check >}} Allowed | Document sections, chapters, file collections |
+| **Tuple** | {{< iconify fa6-solid xmark >}} No | {{< iconify fa6-solid check >}} Yes | {{< iconify fa6-solid check >}} Allowed | Document metadata, fixed records, coordinates |
+| **Set** | {{< iconify fa6-solid check >}} Yes | {{< iconify fa6-solid xmark >}} No | {{< iconify fa6-solid xmark >}} Not Allowed | Keywords, tags, unique identifiers |
+
+
+:::
+
+## Summary of data container choices
+
+::: {.fragment style="margin-top: 0.3em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid list >}} **Lists**: when you need to modify and maintain order
+- {{< iconify fa6-solid tag >}} **Tuples**: when data should never change
+- {{< iconify fa6-solid hashtag >}} **Sets**: when uniqueness matters most
+- **Customize your own data containers to meet your tool's needs!**
+
+:::
+
+::: {.fragment .boxed-content style="margin-top: -0.1em; font-size: 0.7em;"} 
+
+- {{< iconify fa6-solid gears >}} **Next steps for understanding how to use containers**:
+  - Think of a feature for your document engineering tool needing a container:
+    - How would your tool's feature use a container?
+    - If you could use a container, what would be the benefit? 
+    - What type of container would you pick for this feature?
+    - How would you test to confirm that the container works correctly?
+
+:::
+
+## Enhanced document analysis
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+from typing import Dict, List, Set
+
+def analyze_docs(documents: List[str]) -> Dict[str, any]:
+    """Analyze documents using all container types."""
+    all_words: Set[str] = set()
+    doc_stats: List[tuple] = []
+    
+    for doc in documents:
+        words = doc.lower().split()
+        all_words.update(words)
+        doc_stats.append((doc[:15] + "...", len(words)))
+    
+    return {"total_words": len(all_words), "docs": doc_stats}
+
+sample_docs = [
+    "Python programming for document engineering",
+    "Prosegrammers combine code and writing"
+]
+
+result = analyze_docs(sample_docs)
+print(f"Count of Unique words: {result['total_words']}")
+for doc, count in result['docs']:
+    print(f"{doc}: {count} words")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
+
+- Create list of sample documents that contain simple text
+- Determine the number of unique words across all of the documents
+
+:::
+
+## Key takeaways for prosegrammers
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.705em;"}
+
+- {{< iconify fa6-solid database >}} **Choose the right container**
+  - Lists for document sequences and mutable collections
+  - Tuples for immutable metadata and structured records
+  - Sets for unique keywords, tags, and categories
+
+- {{< iconify fa6-solid gear >}} **Master container operations** 
+  - Create, access, modify, and analyze document data
+  - Use indexing, slicing, and iteration effectively
+  - Apply set operations for document categorization
+
+- {{< iconify fa6-solid lightbulb >}} **Think and act like a prosegrammer**
+  - Combine containers to solve complex document analysis challenges
+  - Use type hints to make your Python code clear and maintainable
+  - Apply containers to handle real-world document engineering challenges
+
+:::

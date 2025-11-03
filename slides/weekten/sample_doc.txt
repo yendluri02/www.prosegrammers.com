@@ -1,0 +1,3 @@
+Document Engineering with Python
+Prosegrammers unite code and prose
+Building tools for text analysis
