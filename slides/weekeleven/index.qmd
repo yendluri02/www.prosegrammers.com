@@ -255,7 +255,7 @@ for title, date in sorted_posts:
 ::: {.fragment style="font-size: 0.8em; margin-top: -0.2em"}
 
 - Documentation sites display content chronologically
-- Python's `sorted()` uses efficient `timsort` ($O(n \log n)$)
+- Python's `sorted()` uses efficient `timsort` at $O(n \log n)$
 - `key` parameter enables sorting by custom criteria
 
 :::
@@ -324,7 +324,7 @@ for func in api_functions:
 
 ## Choosing the right algorithm
 
-::: {.incremental style="margin-top: -0.5em; font-size: 0.9em;"}
+::: {.incremental style="margin-top: -0.5em; font-size: 0.875em;"}
 
 - {{< iconify fa6-solid magnifying-glass >}} **For searching**:
   - Small datasets: linear search is fine
