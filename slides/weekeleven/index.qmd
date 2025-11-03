@@ -252,10 +252,10 @@ for title, date in sorted_posts:
 
 :::
 
-::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+::: {.fragment style="font-size: 0.8em; margin-top: -0.2em"}
 
 - Documentation sites display content chronologically
-- Python's `sorted()` uses efficient timsort ($O(n \log n)$)
+- Python's `sorted()` uses efficient `timsort` ($O(n \log n)$)
 - `key` parameter enables sorting by custom criteria
 
 :::
@@ -276,7 +276,7 @@ print("Sorted X:", X)
 
 - `sorted()`: returns new sorted list, keeps original unchanged
 - `.sort()`: sorts list in-place, modifies original
-- Both use timsort algorithm ($O(n \log n)$ average case)
+- Both use `timsort` algorithm with $O(n \log n)$ average case
 - Choose based on whether you need to preserve original data
 
 :::
@@ -308,7 +308,7 @@ for func in api_functions:
 
 # Practical applications for prosegrammers
 
-::: {.incremental style="font-size: 0.9em;"}
+::: {.incremental style="font-size: 0.75em;"}
 
 - **Search features**:
   - Documentation search bars need fast algorithms
@@ -324,23 +324,19 @@ for func in api_functions:
 
 ## Choosing the right algorithm
 
-::: {.incremental style="font-size: 0.9em;"}
+::: {.incremental style="margin-top: -0.5em; font-size: 0.9em;"}
 
-- **For searching**:
+- {{< iconify fa6-solid magnifying-glass >}} **For searching**:
   - Small datasets: linear search is fine
   - Large sorted datasets: use binary search
   - Unsorted data: consider sorting first if searching often
 
-- **For sorting**:
+- {{< iconify fa6-solid arrow-down-a-z >}} **For sorting**:
   - Small datasets (< 50 items): simple sorts work well
   - Large datasets: use Python's `sorted()` or `.sort()`
   - Special cases: counting sort for restricted ranges
 
-:::
-
-::: {.fragment .fade .boxed-content style="font-size: 0.85em;"}
-
-{{< iconify fa6-solid lightbulb >}} Understand algorithm complexity to make
-smart choices for your document engineering projects!
+- {{< iconify fa6-solid lightbulb >}} Understand algorithm worst-case time
+complexity to make smart choices for your document engineering projects!
 
 :::
