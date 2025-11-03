@@ -94,12 +94,12 @@ performance needs**!
 
 :::
 
-# Let's explore searching algorithms!
+# Okay, now let's explore searching algorithms!
 
 ::: {.fragment style="font-size: 0.9em;"}
 
-- **Linear search**: check every item sequentially ($O(n)$)
-- **Binary search**: divide and conquer approach ($O(\log n)$)
+- **Linear search**: check every item sequentially at $O(n)$
+- **Binary search**: divide and conquer approach at $O(\log n)$
 - Binary search requires sorted data but is much faster
 - Essential for implementing search features in documentation
 
