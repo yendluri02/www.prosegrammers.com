@@ -98,7 +98,8 @@ Recall, an efficient but incorrect program is useless!
 - **Program efficiency**: how quickly a program runs as input grows
 - **Big-O notation**: describes how runtime grows with input size
 - **Complexity classes**: constant, linear, logarithmic, or quadratic
-- **Let's briefly explore how to measure efficiency**!
+- {{< iconify fa6-solid rocket >}} **Okay, let's briefly explore how to measure
+efficiency**!
 
 :::
 
@@ -178,7 +179,7 @@ print(f"'{search_term}' found in index: {found}")
 
 :::
 
-::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+::: {.fragment style="font-size: 0.95em; margin-top: -0.1em"}
 
 - Documentation indexes store sorted topic names
 - Binary search enables fast lookup in large documentation
@@ -186,12 +187,12 @@ print(f"'{search_term}' found in index: {found}")
 
 :::
 
-# Let's explore sorting algorithms!
+# Okay, now let's explore sorting algorithms!
 
 ::: {.fragment style="font-size: 0.9em;"}
 
-- **Simple sorts**: bubble, selection, insertion ($O(n^2)$)
-- **Advanced sorts**: mergesort, quicksort ($O(n \log n)$)
+- **Simple sorts**: bubble, selection, insertion at $O(n^2)$
+- **Advanced sorts**: mergesort, quicksort at $O(n \log n)$
 - Simple algorithms work well for small datasets
 - Advanced algorithms essential for large document collections
 
