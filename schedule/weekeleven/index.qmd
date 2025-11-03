@@ -37,3 +37,12 @@ toc-expand: 3
   - Randomly selected ordering of class completes document engineering
   knowledge-check two as an in-person assessment
   - Continue working on second document engineering tool-building project
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weekeleven/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week
+Eleven: Searching and Sorting for Document Engineering](../../slides/weekten/)
