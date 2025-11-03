@@ -3,7 +3,9 @@
 # --> Do not render any markdown
 # files that are in the repository
 # as a configuration file for an agent
-# (e.g., the GEMINI.md file)
+# (e.g., the GEMINI.md file or the
+# AGENTS.md file or the files used for
+# tracking tasks like PLAN.md or COMPLETED.md)
 project:
   type: website
   preview:
