@@ -46,26 +46,38 @@ accessible and useful!
 
 ## Why searching and sorting matter
 
-::: {.incremental style="font-size: 0.9em;"}
+::: {.incremental style="font-size: 0.85em;"}
 
-- **Document engineering applications**:
+- {{< iconify fa6-solid gears >}} **Document engineering applications**:
   - Search engines index billions of web pages
   - Documentation sites need fast keyword search
   - Version control systems sort commits by date
   - Citation managers organize references alphabetically
 
-- **Performance matters for user experience**:
+- {{< iconify fa6-solid rocket >}} **Performance matters for user experience**:
   - Slow search frustrates users
   - Efficient sorting enables real-time features
   - Algorithm choice affects scalability
 
-- {{< iconify fa6-solid microscope >}} **How do we measure algorithm efficiency?**
+- {{< iconify fa6-solid microscope >}} Although not course's key focus, **how
+do we measure efficiency?**
+
+:::
+
+# When the input size grows...the code slows!
+
+::: {.fragment style="margin-top: -0.25em; font-size: 0.95em;"}
+
+- **Program efficiency**: how quickly a program runs as input grows
+- **Big-O notation**: describes how runtime grows with input size
+- **Complexity classes**: constant, linear, logarithmic, or quadratic
+- **Let's briefly explore how to measure efficiency**!
 
 :::
 
 ## Understanding big-O notation
 
-::: {.incremental style="font-size: 0.9em;"}
+::: {.incremental style="margin-top: -0.5em; font-size: 0.85em;"}
 
 - **Big-O** describes algorithm efficiency as input grows
   - $O(1)$: constant time, same speed regardless of size
@@ -77,13 +89,8 @@ accessible and useful!
   - Processing 1,000 vs 1,000,000 documents
   - Real-time search requires $O(\log n)$ or better
   - Batch processing can tolerate $O(n \log n)$
-
-:::
-
-::: {.fragment .fade .boxed-content style="font-size: 0.85em;"}
-
-{{< iconify fa6-solid lightbulb >}} Choose algorithms based on data size and
-performance needs!
+- {{< iconify fa6-solid lightbulb >}} **Choose algorithms based on data size and
+performance needs**!
 
 :::
 
