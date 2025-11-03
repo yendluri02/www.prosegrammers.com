@@ -1,0 +1,824 @@
+---
+title: "Searching and Sorting for Document Engineering"
+echo: true
+description: "How do you efficiently process data?"
+date: "2025-11-03"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  freeze: auto
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    html-math-method: mathjax
+    footer: "Algorithmology"
+    mermaid:
+      theme: default
+---
+
+# What are purposes of searching and sorting?
+
+::: incremental
+
+- Searching *finds* a specific item in a collection
+- Sorting *orders* the items in a collection
+- Recursive and iterative algorithms are possible
+- Basic building blocks of many algorithms
+- **One technique can be used to implement another**!
+
+:::
+
+## Key concepts in a binary search
+
+::: incremental
+
+- **Divide and conquer** algorithm for searching in a **sorted list**
+- Works by **repeatedly dividing** the search space in half
+- Each step **eliminates half** of the remaining elements
+- Can be implemented **recursively** or **iteratively**
+
+:::
+
+::: {.fragment .fade .boxed-content style="margin-top: -0.25em; font-size: 0.85em;"}
+
+{{< iconify fa6-solid lightbulb >}} **Question**: What is the best way to
+implement a binary search?
+
+  - `binary_search(L, item)`
+  - `fast_binary_search(L, item, left, right)`
+  - `iterative_binary_search(L, item)`
+
+:::
+
+## Recursive `binary_search`
+
+```{python}
+def binary_search(L, item):
+    if len(L) == 0: return False
+    median = len(L) // 2
+    if item == L[median]:
+        return True
+    elif item < L[median]:
+        return binary_search(L[:median], item)
+    else:
+        return binary_search(L[median + 1:], item)
+
+print(binary_search([1, 2, 3, 4, 5], 3))   # Output: True
+print(binary_search([2, 4, 6, 8, 10], 5))  # Output: False
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Searches for a single `item` in a sorted list `L`
+- Recursively calls itself with a smaller list
+- Returns `True` if the `item` is found, `False` otherwise
+
+:::
+
+## Improved `binary_search`
+
+```{python}
+def fast_binary_search(L, item, left = 0, right = None):
+    if right is None: right = len(L)
+    if right - left == 0: return False
+    if right - left == 1: return L[left] == item
+    median = (right + left) // 2
+    if item < L[median]:
+        return fast_binary_search(L, item, left, median)
+    else:
+        return fast_binary_search(L, item, median, right)
+
+print(fast_binary_search([1, 2, 3, 4, 5], 3))   # Output: True
+print(fast_binary_search([2, 4, 6, 8, 10], 5))  # Output: False
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Use of list slicing in `binary_search` slows it down!
+- Function call tree has length at most $O(\log n)$ calls
+- Example of both **linear** and **tail** recursion
+
+:::
+
+## Linear and tail recursion
+
+::: {.incremental style="font-size: 0.85em; margin-top: -0.2em"}
+
+- **Linear Recursion**: 
+  - Each function makes at most one recursive call
+  - Binary search is linear recursive (makes one call per level)
+  - Keeps total calls to $O(\log n)$ for binary search
+
+- **Tail Recursion**:
+  - Recursive call is the last operation in the function
+  - Compiler optimized into loops, thus avoiding stack overflow
+  - Often more memory efficient than non-tail recursion
+
+- {{< iconify fa6-solid gears >}} **What is the evidence for linear and/or tail recursion?**
+
+- {{< iconify fa6-solid lightbulb >}} **If you see tail recursion try to make an iterative solution!**
+
+:::
+
+## Iterative `binary_search`
+
+```{python}
+def iterative_binary_search(L, item):
+    left, right = 0, len(L)
+    while right - left > 1:
+        median = (right + left) // 2
+        if item < L[median]:
+            right = median
+        else:
+            left = median
+    return right > left and L[left] == item
+
+print(iterative_binary_search([1, 2, 3, 4, 5], 3))   # Output: True
+print(iterative_binary_search([2, 4, 6, 8, 10], 5))  # Output: False
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Tail recursion can normally be replaced with iteration
+- This function also has worst-case time complexity of $O(\log n)$
+- Effectively divides the input space in half with each iteration
+
+:::
+
+## Iterative versus recursive searching
+
+::: {.fragment style="font-size: 0.9em" .callout-note icon=true title="Empirically comparing the performance of iterative and recursive searching"}
+
+1. **Implement both versions of the algorithm**
+   - Create a recursive implementation that uses function calls
+   - Create an iterative implementation using loops
+
+2. **Create benchmarking harness**
+   - Use `time.perf_counter()` for precise measurement
+   - Implement a function like `timetrials()` that runs multiple trials
+
+3. **Design controlled experiments**
+   - Use a doubling experiment with appropriate input sizes
+   - Generate consistent test data for both implementations
+
+4. **Collect and analyze data**
+   - Record execution times for each implementation
+   - Calculate doubling ratios to determine time complexity
+
+:::
+
+# Let's explore several sorting algorithms!
+
+::: fragment
+
+- Quadratic time sorting algorithms are easy to implement
+- Various sorting algorithms have quadratic time complexity
+- Mergesort and quicksort are efficient yet harder to build
+- Python contains its own sorting algorithm called `timsort`
+- The divide and conquer paradigm is useful for sorting
+
+:::
+
+## Ascending and descending sort
+
+```{mermaid}
+%%| echo: false
+%%| scale: 200
+flowchart LR
+    subgraph Original["Original Array"]
+        direction LR
+        O1[30] --- O2[5] --- O3[100] --- O4[17] --- O5[82]
+        style Original fill:#f5f5f5,stroke:#333
+    end
+    
+    subgraph Ascending["Ascending Order"]
+        direction LR
+        A1[5] --- A2[17] --- A3[30] --- A4[82] --- A5[100]
+        style Ascending fill:#f5f5f5,stroke:#333
+    end
+    
+    subgraph Descending["Descending Order"]
+        direction LR
+        D1[100] --- D2[82] --- D3[30] --- D4[17] --- D5[5]
+        style Descending fill:#f5f5f5,stroke:#333
+    end
+
+    AscendingSort["Ascending Sort"]
+    DescendingSort["Descending Sort"]
+    
+    Original --> AscendingSort --> Ascending
+    Original --> DescendingSort --> Descending
+
+    style AscendingSort fill:#e6e6e6,stroke:#333,fontSize:12px
+    style DescendingSort fill:#e6e6e6,stroke:#333,fontSize:12px
+```
+
+::: {.fragment style="font-size: 0.8em; margin-top: -0.6em"}
+
+- **Ascending**: Elements arranged from smallest to largest
+- **Descending**: Elements arranged from largest to smallest
+- Python's built-in sorting functions support both:
+  - Ascending: `sorted(array)` or `array.sort()`
+  - Descending: `sorted(array, reverse=True)` or `array.sort(reverse=True)`
+
+:::
+
+
+## Detecting a sorted list
+
+```{python}
+def issorted(L):
+    for i in range(len(L)-1):
+        if L[i]>L[i+1]:
+            return False
+    return True
+
+A = [1,2,3,4,5]
+print(A, "is sorted:", issorted(A))
+
+B = [1,4,5,7,2]
+print(B, "is sorted:", issorted(B))
+```
+
+<p class="tightspacer"></p>
+
+::: fragment
+
+#### {{< iconify fa6-solid bolt >}} How do we know if a list is sorted?
+
+:::
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Confirm that adjacent elements are in the correct order
+- Use a single `for` loop to compare adjacent elements in `L`
+
+:::
+
+## All-pairs `issorted` function
+
+```{python}
+def issorted_allpairs(L):
+    for i in range(len(L)-1):
+        for j in range(i+1, len(L)):
+            if L[j] < L[i]:
+              return False
+    return True
+
+A = [1,2,3,4,5]
+print(A, "is sorted:", issorted_allpairs(A))
+
+B = [1,4,5,7,2]
+print(B, "is sorted:", issorted_allpairs(B))
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Use a double `for` loop to compare all pairs of elements in `L`
+- The `issorted_allpairs` function has a time complexity of $O(n^2)$
+- The `issorted` function has a time complexity of $O(n)$
+
+:::
+
+## Bubble sort algorithm
+
+```{python}
+def bubblesort(L):
+    for _ in range(len(L)-1):
+        for i in range(len(L)-1):
+            if L[i]>L[i+1]:
+                L[i], L[i+1] = L[i+1], L[i]
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+print("Is the data sorted?", issorted(data))
+print(data)
+bubblesort(data)
+print("Is the data sorted?", issorted(data))
+print(data)
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Use a double `for` loop to order all of the elements in `L`
+- The `bubblesort` function has a time complexity of $O(n^2)$
+
+:::
+
+## Stopping early with bubble sort
+
+```{python}
+def bubblesort_stopearly(L):
+    keepgoing = True
+    while keepgoing:
+        keepgoing = False
+        for i in range(len(L)-1):
+            if L[i]>L[i+1]:
+                L[i], L[i+1] = L[i+1], L[i]
+                keepgoing = True
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+bubblesort_stopearly(data)
+print(data)
+```
+
+::: {.fragment style="font-size: 0.875em; margin-top: 0.2em"}
+
+- Use a `while` loop containing a `for` loop to order elements in `L`
+
+- Although it may consume less time *for some lists*, `bubblesort_stopearly`
+still has a time complexity of $O(n^2)$
+
+:::
+
+## Implementing selection sort {transition="convex"}
+
+```{python}
+def selectionsort(L):
+    n = len(L)
+    for i in range(n-1):
+        max_index=0        
+        for index in range(n - i):
+            if L[index] > L[max_index]:
+                max_index = index
+        L[n-i-1], L[max_index] = L[max_index], L[n-i-1]
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+selectionsort(data)
+print(data)
+```
+
+::: {.fragment style="font-size: 0.875em; margin-top: 0.2em"}
+
+- **Key invariant**: after $i$ runs the largest $i$ elements are in final position
+
+- Find maximum element and swap it with last unsorted element
+
+- Yet, the `selectionsort` function still has a time complexity of $O(n^2)$
+
+:::
+
+## Implementing insertion sort {transition="convex"}
+
+```{python}
+def insertionsort(L):
+    n = len(L)
+    for i in range(n):
+        j = n - i - 1
+        while j < n - 1 and L[j]>L[j+1]:
+            L[j], L[j+1] = L[j+1], L[j]
+            j+=1
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+insertionsort(data)
+print(data)
+```
+
+::: {.fragment style="font-size: 0.875em; margin-top: 0.2em"}
+
+- **Key invariant**: after $i$ runs the last $i$ elements are in sorted order
+
+- May be faster if the list is already sorted (or almost already sorted)
+
+- Yet, the `insertionsort` function still has a time complexity of $O(n^2)$
+
+:::
+
+## Sorting in Python
+
+```{python}
+X = [3,1,5]
+Y = sorted(X)
+print("X:", X)
+print("Y:", Y)
+
+X.sort()
+print("X:", X)
+print("Y:", Y)
+```
+
+::: fragment
+
+- Two main functions to sort a list: `sort()` and `sorted()`
+- `sort` orders list and `sorted` returns a new list that is sorted
+- Note that calling `sorted` does not change the contents of `X`
+
+:::
+
+# Let's design and implement some faster sorting algorithms!
+
+::: fragment
+
+- {{< iconify fa6-solid robot >}} **Divide and conquer** algorithms:
+    - Step 1: **divide** the problem into 2 or more pieces
+    - Step 2: **conquer** the problem by solving the pieces
+    - Step 3: **combine** the solutions on the parts into a solution
+
+:::
+
+## Implementing mergesort
+
+```{python}
+#| code-line-numbers: "|2-3|4-7|8-20|22-24|"
+def mergesort(L):
+    if len(L) < 2:
+        return
+    mid = len(L) // 2
+    A = L[:mid]
+    B = L[mid:]
+    mergesort(A); mergesort(B)
+    merge(A, B, L)
+
+def merge(A, B, L):   
+    i = 0
+    j = 0
+    while i < len(A) and j < len(B):
+        if A[i] < B[j]:
+            L[i+j] = A[i]
+            i = i + 1
+        else:
+            L[i+j] = B[j]
+            j = j + 1
+    L[i+j:] = A[i:] + B[j:]
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+mergesort(data)
+print(data)
+```
+
+## Implementing quicksort
+
+```{python}
+#| code-line-numbers: "|1|3-4|6-10|12-26|28-30|"
+from random import randrange
+
+def quicksort(L):
+    _quicksort(L, 0, len(L))
+
+def _quicksort(L, left, right):
+    if right - left > 1:    
+        mid = partition(L, left, right)
+        _quicksort(L, left, mid)
+        _quicksort(L, mid+1, right)
+
+def partition(L, left, right):
+    pivot = randrange(left, right)
+    L[pivot], L[right -1] = L[right -1], L[pivot]
+    i, j, pivot = left, right - 2, right - 1
+    while i < j:
+        while L[i] < L[pivot]:
+            i += 1
+        while i < j and L[j] >= L[pivot]:
+            j -= 1
+        if i < j:
+            L[i], L[j] = L[j], L[i]
+    if L[pivot] <= L[i]:
+        L[pivot], L[i] = L[i], L[pivot]
+        pivot = i
+    return pivot
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+quicksort(data)
+print(data)
+```
+
+## Deep dive into `quicksort`
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+### Quick sort time complexity
+
+- Worst-case time complexity: $O(n^2)$
+- Worst-case occurs when pivot is smallest or largest element
+- Random pivot selection helps avoid worst-case on average
+
+:::
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+### Time complexity breakdown
+
+- `partition(L, left, right)`: $O(n)$
+- `quicksort(L)`: Defined by `_quicksort`
+- `_quicksort(L, left, right)`: 
+  - Average case: $O(n \times \log n)$
+  - Worst case: $O(n^2)$
+
+:::
+
+## Compare `mergesort` and `quicksort`
+
+### {{< iconify fa6-solid bolt >}} Both algorithms use divide and conquer!
+
+::: {.fragment .tight-boxed-content style="font-size: 0.85em; margin-top: -0.2em"}
+
+- `mergesort`:
+  - Stable sort maintains the relative order of equal elements
+  - Worst-case time complexity is $O(n \times \log n)$
+  - Requires additional space for merging intermediate sub-lists
+
+:::
+
+::: {.fragment .tight-boxed-content style="font-size: 0.85em; margin-top: 0.4em"}
+
+- `quicksort`:
+  - Not a stable sort and thus relative order not preserved
+  - Worst-case time complexity is $O(n^2)$, but often faster in practice
+  - In-place sorting means it does not require additional space
+
+:::
+
+## Exploring properties of sorting
+
+::: {.incremental style="font-size: 0.95em; margin-top: -0.2em"}
+
+- Sorting algorithms can be **stable** or **unstable**:
+    - **Stable**: Equal elements maintain their relative order
+    - **Unstable**: Equal elements may change their relative order
+- Stability is most important when values have "satellite" data
+- Sorting algorithms can be **in-place** or **not**:
+    - **In-place**: Algorithm only requires constant extra space
+    - **Not in-place**: Algorithm requires non-constant space
+- Sorting algorithms may also be **comparison-based** or not
+- {{< iconify fa6-solid users-viewfinder >}} **Question**: Can we further improve sorting performance?
+
+:::
+
+# Improving the efficiency of sorting requires new assumptions and different approaches 
+
+::: fragment
+
+- **Comparison-based sorting** is at best $O(n \times \log n)$
+- **Non-comparison-based sorting** algorithms can be faster!
+
+:::
+
+## Counting sort algorithm
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+def counting_sort(arr, k=None):
+    if not arr:
+        return []
+    if k is None:
+        k = max(arr)
+    count = [0] * (k+1)
+    for num in arr:
+        count[num] += 1
+    sorted_arr = []
+    for i in range(1, k+1):
+        sorted_arr.extend([i] * count[i])
+    return sorted_arr
+
+array = [4, 2, 2, 8, 3, 3, 1]
+print("Original array:", array)
+print("Sorted array:", counting_sort(array))
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- **Non-comparison based** sorting with $O(n + k)$ time complexity
+
+:::
+
+## Radix sort algorithm
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+def radix_sort(arr):
+    if not arr:
+        return []
+    max_num = max(arr)
+    exp = 1
+    while max_num // exp > 0:
+        output = [0] * len(arr)
+        count = [0] * 10
+        for i in range(len(arr)):
+            digit = (arr[i] // exp) % 10
+            count[digit] += 1
+        for i in range(1, 10):
+            count[i] += count[i - 1]
+        for i in range(len(arr) - 1, -1, -1):
+            digit = (arr[i] // exp) % 10
+            output[count[digit] - 1] = arr[i]
+            count[digit] -= 1
+        for i in range(len(arr)):
+            arr[i] = output[i]
+        exp *= 10
+    return arr
+
+array = [170, 45, 75, 90, 802, 24, 2, 66]
+print("Original array:", array)
+print("Sorted array:", radix_sort(array.copy()))
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- **Non-comparison based** sorting with $O(d × (n + k))$ time complexity
+
+:::
+
+## Recapping count and radix sort
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- **Counting sort**:
+    - Non-comparison sorting with $O(n + k)$ time complexity
+    - Efficient when range of input values ($k$) is not much larger than $n$
+    - Requires extra space proportional to the range of input values
+    - A stable sort that preserves relative order of equal elements
+    - Counts occurrences of each element, reconstructs sorted array
+
+:::
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- **Radix sort**:
+    - Non-comparison based sorting with $O(d × (n + k))$ time complexity
+    - Uses counting sort approach as a subroutine for each digit position
+    - Sorts numbers digit by digit, from least to most significant
+
+:::
+
+# What if the sorting only processes data lists containing values in a very restricted range?
+
+::: fragment
+
+- Sort decimals between restrictive minimum and maximum
+- There is often a need to sort probabilities between 0 and 1
+
+:::
+
+## Bucket sort algorithm
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 12
+def bucket_sort(arr, num_buckets=10):
+    if not arr or len(arr) == 0:
+        return []
+    min_val, max_val = min(arr), max(arr)
+    value_range = (max_val - min_val) / num_buckets
+    buckets = [[] for _ in range(num_buckets)]
+    for num in arr:
+        if num == max_val:
+            index = num_buckets - 1
+        else:
+            index = int((num - min_val) / value_range)
+        buckets[index].append(num)
+    for i in range(num_buckets):
+        buckets[i].sort()
+    result = []
+    for bucket in buckets:
+        result.extend(bucket)
+    return result
+
+# Example usage
+array = [0.42, 0.32, 0.33, 0.52, 0.37, 0.47, 0.51]
+print("Original array:", array)
+print("Sorted array:", bucket_sort(array))
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- **Assumes** that are uniformly distributed between 0 and 1
+
+:::
+
+# What if want a list's $k$th smallest element?
+
+::: {.fragment .tight-boxed-content style="font-size: 0.85em; margin-top: 0.5em"}
+
+- **Quick selection** finds the $k$th smallest element in an unsorted array
+- Wow, much more efficient than sorting the entire array first!
+- **Average time complexity**: $O(n)$ versus $O(n \times \log n)$  for sorting
+- Leverages the same partitioning strategy as `quicksort` function
+- Enables various types of statistical analysis without expensive sorting
+
+:::
+
+## Recursive quick selection
+
+```{python}
+#| code-line-numbers: "|1-2|4-11|13-18|"
+def quickselect(L, k):
+    return _quickselect(L, k, 0, len(L))
+
+def _quickselect(L, k, left, right):
+    pivot = partition(L, left, right)
+    if k <= pivot:
+        return _quickselect(L, k, left, pivot)
+    elif k == pivot + 1:
+        return L[pivot]
+    else:
+        return _quickselect(L, k, pivot + 1, right)
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+selection_one = quickselect(data, 1)
+selection_three = quickselect(data, 3)
+selection_five = quickselect(data, 5)
+quicksort(data)
+print(selection_one, selection_three, selection_five, "for", data)
+```
+
+## Iterative quick selection
+
+```{python}
+#| code-line-numbers: "|1-11|13-18|"
+def quickselect(L, k):
+    left, right = 0, len(L)
+    while left < right:
+        pivot = partition(L, left, right)
+        if k <= pivot:
+            right = pivot
+        elif k == pivot + 1:
+            return L[pivot]
+        else:
+            left = pivot + 1
+    return L[left]
+
+data = [30,100000,54,26,93,17,77,31,44,55,20]
+selection_one = quickselect(data, 1)
+selection_three = quickselect(data, 3)
+selection_five = quickselect(data, 5)
+quicksort(data)
+print(selection_one, selection_three, selection_five, "for", data)
+```
+
+## Reviewing divide and conquer
+
+::: {.fragment style="font-size: 0.8em; margin-top: -0.5em"}
+
+- {{< iconify fa6-solid users-viewfinder >}} **Binary Search**
+    - Recursive step takes constant time
+    - Makes a single recursive call on smaller list
+    - **Time complexity**: $O(\log n)$
+
+:::
+
+::: {.fragment style="font-size: 0.8em; margin-top: -0.5em"}
+
+- {{< iconify fa6-solid arrow-down-a-z >}} **Sorting Algorithms**
+    - Running time is linear plus recursive call cost
+    - Total length of shorter lists is $O(n)$
+    - **Time complexity**: Recursion depth of $O(\log n)$ means $O(n \times \log n)$
+
+:::
+
+::: {.fragment style="font-size: 0.8em; margin-top: -0.5em"}
+
+- {{< iconify fa6-solid arrows-to-circle >}} **Quick Selection**
+    - Running time is linear plus the cost of one recursive call
+    - **Time complexity**: $O(n)$
+
+:::
+
+## Searching and sorting: Quick recap
+
+::: {.fragment style="font-size: 0.925em"}
+
+- **Search algorithms**
+  - Binary search is $O(\log n)$ but needs sorted input
+  - Recursive and iterative functions offer similar speed
+  - Tail recursion can be converted to iteration for better efficiency
+
+:::
+
+::: {.fragment style="font-size: 0.925em"}
+
+- **Basic sorting algorithms**
+  - Simple algorithms (bubble, selection, insertion) are $O(n^2)$
+  - Each maintains different invariants during execution
+  - Suitable for small datasets or nearly-sorted lists
+
+:::
+
+## Sorting and selection: Quick recap
+
+::: {.fragment style="font-size: 0.925em"}
+
+- **Advanced sorting algorithms**
+  - Divide-and-conquer algorithms (mergesort, quicksort) achieve $O(n \log n)$
+  average time, provably best for comparison sorting
+  - Non-comparison sorts (counting, radix, bucket) can beat $O(n \log n)$ under
+  specific assumptions about input data
+
+:::
+
+::: {.fragment style="font-size: 0.925em"}
+
+- **Fast Selection algorithms**
+
+  - Quickselect finds $k$th element in $O(n)$ average time without full
+  list sorting, making it ideal for restricted cases
+  - Shares partitioning strategy with quicksort but makes fewer recursive calls
+  and is thus faster although more specialized
+
+:::
