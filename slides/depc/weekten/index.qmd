@@ -3,7 +3,7 @@ title: "Project Critique for `ruff`"
 description: "Evaluating a project's documentation"
 date: "2025-11-05"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Krish Yendluri, V Rieger
 execute:
   echo: true
 format:
@@ -18,4 +18,27 @@ format:
     footer: "Prosegrammers"
 ---
 
-## Project critique for `ruff`
+## Why Documentation Matters
+ - Docs help others use your tool and support collaboration.
+ - Good docs increase adoption and ease maintenance.
+ - Goal: Evaluate Ruff's documentation using multiple frameworks.
+
+## README-Driven Documentation 
+ - README is the project's front door.
+ - Key elements: purpose, setup, usage, contribution guidelines.
+ - Writing README first aligns project goals with implementation.
+
+## Diátaxis Framework
+ - Organizes documentation by user needs: tutorials, how-to guides, references, explanations.
+ - Functional quality: accuracy and usefulness.
+ - Deep quality: flow and user anticipation.
+
+## Strengths
+ - README-driven: 'Getting started' is clear and approachable.
+ - Diátaxis: Tutorials/how-to for new users are well-covered.
+ - Narrative & Global: Core usage and value communicated clearly.
+
+## Weaknesses & Opportunities
+ - README-driven: Limited 'why' explanations behind rules/config.
+ - Diátaxis: Heavy on reference, fewer advanced explanations.
+ - Narrative & Global: No multilingual versions, examples assume typical developer environments.
