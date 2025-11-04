@@ -6,7 +6,7 @@ toc: false
 
 ![](images/Prosegrammers-Logo.svg){fig-align="center" width="125%"}
 
-## Become a Proseganger
+## Become a Prosegrammer
 
 Welcome to the world of **Prosegrammers** --- where prose meets programming!
 The term "Prosegrammer" is a delightful combination of "prose" (i.e., the
