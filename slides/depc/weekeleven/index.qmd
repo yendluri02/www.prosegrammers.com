@@ -19,3 +19,19 @@ format:
 ---
 
 ## Project critique for `Django`
+
+# `Django` overview - Anshu
+
+# First Steps tutorial - Anshu
+
+# Organization of the documentation - Anshu
+
+# Django in relation to Diátaxis - Logan
+
+# Strengths of `Django` documentation - Logan
+
+# Weaknesses of `Django` documentation - Brandon
+
+# Suggestions for improvement - Brandon
+
+# Questions
