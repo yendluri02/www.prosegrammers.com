@@ -19,20 +19,17 @@ import time
 def main():
     """Display a fun welcome message for Document Engineering students."""
     console = Console()
-
-    # Clear screen and add some space
+    # clear screen and add some space
     console.clear()
     console.print()
-
-    # Create flashy title
-    title = Text("🎉 WELCOME TO DOCUMENT ENGINEERING KRISH! 🎉", style="bold magenta")
+    # create flashy title
+    title = Text("🎉 WELCOME TO DOCUMENT ENGINEERING! 🎉", style="bold magenta")
     title_panel = Panel(
         Align.center(title), box=box.DOUBLE, style="bright_cyan", padding=(1, 2)
     )
     console.print(title_panel)
     console.print()
-
-    # Prosegrammers explanation
+    # prosegrammers explanation
     prosegrammers_content = Text()
     prosegrammers_content.append("Welcome to the world of ", style="bold blue")
     prosegrammers_content.append("PROSEGRAMMERS", style="bold yellow on red")
@@ -44,7 +41,6 @@ def main():
     prosegrammers_content.append(
         " = Masters of Code AND Documentation! ✨", style="white"
     )
-
     prosegrammers_panel = Panel(
         Align.center(prosegrammers_content),
         title="What are Prosegrammers?",
@@ -54,8 +50,7 @@ def main():
     )
     console.print(prosegrammers_panel)
     console.print()
-
-    # Course highlights with fun emojis
+    # course highlights with fun emojis
     highlights = [
         "🐍 Master Python Programming",
         "📚 Document Engineering Magic",
@@ -64,7 +59,6 @@ def main():
         "🔧 Professional Tool Mastery",
         "🌟 Collaborative Git Workflows",
     ]
-
     highlight_columns = Columns(
         [
             Panel(h, style=f"bold {color}", box=box.SIMPLE)
@@ -75,7 +69,6 @@ def main():
         equal=True,
         expand=True,
     )
-
     console.print(
         Panel(
             highlight_columns,
@@ -85,22 +78,18 @@ def main():
         )
     )
     console.print()
-
-    # Motivational message with animation effect
+    # motivational message with animation effect
     motivation_lines = [
         "Get ready to become a documentation SUPERHERO! 🦸‍♀️🦸‍♂️",
         "You'll learn to write code that's not just functional...",
         "...but also BEAUTIFULLY documented! 📖✨",
         "Welcome to your journey as a Prosegrammer! 🎓🚀",
     ]
-
     for line in motivation_lines:
         console.print(Align.center(Text(line, style="bold bright_yellow")))
         time.sleep(0.8)
-
     console.print()
-
-    # Final flourish
+    # final flourish
     final_message = Text(
         "Let's make some document engineering MAGIC! ✨🎪✨",
         style="bold white on bright_magenta",
@@ -110,8 +99,9 @@ def main():
     )
     console.print(final_panel)
     console.print()
+    console.print()
 
 
 if __name__ == "__main__":
+    # run the welcome script when executed directly
     main()
-

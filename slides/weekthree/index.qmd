@@ -1,5 +1,5 @@
 ---
-title: "Object-Oriented Programming in Python"
+title: "Object-Oriented Programming in the Python Language"
 description: "What are the key features of object-oriented programming in Python?"
 date: "2025-09-08"
 date-format: long
@@ -17,6 +17,108 @@ format:
     highlight-style: github
     footer: "Prosegrammers"
 ---
+
+# Document engineering
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Why is it important?**
+    - Documentation quality affects software success
+        - Poor docs cause user confusion
+        - Clear docs increase adoption
+        - Automated docs reduce maintenance cost
+
+:::
+
+## Becoming a prosegrammer
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid gear >}} **Master Python programming**
+  - Text processing and analysis
+  - Document creation and manipulation
+  - Automation tools for writing
+- {{< iconify fa6-solid gear >}} **Create compelling documentation**
+  - Clear and professional writing
+  - Interactive documents with code
+  - Version control for documents
+- {{< iconify fa6-solid lightbulb >}} **Science and engineering to analyze & improve documents!**
+
+:::
+
+## Course learning objectives
+
+::: {.fragment .callout-note icon=true title="Learning Objectives for Document Engineering"}
+
+- **CS-104-1**: Explain processes such as software installation or
+design for a variety of technical and non-technical audiences ranging from
+inexperienced to expert.
+- **CS-104-2**: Use professional-grade integrated development environments (IDEs),
+command-line tools, and version control systems to compose, edit, and deploy
+well-structured, web-ready documents and industry-standard documentation tools.
+- **CS-104-3**: Build automated publishing pipelines to format, check, and ensure both the
+uniformity and quality of digital documents.
+- **CS-104-4**: Identify and apply appropriate conventions of a variety of technical
+communities, tools, and computer languages to produce industry-consistent
+diagrams, summaries, and descriptions of technical topics or processes.
+
+:::
+
+::: {.fragment style="margin-top: -0.05em; font-size: 0.775em;"}
+
+- {{< iconify fa6-solid bullhorn >}} Achieved through course content, skill and
+knowledge checks, and projects!
+
+:::
+
+## Document engineering pipeline
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.7em;"}
+
+- {{< iconify fa6-solid hammer >}} **Three exciting phases** spanning the entire semester
+    - **Module One**: Foundation tools and document processing
+    - **Module Two**: Advanced analysis and automation features
+    - **Module Three**: Complete pipeline integration and optimization
+
+- {{< iconify fa6-solid code >}} **Hands-on Python programming** with real document engineering challenges
+    - Build tools that actually **process** and **analyze** documents
+    - Create your own **classes** and **methods** for document manipulation
+    - Implement algorithms for text **analysis** and content **generation**
+
+- {{< iconify fa6-solid users >}} **Learn like a professional prosegrammer**
+    - Use AI coding assistants (e.g., GitHub Copilot, Gemini CLI) responsibly
+    - Complete weekly demonstrations to track your progress
+    - Submit well-documented, working projects with detailed reports
+
+:::
+
+## Using object-oriented programming for document engineering
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.95em;"}
+
+- {{< iconify fa6-solid cubes >}} **Object-oriented programming (OOP)** is a
+programming paradigm that uses "objects" to represent data and behavior
+
+- {{< iconify fa6-solid puzzle-piece >}} **OOP helps manage complexity** by breaking up
+programs into smaller, reusable pieces like classes and method
+
+- {{< iconify fa6-solid file-lines >}} **OOP is widely used** in many
+programming languages, and Python has strong support for most OOP features
+
+- {{< iconify fa6-solid lightbulb >}} **OOP is useful for document engineering** 
+because documents can be represented as objects with state and behavior
+
+:::
 
 # What are the main goals of object-oriented programming?
 
@@ -228,7 +330,7 @@ v = Vector(3,6)
 print(u + v)
 ```
 
-::: {.fragment style="margin-top: 0.2em; font-size: 0.80em;"}
+::: {.fragment style="margin-top: 0.1em; font-size: 0.80em;"}
 
 - {{< iconify fa6-solid lightbulb >}} **Key Questions**: After trying different
 instances of `Vector`, what is the state and behavior? What are the strengths
@@ -627,7 +729,7 @@ smaller parts that work together!
 
 ## Reminder of course goals
 
-::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.9em;"}
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.75em;"}
 
 - **Document Creation**:
   - Design and implement document generation workflows
@@ -637,7 +739,12 @@ smaller parts that work together!
   - Collect and analyze data about document usage and quality
   - Visualize insights to improve documentation strategies
 - **Communicate** results and best practices for document engineering
-- **Check [syllabus](/syllabus/index.qmd) for details about Document Engineering
-course!**
+- **Content References**:
+    - {{< iconify fa6-solid book-open >}} Online textbook called [A First
+    Course on Data Structures in
+    Python](https://donsheehy.github.io/datastructures/)
+    - {{< iconify fa6-brands github >}} The `ds2` package in the
+    [donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+    GitHub repository
 
 :::

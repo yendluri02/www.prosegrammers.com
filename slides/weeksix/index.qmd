@@ -1,0 +1,260 @@
+---
+title: "Advanced Quarto for Interactive Documentation"
+description: "Explore advanced features of Quarto"
+date: "2025-09-29"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Document engineering
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+    - "Prosegrammers" combine *prose* and *programming*
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.80em;"}
+
+- {{< iconify fa6-solid book-open >}} **What are this week's highlights?**
+    - Explore advanced Markdown and Quarto features
+        - Links, images, tables, and blockquotes for rich documents
+        - Code blocks and live code for interactive learning
+        - Mathematical expressions for technical clarity
+
+:::
+
+# Extended features of Markdown and Quarto
+
+::: fragment
+
+- Links and images
+- Code blocks and inline code
+- Executable code blocks with Quarto
+- Live output from code execution
+- Tables for structured data
+- Blockquotes for emphasis
+
+:::
+
+## Links can connect your content
+
+{{< iconify fa6-solid link >}} **Source Code for creating links**
+
+```markdown
+**External Link:**
+Visit [GitHub](https://github.com) for version control.
+
+**Internal Link:**
+See the [syllabus](../../syllabus/index.qmd) for details.
+
+**Reference Link:**
+Check out [Python documentation][python-docs].
+
+[python-docs]: https://docs.python.org/3/
+```
+
+**Rendered Output:**
+
+**External Link:**
+Visit [GitHub](https://github.com) for version control.
+
+**Internal Link:**  
+See the [syllabus](../../syllabus/index.qmd) for details.
+
+## Images offer visual enhancement
+
+{{< iconify fa6-solid image >}} **Source Code example for images**
+
+```markdown
+**Basic Image:**
+![Prosegrammers Logo](../../images/Prosegrammers-Logo.svg)
+```
+
+![Prosegrammers Logo](../../images/Prosegrammers-Logo.svg)
+
+## Code blocks show technical content
+
+{{< iconify fa6-solid code >}} **Source Code for inline and fenced code block**
+
+````markdown
+**Inline Code:**
+Use the `print()` function in Python.
+
+**Fenced Code Block:**
+```python
+def greet_prosegrammer(name: str) -> str:
+    """Greet a document engineer professionally."""
+    return f"Hello, {name}! Ready to engineer some documents?"
+
+print(greet_prosegrammer("Alice"))
+```
+````
+
+::: incremental
+
+- Inline code blocks highlight technical terms
+- Fenced code blocks preserve formatting
+- Supported languages include Python, R, Julia, ... and more!
+
+:::
+
+## Tables help to present structured data
+
+{{< iconify fa6-solid table >}} **Source Code for table in Markdown**
+
+```markdown
+| Tool     | Purpose           | Prosegrammer Use           |
+|----------|-------------------|----------------------------|
+| Git      | Version control   | Track document changes     |
+| Python   | Programming       | Automate documentation     |
+| Quarto   | Publishing        | Create professional docs   |
+| Markdown | Markup            | Write readable content     |
+```
+
+::: incremental
+
+- Tables are useful for structured data
+- Use pipes `|` and dashes `-` to create tables
+- Organize the data in rows and columns
+- Define a header row to label the columns
+- Table rendering is customizable with CSS
+
+:::
+
+## {{< iconify fa6-solid table >}} Tables show structured data
+
+
+| Tool | Purpose | Prosegrammer Use |
+|------|---------|------------------|
+| Git | Version control | Track document changes |
+| Python | Programming | Automate documentation |
+| Quarto | Publishing | Create professional docs |
+| Markdown | Markup | Write readable content |
+
+
+::: fragment
+
+- Tables organize **structured data** in our documentation
+- This table summarizes key tools for **prosegrammers**
+- Can you inspect the source code to see how it was styled?
+
+:::
+
+##  Blockquotes emphasize key ideas
+
+{{< iconify fa6-solid quote-left >}} **Source code for creating a blockquote**
+
+```markdown
+> Document engineering is the art of creating clear, 
+> maintainable, and professional documentation that 
+> serves both human readers and automated systems.
+>
+> — A thoughtful prosegrammer
+```
+
+**Rendered Output:**
+
+> Document engineering is the art of creating clear, 
+> maintainable, and professional documentation that 
+> serves both human readers and automated systems.
+>
+> — A thoughtful prosegrammer
+
+##  Mathematical Expressions
+
+{{< iconify fa6-solid calculator >}} **Source code for mathematical expressions**
+
+```markdown
+**Inline math:**
+The complexity is $O(n^2)$ for this algorithm.
+
+**Display math:**
+$$
+\text{Document Quality} = \frac{\text{Clarity} \times \text{Accuracy}}{\text{Complexity}}
+$$
+```
+
+::: {.fragment .fade style="margin-top: 0.2em; font-size: 0.85em;"}
+
+**Rendered Output:**
+
+**Inline math:** The complexity is $O(n^2)$ for this algorithm.
+
+**Display math with a silly equation:**
+$$
+\text{Document Quality} = \frac{\text{Clarity} \times \text{Accuracy}}{\text{Complexity}}
+$$
+
+:::
+
+# {{< iconify fa6-solid magic >}} Quarto offers ways to enhanced markdown
+
+::: {.incremental}
+- **Executable code blocks** with live output
+- **Cross-references** for figures and tables  
+- **Citations and bibliography** management
+- **Multiple output formats** from single source
+:::
+
+::: {.fragment .fade  style="font-size: 1.0em;"}
+
+{{< iconify fa6-solid rocket >}} Quarto makes Markdown a **powerful
+publishing platform**!
+
+:::
+
+## Executable Python Code
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+def document_stats(text: str) -> dict:
+    """Calculate basic statistics for document engineering."""
+    words = text.split()
+    return {
+        "word_count": len(words),
+        "character_count": len(text),
+        "avg_word_length": sum(len(word) for word in words) / len(words)
+    }
+
+sample_text = "Prosegrammers excel at document engineering"
+stats = document_stats(sample_text)
+print(f"Document statistics: {stats}")
+```
+
+::: {.fragment .fade style="margin-top: 0.4em; font-size: 0.95em;"}
+
+{{< iconify fa6-solid play >}} Running live code makes documentation
+**interactive** and **testable**! Code block format details? Try out `pyodide`! 
+
+:::
+
+#  Quick reminders for prosegrammers!
+
+::: {.fragment .fade style="font-size: 1.0em;"}
+
+- {{< iconify fa6-solid gears >}} Document engineering means blending code and
+prose to build resources for both humans and machines
+- {{< iconify fa6-solid flag-checkered >}} Quarto and Markdown empower you to
+easily create documents that are clear, interactive, and professional
+- {{< iconify fa6-solid code >}} Prosegrammers use these tools to
+automate, analyze, and publish documentation that achieves its goals
+
+:::

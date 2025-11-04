@@ -1,0 +1,30 @@
+{
+  "analysis_date": "2025-10-27",
+  "total_documents": 5,
+  "properties_analyzed": [
+    "category",
+    "difficulty"
+  ],
+  "unique_counts": {
+    "category": 3,
+    "difficulty": 3
+  },
+  "property_statistics": {
+    "category": {
+      "unique_values": [
+        "guide",
+        "reference",
+        "tutorial"
+      ],
+      "total_count": 5
+    },
+    "difficulty": {
+      "unique_values": [
+        "advanced",
+        "beginner",
+        "intermediate"
+      ],
+      "total_count": 5
+    }
+  }
+}

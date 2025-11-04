@@ -314,14 +314,14 @@ project assessments.
   - **Topic**: Document Engineering Building Blocks
   - **Weeks**: Seven through eleven
   - **Subjects for Critique**: [ruff](https://astral.sh/ruff) and
-  [Quarto](https://quarto.org/)
+  [Django](https://www.djangoproject.com/)
   - **Technical Topics**: 
     - **Documentation**: [Literate programming](https://guides.nyu.edu/datascience/literate-prog), [Localization](https://developer.mozilla.org/en-US/docs/Glossary/Localization)
     - **Engineering**: Intermediate Python programming, AI coding agents, Quarto
 - **Module Three**:
   - **Topic**: Advanced Document Engineering
   - **Subjects for Critique**: [ty](https://astral.sh/ruff) or
-  [Pyrefly](https://pyrefly.org/) and [Quarto](https://quarto.org/)
+  [Pyrefly](https://pyrefly.org/) and [FastAPI](https://fastapi.tiangolo.com/)
   - **Weeks**: Twelve through sixteen
   - **Topics**: 
     - **Documentation**: [Zettelkasten](https://zettelkasten.de/), [Digital gardens](https://github.com/MaggieAppleton/digital-gardeners)
@@ -342,8 +342,8 @@ project assessments.
 - **Document Engineering Skill-Checks**:
   - **Skill-Check One**: Week Two
   - **Skill-Check Two**: Week Three
-  - **Skill-Check Three**: Week Seven
-  - **Skill-Check Four**: Week Eight
+  - **Skill-Check Three**: Week Seven (rescheduled to Week Nine)
+  - **Skill-Check Four**: Week Eight (rescheduled to Week Ten)
   - **Skill-Check Five**: Week Twelve
   - **Skill-Check Six**: Week Thirteen
 - **Document Engineering Knowledge-Checks**:
@@ -353,6 +353,7 @@ project assessments.
   - **Knowledge-Check Two**:
     - *First Half of Class*: Week Nine
     - *Second Half of Class*: Week Ten
+    - Rescheduled for entire class to have check on Week Eleven
   - **Knowledge-Check Three**:
     - *First Half of Class*: Week Fourteen
     - *Second Half of Class*: Week Fifteen

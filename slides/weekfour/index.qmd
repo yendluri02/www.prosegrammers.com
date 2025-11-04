@@ -1,0 +1,554 @@
+---
+title: "Software Testing for Document Engineering"
+description: "Build correct document engineering tools"
+date: "2025-09-15"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# How do you know if your document engineering tool is correct? You test it!
+
+# Software testing for document engineering
+
+::: fragment
+
+- {{< iconify fa6-solid heading >}} Review the basics of document engineering
+- {{< iconify fa6-solid gears >}} Explore software testing techniques
+- {{< iconify fa6-solid robot >}} Learn how to test document engineering tools
+-  {{< iconify fa6-solid lightbulb >}} **Let's start by learning the importance of correctness!**
+
+:::
+
+## Document engineering tools and workflows must run correctly
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.9em;"}
+
+- **Text processing**: does each function parse content correctly?
+- **Document analysis**: do algorithms extract the right information?
+- **File operations**: are documents read and written correctly?
+- **Content validation**: do parsers handle malformed input properly?
+- **Output generation**: does the tool create documents as expected?
+
+:::
+
+::: {.fragment .boxed-content .fade-up style="margin-top: -0.05em; font-size: 1em;"}
+
+{{< iconify fa6-solid rocket >}} Software testing techniques help to ensure
+that document tools work correctly! Let's learn more about software testing!
+
+:::
+
+## Testing document engineering tools gives confidence in correctness
+
+::: {.fragment .fade-right}
+
+- {{< iconify fa6-solid gears >}} **Steps for testing document engineering tools**:
+    - Create sample document input
+    - Setup the tool's environment
+    - Process the input through the tool
+    - Collect the output from the tool
+    - Compare output to expected results
+    - Report any discrepancies as defects
+
+:::
+
+## Testing versus benchmarking for document engineering tools
+
+::: {.fragment .fade-right}
+
+- {{< iconify fa6-solid robot >}} **Testing**: Create and run test cases to
+confirm document tools produce correct output for sample documents
+- {{< iconify fa6-solid flask >}} **Benchmarking**: Measure timing and
+performance of document processing operations like parsing or formatting
+    - Testing and benchmarking are complementary methods
+    - Course focuses on **testing** document engineering tools
+    - Explore more about benchmarking in [Algorithm
+    Analysis](https://algorithmology.org/)!
+
+:::
+
+## How would you test the `Doubler`?
+
+```{python}
+class Doubler:
+    def __init__(self, n):
+        self._n = 2 * n
+
+    def n(self):
+        return self._n
+
+x = Doubler(5)
+print(x.n() == 10)
+assert(x.n() == 10)
+y = Doubler(-4)
+print(y.n() == -8)
+assert(y.n() == -8)
+```
+
+::: {.fragment .fade-left style="margin-top: -0.25em; font-size: 0.9em;"}
+
+- Establish a confidence in the correctness of the `Doubler` class
+- When testing is it better to use `print` or `assert` statements?
+
+:::
+
+## Explore use of the `print` and `assert`
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+class Doubler:
+    def __init__(self, n):
+        self._n = 2 * n
+
+    def n(self):
+        return self._n
+
+x = Doubler(5)
+print(x.n() == 10)
+assert(x.n() == 10)
+y = Doubler(-4)
+print(y.n() == -8)
+assert(y.n() == -8)
+```
+
+::: {.fragment style="margin-top: 0.05em; font-size: 0.90em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Key Tasks**: After creating `assert`
+statements that will pass and fail as expected, decide which you prefer and why!
+What situations warrant a `print` statement and which ones require an `assert`?
+
+:::
+
+## Test document processing tools
+
+::: {.fragment .fade-right}
+
+- {{< iconify fa6-solid lightbulb >}} **Answer key questions when testing document tools**:
+    - Does the tool correctly parse document formats?
+    - After changing code, does processing still work?
+- {{< iconify fa6-solid robot >}} **Using assertion statements during testing**:
+    - `print` statements require manual checking of output
+    - `assert` statements automatically verify correctness
+- Use a testing framework like `pytest` or `unittest`
+- Assess test coverage with `coverage.py`
+
+:::
+
+## `unittest` for `DayOfTheWeek`
+
+```{python}
+import unittest
+from dayoftheweek import DayOfTheWeek
+
+class TestDayOfTheWeek(unittest.TestCase):
+    def test_init(self):
+        d = DayOfTheWeek('F')
+        self.assertEqual(d.name(), 'Friday')
+        d = DayOfTheWeek('Th')
+        self.assertEqual(d.name(), 'Thursday')
+
+unittest.main(argv=['ignored'], verbosity=2, exit=False)
+```
+
+::: {.fragment .fade-left style="margin-top: 0.25em; font-size: 1.0em;"}
+
+- Call `unittest.main` differently for tests outside Quarto
+- Run `test_dayoftheweek.py` in `slides/weekfour/`  
+- The `OK` output in terminal confirms passing assertions
+
+:::
+
+## Explore `DayOfTheWeek`
+
+```python
+class DayOfTheWeek:
+    """A class to represent a day of the week."""
+    def __init__(self, abbreviation):
+        """Create a new DayOfTheWeek object."""
+        self.abbreviation = abbreviation
+        self.name_map = {
+            "M": "Monday",
+            "T": "Tuesday",
+            "W": "Wednesday",
+            "Th": "Thursday",
+            "F": "Friday",
+            "Sa": "Saturday",
+            "Su": "Sunday",
+        }
+
+    def name(self):
+        return self.name_map.get(self.abbreviation)
+```
+
+::: {.fragment .fade-right style="margin-top: 0.15em; font-size: 0.7em;"}
+
+- Support the lookup of a day of the week through an abbreviation like `Sa`
+- Simple example helps us learn testing before complex document processing
+
+:::
+
+# Exploring test-driven development in Python
+
+::: {.panel-tabset}
+
+## Questions
+
+- **Test-driven development (TDD) states "tests before code"**:
+    - How will you use a function?
+    - What are the function's inputs and outputs?
+    - Can you write code to make the tests pass?
+
+## Practices
+
+- **The "TDD mantra" is Red-Green-Refactor**:
+    - **Red**: The tests fail. You haven’t written the code yet!
+    - **Green**: You get the tests to pass by changing the code.
+    - **Refactor**: You clean up the code, removing duplication.
+
+:::
+
+## How can you refactor Python code?
+
+::: {.panel-tabset style="margin-top: -0.1em;"}
+
+## Start
+
+```{python}
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+avg1 = sum(L1)/len(L1)
+avg2 = sum(L2)/len(L2)
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+- This code will not work for empty lists!
+- *And*, the code is repetitive and hard to read
+- Can we refactor the program to avoid the defect?
+
+## Intermediate
+
+```{python}
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+if len(L1) == 0:
+    avg1 = 0
+else:
+    avg1 = sum(L1) / len(L1)
+if len(L2) == 0:
+    avg2 = 0
+else:
+    avg2 = sum(L2) / len(L2)
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+::: {.fragment .fade-right style="margin-top: -0.25em; font-size: 0.9em;"}
+
+- This avoids the defect but is repetitive and hard to read!
+
+:::
+
+## Finished
+
+```{python}
+def avg(L):
+    if len(L) == 0:
+        return 0
+    else:
+        return sum(L) / len(L)
+
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+avg1 = avg(L1)
+avg2 = avg(L2)
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+::: {.fragment .fade-right style="margin-top: -0.25em; font-size: 0.9em;"}
+
+- The `avg` function avoids the defect and is easier to read!
+
+:::
+
+:::
+
+## Bug hunt for average computation
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# initialize the lists
+L1 = [1, 2, 3, 4, 5]
+L2 = [6, 7, 8, 9, 10]
+# compute the averages
+avg1 = sum(L1)/len(L1)
+avg2 = sum(L2)/len(L2)
+# display the results
+print("avg(", L1, ") -->", avg1)
+print("avg(", L2, ") -->", avg2)
+```
+
+::: {.fragment style="margin-top: 0.3em; font-size: 0.91em;"}
+
+- {{< iconify fa6-solid gears >}} **Key Tasks**: After confirming that the
+program works for the initial lists in `L1` and `L2`, try to find the defect.
+Can you make a solution that works for empty lists? How do you know it is
+correct?
+
+:::
+
+## Refactoring in document engineering
+
+::: {.incremental .fade-right style="margin-top: 0.3em; font-size: 0.925em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **What is refactoring?**
+    - **Defined**: Better code structure without changing features
+    - **Goal**: Enhance aspects of document processing tools
+- {{< iconify fa6-solid gears >}} **Why refactor document engineering systems?**
+    - **Readability**: Helps others to understand text processing logic
+    - **Maintainability**: Simplifies modifications and debugging
+    - **Reusability**: Promotes code reuse across document tools
+    - **Performance**: Aim to improve text processing efficiency
+- {{< iconify fa6-solid robot >}} **Use test cases to confirm correctness of
+refactoring!**
+
+:::
+
+## What to test in document tools?
+
+::: {.incremental style="margin-top: -0.25em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **For each document processing function, ask these questions**:
+    - What should **happen** when processing different document types?
+    - How do I want to **use** this document analysis function?
+    - What **are** the inputs and outputs of text processing?
+    - What **should be** the function's document inputs and outputs?
+    - What are the **edge cases** for document processing?
+- Test the system's **expected behavior**, not its **implementation**
+- Test the **public interface** of document processing tools
+- Transform detected **defects** into repeatable **test cases**
+- Later, as schedule permits, assess adequacy of tests with `coverage.py`
+
+:::
+
+## Testing aids document tool design
+
+::: {.incremental style="margin-top: -0.25em; font-size: 0.915em;"}
+
+- Software testing helps refine document engineering tool design
+
+- Interplay between **testing** and **document tool design**:
+
+    - See **data** (documents) and **operations** (processing functions)
+    - Specify what **should** happen when processing documents
+    - Write a unit **test case** to encode expected behavior
+    - Confirm that all test cases **pass** correctly
+    - **Refactor** code to **improve** document processing design
+    - Repeatedly **run** test suite to confirm correctness
+
+- {{< iconify fa6-solid rocket >}} **Systems with good designs are easier to
+test and maintain**!
+
+:::
+
+# Don't benchmark until you are done testing!
+
+::: {.fragment .boxed-content .fade-right}
+
+- **Testing**: Use test cases to confirm document tools produce correct output 
+for sample documents and operations
+- **Benchmarking**: Measure timing and performance of document processing 
+operations like parsing
+- Running experiments on incorrect document tools may compromise results.
+**Always run a small trial first**!
+
+:::
+
+## Test a document analysis function
+
+```{python}
+import re
+from typing import Dict, Any
+
+def document_summary(text: str) -> Dict[str, Any]:
+    """Generate a comprehensive summary of document statistics."""
+    words = [word for word in text.split() if any(char.isalnum() for char in word)]
+    word_count = len(words)
+    sentences = re.split(r'[.!?]+', text)
+    sentence_count = len([s for s in sentences if s.strip()])
+    paragraphs = [p for p in text.split('\n\n') if p.strip()]
+    paragraph_count = len(paragraphs)
+    avg_words_per_sentence = word_count / sentence_count if sentence_count > 0 else 0
+    return {
+        'word_count': word_count, 'sentence_count': sentence_count,
+        'paragraph_count': paragraph_count,
+        'avg_words_per_sentence': round(avg_words_per_sentence, 1)
+    }
+
+sample_text = "Hello world. This is a test."
+result = document_summary(sample_text)
+print(f"Words: {result['word_count']}, Sentences: {result['sentence_count']}")
+assert result['word_count'] == 6
+assert result['sentence_count'] == 2
+```
+
+## Test the `document_summary` function
+
+::: {.incremental .fade-right style="margin-top: -0.1em; font-size: 0.95em;"}
+
+- Implement a Python function like `document_summary`
+- Create an input document as a string like `sample_text`
+- Call the function and collect the output in `result`
+- Use `assert` statements to confirm correctness of output
+- Manually inspect printed output for additional confidence
+- {{< iconify fa6-solid lightbulb >}} **Yet, can we adopt a more automated
+approach to testing? Let's explore the basics of automated testing with
+`pytest`! Frameworks make testing easy and repeatable.**
+- {{< iconify fa6-solid robot >}} **You can use `uv` to add `pytest` as a project
+dependency!**
+
+:::
+
+# Advanced testing for document analysis tools
+
+::: incremental
+
+- Automated testing frameworks like `pytest` and `unittest`:
+    - Enable structured definition and running of tests
+    - Perform parameterized test cases with `pytest`
+    - Support property-based testing with `hypothesis` 
+
+:::
+
+## Testing `DayOfTheWeek` with Pytest
+
+```python
+from daydetector.dayoftheweek import DayOfTheWeek
+
+def test_init():
+    """Test the DayOfTheWeek class."""
+    d = DayOfTheWeek("F")
+    assert d.name() == "Friday"
+    d = DayOfTheWeek("Th")
+    assert d.name() == "Thursday"
+    d = DayOfTheWeek("W")
+    assert d.name() == "Wednesday"
+    d = DayOfTheWeek("T")
+    assert d.name() == "Tuesday"
+    d = DayOfTheWeek("M")
+    assert d.name() == "Monday"
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 0.8em;"}
+
+- Standard format for test names and files
+- Automated discovery and running of the tests
+- Extension through the use of plugins
+
+:::
+
+## Parameterized Tests with `pytest`
+
+```python
+@pytest.mark.parametrize(
+    "abbreviation, expected",
+    [
+        ("M", "Monday"),
+        ("T", "Tuesday"),
+        ("W", "Wednesday"),
+        ("Th", "Thursday"),
+        ("F", "Friday"),
+        ("Sa", "Saturday"),
+        ("Su", "Sunday"),
+        ("X", None),
+    ],
+)
+def test_day_name(abbreviation, expected):
+    """Use parameterized testing to confirm that lookup works correctly."""
+    day = DayOfTheWeek(abbreviation)
+    assert day.name() == expected
+```
+
+::: {.fragment .fade-right style="margin-top: 0.5em; font-size: 1.0em;"}
+
+- Express the inputs and the expected outputs in a table!
+- Same approach works for testing document processing functions
+
+:::
+
+## Property-based test case
+
+```python
+import hypothesis.strategies as st
+from hypothesis import given
+import pytest
+
+@pytest.mark.parametrize(
+    "valid_days",
+    [["Monday", "Tuesday", "Wednesday", "Thursday",
+      "Friday", "Saturday", "Sunday"]],
+)
+@given(
+    st.text(alphabet=st.characters(), min_size=1, max_size=2)
+)
+def test_abbreviation_maps_to_name(valid_days, abbreviation):
+    """Use property-based testing with Hypothesis to confirm mapping."""
+    day = DayOfTheWeek(abbreviation)
+    assert day.name() in valid_days or day.name() is None
+```
+
+::: {.fragment .fade-right style="margin-top: 0.0em; font-size: 0.875em;"}
+
+- `Hypothesis` strategies generate random character inputs for the `abbreviation`
+parameter, thereby increasing the input diversity
+
+:::
+
+## *Oh, one more thing*! You could use a large language model to write tests in `test_dayoftheweek.py`! Wow!
+
+::: {.fragment .boxed-content .fade-up style="margin-top: 0.25em; font-size: 1.15em;"}
+
+- What are the **benefits** and **downsides** of using artificial intelligence (AI) to generate tests?
+
+- What are situations in which you **should** and **should not** use AI to generate tests?
+
+- Tests **establish a confidence in correctness**!
+
+:::
+
+## Reminder of course goals
+
+::: {.fragment .fade style="margin-top: -0.15em; font-size: 0.75em;"}
+
+- **Document Creation**:
+  - Design and implement document generation workflows
+  - Test all aspects of documents to ensure quality and accuracy
+  - Create frameworks for automated document production
+- **Document Analysis**:
+  - Collect and analyze data about document usage and quality
+  - Visualize insights to improve documentation strategies
+- **Communicate** results and best practices for document engineering
+- **References for this week's content**:
+    - {{< iconify fa6-solid book-open >}} Online textbook called [A First
+    Course on Data Structures in
+    Python](https://donsheehy.github.io/datastructures/)
+    - {{< iconify fa6-brands github >}} The `ds2` package in the
+    [donsheehy/datastructures](https://github.com/donsheehy/datastructures)
+    GitHub repository
+
+:::

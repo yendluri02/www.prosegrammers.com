@@ -1,0 +1,764 @@
+---
+title: "Using Dictionaries for Document Engineering"
+description: "Explore dictionaries in Python programs"
+date: "2025-10-20"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Dictionaries for document engineering
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.70em;"} 
+
+- {{< iconify fa6-solid lightbulb >}} **What is document engineering?**
+    - Creating documents using code
+    - Manipulating and analyzing text data
+    - Building documentation systems
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.70em;"}
+
+- {{< iconify fa6-solid book >}} **What are this week's highlights?**
+    - Explore Python dictionaries for document engineering
+        - Store document content with unique identifiers
+        - Map metadata to documents efficiently
+        - Read and parse JSON files into dictionaries
+
+:::
+
+# Key insights for prosegrammers
+
+::: {.fragment .boxed-content .fade style="font-size: 1.0em;"}
+
+- {{< iconify fa6-solid gears >}} Document engineering means blending
+code and prose to build resources for humans and machines
+- {{< iconify fa6-solid book >}} Dictionaries store key-value pairs that
+map document identifiers to content, metadata to properties
+- {{< iconify fa6-solid code >}} JSON files naturally translate to
+dictionaries, supporting seamless data exchange between programs
+
+:::
+
+## What are dictionaries? Why do they matter for prosegramming?
+
+::: {.incremental style="margin-top: -0.15em; font-size: 0.8em;"}
+
+- {{< iconify fa6-solid book >}} **Dictionaries** store data as
+key-value pairs
+  - Keys are unique identifiers (usually strings or numbers)
+  - Values can be any Python object (strings, lists, other dictionaries)
+  - Provide fast lookups based on keys
+
+- {{< iconify fa6-solid lightbulb >}} **Why use dictionaries for
+documents?**
+  - Map document IDs to their content
+  - Store document metadata (title, author, date)
+  - Parse structured data formats like JSON
+  - Build document indexes and catalogs
+
+:::
+
+# Creating and using dictionaries in Python
+
+::: {.incremental style="margin-top: -0.25em; font-size: 0.725em;"}
+
+- {{< iconify fa6-solid plus >}} **Creating dictionaries**
+  - Initialize empty or with key-value pairs
+  - Build document metadata collections
+
+- {{< iconify fa6-solid search >}} **Accessing dictionary values**
+  - Retrieve values by key
+  - Handle missing keys safely
+
+- {{< iconify fa6-solid arrows-rotate >}} **Modifying dictionaries**
+  - Add new key-value pairs
+  - Update existing values
+
+:::
+
+## Basic dictionary creation
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# create a dictionary to store document metadata
+document = {
+    "doc_id": "D001",
+    "title": "Introduction to Document Engineering",
+    "author": "Dr. Kapfhammer",
+    "date": "2024-10-15",
+    "word_count": 1250
+}
+
+print("Document metadata:")
+for key, value in document.items():
+    print(f"  {key}: {value}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.75em;"}
+
+- Create dictionary with string keys and mixed value types
+- Use `items()` method to iterate over key-value pairs
+
+:::
+
+## Accessing dictionary values
+
+```{python}
+#| autorun: true
+#| max-lines: 12
+# access document information by key
+document = {
+    "doc_id": "D001",
+    "title": "Python Dictionaries Guide",
+    "author": "Dr. Kapfhammer"
+}
+
+print(f"Title: {document['title']}")
+print(f"Author: {document['author']}")
+
+# safe access with get() method
+word_count = document.get("word_count", "Not available")
+print(f"Word count: {word_count}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use bracket notation `document['key']` for direct access
+- Use `get()` method with default value for safe access
+
+:::
+
+## Adding and modifying entries
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# start with basic document metadata
+document = {
+    "doc_id": "D002",
+    "title": "Getting Started with Quarto"
+}
+
+# add new key-value pairs
+document["author"] = "Dr. Kapfhammer"
+document["date"] = "2024-10-20"
+document["word_count"] = 890
+
+print("Updated document metadata:")
+for key, value in document.items():
+    print(f"  {key}: {value}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Add new entries with bracket notation `dict[key] = value`
+- Update existing entries using same syntax
+
+:::
+
+# Dictionaries with different value types
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid text-width >}} **String values**: store text
+content
+- {{< iconify fa6-solid hashtag >}} **Integer values**: store counts and
+IDs
+- {{< iconify fa6-solid list >}} **List values**: store multiple related
+items
+- {{< iconify fa6-solid book >}} **Dictionary values**: nest related
+data structures
+- {{< iconify fa6-solid layer-group >}} **Tuple and set values**: store
+ordered and unique data
+- **Let's explore how to create and use dictionaries with different data!**
+
+:::
+
+## Dictionary with string and integer
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# track document statistics
+doc_stats = {
+    "filename": "user_guide.md",
+    "word_count": 1500,
+    "paragraph_count": 45,
+    "author": "Dr. Kapfhammer"
+}
+
+print("Document statistics:")
+for stat, value in doc_stats.items():
+    print(f"  {stat}: {value}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
+
+- It is possible to mix string and integer values in same dictionary
+- While the keys describe the type of information stored, type errors are
+possible
+
+:::
+
+## Dictionary mapping to lists
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 6
+# map document sections to their contents
+document_sections = {
+    "introduction": ["overview", "goals", "prerequisites"],
+    "installation": ["requirements", "setup", "verification"],
+    "usage": ["basic_commands", "examples", "troubleshooting"]
+}
+
+print("Document structure:")
+for section, subsections in document_sections.items():
+    print(f"{section}:")
+    for sub in subsections:
+        print(f"  - {sub}")
+```
+
+## Dictionary mapping to dictionary
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# store multiple documents with nested metadata
+documents = {
+    "D001": {
+        "title": "Python Basics",
+        "author": "Dr. Kapfhammer",
+        "word_count": 1200
+    },
+    "D002": {
+        "title": "Advanced Containers",
+        "author": "Dr. Kapfhammer",
+        "word_count": 1800
+    }
+}
+
+print("Document catalog:")
+for doc_id, metadata in documents.items():
+    print(f"{doc_id}: {metadata['title']} ({metadata['word_count']}w)")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Nested dictionaries represent complex data structures
+- Access nested values with multiple brackets: `dict[key1][key2]`
+
+:::
+
+## Dictionary mapping to tuples and sets
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# use tuples for immutable metadata and sets for tags
+document_info = {
+    "metadata": ("Python Guide", "Dr. Kapfhammer", "2024-10-15"),
+    "tags": {"python", "tutorial", "beginner", "programming"},
+    "versions": {"v1.0", "v1.1", "v2.0"}
+}
+
+title, author, date = document_info["metadata"]
+print(f"Document: {title} by {author}")
+print(f"Tags: {', '.join(sorted(document_info['tags']))}")
+print(f"Available versions: {', '.join(sorted(document_info['versions']
+))}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Tuples store fixed metadata that should not change
+- Sets store unique tags and prevent duplicates
+- Both tuples and sets can be the values of a dictionary
+
+:::
+
+# Looking up a value in a dictionary using a key is efficient! How helpful?
+
+::: {.fragment style="margin-top: -0.2em; font-size: 0.9em;"}
+
+- Dictionaries are very efficient for looking up values by key
+- Average time complexity for lookups is constant time or $O(1)$
+- Dictionaries ideal for mapping document identifiers to content
+- You can learn more about this in the Algorithm Analysis class
+- **Let's explore more about dictionaries for document engineering!**
+
+:::
+
+# Mapping document identifiers to content
+
+::: {.incremental style="margin-top: -0.3em; font-size: 0.725em;"}
+
+- {{< iconify fa6-solid database >}} **Document collections**
+  - Store multiple documents in single dictionary
+  - Access documents by unique identifier
+
+- {{< iconify fa6-solid magnifying-glass >}} **Efficient lookups**
+  - Retrieve specific documents quickly
+  - No need to search through lists
+
+- {{< iconify fa6-solid sitemap >}} **Catalog management**
+  - Build document indexes and catalogs
+  - Organize documents systematically
+
+:::
+
+## Creating a document catalog
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# build a catalog of documentation files
+doc_catalog = {
+    "README": "# Project Overview\n\nWelcome to our project!",
+    "INSTALL": "## Installation Steps\n\n1. Clone repo\n2. Run setup",
+    "USAGE": "## Usage Guide\n\nRun with: python main.py",
+    "API": "## API Reference\n\nFunctions: init(), process(), save()"
+}
+
+print("Document catalog contents:")
+for doc_id, content in doc_catalog.items():
+    lines = content.split('\n')
+    print(f"\n{doc_id}:")
+    print(f"  First line: {lines[0]}")
+    print(f"  Total lines: {len(lines)}")
+```
+
+## Processing documents from catalog
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+from typing import Dict
+
+def analyze_catalog(catalog: Dict[str, str]) -> Dict[str, int]:
+    """Analyze word counts for all documents in catalog."""
+    analysis = {}
+    for doc_id, content in catalog.items():
+        word_count = len(content.split())
+        analysis[doc_id] = word_count
+    return analysis
+
+doc_catalog = {
+    "README": "Welcome to document engineering with Python",
+    "GUIDE": "Learn how to use dictionaries for document storage"
+}
+
+results = analyze_catalog(doc_catalog)
+print("Word count analysis:")
+for doc, count in results.items():
+    print(f"  {doc}: {count} words")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
+
+- Process all documents in catalog with iteration
+- Return analysis results as new dictionary
+- This example illustrates the key points
+- More advanced examples would use real Markdown documents
+
+:::
+
+# Dictionary operations for prosegramming
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.7em;"}
+
+- {{< iconify fa6-solid key >}} **Checking for keys**
+  - Verify if document exists in catalog
+  - Avoid errors when accessing missing keys
+
+- {{< iconify fa6-solid trash >}} **Removing entries**
+  - Delete documents from catalog
+  - Clean up obsolete entries
+
+- {{< iconify fa6-solid arrows-rotate >}} **Updating dictionaries**
+  - Merge multiple document collections
+  - Update metadata in bulk
+
+:::
+
+## Checking keys and removing entries
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+# manage document catalog with key operations
+docs = {
+    "D001": "Python Basics Guide",
+    "D002": "Advanced Topics",
+    "D003": "Code Examples"
+}
+
+print("Initial documents:", list(docs.keys()))
+
+# check if key exists before accessing
+if "D002" in docs:
+    print(f"Found: {docs['D002']}")
+
+# remove obsolete document
+del docs["D003"]
+print("After removal:", list(docs.keys()))
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use `in` operator to check key existence in the dictionary
+- Use `del` statement to remove key-value pairs from the dictionary
+
+:::
+
+## Updating and merging dictionaries
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# merge multiple document collections
+python_docs = {
+    "P001": "Python Tutorial",
+    "P002": "Python Reference"
+}
+
+quarto_docs = {
+    "Q001": "Quarto Basics",
+    "Q002": "Quarto Advanced"
+}
+
+# merge collections into single catalog
+all_docs = {}
+all_docs.update(python_docs)
+all_docs.update(quarto_docs)
+
+print("Combined catalog:")
+for doc_id, title in all_docs.items():
+    print(f"  {doc_id}: {title}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use `update()` method to merge dictionaries together
+- Later updates overwrite earlier values for same keys
+
+:::
+
+## Iterating through keys and values
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+# different ways to iterate through dictionaries
+document = {
+    "title": "Document Engineering Guide",
+    "author": "Dr. Kapfhammer",
+    "pages": 150
+}
+
+print("Keys only:")
+for key in document.keys():
+    print(f"  {key}")
+
+print("\nValues only:")
+for value in document.values():
+    print(f"  {value}")
+
+print("\nKey-value pairs:")
+for key, value in document.items():
+    print(f"  {key}: {value}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use `keys()` to iterate over keys only
+- Use `values()` to iterate over values only
+- Use `items()` to iterate over key-value pairs
+
+:::
+
+# Using Python to read and parse JSON files
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.75em;"}
+
+- {{< iconify fa6-solid file-code >}} **JSON format**
+  - JavaScript Object Notation for data exchange
+  - Maps naturally to Python dictionaries
+  - Standard format for document metadata
+
+- {{< iconify fa6-solid download >}} **Reading JSON**
+  - Use `json` module from standard library
+  - Parse JSON strings into dictionaries
+  - Handle file reading and parsing together
+
+:::
+
+## Parsing JSON strings to dictionaries
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+import json
+
+# JSON string representing document metadata
+json_string = '''
+{
+    "doc_id": "D001",
+    "title": "Python for Prosegrammers",
+    "author": "Dr. Kapfhammer",
+    "tags": ["python", "programming", "tutorial"],
+    "published": true,
+    "word_count": 2500
+}
+'''
+
+doc_data = json.loads(json_string)
+print("Parsed document metadata:")
+print(f"  Title: {doc_data['title']}")
+print(f"  Author: {doc_data['author']}")
+print(f"  Tags: {', '.join(doc_data['tags'])}")
+print(f"  Word count: {doc_data['word_count']}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Use `json.loads()` to parse JSON string to dictionary
+- JSON arrays become Python lists, objects become dictionaries
+
+:::
+
+## Working with JSON documents
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+import json
+
+# JSON string with multiple documents
+json_data = '''
+{
+    "documents": [
+        {"id": "D001", "title": "Python Basics", "words": 1200},
+        {"id": "D002", "title": "Advanced Topics", "words": 1800},
+        {"id": "D003", "title": "Best Practices", "words": 1500}
+    ]
+}
+'''
+
+data = json.loads(json_data)
+print("Document collection:")
+for doc in data["documents"]:
+    print(f"  {doc['id']}: {doc['title']} ({doc['words']} words)")
+
+total_words = sum(doc["words"] for doc in data["documents"])
+print(f"\nTotal words across all documents: {total_words}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Parse nested JSON structures with lists and dictionaries
+- Process document collections systematically
+
+:::
+
+## Creating JSON from dictionaries
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+import json
+
+# create document metadata dictionary
+document = {
+    "doc_id": "D004",
+    "title": "Dictionaries for Document Engineering",
+    "author": "Dr. Kapfhammer",
+    "metadata": {
+        "created": "2024-10-15",
+        "modified": "2024-10-20",
+        "version": "1.0"
+    },
+    "tags": ["python", "dictionaries", "tutorial"]
+}
+
+json_output = json.dumps(document, indent=2)
+print("JSON representation:")
+print(json_output)
+```
+
+# Practical document engineering examples
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.725em;"}
+
+- {{< iconify fa6-solid chart-bar >}} **Word frequency analysis**
+  - Count word occurrences in documents
+  - Build frequency dictionaries
+
+- {{< iconify fa6-solid sitemap >}} **Document indexing**
+  - Create searchable document indexes
+  - Map keywords to document IDs
+
+- {{< iconify fa6-solid tags >}} **Metadata management**
+  - Organize document properties
+  - Track document relationships
+
+:::
+
+## Word frequency analysis
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+from typing import Dict
+
+def word_frequency(text: str) -> Dict[str, int]:
+    """Count word frequencies in text."""
+    words = text.lower().split()
+    frequency = {}
+    for word in words:
+        frequency[word] = frequency.get(word, 0) + 1
+    return frequency
+
+document_text = """
+Document engineering combines programming with writing.
+Programming skills help automate document processing.
+Writing skills create clear documentation.
+"""
+
+freq = word_frequency(document_text)
+print("Word frequencies:")
+for word, count in sorted(freq.items(), key=lambda x: x[1], reverse=True
+)[:5]:
+    print(f"  {word}: {count}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.8em;"}
+
+- Use `get()` method with default value to count occurrences
+- Dictionary stores word as key and count as value
+
+:::
+
+## Building a document index
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+from typing import Dict, Set
+
+def build_index(documents: Dict[str, str]) -> Dict[str, Set[str]]:
+    """Build keyword index mapping words to document IDs."""
+    index = {}
+    for doc_id, content in documents.items():
+        words = set(content.lower().split())
+        for word in words:
+            if word not in index:
+                index[word] = set()
+            index[word].add(doc_id)
+    return index
+
+docs = {
+    "D001": "python programming tutorial",
+    "D002": "python document engineering",
+    "D003": "programming best practices"
+}
+
+index = build_index(docs)
+print("Documents containing 'python':", index["python"])
+print("Documents containing 'programming':", index["programming"])
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Build inverted index mapping keywords to document IDs
+- Use sets to store unique document references
+- Makes it easy to find documents by specific keyword
+
+:::
+
+## Managing document metadata
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 8
+from typing import Dict, List
+
+def filter_by_author(
+    docs: Dict[str, Dict], 
+    author: str
+) -> List[str]:
+    """Find all documents by specific author."""
+    return [
+        doc_id for doc_id, meta in docs.items() 
+        if meta.get("author") == author
+    ]
+
+document_library = {
+    "D001": {"title": "Python Basics", "author": "Dr. Kapfhammer"},
+    "D002": {"title": "Quarto Guide", "author": "Dr. Smith"},
+    "D003": {"title": "Git Tutorial", "author": "Dr. Kapfhammer"}
+}
+
+kapfhammer_docs = filter_by_author(document_library, "Dr. Kapfhammer")
+print(f"Documents by Dr. Kapfhammer: {kapfhammer_docs}")
+
+for doc_id in kapfhammer_docs:
+    print(f"  {doc_id}: {document_library[doc_id]['title']}")
+```
+
+::: {.incremental style="margin-top: -0.2em; font-size: 0.825em;"}
+
+- Filter documents by metadata criteria
+- Return matching document IDs for further processing
+
+:::
+
+# Dictionaries for prosegrammers
+
+::: {.fragment .boxed-content style="margin-top: -0.2em; font-size: 0.725em;"}
+
+- {{< iconify fa6-solid gears >}} **Next steps for using dictionaries**:
+  - Find locations in your tool where dictionaries could improve design
+    - Could you use a dictionary to map IDs to content?
+    - Would nested dictionaries organize complex data better?
+    - Could JSON files store and load your tool's configuration?
+  - If you are already using dictionaries, how can you refactor them?
+  - {{< iconify fa6-solid lightbulb >}} **How would dictionaries make
+your tool more powerful?**
+
+:::
+
+## Key takeaways for prosegrammers
+
+::: {.incremental style="margin-top: 0.1em; font-size: 0.7em;"}
+
+- {{< iconify fa6-solid book >}} **Master dictionary fundamentals**
+  - Create dictionaries with various value types
+  - Access, modify, and iterate through key-value pairs
+  - Use dictionary methods for safe and efficient operations
+
+- {{< iconify fa6-solid file-code >}} **Leverage JSON for data exchange**
+  - Read and parse JSON files into Python dictionaries
+  - Convert dictionaries to JSON for storage and sharing
+  - Handle nested structures with lists and dictionaries
+
+- {{< iconify fa6-solid lightbulb >}} **Think like a prosegrammer**
+  - Use dictionaries to map document IDs to content and metadata
+  - Build indexes and catalogs for document collections
+  - Apply dictionaries to real-world document engineering challenges
+
+:::

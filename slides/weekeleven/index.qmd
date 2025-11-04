@@ -1,0 +1,370 @@
+---
+title: "Searching and Sorting for Document Engineering"
+echo: true
+description: "How do you efficiently process data?"
+date: "2025-11-03"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  freeze: auto
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    html-math-method: mathjax
+    footer: "Prosegrammers"
+    mermaid:
+      theme: default
+---
+
+# Searching and sorting
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid magnifying-glass >}} **Searching**: find specific content in documents
+  - Locate keywords in large text collections
+  - Find references and citations in documentation
+  - Search through API documentation and code examples
+
+:::
+
+::: {.fragment style="margin-top: -0.5em; font-size: 0.85em;"}
+
+- {{< iconify fa6-solid arrow-down-a-z >}} **Sorting**: organize document data
+  - Order search results by relevance
+  - Alphabetize glossaries and indexes
+  - Rank documents by date or popularity
+- {{< iconify fa6-solid lightbulb >}} Both methods help to make documents more
+accessible and useful!
+
+:::
+
+## Why searching and sorting matter
+
+::: {.incremental style="font-size: 0.85em;"}
+
+- {{< iconify fa6-solid gears >}} **Document engineering applications**:
+  - Search engines index billions of web pages
+  - Documentation sites need fast keyword search
+  - Version control systems sort commits by date
+  - Citation managers organize references alphabetically
+
+- {{< iconify fa6-solid rocket >}} **Performance matters for user experience**:
+  - Slow search frustrates users
+  - Efficient sorting enables real-time features
+  - Algorithm choice affects scalability
+
+- {{< iconify fa6-solid microscope >}} Although not course's key focus, **how
+do we measure efficiency?**
+
+:::
+
+## Course learning objectives
+
+::: {.fragment .callout-note icon=true title="Learning Objectives for Document Engineering"}
+
+- **CS-104-1**: Explain processes such as software installation or
+design for a variety of technical and non-technical audiences ranging from
+inexperienced to expert.
+- **CS-104-2**: Use professional-grade integrated development environments (IDEs),
+command-line tools, and version control systems to compose, edit, and deploy
+well-structured, web-ready documents and industry-standard documentation tools.
+- **CS-104-3**: Build automated publishing pipelines to format, check, and ensure both the
+uniformity and quality of digital documents.
+- **CS-104-4**: Identify and apply appropriate conventions of a variety of technical
+communities, tools, and computer languages to produce industry-consistent
+diagrams, summaries, and descriptions of technical topics or processes.
+
+:::
+
+::: {.fragment style="margin-top: -0.05em; font-size: 0.775em;"}
+
+- {{< iconify fa6-solid bullhorn >}} This week's content aids attainment of
+**CS-104-2**, **CS-104-3** and **CS-104-4**!
+
+:::
+
+# When the input size grows...the code slows!
+
+::: {.fragment style="margin-top: -0.25em; font-size: 0.95em;"}
+
+- In document engineering, focus first on **correctness**, then on efficiency!
+Recall, an efficient but incorrect program is useless!
+- **Program efficiency**: how quickly a program runs as input grows
+- **Big-O notation**: describes how runtime grows with input size
+- **Complexity classes**: constant, linear, logarithmic, or quadratic
+- {{< iconify fa6-solid rocket >}} **Okay, let's briefly explore how to measure
+efficiency**!
+
+:::
+
+## Understanding big-O notation
+
+::: {.incremental style="margin-top: -0.5em; font-size: 0.85em;"}
+
+- **Big-O** describes algorithm efficiency as input grows
+  - $O(1)$: constant time, same speed regardless of size
+  - $O(n)$: linear time, doubles when size doubles
+  - $O(\log n)$: logarithmic time, grows very slowly
+  - $O(n^2)$: quadratic time, 4× slower when size doubles
+
+- **Why it matters for document engineering**:
+  - Processing 1,000 vs 1,000,000 documents
+  - Real-time search requires $O(\log n)$ or better
+  - Batch processing can tolerate $O(n \log n)$
+- {{< iconify fa6-solid lightbulb >}} **Choose algorithms based on data size and
+performance needs**!
+
+:::
+
+# Okay, now let's explore searching algorithms!
+
+::: {.fragment style="font-size: 0.9em;"}
+
+- **Linear search**: check every item sequentially at $O(n)$
+- **Binary search**: divide and conquer approach at $O(\log n)$
+- Binary search requires sorted data but is much faster
+- Essential for implementing search features in documentation
+
+:::
+
+## Binary search implementation
+
+```{python}
+def binary_search(L, item):
+    if len(L) == 0: return False
+    median = len(L) // 2
+    if item == L[median]:
+        return True
+    elif item < L[median]:
+        return binary_search(L[:median], item)
+    else:
+        return binary_search(L[median + 1:], item)
+
+print(binary_search([1, 2, 3, 4, 5], 3))
+print(binary_search([2, 4, 6, 8, 10], 5))
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Searches for `item` in sorted list `L` by dividing in half
+- Returns `True` if found, `False` otherwise
+- Time complexity: $O(\log n)$ for sorted lists
+
+:::
+
+## Document search example
+
+::: {.fragment style="font-size: 0.85em;"}
+
+**Scenario**: Search for keywords in sorted documentation index
+
+```{python}
+doc_index = ["API", "authentication", "configuration", "deployment",
+             "installation", "quickstart", "reference", "tutorial"]
+
+search_term = "configuration"
+found = binary_search(doc_index, search_term)
+print(f"'{search_term}' found in index: {found}")
+
+search_term = "testing"
+found = binary_search(doc_index, search_term)
+print(f"'{search_term}' found in index: {found}")
+```
+
+:::
+
+::: {.fragment style="font-size: 0.95em; margin-top: -0.1em"}
+
+- Documentation indexes store sorted topic names
+- Binary search enables fast lookup in large documentation
+- Used by search engines and documentation generators
+
+:::
+
+# Okay, now let's explore sorting algorithms!
+
+::: {.fragment style="font-size: 0.9em;"}
+
+- **Simple sorts**: bubble, selection, insertion at $O(n^2)$
+- **Advanced sorts**: mergesort, quicksort at $O(n \log n)$
+- Simple algorithms work well for small datasets
+- Advanced algorithms essential for large document collections
+
+:::
+
+## Simple sorting: bubble sort
+
+```{python}
+def bubblesort(L):
+    for _ in range(len(L)-1):
+        for i in range(len(L)-1):
+            if L[i]>L[i+1]:
+                L[i], L[i+1] = L[i+1], L[i]
+
+data = [30, 54, 26, 93, 17, 77, 31, 44, 55, 20]
+print("Original:", data)
+bubblesort(data)
+print("Sorted:", data)
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Repeatedly swaps adjacent elements if out of order
+- Simple to understand and implement
+- Time complexity: $O(n^2)$ makes it slow for large datasets
+
+:::
+
+## Advanced sorting: mergesort
+
+```{pyodide}
+#| autorun: true
+#| max-lines: 10
+def mergesort(L):
+    if len(L) < 2:
+        return
+    mid = len(L) // 2
+    A = L[:mid]
+    B = L[mid:]
+    mergesort(A); mergesort(B)
+    merge(A, B, L)
+
+def merge(A, B, L):
+    i, j = 0, 0
+    while i < len(A) and j < len(B):
+        if A[i] < B[j]:
+            L[i+j] = A[i]
+            i += 1
+        else:
+            L[i+j] = B[j]
+            j += 1
+    L[i+j:] = A[i:] + B[j:]
+
+data = [30, 54, 26, 93, 17, 77, 31, 44, 55, 20]
+mergesort(data)
+print(data)
+```
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- Divides list in half, sorts recursively, then merges
+- Time complexity: $O(n \log n)$ in all cases
+- More efficient than bubble sort for large datasets
+
+:::
+
+## Sorting documents by date
+
+::: {.fragment style="font-size: 0.85em;"}
+
+**Scenario**: Sort blog posts by publication date
+
+```{python}
+posts = [
+    ("Getting Started", "2025-03-15"),
+    ("Advanced Topics", "2025-01-20"),
+    ("Quick Reference", "2025-02-10")
+]
+
+sorted_posts = sorted(posts, key=lambda x: x[1])
+print("Posts by date:")
+for title, date in sorted_posts:
+    print(f"  {date}: {title}")
+```
+
+:::
+
+::: {.fragment style="font-size: 0.8em; margin-top: -0.2em"}
+
+- Documentation sites display content chronologically
+- Python's `sorted()` uses efficient `timsort` at $O(n \log n)$
+- `key` parameter enables sorting by custom criteria
+
+:::
+
+## Python's built-in sorting
+
+```{python}
+X = [3, 1, 5, 2, 4]
+Y = sorted(X)
+print("Original X:", X)
+print("Sorted Y:", Y)
+
+X.sort()
+print("Sorted X:", X)
+```
+
+::: {.fragment style="font-size: 0.85em;"}
+
+- `sorted()`: returns new sorted list, keeps original unchanged
+- `.sort()`: sorts list in-place, modifies original
+- Both use `timsort` algorithm with $O(n \log n)$ average case
+- Choose based on whether you need to preserve original data
+
+:::
+
+## Sorting documentation keywords
+
+::: {.fragment style="font-size: 0.85em;"}
+
+**Scenario**: Alphabetize API function names for reference
+
+```{python}
+api_functions = ["render", "preview", "create", "analyze", "export"]
+
+api_functions.sort()
+print("Alphabetized functions:")
+for func in api_functions:
+    print(f"  - {func}()")
+```
+
+:::
+
+::: {.fragment style="font-size: 0.85em; margin-top: -0.2em"}
+
+- API documentation often lists functions alphabetically
+- Makes it easier for users to find specific functions
+- Sorted references improve documentation usability
+
+:::
+
+# Practical applications for prosegrammers
+
+::: {.incremental style="font-size: 0.75em;"}
+
+- **Search features**:
+  - Documentation search bars need fast algorithms
+  - Binary search enables quick keyword lookup
+  - Full-text search uses more advanced data structures
+
+- **Content organization**:
+  - Sorting blog posts, articles, and documentation pages
+  - Alphabetizing glossaries and reference materials
+  - Ranking search results by relevance score
+
+:::
+
+## Choosing the right algorithm
+
+::: {.incremental style="margin-top: -0.5em; font-size: 0.875em;"}
+
+- {{< iconify fa6-solid magnifying-glass >}} **For searching**:
+  - Small datasets: linear search is fine
+  - Large sorted datasets: use binary search
+  - Unsorted data: consider sorting first if searching often
+
+- {{< iconify fa6-solid arrow-down-a-z >}} **For sorting**:
+  - Small datasets (< 50 items): simple sorts work well
+  - Large datasets: use Python's `sorted()` or `.sort()`
+  - Special cases: counting sort for restricted ranges
+
+- {{< iconify fa6-solid lightbulb >}} Understand algorithm worst-case time
+complexity to make smart choices for your document engineering projects!
+
+:::

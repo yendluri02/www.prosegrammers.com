@@ -24,7 +24,7 @@ toc-expand: 3
   preview`)
 - {{< iconify fa6-solid gears size=18px >}} **Friday**:
   - Use installed software tools for document engineering skill-check one
-  - You must complete skill-check one during the in-person classroom session
+  - Complete skill-check one during the in-person classroom session
   - Please review [Week One: Introduction to Document
   Engineering](../../slides/weekone/) for a list of necessary software tools
 

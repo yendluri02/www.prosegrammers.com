@@ -1,0 +1,227 @@
+---
+title: "Markdown and Quarto Basics for Document Engineering"
+description: "Essential markup skills for document engineering"
+date: "2025-09-22"
+date-format: long
+author: Gregory M. Kapfhammer
+execute:
+  echo: true
+format:
+  live-revealjs:
+    completion: true
+    theme: default
+    css: ../css/styles.css
+    history: false
+    scrollable: true
+    transition: slide
+    highlight-style: github
+    footer: "Prosegrammers"
+---
+
+# Hey, the course website uses both Markdown and Quarto! Neato!
+
+::: fragment
+
+- Markdown and Quarto create professional documentation
+- Learn the basics of Markdown's syntax and Quarto's features
+- Support the creation of your own documentation projects
+
+:::
+
+## What is Markdown? How can document engineers use it? How does Quarto leverage Markdown?
+
+::: {.incremental}
+
+- Master fundamental **Markdown syntax** for documents
+- Adopt **Quarto features** to enhance technical documentation
+- Connect markup skills to **document engineering workflows**
+- Create professional documentation as a **prosegrammer**
+- Build on existing tools like **VS Code**, **Git**, and **Python**
+- {{< iconify fa6-solid lightbulb >}} **Let's explore the essentials of
+Markdown and Quarto!**
+
+:::
+
+## Understanding static site generators
+
+::: {.fragment .fade style="margin-top: -0.5em; font-size: 0.9em;"}
+
+- Static site generators convert input files into static websites:
+    - **Examples**: Jekyll, Hugo, Quarto, and many more!
+    - **Input**: Markdown, HTML, CSS, and other files
+    - **Output**: Static HTML files for deployment
+    - **Deployment**: Hosted on GitHub Pages or Netlify
+    - Use templates and themes for consistent styling
+    - Ideal for blogs, documentation, and portfolios
+- {{< iconify fa6-solid lightbulb >}} **Prosegrammers** leverage static site
+generators for efficient documentation workflows! You could use Quarto to
+publish a website for your own document engineering tool! Impressive!
+
+:::
+
+## What is Markdown?
+
+::: {.incremental style="margin-top: -0.1em; font-size: 0.775em;"}
+
+- **Lightweight markup language** for formatting plain text
+- Converts to HTML, PDF, and other formats seamlessly
+- **Standard for technical documentation** across platforms
+- Challenges associated with using Markdown:
+    - Requires use of document engineering tools
+    - Limited styling options compared to full HTML/CSS
+    - Variations in Markdown flavors (e.g., GitHub or CommonMark)
+    - Requires learning syntax for different elements
+    - Managing large documents can be challenging
+- {{< iconify fa6-solid gears >}} **Using Markdown is essential for modern
+document engineering workflows!** Prosegrammers build tools to analyze it and
+for documentation.
+
+:::
+
+# Basic Markdown syntax
+
+::: fragment
+
+- Headers
+- Paragraphs and line breaks
+- Bold and italic text
+- Ordered and unordered lists
+
+{{< iconify fa6-solid gears >}} **Let's explore the essentials of Markdown
+and Quarto!**
+
+:::
+
+## Headers structure your content
+
+{{< iconify fa6-solid heading >}} **Source code examples for headers**
+
+```markdown
+# Main Title (H1)
+## Section Header (H2) 
+### Subsection Header (H3)
+#### Detail Header (H4)
+```
+
+
+::: {.fragment .fade style="font-size: 1.0em;"}
+
+- Headers create logical document hierarchy for navigation
+- Use `H1` for main title, `H2` for sections, `H3` for subsections
+- Use the `#` symbol to indicate a header's nesting levels
+- Normally, define two or three levels of headers for clarity
+- Consider building a table of contents for longer documents
+
+:::
+
+## Paragraphs and text formatting
+
+{{< iconify fa6-solid paragraph >}} **Source code for text formatting**
+
+```markdown
+This is a regular paragraph with normal text.
+
+This is **bold text** and this is *italic text*.
+You can combine them: ***bold and italic***.
+
+Use `inline code` for technical terms.
+```
+
+**Rendered Output:**
+
+This is a regular paragraph with normal text.
+
+This is **bold text** and this is *italic text*.
+You can combine them: ***bold and italic***.
+
+Use `inline code` for technical terms.
+
+## Lists help to organize information
+
+{{< iconify fa6-solid list >}} **Source Code for using lists**
+
+```markdown
+**Unordered List:**
+- Document engineering principles
+- Python programming skills  
+- Version control with Git
+- Professional documentation
+
+**Ordered List:**
+1. Plan your document structure
+2. Write clear, concise content
+3. Format with Markdown
+4. Review and revise
+```
+
+::: {.fragment .fade style="margin-top: -0.1em; font-size: 0.9em;"}
+
+- Lists help to add structure and clarity to technical content
+- Unordered lists use `-`, `*`, or `+` for bullet points
+- Ordered lists use numbers followed by a period (e.g., `1.`, `2.`)
+
+:::
+
+# {{< iconify fa6-solid gears >}} We will learn more about advanced Markdown features next week! Make sure to check the course slides!
+
+## Document engineering workflow
+
+::: {.incremental}
+
+- {{< iconify fa6-solid folder-tree >}} Keep your documents nicely organized:
+    1. **Plan** document structure with headers
+    2. **Write** content using Markdown syntax
+    3. **Enhance** with Quarto features as needed
+    4. **Test** any embedded code examples
+    5. **Render** to desired output format
+    6. **Review** and iterate for clarity
+
+:::
+
+::: {.fragment .fade .boxed-content style="font-size: 0.8em;"}
+
+{{< iconify fa6-solid lightbulb >}} **Prosegrammers** always follow systematic
+approaches to documentation!
+
+:::
+
+## Best practices for prosegrammers
+
+::: {.incremental}
+
+- **Keep source readable** since others will read your Markdown
+- **Use consistent formatting** with established style guidelines  
+- **Write descriptive "alt text"** to improve accessibility
+- **Test code examples** to ensure that they actually work
+- **Link strategically** to connect related concepts
+- **Version control everything** to track documentation changes
+
+:::
+
+::: {.fragment .fade .boxed-content style="font-size: 0.85em;"}
+
+{{< iconify fa6-solid lightbulb >}} Reflect on what steps you are doing well
+and how you can improve. **Then, schedule office hours to discuss any of
+these best practices**!
+
+:::
+
+## Are you ready to practice?
+
+::: {.incremental}
+
+- {{< iconify fa6-solid rocket >}} **Getting good at document engineering requires practice** 
+    - Make sure that your **development environment** is set up
+    - Start with **simple README files** for your projects
+    - Practice **different Markdown features** daily
+    - Experiment with **Quarto capabilities** for reports
+    - Build your **prosegrammer toolkit** systematically
+
+:::
+
+::: {.fragment .fade style="font-size: 1.0em;"}
+
+- {{< iconify fa6-solid lightbulb >}} **Grasp these basics** and you'll excel at
+both **writing documentation** and **building tools to analyze documents**!
+
+:::

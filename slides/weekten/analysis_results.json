@@ -1,0 +1,13 @@
+{
+  "total_documents": 5,
+  "total_properties": 2,
+  "unique_value_counts": {
+    "category": 3,
+    "difficulty": 3
+  },
+  "statistics": {
+    "min_unique": 3,
+    "max_unique": 3,
+    "avg_unique": 3.0
+  }
+}

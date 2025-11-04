@@ -1,9 +1,9 @@
 ---
 title: "Project Critique for Quarto"
 description: "Evaluating a project's documentation"
-date: "2025-09-29"
+date: "2025-010-01"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Krish Yendluri, V Rieger, Logan Butler
 execute:
   echo: true
 format:
@@ -18,5 +18,60 @@ format:
     footer: "Prosegrammers"
 ---
 
-## DEPC2: Document engineering project critique for Quarto
-test slide?!
+# Quarto Overview
+Quarto is a publishing tool that allows you to combine code and other content into formats such as PDF, Word Documents, HTML, and presentations, such as this current presentation.
+The documentation offers tutorials for getting started as well as reference guides for some of the content it can include.
+
+# "Hello, Quarto" Tutorial
+After the “Getting Started” section, which simply provides the downloads for Quarto on separate platforms, there are three tutorials that the Quarto documentation provides, “Hello, Quarto” being the first of them. It provides this tutorial for multiple tools, including VS Code and RStudio. It tells you how to render and preview Quarto documents, shows you an example of a `.qmd` file, talks about making changes and explains how Quarto works as a combination of Markdown and code blocks.
+
+# "Markdown Basics" Reference Guide
+The first of many guides offered in the Quarto documentation, this shows the syntax and output of many elements in Markdown such as text formatting, headings, links, lists, and tables. The difference between this and "Hello, Quarto" is the tutorial is geared towards the user and the content is read in order, the user learning as they go, whereas the reference just explains the syntax for a group of elements that the user can pick and choose which ones to use.
+
+# Quarto in relation to Diátaxis
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+ - Quarto utilizes Tutorials/Learning-oriented documentation
+ - Quarto documentation achieves Functional Quality under Diataxis standards(accurate, complete, useful, consistent)
+ - Quarto documentation achieves Deep Quality under Diataxis Standards(Good flow , anticipation of the user , good feeling during the use of Quarto)
+ - Quarto separates documentation types.
+ - Quarto documentation writes with user goal in mind (installing and using Quarto)
+
+:::
+
+## Pros of Quarto Documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+
+ - Clearly explains what Quarto is and how it works.
+ - Demonstrates the rendering process effectively, including a helpful visual example.
+ - Provides a clear example of how to render and preview a Quarto document.
+ - Covers various quality-of-life features and appearance-related syntax options.
+ - Offers clean, well-organized documentation with well-presented examples.
+ - Divides content into multiple focused sections, such as a “Hello World” tutorial, computation, and authoring.
+ - Includes links and references to additional resources for learning more about Quarto.
+
+
+:::
+
+# Cons of Quarto Documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+
+ - Installation instructions are not clearly explained and require reading through the documentation.
+ - While the examples are helpful, some sections rely too heavily on them, offering little accompanying description or explanation.
+
+:::
+
+## Possible fixes/suggestions for personal documentation
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+ - Clearly explain all code examples and provide sufficient context.
+ - Include examples thoughtfully without overwhelming the content.
+ - Consolidate all installation steps in one place for easier access and understanding.
+ - Maintain a clean, organized, and well-structured presentation of the documentation.
+
+:::

@@ -3,7 +3,7 @@ title: "Understanding README-Driven Documentation"
 description: "Use READMEs for documentation"
 date: "2025-09-15"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Chezka Quinola, Brandon Thompson, DJ Battle, Jordi Tort
 execute:
   echo: true
 format:
@@ -18,4 +18,90 @@ format:
     footer: "Prosegrammers"
 ---
 
-# DECO2: Document engineering concept overview
+<!--chezka-->
+# Understanding README-Driven Documentation
+
+---
+
+## Why Documentation Matters
+- Helps others understand and use your code or project
+- Reduces confusion and support questions
+- Improves collaboration within teams
+- Serves as a reference for future work
+- Builds trust and credibility for your project
+
+---
+
+## What a README Is
+- A file (usually `README.md`) that introduces your project
+- Explains purpose, setup, and usage instructions
+- Often includes:
+  - Installation steps
+  - Examples or demos
+  - Contribution guidelines
+  - License information
+- First impression for anyone visiting your project
+
+
+<!--jordi-->
+## README-Driven Development
+- It starts with the `README`.
+  - Write the `README` before any code to define project structure.
+-  Keeps developers, contributors, and all people in the same loop avoiding problems.
+- This will always act as a blueprint for development, testing and documentation throughout the project.
+
+---
+
+<!--jordi-->
+## What Goes in a README? 
+- It briefly explains the purpose and the functionality of the project. 
+- It provides installation steps, including dependencies and environment setup.
+- It includes usage instructions or examples so users know how to use or run with the project.
+- It also gives credit to the creator(s) or contributor(s). 
+
+---
+
+<!--DJ-->
+## Why It’s Helpful
+- It forces you to write documentation before coding 
+- You can see what everyone is doing without having to explain the code
+- Lays out the guidelines for each member of the team to follow easily
+
+---
+
+<!--DJ-->
+## Common Mistakes
+- Not keeping to code selection not up to date
+- Not over explaining how to complete each step
+- Not explaining the role of each person on the team's job
+
+---
+
+<!--brandon-->
+## Best Tips
+
+::: {.incremental style="font-size: 0.9em;"}
+
+- Keep new users in mind
+  - Make sure your `README` is structured to be not only accessible but also understandable for new users
+- Clearly outline your project
+  - Make sure that your `README` explains the project that you're doing and also why you are doing it, as well as the problem it solves and what makes it stand out.
+- Define key features
+  - On top of outlining the project and why you're doing it make sure to include the project's key features
+
+:::
+
+---
+
+<!--brandon-->
+## Wrap-Up
+- README is your project’s front door  
+  - README introduces your project in a way that is easy to understand
+  - It helps your team stay organized and on task, as well as helping to avoid problems
+- Clear docs = happy users  
+  - README clearly outlines your project reducing confusion for users 
+  - Includes important information such as purpose and functionality of the project
+
+---
+
+## Q&A
