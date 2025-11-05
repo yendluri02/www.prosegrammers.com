@@ -43,8 +43,27 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
 
 # Django in relation to Diátaxis - Logan
 
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+ - Django utilizes Tutorials/Learning-oriented documentation
+ - Django utilizes How-To Guides/Goal-oriented documentation
+ - Django utilizes References/Information-oriented documentation
+ - Django separates documentation types.
+ - Django documentation achieves Functional Quality under Diataxis standards(accurate, complete, useful, consistent)
+ - Django documentation does not achieves Deep Quality under Diataxis Standards(Bad flow , anticipation of the user , not having a good feeling during the use of Django)
+ - Django documentation somewhat writes with user goal in mind (installing and using Django)
+
 # Strengths of `Django` documentation - Logan
 
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+ - Offers a wide varity of types of documention to use such as Tutorials,How-To-Guides,and
+ References.
+ - Seperates its documentation into different subsections for easier use.
+ - It gives beginner and advanced documention for each subsection category.
+ - Gives well-presented code examples for each document in the documention.
+ - Has an FAQ to answer commonley asked questions.
+ - Django gives lots of documention on every aspect of the framework
+ 
 # Weaknesses of `Django` documentation - Brandon
 
 # Suggestions for improvement - Brandon
