@@ -3,7 +3,7 @@ title: "Project Critique for `Django`"
 description: "Evaluating a project's documentation"
 date: "2025-11-05"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Anshu Pathak, Logan Butler, Brandon Ladakos
 execute:
   echo: true
 format:
@@ -18,4 +18,76 @@ format:
     footer: "Prosegrammers"
 ---
 
-## Project critique for `Django`
+# Project critique for `Django`
+
+# `Django` overview
+
+Django is a Python tool that helps you build websites quickly and safely. It keeps your work organized by separating your data, what the website does, and how it looks to users.
+
+# First Steps in `Django` documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+- Designed for beginners new to Django or programming.
+- Includes setup and installation guidance.
+- Provides an 8-part step-by-step tutorial covering core concepts.
+- Offers advanced tutorials on reusable apps and contributing to Django.
+- Links to help resources like FAQ, index, and bug tracker.
+:::
+
+# Organization of `Django` documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+- **Tutorials:** Step-by-step guides for building web applications; ideal for beginners.
+- **Topic Guides:** Explain key concepts at a high level and provide background information.
+- **Reference Guides:** Technical API references; assume basic understanding of Django.
+- **How-to Guides:** Practical recipes for solving specific problems; more advanced than tutorials.
+
+:::
+
+## `Django` in relation to Diátaxis
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
+ - Django utilizes Tutorials/Learning-oriented documentation.
+ - Django utilizes How-To Guides/Goal-oriented documentation.
+ - Django utilizes References/Information-oriented documentation.
+ - Django separates documentation types.
+ - Django documentation achieves Functional Quality under Diataxis standards (accurate, complete, useful, consistent).
+ - Django documentation does not achieve Deep Quality under Diataxis Standards (poor flow, low anticipation of user needs, and an unsatisfying user experience).
+ - Django documentation somewhat writes with user goal in mind (installing and using Django).
+</parameter>
+:::
+
+# Strengths of `Django` documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+ - Offers a wide variety of types of documentation to use such as Tutorials, How-To-Guides, and References.
+ - Separates its documentation into different subsections for easier use.
+ - Provides beginner and advanced documentation for each category.
+ - Provides well-presented code examples for each document in the documentation.
+ - Has an FAQ to answer commonly asked questions.
+ - Django provides extensive documentation on every aspect of the framework.
+
+:::
+
+# Weaknesses of `Django` Documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+  - **Docs Are Extensive:** Long and detailed documentation can intimidate beginners.
+  - **Limited Practical Examples:** Focuses more on describing features than showing real-world applications.
+  - **Lacks Visual Examples:** Makes understanding complex processes more difficult.
+  - **Does Not Provide Best Practices:** Explains how, but not when or where to use certain approaches.
+:::
+
+# Suggestions for Improvement
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+  - **Simplify Documentation:** Create more clear beginner-friendly sections to make the docs easier to navigate.
+  - **Add Use Cases:** Include practical use cases and complete project examples to demonstrate real applications.
+  - **Add Visual Aids:** Add diagrams or flowcharts to explain how data flows through Django components.
+  - **Add Best Practice Guidelines:** Provide official guidance on common design patterns, project organization, and performance optimization.
+:::
+
+# Questions?
