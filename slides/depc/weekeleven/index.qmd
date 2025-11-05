@@ -18,7 +18,7 @@ format:
     footer: "Prosegrammers"
 ---
 
-## Project critique for `Django`
+# Project critique for `Django`
 
 # `Django` overview
 
@@ -26,22 +26,29 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
 
 # First Steps in Django documentation
 
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
 - Designed for beginners new to Django or programming.
 - Includes setup and installation guidance.
 - Provides an 8-part step-by-step tutorial covering core concepts.
 - Offers advanced tutorials on reusable apps and contributing to Django.
 - Links to help resources like FAQ, index, and bug tracker.
 
+:::
 
-# Organisation of Django Documentation
+# Organisation of `Django` Documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+
 
 - **Tutorials:** Step-by-step guides for building web applications; ideal for beginners.  
 - **Topic Guides:** Explain key concepts at a high level and provide background information.  
 - **Reference Guides:** Technical API references; assume basic understanding of Django.  
 - **How-to Guides:** Practical recipes for solving specific problems; more advanced than tutorials.  
 
+:::
 
-# Django in relation to Diátaxis - Logan
+## `Django` in relation to Diátaxis
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
 
@@ -52,8 +59,9 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
  - Django documentation achieves Functional Quality under Diataxis standards(accurate, complete, useful, consistent)
  - Django documentation does not achieves Deep Quality under Diataxis Standards(Bad flow , anticipation of the user , not having a good feeling during the use of Django)
  - Django documentation somewhat writes with user goal in mind (installing and using Django)
+:::
 
-# Strengths of `Django` documentation - Logan
+# Strengths of `Django` documentation
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
  - Offers a wide varity of types of documention to use such as Tutorials,How-To-Guides,and
@@ -64,8 +72,10 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
  - Has an FAQ to answer commonley asked questions.
  - Django gives lots of documention on every aspect of the framework
  
-# Weaknesses of `Django` documentation - Brandon
+:::
+ 
+# Weaknesses of `Django` documentation
 
-# Suggestions for improvement - Brandon
+# Suggestions for improvement
 
-# Questions
+# Questions?
