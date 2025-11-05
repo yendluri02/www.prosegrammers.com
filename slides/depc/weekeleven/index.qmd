@@ -3,7 +3,7 @@ title: "Project Critique for `Django`"
 description: "Evaluating a project's documentation"
 date: "2025-11-05"
 date-format: long
-author: Anshu Pathak, Logan Butler, Brandon Ladakos
+author: Gregory M. Kapfhammer
 execute:
   echo: true
 format:
@@ -18,51 +18,20 @@ format:
     footer: "Prosegrammers"
 ---
 
-# Project critique for `Django`
+## Project critique for `Django`
 
-## `Django` overview - Anshu
+# `Django` overview - Anshu
 
-Django is a Python tool that helps you build websites quickly and safely. It keeps your work organized by separating your data, what the website does, and how it looks to users.
+# First Steps tutorial - Anshu
 
-## First Steps section
+# Organization of the documentation - Anshu
 
-::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+# Django in relation to Diátaxis - Logan
 
-- Designed for beginners new to Django or programming.
-- Includes setup and installation guidance.
-- Provides an 8-part step-by-step tutorial covering core concepts.
-- Offers advanced tutorials on reusable apps and contributing to Django.
-- Links to help resources like FAQ, index, and bug tracker.
+# Strengths of `Django` documentation - Logan
 
-:::
+# Weaknesses of `Django` documentation - Brandon
 
-## Organisation of Django Documentation
-
-::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
-
-- **Tutorials:** Step-by-step guides for building web applications; ideal for beginners.  
-- **Topic Guides:** Explain key concepts at a high level and provide background information.  
-- **Reference Guides:** Technical API references; assume basic understanding of Django.  
-- **How-to Guides:** Practical recipes for solving specific problems; more advanced than tutorials.  
-- Clearly seperates documentation for the different layers of Django (Models, Views, Templates, Forms, etc.)
-
-:::
-    
-## Django in relation to Diátaxis - Logan
-
-
-
-somethibng something
-
-
-## Strengths of `Django` documentation - Logan
-hi
-
-## Weaknesses of `Django` documentation - Brandon
-
-
-## Suggestions for improvement - Brandon
-
+# Suggestions for improvement - Brandon
 
 # Questions
-

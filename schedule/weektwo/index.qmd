@@ -1,0 +1,37 @@
+---
+title: Exploring Python Programming
+description: "Understand Python Programming Basics"
+date: "2025-09-01"
+layout: full
+toc: true
+toc-expand: 3
+---
+
+## Activities
+
+- {{< iconify fa6-solid lightbulb size=18px >}} **Monday**:
+  - No class due to the fact that it is Labor Day
+  - Students review all materials on the course website
+- {{< iconify fa6-solid people-line size=18px >}} **Wednesday**:
+  - Instructor-led document engineering deep-dive on Python programming
+- {{< iconify fa6-solid gears size=18px >}} **Wednesday Laboratory**:
+  - Overview of the first document engineering tool-building project
+  - First document engineering tool-building project assigned next week
+  - Students meet with course instructor and student technical leaders
+  - Students demonstrate installation of all required software tools
+  - Students must run all commands described in [Week One: Introduction to
+  Document Engineering](../../slides/weekone/) (e.g., `git clone` and `quarto
+  preview`)
+- {{< iconify fa6-solid gears size=18px >}} **Friday**:
+  - Use installed software tools for document engineering skill-check one
+  - Complete skill-check one during the in-person classroom session
+  - Please review [Week One: Introduction to Document
+  Engineering](../../slides/weekone/) for a list of necessary software tools
+
+## Slides
+
+```{=html}
+<iframe class="slide-deck" src="../../slides/weektwo/"></iframe>
+```
+
+{{< iconify majesticons presentation-play size=18px >}} Full Screen: [Week Two: Exploring the Python Programming Language](../../slides/weektwo/)
