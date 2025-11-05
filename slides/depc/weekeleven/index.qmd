@@ -3,7 +3,7 @@ title: "Project Critique for `Django`"
 description: "Evaluating a project's documentation"
 date: "2025-11-05"
 date-format: long
-author: Gregory M. Kapfhammer
+author: Anshu Pathak, Logan Butler, Brandon Ladakos
 execute:
   echo: true
 format:
