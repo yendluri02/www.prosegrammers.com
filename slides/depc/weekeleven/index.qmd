@@ -20,11 +20,26 @@ format:
 
 ## Project critique for `Django`
 
-# `Django` overview - Anshu
+# `Django` overview
 
-# First Steps tutorial - Anshu
+Django is a Python tool that helps you build websites quickly and safely. It keeps your work organized by separating your data, what the website does, and how it looks to users.
 
-# Organization of the documentation - Anshu
+# First Steps in Django documentation
+
+- Designed for beginners new to Django or programming.
+- Includes setup and installation guidance.
+- Provides an 8-part step-by-step tutorial covering core concepts.
+- Offers advanced tutorials on reusable apps and contributing to Django.
+- Links to help resources like FAQ, index, and bug tracker.
+
+
+# Organisation of Django Documentation
+
+- **Tutorials:** Step-by-step guides for building web applications; ideal for beginners.  
+- **Topic Guides:** Explain key concepts at a high level and provide background information.  
+- **Reference Guides:** Technical API references; assume basic understanding of Django.  
+- **How-to Guides:** Practical recipes for solving specific problems; more advanced than tutorials.  
+
 
 # Django in relation to Diátaxis - Logan
 
