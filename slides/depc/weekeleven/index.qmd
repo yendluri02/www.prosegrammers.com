@@ -50,25 +50,25 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
 
- - Django utilizes Tutorials/Learning-oriented documentation
- - Django utilizes How-To Guides/Goal-oriented documentation
- - Django utilizes References/Information-oriented documentation
+ - Django utilizes Tutorials/Learning-oriented documentation.
+ - Django utilizes How-To Guides/Goal-oriented documentation.
+ - Django utilizes References/Information-oriented documentation.
  - Django separates documentation types.
- - Django documentation achieves Functional Quality under Diataxis standards(accurate, complete, useful, consistent)
- - Django documentation does not achieves Deep Quality under Diataxis Standards(Bad flow , anticipation of the user , not having a good feeling during the use of Django)
- - Django documentation somewhat writes with user goal in mind (installing and using Django)
+ - Django documentation achieves Functional Quality under Diataxis standards (accurate, complete, useful, consistent).
+ - Django documentation does not achieve Deep Quality under Diataxis Standards (poor flow, low anticipation of user needs, and an unsatisfying user experience).
+ - Django documentation somewhat writes with user goal in mind (installing and using Django).
+</parameter>
 :::
 
 # Strengths of `Django` documentation
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
- - Offers a wide varity of types of documention to use such as Tutorials,How-To-Guides,and
- References.
- - Seperates its documentation into different subsections for easier use.
- - It gives beginner and advanced documention for each subsection category.
- - Gives well-presented code examples for each document in the documention.
- - Has an FAQ to answer commonley asked questions.
- - Django gives lots of documention on every aspect of the framework
+ - Offers a wide variety of types of documentation to use such as Tutorials, How-To-Guides, and References.
+ - Separates its documentation into different subsections for easier use.
+ - Provides beginner and advanced documentation for each category.
+ - Provides well-presented code examples for each document in the documentation.
+ - Has an FAQ to answer commonly asked questions.
+ - Django provides extensive documentation on every aspect of the framework.
 
 :::
 
@@ -76,7 +76,7 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
   - **Docs Are Extensive:** Long and detailed documentation can intimidate beginners.
-  - **Limited Practical Examples:** Focuses more on describing features than showing real world applications.
+  - **Limited Practical Examples:** Focuses more on describing features than showing real-world applications.
   - **Lacks Visual Examples:** Makes understanding complex processes more difficult.
   - **Does Not Provide Best Practices:** Explains how, but not when or where to use certain approaches.
 :::
@@ -84,7 +84,7 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
 # Suggestions for Improvement
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
-  - **Simplify Documentation:** Create more clear beginner friendly sections to make the docs easier to navigate.
+  - **Simplify Documentation:** Create more clear beginner-friendly sections to make the docs easier to navigate.
   - **Add Use Cases:** Include practical use cases and complete project examples to demonstrate real applications.
   - **Add Visual Aids:** Add diagrams or flowcharts to explain how data flows through Django components.
   - **Add Best Practice Guidelines:** Provide official guidance on common design patterns, project organization, and performance optimization.
