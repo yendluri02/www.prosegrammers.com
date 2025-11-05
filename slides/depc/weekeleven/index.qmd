@@ -30,8 +30,16 @@ format:
 
 # Strengths of `Django` documentation - Logan
 
-# Weaknesses of `Django` documentation - Brandon
+# Weaknesses of `Django` Documentation
+  - **Docs Are Extensive:** Long and detailed documentation can intimidate beginners.  
+  - **Limited Practical Examples:** Focuses more on describing features than showing real world applications.  
+  - **Lacks Visual Examples:** Makes understanding complex processes more difficult.  
+  - **Does Not Provide Best Practices:** Explains how, but not when or where to use certain approaches.  
 
-# Suggestions for improvement - Brandon
+# Suggestions for Improvement
+  - **Simplify Documentation:** Create more clear beginner friendly sections to make the docs easier to navigate.  
+  - **Add Use Cases:** Include practical use cases and complete project examples to demonstrate real applications.  
+  - **Add Visual Aids:** Add diagrams or flowcharts to explain how data flows through Django components.  
+  - **Add Best Practice Guidelines:** Provide official guidance on common design patterns, project organization, and performance optimization.  
 
 # Questions
