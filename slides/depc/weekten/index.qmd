@@ -29,8 +29,6 @@ Ruff is a program made for linting and code formatting for Python files. Linting
 - Strong tool, weak communication: Ruff tells us what it *is*, not why it *matters*.  
 - A documentation system should inspire confidence and community — Ruff’s currently feels closed-off and impersonal.
 
----
-
 ## README-Driven Development
 
 - **Core idea:** A README should explain the tool’s *purpose, philosophy, and practical use cases* before any code exists.  
@@ -42,7 +40,6 @@ Ruff is a program made for linting and code formatting for Python files. Linting
   - No emotional or community appeal — it’s efficient but sterile.  
 - In README-driven terms: Ruff’s “README” documents the tool’s *existence*, not its *vision.*
 
----
 ## The Diátaxis Framework
 
 - The Diátaxis framework divides documentation into **four purposes:**  
@@ -53,8 +50,6 @@ Ruff is a program made for linting and code formatting for Python files. Linting
 
 - Ruff’s docs heavily favor **Reference**, barely touching the others.  
 - It’s technically complete but **pedagogically empty** — everything is factual, nothing is taught.  
-
----
 
 ## README Strengths and Missed Opportunities 
 
@@ -69,10 +64,6 @@ Ruff is a program made for linting and code formatting for Python files. Linting
   - Doesn’t explain what problems Ruff *solved* in existing tools.  
   - Feels like it was written *after* Ruff was built, not *before* — breaking the README-driven rule.  
 
----
-
-
----
 
 ## Applying Diátaxis to Ruff
 
@@ -85,7 +76,6 @@ Ruff is a program made for linting and code formatting for Python files. Linting
 
 - Ruff overindexes on **facts** and underdelivers on **learning**.  
 
----
 
 ##  The Core Problem: Speed Without Substance 
 
