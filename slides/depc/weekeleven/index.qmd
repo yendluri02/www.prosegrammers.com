@@ -24,7 +24,7 @@ format:
 
 Django is a Python tool that helps you build websites quickly and safely. It keeps your work organized by separating your data, what the website does, and how it looks to users.
 
-# First Steps in Django documentation
+# First Steps in `Django` documentation
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
 
@@ -33,18 +33,16 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
 - Provides an 8-part step-by-step tutorial covering core concepts.
 - Offers advanced tutorials on reusable apps and contributing to Django.
 - Links to help resources like FAQ, index, and bug tracker.
-
 :::
 
-# Organisation of `Django` Documentation
+# Organization of `Django` documentation
 
 ::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
 
-
-- **Tutorials:** Step-by-step guides for building web applications; ideal for beginners.  
-- **Topic Guides:** Explain key concepts at a high level and provide background information.  
-- **Reference Guides:** Technical API references; assume basic understanding of Django.  
-- **How-to Guides:** Practical recipes for solving specific problems; more advanced than tutorials.  
+- **Tutorials:** Step-by-step guides for building web applications; ideal for beginners.
+- **Topic Guides:** Explain key concepts at a high level and provide background information.
+- **Reference Guides:** Technical API references; assume basic understanding of Django.
+- **How-to Guides:** Practical recipes for solving specific problems; more advanced than tutorials.
 
 :::
 
@@ -71,11 +69,25 @@ Django is a Python tool that helps you build websites quickly and safely. It kee
  - Gives well-presented code examples for each document in the documention.
  - Has an FAQ to answer commonley asked questions.
  - Django gives lots of documention on every aspect of the framework
- 
-:::
- 
-# Weaknesses of `Django` documentation
 
-# Suggestions for improvement
+:::
+
+# Weaknesses of `Django` Documentation
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+  - **Docs Are Extensive:** Long and detailed documentation can intimidate beginners.
+  - **Limited Practical Examples:** Focuses more on describing features than showing real world applications.
+  - **Lacks Visual Examples:** Makes understanding complex processes more difficult.
+  - **Does Not Provide Best Practices:** Explains how, but not when or where to use certain approaches.
+:::
+
+# Suggestions for Improvement
+
+::: {.incremental .fade-right style="margin-top: -0.2em; font-size: 0.775em;"}
+  - **Simplify Documentation:** Create more clear beginner friendly sections to make the docs easier to navigate.
+  - **Add Use Cases:** Include practical use cases and complete project examples to demonstrate real applications.
+  - **Add Visual Aids:** Add diagrams or flowcharts to explain how data flows through Django components.
+  - **Add Best Practice Guidelines:** Provide official guidance on common design patterns, project organization, and performance optimization.
+:::
 
 # Questions?
